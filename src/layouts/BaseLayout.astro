@@ -1,0 +1,187 @@
+---
+import '../styles/global.css';
+import { SITE_NAME, SITE_URL } from '../config';
+import type { Lang, PageKey, AudienceSlug } from '../i18n';
+import {
+  getDictionary,
+  getPagePath,
+  getAbsoluteUrl,
+  getAlternateLinks,
+} from '../i18n';
+import LanguageSuggestion, {
+  type CustomAlternate,
+} from '../components/LanguageSuggestion.astro';
+import Header from '../components/Header.astro';
+import AdStamp from '../components/AdStamp.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Footer from '../components/Footer.astro';
+import {
+  buildJsonLdGraph,
+  type BreadcrumbItem,
+  type FaqSchemaItem,
+} from '../utils/schema';
+
+interface Props {
+  lang: Lang;
+  page?: PageKey;
+  title: string;
+  description: string;
+  customCanonical?: string;
+  customAlternates?: CustomAlternate[];
+  ogImageId?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  articleSchema?: {
+    datePublished: string;
+    dateModified: string;
+  };
+  faqsSchema?: FaqSchemaItem[];
+  noindex?: boolean;
+}
+
+const {
+  lang,
+  page = 'home',
+  title,
+  description,
+  customCanonical,
+  customAlternates,
+  ogImageId,
+  breadcrumbs,
+  articleSchema,
+  faqsSchema,
+  noindex = false,
+} = Astro.props;
+
+const t = getDictionary(lang);
+const canonicalUrl = customCanonical ?? getAbsoluteUrl(lang, page);
+const alternates = customAlternates ?? getAlternateLinks(page);
+const defaultAlt = alternates.find((a) => a.lang === 'en') ?? alternates[0];
+const defaultUrl = defaultAlt ? defaultAlt.href : getAbsoluteUrl('en', page);
+
+const resolvedOgId = (ogImageId ?? `${page}-${lang}`).replaceAll('/', '-');
+const ogImageUrl = `${SITE_URL}/og/${resolvedOgId}.png`;
+
+function getDefaultPageLabel(p: PageKey): string {
+  if (p === 'home') return t.nav.home;
+  if (p === 'roles') return t.nav.roles;
+  if (p === 'how-it-works') return t.nav.howItWorks;
+  if (p === 'privacy') return t.nav.privacy;
+  if (p === 'legal') return t.nav.legal;
+  if (p.startsWith('for/')) {
+    const slug = p.slice(4) as AudienceSlug;
+    return t.audiences[slug]?.label ?? slug;
+  }
+  return p;
+}
+
+const finalBreadcrumbs: BreadcrumbItem[] =
+  breadcrumbs ??
+  (page === 'home'
+    ? [{ name: t.nav.home, url: getPagePath(lang, 'home') }]
+    : [
+        { name: t.nav.home, url: getPagePath(lang, 'home') },
+        { name: getDefaultPageLabel(page), url: getPagePath(lang, page) },
+      ]);
+
+const jsonLd = buildJsonLdGraph({
+  lang,
+  canonicalUrl,
+  title,
+  description,
+  ogImageUrl,
+  breadcrumbs: finalBreadcrumbs,
+  article: articleSchema,
+  faqs: faqsSchema,
+});
+
+const ogLocaleMap: Record<Lang, string> = {
+  en: 'en_GB',
+  fi: 'fi_FI',
+  sv: 'sv_SE',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  es: 'es_ES',
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    {
+      alternates.map((alt) => (
+        <link rel="alternate" hreflang={alt.lang} href={alt.href} />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={defaultUrl} />
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`${SITE_NAME} — Profession Guides RSS`}
+      href={`${SITE_URL}/rss.xml`}
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={articleSchema ? 'article' : 'website'} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={ogLocaleMap[lang]} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Preload critical self-hosted WOFF2 fonts -->
+    <link
+      rel="preload"
+      href="/fonts/familjen-grotesk-latin-700-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/source-serif-4-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- JSON-LD Structured Data (WebSite, Person, BreadcrumbList, FAQPage; NO JobPosting) -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLd)}
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">{t.skipToContent}</a>
+    <LanguageSuggestion
+      lang={lang}
+      page={page}
+      customAlternates={customAlternates}
+    />
+    <Header lang={lang} page={page} customAlternates={customAlternates} />
+    <AdStamp lang={lang} />
+    <Breadcrumbs items={finalBreadcrumbs} />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

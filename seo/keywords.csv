@@ -1,0 +1,241 @@
+language,keyword,cluster,search_intent,page_type,target_url,priority,volume,notes
+en,ai training jobs,general-ai-work,commercial,home,/,1,TBD,Core head term for remote AI training contract work in Europe
+en,remote ai training jobs europe,general-ai-work,commercial,home,/,1,TBD,High-intent European geographic modifier for remote contractor roles
+en,get paid to train ai,general-ai-work,commercial,home,/,2,TBD,Broad awareness query requiring strict rate and non-guarantee context
+en,ai trainer remote job,general-ai-work,commercial,directory,/roles/,1,TBD,Direct role-seeking intent mapped to open roles directory
+en,rlhf jobs,glossary-evals,informational,spoke,/ai-training-glossary-rlhf-evals-rubrics/,2,TBD,Technical AI evaluation query from experienced annotators and engineers
+en,ai evaluation jobs for lawyers,law-hub,commercial,hub,/ai-training-for-lawyers/,1,TBD,High-value niche query for licensed lawyers ($100-150/h and $60-150/h pools)
+en,legal ai training jobs,law-hub,commercial,hub,/ai-training-for-lawyers/,1,TBD,Primary target keyword for the English Legal Expert hub
+en,remote ai jobs for attorneys,law-hub,commercial,hub,/ai-training-for-lawyers/,2,TBD,Synonym variant targeting JD/LLB/LLM holders in Europe
+en,legal compliance ai evaluation work,law-hub,informational,hub,/ai-training-for-lawyers/,2,TBD,Targets non-bar legal specialists ($60-150/h Legal Expert pool)
+en,medical ai training jobs,medicine-hub,commercial,hub,/ai-training-for-doctors/,1,TBD,Primary target keyword for the English Medical Expert hub ($60-180/h)
+en,remote ai jobs for doctors,medicine-hub,commercial,hub,/ai-training-for-doctors/,1,TBD,High-intent clinical specialist query for MD and clinical practitioners
+en,clinical ai evaluation contractor,medicine-hub,commercial,hub,/ai-training-for-doctors/,2,TBD,Targets doctors nurses dentists and pharmacists evaluating clinical rubrics
+en,healthcare ai data annotation jobs,medicine-hub,informational,hub,/ai-training-for-doctors/,2,TBD,Secondary medical cluster keyword
+en,software engineer ai training jobs,tech-hub,commercial,hub,/ai-training-for-software-engineers/,1,TBD,Primary target keyword for Software Engineering Expert hub ($70-150/h)
+en,coding rlhf remote contractor,tech-hub,commercial,hub,/ai-training-for-software-engineers/,2,TBD,Developer-focused query for code evaluation and repository benchmarks
+en,spreadsheet and office ai trainer jobs,tech-hub,commercial,hub,/ai-training-for-software-engineers/,2,TBD,Covers Office & Productivity Software Expert pool ($60-70/h)
+en,finnish language ai jobs,language-hub,commercial,hub,/ai-training-for-language-experts/,1,TBD,Seed keyword targeting native Finnish linguists and translators ($35-50/h)
+en,ai training jobs for translators,language-hub,commercial,hub,/ai-training-for-language-experts/,1,TBD,Primary target keyword for Language & Audio Expert hub
+en,multilingual audio ai evaluation jobs,language-hub,commercial,hub,/ai-training-for-language-experts/,2,TBD,Targets native speakers of Finnish French Spanish Italian Portuguese Polish Dutch
+en,finance ai training jobs,finance-hub,commercial,hub,/ai-training-for-finance-experts/,1,TBD,Primary target keyword for Finance Expert hub (rate set per project)
+en,remote ai evaluation jobs for accountants,finance-hub,commercial,hub,/ai-training-for-finance-experts/,2,TBD,Targets audit corporate finance actuarial and investment professionals
+en,generalist ai trainer jobs,general-hub,commercial,hub,/ai-training-for-generalists/,1,TBD,Primary target keyword for Generalist Expert hub ($40-70/h)
+en,no degree ai writing evaluation jobs,general-hub,informational,hub,/ai-training-for-generalists/,2,TBD,Targets strong readers and writers without specialized clinical/bar licenses
+en,mercor jobs,mercor-brand,navigational,directory,/roles/,1,TBD,Seed keyword mapping to curated Mercor talent pools with rate disclaimers
+en,mercor review,mercor-brand,commercial,spoke,/is-mercor-legit-review/,1,TBD,Primary seed keyword for independent first-person Mercor review spoke
+en,is mercor legit,mercor-brand,informational,spoke,/is-mercor-legit-review/,1,TBD,High-trust skepticism query addressed with transparent pros cons and non-guarantees
+en,mercor pay rates,mercor-brand,informational,spoke,/open-ai-training-pools-ledger/,1,TBD,Seed keyword mapped to Open Ledger of posted hourly pay ranges checked 2026-11-05
+en,mercor ai interview tips,mercor-interview,informational,spoke,/mercor-ai-interview-guide/,1,TBD,Seed keyword for automated video interview preparation spoke
+en,how does mercor ai interview work,mercor-interview,informational,spoke,/mercor-ai-interview-guide/,2,TBD,Long-tail informational query on AI interview mechanics and retake policy
+en,mercor referral,mercor-brand,navigational,faq,/how-it-works/,2,TBD,Seed keyword answered transparently with referral disclosure and zero-cost explanation
+en,mercor vs outlier,platform-comparison,commercial,spoke,/mercor-vs-outlier-vs-micro1/,1,TBD,Seed keyword comparing Mercor talent pools with Outlier AI
+en,mercor vs micro1,platform-comparison,commercial,spoke,/mercor-vs-outlier-vs-micro1/,1,TBD,Seed keyword comparing Mercor with micro1 vetting and payout structure
+en,mercor vs dataannotation tech,platform-comparison,commercial,spoke,/mercor-vs-outlier-vs-micro1/,2,TBD,Secondary comparison keyword for European remote AI contractors
+en,ai training jobs finland,finland-local,commercial,home,/,1,TBD,Seed keyword targeting English-speaking specialists living in Finland
+en,us contractor taxes in finland vero,finland-tax,informational,spoke,/ai-training-taxes-finland-guide/,1,TBD,Targets foreign-currency USD Stripe payouts and Finnish Vero.fi rules
+en,ai contractor work unemployment benefits kela,finland-benefits,informational,spoke,/ai-training-unemployment-benefits-finland/,2,TBD,Explains Finnish TE-palvelut / Kela / TYJ rules for side-income contractors
+en,fake ai job scams telegram whatsapp,scam-prevention,informational,spoke,/how-to-spot-fake-ai-job-scams/,2,TBD,Helps candidates distinguish real platforms from advance-fee crypto scams
+en,what is rlhf rubric evaluation,glossary-evals,informational,spoke,/ai-training-glossary-rlhf-evals-rubrics/,3,TBD,Educational query explaining prompts rubrics SFT and RLHF
+en,easy money ai jobs no work,excluded-spam,informational,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: attracts low-effort get-rich-quick traffic incompatible with expert credentialed pools
+en,guaranteed passive income ai training,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: violates factual accuracy policy because Mercor work and hours are never guaranteed
+fi,tekoälytyö,general-ai-work,commercial,home,/fi/,1,TBD,Primary Finnish seed keyword for AI training work from Finland
+fi,tekoäly etätyö,general-ai-work,commercial,home,/fi/,1,TBD,High-priority Finnish seed keyword for remote AI contract work
+fi,etätyö kotoa,general-ai-work,informational,home,/fi/,2,TBD,Broad Finnish remote work seed keyword qualified toward credentialed experts
+fi,sivutyö kotoa,general-ai-work,informational,directory,/fi/roles/,2,TBD,Finnish side-income seed keyword mapped to flexible contractor pools
+fi,tekoälyn kouluttaja,general-ai-work,commercial,home,/fi/,1,TBD,Core Finnish role seed keyword for AI trainer positions
+fi,AI-kouluttaja,general-ai-work,commercial,directory,/fi/roles/,1,TBD,Direct Finnish seed keyword for open AI trainer pools
+fi,kielimallin koulutus työ,glossary-evals,informational,spoke,/fi/tekoalykoulutuksen-sanasto-rlhf-evals/,1,TBD,Seed keyword targeting LLM training and evaluation mechanics in Finnish
+fi,juristi sivutyö,law-hub,commercial,hub,/fi/tekoalytyo-juristeille/,1,TBD,Seed keyword for Finnish lawyers OTM/VT looking for remote side contracts
+fi,oikeustieteen asiantuntija etätyö,law-hub,commercial,hub,/fi/tekoalytyo-juristeille/,2,TBD,Targets legal compliance and licensed lawyers in Finland ($60-150/h and $100-150/h)
+fi,lakimies etätyö tekoäly,law-hub,commercial,hub,/fi/tekoalytyo-juristeille/,2,TBD,Secondary legal hub keyword in Finnish
+fi,lääkäri sivutyö etänä,medicine-hub,commercial,hub,/fi/tekoalytyo-laakareille/,1,TBD,Seed keyword targeting Finnish physicians and healthcare professionals ($60-180/h)
+fi,terveydenhuollon asiantuntija etätyö,medicine-hub,commercial,hub,/fi/tekoalytyo-laakareille/,2,TBD,Targets doctors nurses dentists pharmacists in Finland
+fi,lääketieteen tekoälykoulutus,medicine-hub,informational,hub,/fi/tekoalytyo-laakareille/,2,TBD,Informational medical AI evaluation query in Finnish
+fi,ohjelmistokehittäjä sivutyö etänä,tech-hub,commercial,hub,/fi/tekoalytyo-ohjelmistokehittajille/,1,TBD,Primary Finnish keyword for Software Engineering Expert hub ($70-150/h)
+fi,koodari tekoälyn koulutus etätyö,tech-hub,commercial,hub,/fi/tekoalytyo-ohjelmistokehittajille/,2,TBD,Targets Finnish software developers evaluating code models
+fi,excel ja toimisto-ohjelmat etätyö,tech-hub,commercial,hub,/fi/tekoalytyo-ohjelmistokehittajille/,2,TBD,Covers Office & Productivity Software Expert pool ($60-70/h) in Finnish
+fi,suomen kielen asiantuntija etätyö,language-hub,commercial,hub,/fi/tekoalytyo-kieliasiantuntijoille/,1,TBD,Seed keyword targeting native Finnish linguists and translators ($35-50/h)
+fi,kääntäjä sivutyö tekoäly,language-hub,commercial,hub,/fi/tekoalytyo-kieliasiantuntijoille/,1,TBD,High-relevance query for Finnish translators and FM language graduates
+fi,suomen kielen oikoluku ja tekoälyarviointi,language-hub,informational,hub,/fi/tekoalytyo-kieliasiantuntijoille/,2,TBD,Targets Finnish syntax and audio evaluation specialists
+fi,taloushallinnon asiantuntija sivutyö etänä,finance-hub,commercial,hub,/fi/tekoalytyo-talousasiantuntijoille/,1,TBD,Primary Finnish keyword for Finance Expert hub
+fi,ekonomi sivutyö kotoa,finance-hub,commercial,hub,/fi/tekoalytyo-talousasiantuntijoille/,2,TBD,Targets KTM auditors financial analysts and actuaries in Finland
+fi,yleisasiantuntija tekoälytyö etänä,general-hub,commercial,hub,/fi/tekoalytyo-yleisasiantuntijoille/,1,TBD,Primary Finnish keyword for Generalist Expert hub ($40-70/h)
+fi,kirjoittaminen ja tekstinarviointi etätyö,general-hub,informational,hub,/fi/tekoalytyo-yleisasiantuntijoille/,2,TBD,Targets university graduates and strong writers in Finland
+fi,toiminimi verotus ulkomainen asiakas,finland-tax,informational,spoke,/fi/tekoalytyo-verotus-toiminimi-yel/,1,TBD,Seed keyword for Finnish tax guide covering USD payouts from US client
+fi,YEL raja 2026,finland-tax,informational,spoke,/fi/tekoalytyo-verotus-toiminimi-yel/,1,TBD,Seed keyword addressing YEL pension threshold for part-time self-employed contractors
+fi,ulkomailta saatu työkorvaus verotus,finland-tax,informational,spoke,/fi/tekoalytyo-verotus-toiminimi-yel/,1,TBD,Crucial Vero.fi compliance topic for private individuals and toiminimi operators
+fi,laskutuspalvelu vai toiminimi ulkomaille,finland-tax,informational,spoke,/fi/tekoalytyo-verotus-toiminimi-yel/,2,TBD,Explains why US platforms paying via Stripe connects relate to Finnish bookkeeping
+fi,sivutoiminen yrittäjä työttömyysturva,finland-benefits,informational,spoke,/fi/tekoalytyo-ja-tyottomyysturva/,1,TBD,Primary keyword for Finnish unemployment benefits & contractor status spoke
+fi,kevytyrittäjä ja soviteltu päiväraha,finland-benefits,informational,spoke,/fi/tekoalytyo-ja-tyottomyysturva/,2,TBD,Addresses Kela and unemployment fund (kassa/TYJ) entrepreneur definitions
+fi,mercor kokemuksia,mercor-brand,commercial,spoke,/fi/mercor-kokemuksia-arvostelu/,1,TBD,Seed keyword for Finnish first-person honest review of Mercor
+fi,mercor suomi,mercor-brand,navigational,home,/fi/,1,TBD,Seed keyword for Finnish visitors researching Mercor opportunities in Finland
+fi,onko mercor luotettava,mercor-brand,informational,spoke,/fi/mercor-kokemuksia-arvostelu/,1,TBD,Trust and legitimacy query in Finnish
+fi,mercor tekoälyhaastattelu kokemuksia,mercor-interview,informational,spoke,/fi/mercor-tekoalyhaastattelu-opas/,1,TBD,Primary Finnish keyword for Mercor AI video interview preparation guide
+fi,mercor vs outlier kokemuksia,platform-comparison,commercial,spoke,/fi/mercor-vs-outlier-vs-micro1-vertailu/,1,TBD,Primary Finnish keyword comparing Mercor Outlier and micro1
+fi,tekoälytyö huijaus tunnistaminen,scam-prevention,informational,spoke,/fi/huijausilmoitukset-tekoalytyo-tunnistaminen/,2,TBD,Primary Finnish keyword on spotting fake WhatsApp/Telegram task scams
+fi,mitä on rlhf ja tekoälyn arviointi,glossary-evals,informational,spoke,/fi/tekoalykoulutuksen-sanasto-rlhf-evals/,3,TBD,Finnish glossary spoke keyword
+fi,mercor palkkiot ja avoimet tehtävät,mercor-brand,informational,spoke,/fi/avoimet-tekoalypoolit-ja-seuranta/,2,TBD,Maps to Finnish Open Pools & Rate Ledger spoke
+fi,mercor suosittelulinkki,mercor-brand,navigational,faq,/fi/how-it-works/,3,TBD,Explains referral disclosure transparently in Finnish
+fi,helppoa rahaa netistä ilman osaamista,excluded-spam,informational,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: spammy get-rich-quick intent incompatible with expert AI evaluation
+fi,varma passiivinen tulo tekoälyllä,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: misleading income expectation; contract hours are never guaranteed
+sv,AI-träning jobb,general-ai-work,commercial,home,/sv/,1,TBD,Primary Swedish seed keyword for remote AI training roles in Norden
+sv,distansjobb AI,general-ai-work,commercial,home,/sv/,1,TBD,Swedish seed keyword for remote AI contract work
+sv,extrajobb hemifrån,general-ai-work,informational,directory,/sv/roles/,2,TBD,Swedish seed keyword for flexible side work from home
+sv,jobba med AI på distans,general-ai-work,commercial,home,/sv/,1,TBD,Swedish seed keyword targeting remote AI evaluation contractors
+sv,mercor erfarenheter,mercor-brand,commercial,spoke,/sv/mercor-erfarenheter-omdome/,1,TBD,Swedish seed keyword for independent Mercor review spoke (needs native review)
+sv,är mercor seriöst,mercor-brand,informational,spoke,/sv/mercor-erfarenheter-omdome/,1,TBD,Swedish legitimacy and trust query
+sv,mercor lön och arvode,mercor-brand,informational,spoke,/sv/oppna-ai-pooler-och-arvoden/,2,TBD,Swedish query for posted USD hourly pay ranges
+sv,mercor AI-intervju tips,mercor-interview,informational,spoke,/sv/mercor-ai-intervju-guide/,2,TBD,Swedish guide to Mercor's automated video interview
+sv,mercor vs outlier svenska,platform-comparison,commercial,spoke,/sv/mercor-vs-outlier-vs-micro1-jamforelse/,2,TBD,Swedish comparison between Mercor Outlier and micro1
+sv,AI-jobb för jurister på distans,law-hub,commercial,hub,/sv/ai-traning-for-jurister/,1,TBD,Swedish Legal Expert hub target keyword ($100-150/h and $60-150/h)
+sv,extrajobb jurist hemifrån,law-hub,commercial,hub,/sv/ai-traning-for-jurister/,2,TBD,Targets jur.kand. and legal compliance specialists in Sweden and Finland
+sv,juridisk AI-utvärdering konsult,law-hub,informational,hub,/sv/ai-traning-for-jurister/,2,TBD,Secondary Swedish legal hub query
+sv,AI-jobb för läkare på distans,medicine-hub,commercial,hub,/sv/ai-traning-for-lakare/,1,TBD,Swedish Medical Expert hub target keyword ($60-180/h)
+sv,distansjobb för läkare och sjuksköterskor,medicine-hub,commercial,hub,/sv/ai-traning-for-lakare/,2,TBD,Targets licensed clinicians in Sweden and Swedish-speaking Finland
+sv,medicinsk AI-granskning uppdrag,medicine-hub,informational,hub,/sv/ai-traning-for-lakare/,2,TBD,Secondary Swedish medical hub query
+sv,AI-träning jobb för systemutvecklare,tech-hub,commercial,hub,/sv/ai-traning-for-mjukvaruutvecklare/,1,TBD,Swedish Software Engineering Expert hub target keyword ($70-150/h)
+sv,frilansuppdrag programmerare AI RLHF,tech-hub,commercial,hub,/sv/ai-traning-for-mjukvaruutvecklare/,2,TBD,Targets Swedish software engineers evaluating code
+sv,kalkylblad och kontorsprogram AI-expert,tech-hub,commercial,hub,/sv/ai-traning-for-mjukvaruutvecklare/,3,TBD,Covers Office & Productivity Software Expert pool ($60-70/h)
+sv,AI-jobb för översättare och lingvister,language-hub,commercial,hub,/sv/ai-traning-for-sprakexperter/,1,TBD,Swedish Language & Audio Expert hub target keyword ($35-50/h)
+sv,språkgranskare AI distansjobb,language-hub,commercial,hub,/sv/ai-traning-for-sprakexperter/,2,TBD,Targets multilingual translators and audio specialists
+sv,finlandssvensk språkexpert distansjobb,language-hub,commercial,hub,/sv/ai-traning-for-sprakexperter/,2,TBD,Targets bilingual Swedish-Finnish specialists in Finland
+sv,AI-jobb för ekonomer och revisorer,finance-hub,commercial,hub,/sv/ai-traning-for-ekonomer/,1,TBD,Swedish Finance Expert hub target keyword
+sv,extrajobb ekonom distans AI,finance-hub,commercial,hub,/sv/ai-traning-for-ekonomer/,2,TBD,Targets finance audit and actuarial specialists
+sv,AI-tränare generalist distansjobb,general-hub,commercial,hub,/sv/ai-traning-for-generalister/,1,TBD,Swedish Generalist Expert hub target keyword ($40-70/h)
+sv,utvärdera AI-texter hemifrån,general-hub,informational,hub,/sv/ai-traning-for-generalister/,2,TBD,Targets strong writers and academic generalists
+sv,skatt på inkomst från amerikanskt företag skatteverket,finland-tax,informational,spoke,/sv/ai-traning-skatt-och-egenforetagande/,1,TBD,Covers Swedish Skatteverket F-skatt and Finnish Vero rules in Swedish
+sv,fakturera utländsk uppdragsgivare i USD,finland-tax,informational,spoke,/sv/ai-traning-skatt-och-egenforetagande/,2,TBD,Addresses Stripe USD payouts and tax declarations
+sv,uppdragstagare och a-kassa regler,finland-benefits,informational,spoke,/sv/ai-traning-och-arbetsloshetsersattning/,2,TBD,Covers unemployment insurance implications for side contracts
+sv,bluffjobb AI whatsapp telegram varning,scam-prevention,informational,spoke,/sv/avsloja-falska-ai-jobb-bedragerier/,2,TBD,Swedish guide to spotting fake AI job scams
+sv,vad är RLHF och AI-utvärdering,glossary-evals,informational,spoke,/sv/ai-traning-ordlista-rlhf-evals/,3,TBD,Swedish AI evaluation glossary keyword
+sv,hur fungerar mercor utbetalning stripe,mercor-brand,informational,faq,/sv/how-it-works/,2,TBD,Maps to existing Swedish How It Works & FAQ page
+sv,lediga uppdrag AI-träning,general-ai-work,commercial,directory,/sv/roles/,1,TBD,Maps to existing Swedish Open Roles directory
+sv,utvärdera språkmodeller på distans,general-ai-work,informational,home,/sv/,2,TBD,Informational Swedish query on LLM evaluation
+sv,frilansjobb för akademiker på distans,general-ai-work,commercial,directory,/sv/roles/,2,TBD,Targets credentialed Nordic graduates
+sv,snabba pengar online utan erfarenhet,excluded-spam,informational,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: low-quality get-rich-quick query incompatible with expert vetting
+sv,garanterad inkomst hemifrån AI,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: misleading income guarantee; hours and projects are never guaranteed
+sv,automatisk passiv inkomst AI-bot,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: unrelated crypto/bot spam intent
+sv,mercor värvningslänk information,mercor-brand,navigational,faq,/sv/how-it-works/,3,TBD,Transparently explains referral code disclosure in Swedish
+sv,oberoende guide till mercor norden,mercor-brand,informational,home,/sv/,3,TBD,Brand/editorial positioning query in Swedish
+sv,egenföretagare YEL och F-skatt AI-uppdrag,finland-tax,informational,spoke,/sv/ai-traning-skatt-och-egenforetagande/,2,TBD,Bridges Finland-Swedish (YEL/Vero) and Sweden (F-skatt) tax guidance
+de,KI-Trainer Job remote,general-ai-work,commercial,home,/de/,1,TBD,Primary German seed keyword for remote AI training contractor work
+de,KI Training Nebenjob,general-ai-work,commercial,directory,/de/roles/,1,TBD,German seed keyword for side-income AI evaluation contracts
+de,Nebenjob von zu Hause Akademiker,general-ai-work,commercial,directory,/de/roles/,1,TBD,German seed keyword targeting credentialed university graduates
+de,Jurist Nebenjob KI,law-hub,commercial,hub,/de/ki-training-fuer-juristen/,1,TBD,German seed keyword for Legal Expert hub ($100-150/h and $60-150/h)
+de,Mercor Erfahrungen,mercor-brand,commercial,spoke,/de/mercor-erfahrungen-bewertung/,1,TBD,German seed keyword for independent Mercor review spoke (needs native review)
+de,Mercor seriös,mercor-brand,informational,spoke,/de/mercor-erfahrungen-bewertung/,1,TBD,German seed keyword addressing legitimacy and contractor structure
+de,KI Modelle trainieren Geld verdienen seriös,general-ai-work,informational,home,/de/,2,TBD,High-intent German query requiring clear non-guarantee and tax context
+de,Remote Job für Rechtsanwälte KI,law-hub,commercial,hub,/de/ki-training-fuer-juristen/,1,TBD,Targets licensed German/Austrian/Swiss lawyers and Volljuristen
+de,Wirtschaftsjurist Freelance KI Bewertung,law-hub,commercial,hub,/de/ki-training-fuer-juristen/,2,TBD,Targets LL.B./LL.M. and compliance specialists ($60-150/h pool)
+de,KI-Training Jobs für Ärzte Remote,medicine-hub,commercial,hub,/de/ki-training-fuer-aerzte/,1,TBD,Primary German keyword for Medical Expert hub ($60-180/h)
+de,Arzt Nebenjob Homeoffice Medizinische KI,medicine-hub,commercial,hub,/de/ki-training-fuer-aerzte/,1,TBD,Targets physicians pharmacists and clinical specialists in DACH
+de,Medizinische Textbewertung Honorararzt Remote,medicine-hub,informational,hub,/de/ki-training-fuer-aerzte/,2,TBD,Secondary medical AI evaluation keyword in German
+de,KI-Trainer Softwareentwickler Freelance,tech-hub,commercial,hub,/de/ki-training-fuer-softwareentwickler/,1,TBD,Primary German keyword for Software Engineering Expert hub ($70-150/h)
+de,Programmierer RLHF Code Bewertung Remote,tech-hub,commercial,hub,/de/ki-training-fuer-softwareentwickler/,2,TBD,Targets DACH software engineers evaluating LLM code generation
+de,Excel und Office Experte Remote Auftrag,tech-hub,commercial,hub,/de/ki-training-fuer-softwareentwickler/,2,TBD,Covers Office & Productivity Software Expert pool ($60-70/h)
+de,KI-Jobs für Übersetzer und Linguisten,language-hub,commercial,hub,/de/ki-training-fuer-sprachexperten/,1,TBD,Primary German keyword for Language & Audio Expert hub ($35-50/h)
+de,Sprachexperte Audio Bewertung Homeoffice,language-hub,commercial,hub,/de/ki-training-fuer-sprachexperten/,2,TBD,Targets multilingual linguists residing in DACH
+de,KI-Training für Finanzexperten und Wirtschaftsprüfer,finance-hub,commercial,hub,/de/ki-training-fuer-finanzexperten/,1,TBD,Primary German keyword for Finance Expert hub
+de,Steuerberater und Analyst Nebenjob KI,finance-hub,commercial,hub,/de/ki-training-fuer-finanzexperten/,2,TBD,Targets corporate finance audit and actuarial specialists
+de,KI-Trainer Generalist Texterstellung Remote,general-hub,commercial,hub,/de/ki-training-fuer-generalisten/,1,TBD,Primary German keyword for Generalist Expert hub ($40-70/h)
+de,Sprachmodelle bewerten Quereinsteiger Akademiker,general-hub,informational,hub,/de/ki-training-fuer-generalisten/,2,TBD,Targets strong analytical writers without clinical/bar licenses
+de,Mercor KI-Interview Tipps und Ablauf,mercor-interview,informational,spoke,/de/mercor-ki-interview-leitfaden/,1,TBD,German guide to Mercor's automated video interview
+de,Mercor vs Outlier vs micro1 Vergleich,platform-comparison,commercial,spoke,/de/mercor-vs-outlier-vs-micro1-vergleich/,1,TBD,German comparison of major AI training contractor platforms
+de,US-Auftraggeber Steuern Freiberufler Finanzamt,finland-tax,informational,spoke,/de/ki-training-steuern-freiberufler-gewerbe/,1,TBD,Addresses German Finanzamt Freiberufler vs Gewerbe rules for USD payouts
+de,Stripe Auszahlung USD versteuern Deutschland,finland-tax,informational,spoke,/de/ki-training-steuern-freiberufler-gewerbe/,2,TBD,Covers invoicing and foreign currency income reporting in Germany
+de,Nebenverdienst Selbstständig Arbeitslosengeld Agentur für Arbeit,finland-benefits,informational,spoke,/de/ki-training-und-arbeitslosengeld/,2,TBD,Covers Bundesagentur für Arbeit side-income rules (165 EUR Freibetrag / 15h rule)
+de,Fake KI-Jobs erkennen WhatsApp Telegram Betrug,scam-prevention,informational,spoke,/de/falsche-ki-job-betrugsmaschen-erkennen/,2,TBD,German scam awareness guide for remote job seekers
+de,Was ist RLHF und KI-Evaluation Glossar,glossary-evals,informational,spoke,/de/ki-training-glossar-rlhf-evals/,3,TBD,German glossary spoke explaining RLHF and evaluation rubrics
+de,Mercor Stundensätze und offene Projekte,mercor-brand,informational,spoke,/de/offene-ki-pools-und-stundensaetze/,2,TBD,Maps to German Open Pools & Rate Ledger spoke
+de,Wie funktioniert Mercor Auszahlung,mercor-brand,informational,faq,/de/how-it-works/,2,TBD,Maps to existing German How It Works & FAQ page
+de,Offene KI-Expertenrollen Europa,general-ai-work,commercial,directory,/de/roles/,1,TBD,Maps to existing German Open Roles directory
+de,Honorartätigkeit KI Bewertung Europa,general-ai-work,informational,home,/de/,2,TBD,Targets European independent contractors speaking German
+de,Mercor Empfehlungslink Hinweis,mercor-brand,navigational,faq,/de/how-it-works/,3,TBD,Explains WERBUNG / referral disclosure transparently
+de,KI Datenannotation für Fachkräfte,general-ai-work,commercial,directory,/de/roles/,2,TBD,Professional domain annotation keyword in German
+de,Freiberufler Remote Aufträge USA annehmen,finland-tax,informational,spoke,/de/ki-training-steuern-freiberufler-gewerbe/,2,TBD,Cross-border US client contracting query
+de,schnelles Geld verdienen im Internet ohne Arbeit,excluded-spam,informational,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: spammy get-rich-quick intent incompatible with specialist AI evaluation
+de,garantiertes Einkommen mit KI Heimarbeit,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: violates factual rules because contractor hours are never guaranteed
+de,passives Einkommen KI Bot Autopilot,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: unrelated crypto/trading bot query
+de,DataAnnotation vs Mercor Erfahrungen Deutsch,platform-comparison,commercial,spoke,/de/mercor-vs-outlier-vs-micro1-vergleich/,2,TBD,Secondary German comparison query
+de,KI-Modelle testen auf Honorarbasis,general-ai-work,commercial,home,/de/,2,TBD,Freelance fee-based AI testing query in German
+fr,entraîneur IA télétravail,general-ai-work,commercial,home,/fr/,1,TBD,Primary French seed keyword for remote AI trainer roles
+fr,annotation IA emploi à distance,general-ai-work,commercial,directory,/fr/roles/,1,TBD,French seed keyword for remote AI data annotation and evaluation
+fr,juriste freelance IA,law-hub,commercial,hub,/fr/entrainement-ia-pour-juristes/,1,TBD,French seed keyword for Legal Expert hub ($100-150/h and $60-150/h)
+fr,Mercor avis,mercor-brand,commercial,spoke,/fr/mercor-avis-fiabilite/,1,TBD,French seed keyword for independent Mercor review spoke (needs native review)
+fr,Mercor arnaque,mercor-brand,informational,spoke,/fr/mercor-avis-fiabilite/,1,TBD,French seed keyword addressing scam concerns and contractor facts
+fr,mission freelance entraînement IA Europe,general-ai-work,commercial,home,/fr/,1,TBD,Targets French-speaking independent contractors in France Belgium and Europe
+fr,complément de revenu cadre télétravail IA,general-ai-work,informational,directory,/fr/roles/,2,TBD,Targets credentialed professionals seeking flexible remote tasks
+fr,avocat mission à distance intelligence artificielle,law-hub,commercial,hub,/fr/entrainement-ia-pour-juristes/,1,TBD,Targets licensed avocats and Master en droit graduates
+fr,évaluation juridique modèles IA freelance,law-hub,informational,hub,/fr/entrainement-ia-pour-juristes/,2,TBD,Secondary French legal hub keyword
+fr,emploi IA à distance pour médecins,medicine-hub,commercial,hub,/fr/entrainement-ia-pour-medecins/,1,TBD,Primary French keyword for Medical Expert hub ($60-180/h)
+fr,médecin pharmacien mission télétravail IA,medicine-hub,commercial,hub,/fr/entrainement-ia-pour-medecins/,2,TBD,Targets French-speaking doctors pharmacists nurses and dentists
+fr,évaluation médicale intelligence artificielle,medicine-hub,informational,hub,/fr/entrainement-ia-pour-medecins/,2,TBD,Secondary French medical hub keyword
+fr,développeur freelance entraînement IA RLHF,tech-hub,commercial,hub,/fr/entrainement-ia-pour-developpeurs/,1,TBD,Primary French keyword for Software Engineering Expert hub ($70-150/h)
+fr,ingénieur logiciel évaluation de code IA,tech-hub,commercial,hub,/fr/entrainement-ia-pour-developpeurs/,2,TBD,Targets software engineers evaluating code benchmarks
+fr,expert Excel bureautique mission IA à distance,tech-hub,commercial,hub,/fr/entrainement-ia-pour-developpeurs/,2,TBD,Covers Office & Productivity Software Expert pool ($60-70/h)
+fr,emploi IA pour traducteurs et linguistes français,language-hub,commercial,hub,/fr/entrainement-ia-pour-linguistes/,1,TBD,Primary French keyword for Language & Audio Expert hub ($35-50/h)
+fr,évaluateur linguistique et audio français télétravail,language-hub,commercial,hub,/fr/entrainement-ia-pour-linguistes/,1,TBD,High-relevance query since French is explicitly listed in Language & Audio pool
+fr,correcteur rédacteur français entraînement IA,language-hub,commercial,hub,/fr/entrainement-ia-pour-linguistes/,2,TBD,Targets native French linguists and translators
+fr,mission IA finance audit comptabilité à distance,finance-hub,commercial,hub,/fr/entrainement-ia-pour-experts-financiers/,1,TBD,Primary French keyword for Finance Expert hub
+fr,analyste financier freelance intelligence artificielle,finance-hub,commercial,hub,/fr/entrainement-ia-pour-experts-financiers/,2,TBD,Targets corporate finance audit and actuarial specialists
+fr,évaluateur IA généraliste rédaction télétravail,general-hub,commercial,hub,/fr/entrainement-ia-pour-generalistes/,1,TBD,Primary French keyword for Generalist Expert hub ($40-70/h)
+fr,tester des modèles IA à domicile sans diplôme médical,general-hub,informational,hub,/fr/entrainement-ia-pour-generalistes/,2,TBD,Targets strong French/English readers and writers
+fr,entretien vidéo IA Mercor conseils,mercor-interview,informational,spoke,/fr/guide-entretien-ia-mercor/,1,TBD,French guide to Mercor's automated video interview
+fr,Mercor vs Outlier vs micro1 comparatif,platform-comparison,commercial,spoke,/fr/mercor-vs-outlier-vs-micro1-comparatif/,1,TBD,French comparison of AI training platforms
+fr,micro-entrepreneur facturer client américain USD URSSAF,finland-tax,informational,spoke,/fr/fiscalite-urssaf-impots-entrainement-ia/,1,TBD,Addresses French URSSAF micro-entreprise and impots.gouv.fr rules for US clients
+fr,déclarer revenus Stripe en dollars auto-entrepreneur,finland-tax,informational,spoke,/fr/fiscalite-urssaf-impots-entrainement-ia/,2,TBD,Practical tax compliance query for French independent contractors
+fr,cumul ARE France Travail et revenus auto-entrepreneur,finland-benefits,informational,spoke,/fr/entrainement-ia-et-allocations-chomage/,2,TBD,Addresses France Travail unemployment benefit rules for side income
+fr,reconnaître fausses offres emploi IA WhatsApp Telegram,scam-prevention,informational,spoke,/fr/reperer-arnaques-faux-emplois-ia/,2,TBD,French guide to spotting fake task scams
+fr,lexique RLHF évaluation IA rubriques,glossary-evals,informational,spoke,/fr/glossaire-entrainement-ia-rlhf-evals/,3,TBD,French glossary spoke explaining RLHF and rubrics
+fr,tarifs horaires Mercor et missions ouvertes,mercor-brand,informational,spoke,/fr/registre-missions-ia-et-tarifs/,2,TBD,Maps to French Open Pools & Rate Ledger spoke
+fr,comment fonctionne le paiement Mercor Stripe,mercor-brand,informational,faq,/fr/how-it-works/,2,TBD,Maps to existing French How It Works & FAQ page
+fr,rôles ouverts entraînement IA Europe,general-ai-work,commercial,directory,/fr/roles/,1,TBD,Maps to existing French Open Roles directory
+fr,lien de parrainage Mercor explication,mercor-brand,navigational,faq,/fr/how-it-works/,3,TBD,Explains PUBLICITÉ / referral link disclosure transparently
+fr,évaluation de LLM par des experts humains,general-ai-work,informational,home,/fr/,2,TBD,Editorial topic query in French
+fr,missions freelance internationales en dollars,finland-tax,informational,spoke,/fr/fiscalite-urssaf-impots-entrainement-ia/,3,TBD,Cross-border contracting query in French
+fr,DataAnnotation vs Mercor avis France,platform-comparison,commercial,spoke,/fr/mercor-vs-outlier-vs-micro1-comparatif/,2,TBD,Secondary platform comparison query in French
+fr,argent facile sur internet sans compétence,excluded-spam,informational,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: low-quality get-rich-quick query incompatible with expert vetting
+fr,revenu passif garanti intelligence artificielle,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: misleading income guarantee; contractor work is never guaranteed
+fr,gagner de l'argent automatiquement avec un bot IA,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: unrelated crypto/bot spam intent
+fr,travail à domicile payé d'avance sans entretien,excluded-spam,informational,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: high scam-risk intent that does not match credentialed vetting
+es,entrenador de IA remoto,general-ai-work,commercial,home,/es/,1,TBD,Primary Spanish seed keyword for remote AI trainer contractor roles
+es,trabajo anotación de datos IA,general-ai-work,commercial,directory,/es/roles/,1,TBD,Spanish seed keyword for remote AI data annotation and evaluation
+es,abogado trabajo IA remoto,law-hub,commercial,hub,/es/entrenamiento-ia-para-abogados/,1,TBD,Spanish seed keyword for Legal Expert hub ($100-150/h and $60-150/h)
+es,Mercor opiniones,mercor-brand,commercial,spoke,/es/mercor-opiniones-es-fiable/,1,TBD,Spanish seed keyword for independent Mercor review spoke (needs native review)
+es,Mercor es fiable,mercor-brand,informational,spoke,/es/mercor-opiniones-es-fiable/,1,TBD,Spanish seed keyword addressing platform legitimacy and terms
+es,trabajos remotos de inteligencia artificial en Europa,general-ai-work,commercial,home,/es/,1,TBD,Targets Spanish-speaking specialists in Spain and across the EU
+es,ingresos extra desde casa para profesionales,general-ai-work,informational,directory,/es/roles/,2,TBD,Targets credentialed degree-holders seeking flexible remote contracts
+es,evaluador jurídico de IA freelance,law-hub,commercial,hub,/es/entrenamiento-ia-para-abogados/,2,TBD,Targets licensed lawyers and legal compliance professionals
+es,trabajo remoto para juristas y expertos en cumplimiento,law-hub,commercial,hub,/es/entrenamiento-ia-para-abogados/,2,TBD,Covers the $60-150/h Legal Expert pool in Spanish
+es,trabajo de entrenamiento de IA para médicos,medicine-hub,commercial,hub,/es/entrenamiento-ia-para-medicos/,1,TBD,Primary Spanish keyword for Medical Expert hub ($60-180/h)
+es,médico trabajo remoto evaluación clínica IA,medicine-hub,commercial,hub,/es/entrenamiento-ia-para-medicos/,1,TBD,Targets doctors nurses dentists and pharmacists in Spain/Europe
+es,revisión médica de modelos de lenguaje desde casa,medicine-hub,informational,hub,/es/entrenamiento-ia-para-medicos/,2,TBD,Secondary Spanish medical hub query
+es,trabajo IA remoto para ingenieros de software,tech-hub,commercial,hub,/es/entrenamiento-ia-para-ingenieros-de-software/,1,TBD,Primary Spanish keyword for Software Engineering Expert hub ($70-150/h)
+es,programador freelance evaluación de código RLHF,tech-hub,commercial,hub,/es/entrenamiento-ia-para-ingenieros-de-software/,2,TBD,Targets software developers evaluating code models
+es,experto en hojas de cálculo y ofimática trabajo IA,tech-hub,commercial,hub,/es/entrenamiento-ia-para-ingenieros-de-software/,2,TBD,Covers Office & Productivity Software Expert pool ($60-70/h)
+es,trabajo IA remoto para traductores y lingüistas,language-hub,commercial,hub,/es/entrenamiento-ia-para-expertos-en-idiomas/,1,TBD,Primary Spanish keyword for Language & Audio Expert hub ($35-50/h)
+es,evaluador de español y audio inteligencia artificial,language-hub,commercial,hub,/es/entrenamiento-ia-para-expertos-en-idiomas/,1,TBD,High-relevance query since Spanish is explicitly listed in Language & Audio pool
+es,corrector y lingüista español trabajo desde casa IA,language-hub,commercial,hub,/es/entrenamiento-ia-para-expertos-en-idiomas/,2,TBD,Targets native Spanish linguists and audio evaluators
+es,trabajo IA para expertos en finanzas y auditoría,finance-hub,commercial,hub,/es/entrenamiento-ia-para-expertos-en-finanzas/,1,TBD,Primary Spanish keyword for Finance Expert hub
+es,analista financiero y contable freelance IA,finance-hub,commercial,hub,/es/entrenamiento-ia-para-expertos-en-finanzas/,2,TBD,Targets corporate finance accounting and actuarial professionals
+es,entrenador de IA generalista redacción remoto,general-hub,commercial,hub,/es/entrenamiento-ia-para-generalistas/,1,TBD,Primary Spanish keyword for Generalist Expert hub ($40-70/h)
+es,evaluar textos de inteligencia artificial desde casa,general-hub,informational,hub,/es/entrenamiento-ia-para-generalistas/,2,TBD,Targets strong bilingual readers and writers
+es,consejos entrevista de vídeo con IA de Mercor,mercor-interview,informational,spoke,/es/guia-entrevista-ia-mercor/,1,TBD,Spanish guide to Mercor's automated video interview
+es,Mercor vs Outlier vs micro1 comparativa,platform-comparison,commercial,spoke,/es/mercor-vs-outlier-vs-micro1-comparativa/,1,TBD,Spanish comparison of remote AI contractor platforms
+es,autónomo facturar a empresa de EE. UU. Agencia Tributaria,finland-tax,informational,spoke,/es/impuestos-autonomos-entrenamiento-ia-espana/,1,TBD,Addresses Spanish Agencia Tributaria and Seguridad Social RETA rules for US clients
+es,declarar ingresos en dólares por Stripe en España,finland-tax,informational,spoke,/es/impuestos-autonomos-entrenamiento-ia-espana/,2,TBD,Practical tax compliance query for contractors in Spain
+es,compatibilizar paro SEPE con trabajo autónomo puntual,finland-benefits,informational,spoke,/es/entrenamiento-ia-y-prestacion-por-desempleo/,2,TBD,Addresses Spanish SEPE unemployment rules and RETA registration
+es,cómo detectar ofertas falsas de trabajo IA en WhatsApp,scam-prevention,informational,spoke,/es/como-detectar-estafas-trabajos-ia-falsos/,2,TBD,Spanish guide to spotting fake task scams
+es,qué es RLHF y evaluación de modelos IA glosario,glossary-evals,informational,spoke,/es/glosario-entrenamiento-ia-rlhf-evals/,3,TBD,Spanish glossary spoke explaining RLHF and evaluation rubrics
+es,tarifas por hora de Mercor y grupos abiertos,mercor-brand,informational,spoke,/es/registro-grupos-ia-abiertos-y-tarifas/,2,TBD,Maps to Spanish Open Pools & Rate Ledger spoke
+es,cómo funciona el pago de Mercor por Stripe,mercor-brand,informational,faq,/es/how-it-works/,2,TBD,Maps to existing Spanish How It Works & FAQ page
+es,puestos abiertos entrenamiento de IA Europa,general-ai-work,commercial,directory,/es/roles/,1,TBD,Maps to existing Spanish Open Roles directory
+es,enlace de referido Mercor información transparente,mercor-brand,navigational,faq,/es/how-it-works/,3,TBD,Explains PUBLICIDAD / referral link disclosure transparently
+es,evaluación humana de modelos lingüísticos en español,general-ai-work,informational,home,/es/,2,TBD,Editorial positioning query in Spanish
+es,comparativa Outlier vs DataAnnotation vs Mercor español,platform-comparison,commercial,spoke,/es/mercor-vs-outlier-vs-micro1-comparativa/,2,TBD,Secondary Spanish comparison query
+es,obligaciones fiscales cliente extranjero sin IVA ROI,finland-tax,informational,spoke,/es/impuestos-autonomos-entrenamiento-ia-espana/,3,TBD,Spanish non-EU B2B invoicing query
+es,dinero fácil por internet sin experiencia,excluded-spam,informational,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: spammy get-rich-quick intent incompatible with expert AI evaluation
+es,ingresos pasivos garantizados con inteligencia artificial,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: violates factual rules because contractor hours and earnings are never guaranteed
+es,ganar dinero automático con robots de IA,excluded-spam,commercial,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: unrelated crypto/trading bot spam query
+es,trabajo desde casa cobrando por adelantado sin entrevista,excluded-spam,informational,EXCLUDE,EXCLUDE,EXCLUDE,TBD,Excluded: scam-prone search intent incompatible with credentialed contractor vetting

@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RoleCard, { type RoleEntry } from '../RoleCard.astro';
+import AuthorBox from '../AuthorBox.astro';
+import rolesRaw from '../../data/roles.json';
+import { buildGoUrl } from '../../config';
+import {
+  AUDIENCE_SLUGS,
+  getDictionary,
+  getPagePath,
+  getAudiencePath,
+  interpolate,
+  type Lang,
+} from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+const roles = rolesRaw as RoleEntry[];
+const featuredRoles = [...roles]
+  .sort((a, b) => b.maxPay - a.maxPay || b.minPay - a.minPay)
+  .slice(0, 4);
+
+const generalReferralHref = buildGoUrl('general-portal', 'home');
+
+const audienceChoices = AUDIENCE_SLUGS.map((slug) => {
+  const matchingCount = roles.filter((r) => r.audiences.includes(slug)).length;
+  const countLabel =
+    matchingCount === 1
+      ? interpolate(t.home.roleCountSingular, { count: matchingCount })
+      : interpolate(t.home.roleCountPlural, { count: matchingCount });
+  return {
+    slug,
+    shortChoice: t.audiences[slug].shortChoice,
+    description: t.audiences[slug].description,
+    countLabel,
+    href: getAudiencePath(lang, slug),
+  };
+});
+---
+
+<BaseLayout
+  lang={lang}
+  page="home"
+  title={t.home.metaTitle}
+  description={t.home.metaDescription}
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">{t.home.eyebrow}</span>
+      <h1>{t.home.heroTitle}</h1>
+      <p class="lead">{t.home.heroLead}</p>
+      <div class="btn-group">
+        <a href={getPagePath(lang, 'roles')} class="btn btn--primary">
+          {t.common.viewAllRoles}
+        </a>
+        <a href={getPagePath(lang, 'how-it-works')} class="btn btn--secondary">
+          {t.common.readHowItWorks}
+        </a>
+      </div>
+
+      <div class="audience-selector" aria-labelledby="i-work-in-heading">
+        <h2 id="i-work-in-heading" class="audience-selector__label">
+          {t.home.iWorkInLabel}
+        </h2>
+        <div class="audience-choices-grid">
+          {
+            audienceChoices.map((item) => (
+              <a href={item.href} class="audience-choice">
+                <div class="audience-choice__top">
+                  <span class="audience-choice__title">{item.shortChoice}</span>
+                  <span class="audience-choice__badge">{item.countLabel}</span>
+                </div>
+                <span class="audience-choice__desc">{item.description}</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="reality-heading">
+    <div class="container">
+      <h2 id="reality-heading">{t.home.realityHeading}</h2>
+      <p>{t.home.realityIntro}</p>
+      <div class="facts-grid">
+        {
+          t.home.realityPoints.map((pt) => (
+            <article class="fact-card">
+              <h3 class="fact-card__title">{pt.title}</h3>
+              <p class="fact-card__body">{pt.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="featured-roles-heading">
+    <div class="container">
+      <h2 id="featured-roles-heading">{t.home.featuredHeading}</h2>
+      <p>{t.home.featuredSub}</p>
+      <div class="roles-grid">
+        {
+          featuredRoles.map((role) => (
+            <RoleCard role={role} lang={lang} src="home" headingLevel="h3" />
+          ))
+        }
+      </div>
+      <div class="btn-group" style="margin-top: var(--space-8);">
+        <a href={getPagePath(lang, 'roles')} class="btn btn--secondary">
+          {t.common.viewAllRoles}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--compact" aria-labelledby="general-cta-heading">
+    <div class="container">
+      <h2 id="general-cta-heading">{t.home.generalCtaHeading}</h2>
+      <p>{t.home.generalCtaBody}</p>
+      <div class="role-card__apply-wrap">
+        <a
+          href={generalReferralHref}
+          target="_blank"
+          rel="sponsored noopener noreferrer"
+          class="btn btn--primary"
+        >
+          <span>{t.common.generalApplyButton}</span>
+          <span class="sr-only"> {t.common.externalLinkSr}</span>
+        </a>
+        <span class="referral-micro">{t.common.referralMicroLabel}</span>
+      </div>
+
+      <AuthorBox lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

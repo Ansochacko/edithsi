@@ -1,0 +1,16 @@
+---
+// Review with a lawyer before launch
+import LegalView from '../../components/views/LegalView.astro';
+import { NON_DEFAULT_LANGUAGES, type Lang } from '../../i18n';
+
+export function getStaticPaths() {
+  return NON_DEFAULT_LANGUAGES.map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params as { lang: Lang };
+---
+
+<!-- Review with a lawyer before launch -->
+<LegalView lang={lang} />

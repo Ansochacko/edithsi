@@ -1,0 +1,81 @@
+---
+import { OPERATOR } from '../config';
+import {
+  AUDIENCE_SLUGS,
+  getDictionary,
+  getPagePath,
+  getAudiencePath,
+  interpolate,
+  type Lang,
+} from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+
+const operatorLine = interpolate(t.footer.operatorLine, {
+  name: OPERATOR.name,
+  city: OPERATOR.city,
+  email: OPERATOR.email,
+});
+
+const businessIdLine = OPERATOR.businessId
+  ? interpolate(t.footer.businessIdLine, { businessId: OPERATOR.businessId })
+  : '';
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand-col">
+      <p class="site-footer__disclaimer">{t.footer.trademarkDisclaimer}</p>
+      <p class="site-footer__operator">{operatorLine}</p>
+      {businessIdLine && <p class="site-footer__operator">{businessIdLine}</p>}
+    </div>
+
+    <div class="site-footer__nav-cols">
+      <nav aria-label={t.footer.audiencesHeading}>
+        <span class="site-footer__heading">{t.footer.audiencesHeading}</span>
+        <ul class="site-footer__links">
+          {
+            AUDIENCE_SLUGS.map((slug) => (
+              <li>
+                <a href={getAudiencePath(lang, slug)} class="site-footer__link">
+                  {t.audiences[slug].label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <nav aria-label={t.footer.linksHeading}>
+        <span class="site-footer__heading">{t.footer.linksHeading}</span>
+        <ul class="site-footer__links">
+          <li>
+            <a href={getPagePath(lang, 'roles')} class="site-footer__link">
+              {t.nav.roles}
+            </a>
+          </li>
+          <li>
+            <a href={getPagePath(lang, 'how-it-works')} class="site-footer__link">
+              {t.nav.howItWorks}
+            </a>
+          </li>
+          <li>
+            <a href={getPagePath(lang, 'privacy')} class="site-footer__link">
+              {t.nav.privacy}
+            </a>
+          </li>
+          <li>
+            <a href={getPagePath(lang, 'legal')} class="site-footer__link">
+              {t.nav.legal}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>

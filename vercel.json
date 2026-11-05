@@ -1,0 +1,98 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.edithsi.com"
+        }
+      ],
+      "destination": "https://edithsi.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/go/legal-licensed/:path*",
+      "destination": "https://work.mercor.com/jobs/list_AAABnXhvagXHJt27tM9AQqyk/legal-experts?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
+      "permanent": false
+    },
+    {
+      "source": "/go/legal-general/:path*",
+      "destination": "https://work.mercor.com/jobs/list_AAABoKOQUds_uf4uJMtGK64s/legal-expert?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
+      "permanent": false
+    },
+    {
+      "source": "/go/medical-expert/:path*",
+      "destination": "https://work.mercor.com/jobs/list_AAABoKOPjbVqcleYq1NNjKxo/medical-expert?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
+      "permanent": false
+    },
+    {
+      "source": "/go/software-engineering/:path*",
+      "destination": "https://work.mercor.com/jobs/list_AAABoKOP6g9ZUjU9LdNBCqS7/software-engineering-expert?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
+      "permanent": false
+    },
+    {
+      "source": "/go/office-productivity/:path*",
+      "destination": "https://work.mercor.com/jobs/list_AAABoKOQsxXSV5vKwxhGnL5Z/office-productivity-software-expert?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
+      "permanent": false
+    },
+    {
+      "source": "/go/finance-expert/:path*",
+      "destination": "https://work.mercor.com/jobs/list_AAABoKOQo_tcpjmZ2_xLb7qN/finance-expert?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
+      "permanent": false
+    },
+    {
+      "source": "/go/language-audio/:path*",
+      "destination": "https://work.mercor.com/jobs/list_AAABoKOPMUFnRCU8QMZBH634/language-audio-expert?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
+      "permanent": false
+    },
+    {
+      "source": "/go/generalist-expert/:path*",
+      "destination": "https://work.mercor.com/jobs/list_AAABoKORCF2dakrez4FCAo_G/generalist-expert?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
+      "permanent": false
+    },
+    {
+      "source": "/go/general-portal/:path*",
+      "destination": "https://t.mercor.com/Pq3VD?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

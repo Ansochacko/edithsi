@@ -1,0 +1,84 @@
+---
+import { OPERATOR, CHECKED_ON, SITE_NAME } from '../config';
+import type { Lang } from '../i18n';
+import { getPagePath } from '../i18n';
+
+interface Props {
+  lang: Lang;
+  checkedOn?: string;
+}
+
+const { lang, checkedOn = CHECKED_ON } = Astro.props;
+
+const AUTHOR_COPY: Record<
+  Lang,
+  {
+    heading: string;
+    role: string;
+    bio: string;
+    checkedLabel: string;
+    legalLinkText: string;
+  }
+> = {
+  en: {
+    heading: 'About the author',
+    role: `Independent Mercor Contractor · ${OPERATOR.city}, Finland`,
+    bio: `I am ${OPERATOR.name}, a Finland-based contractor who has gone through Mercor's application and independent contracting workflow first-hand. Because of contractor confidentiality (NDA), I never share internal client project details. I maintain ${SITE_NAME} independently as an honest guide and may earn a referral bonus if you apply through my links and are hired.`,
+    checkedLabel: 'Facts & rates last checked on',
+    legalLinkText: 'Read full advertising & legal disclosure',
+  },
+  fi: {
+    heading: 'Tietoa kirjoittajasta',
+    role: `Itsenäinen Mercor-toimeksiantaja · ${OPERATOR.city}, Suomi`,
+    bio: `Olen ${OPERATOR.name}, Suomessa asuva itsenäinen Mercor-toimeksiantaja. Koska minua sitoo salassapitosopimus (NDA), en koskaan jaa asiakasprojektien sisäisiä tietoja. Ylläpidän ${SITE_NAME}-sivustoa yksin rehellisenä oppaana, ja voin ansaita suosittelupalkkion, jos haet linkkieni kautta ja työllistyt projektiin.`,
+    checkedLabel: 'Tiedot ja palkkiovälit tarkistettu viimeksi',
+    legalLinkText: 'Lue täydellinen mainos- ja oikeudellinen seloste',
+  },
+  sv: {
+    heading: 'Om författaren',
+    role: `Självständig Mercor-uppdragstagare · ${OPERATOR.city}, Finland`,
+    bio: `Jag heter ${OPERATOR.name} och arbetar från Finland som självständig uppdragstagare hos Mercor. På grund av sekretessavtal (NDA) delar jag aldrig interna projektdetaljer. Jag driver ${SITE_NAME} på egen hand och kan få en värvningsbonus om du ansöker via mina länkar och anlitas.`,
+    checkedLabel: 'Uppgifter senast kontrollerade',
+    legalLinkText: 'Läs fullständig reklam- och juridisk information',
+  },
+  de: {
+    heading: 'Über den Autor',
+    role: `Selbstständiger Mercor-Auftragnehmer · ${OPERATOR.city}, Finnland`,
+    bio: `Ich bin ${OPERATOR.name} und arbeite von Finnland aus als selbstständiger Auftragnehmer auf Mercor. Aufgrund von Geheimhaltungsvereinbarungen (NDA) gebe ich keine internen Projektdetails weiter. Ich betreibe ${SITE_NAME} unabhängig und erhalte möglicherweise einen Empfehlungsbonus, wenn Sie über meine Links beauftragt werden.`,
+    checkedLabel: 'Angaben zuletzt geprüft am',
+    legalLinkText: 'Vollständige Werbe- und Rechtshinweise lesen',
+  },
+  fr: {
+    heading: 'À propos de l’auteur',
+    role: `Prestataire indépendant sur Mercor · ${OPERATOR.city}, Finlande`,
+    bio: `Je suis ${OPERATOR.name}, prestataire indépendant basé en Finlande. En raison de mes engagements de confidentialité (NDA), je ne divulgue aucun détail interne sur les projets clients. Je gère ${SITE_NAME} à titre indépendant et peux percevoir une prime de parrainage si votre candidature aboutit.`,
+    checkedLabel: 'Informations vérifiées le',
+    legalLinkText: 'Lire les mentions légales et publicitaires',
+  },
+  es: {
+    heading: 'Sobre el autor',
+    role: `Contratista independiente en Mercor · ${OPERATOR.city}, Finlandia`,
+    bio: `Soy ${OPERATOR.name}, contratista independiente residente en Finlandia. Por acuerdos de confidencialidad (NDA), nunca comparto detalles internos de los proyectos. Gestiono ${SITE_NAME} de forma independiente y puedo recibir una bonificación por referido si te contratan a través de mis enlaces.`,
+    checkedLabel: 'Datos verificados por última vez el',
+    legalLinkText: 'Leer aviso legal y publicitario completo',
+  },
+};
+
+const copy = AUTHOR_COPY[lang];
+---
+
+<aside class="author-box" aria-label={copy.heading}>
+  <div class="author-box__header">
+    <div>
+      <span class="author-box__eyebrow">{copy.heading}</span>
+      <p class="author-box__role">{copy.role}</p>
+    </div>
+    <span class="author-box__checked">
+      {copy.checkedLabel}: <time datetime={checkedOn}>{checkedOn}</time>
+    </span>
+  </div>
+  <p class="author-box__bio">{copy.bio}</p>
+  <a href={getPagePath(lang, 'legal')} class="author-box__link">
+    {copy.legalLinkText}
+  </a>
+</aside>

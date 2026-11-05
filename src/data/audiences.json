@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "software",
+    "label": "Software & IT",
+    "shortChoice": "Software & IT",
+    "description": "developers, engineers, data and IT people"
+  },
+  {
+    "slug": "medical",
+    "label": "Medical & Health",
+    "shortChoice": "Medical & Health",
+    "description": "doctors, nurses, dentists, pharmacists, public health"
+  },
+  {
+    "slug": "legal",
+    "label": "Law",
+    "shortChoice": "Law",
+    "description": "lawyers, law graduates, compliance and policy people"
+  },
+  {
+    "slug": "finance",
+    "label": "Finance & Business",
+    "shortChoice": "Finance & Business",
+    "description": "accountants, auditors, bankers, analysts, insurance"
+  },
+  {
+    "slug": "language",
+    "label": "Languages & Translation",
+    "shortChoice": "Languages",
+    "description": "native speakers, translators, linguists, audio professionals"
+  },
+  {
+    "slug": "office",
+    "label": "Office & Productivity",
+    "shortChoice": "Office tools",
+    "description": "power users of Excel, Word, PowerPoint, email tools"
+  },
+  {
+    "slug": "general",
+    "label": "Anyone",
+    "shortChoice": "Something else",
+    "description": "strong readers and writers with no specific credential"
+  }
+]

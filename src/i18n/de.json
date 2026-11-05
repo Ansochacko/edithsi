@@ -1,0 +1,309 @@
+{
+  "_comment": "NEEDS NATIVE REVIEW",
+  "lang": "de",
+  "langName": "German",
+  "langNative": "Deutsch",
+  "suggestionPrompt": "Diese Seite auf Deutsch lesen?",
+  "suggestionAction": "Zu Deutsch wechseln",
+  "suggestionDismiss": "Sprachvorschlag schließen",
+  "skipToContent": "Zum Hauptinhalt springen",
+  "adStamp": "WERBUNG",
+  "adStampNote": "Unabhängiger Leitfaden mit Empfehlungslinks zu Mercor. Ich erhalte möglicherweise einen Empfehlungsbonus, wenn Sie beauftragt werden.",
+  "nav": {
+    "ariaLabel": "Hauptnavigation",
+    "home": "Startseite",
+    "roles": "Offene Rollen",
+    "forYou": "Für Sie",
+    "howItWorks": "Ablauf & ehrliche FAQ",
+    "privacy": "Datenschutz",
+    "legal": "Impressum & Rechtliches",
+    "languageLabel": "Sprache"
+  },
+  "common": {
+    "applyButton": "Auf Mercor bewerben",
+    "generalApplyButton": "Alle Mercor-Ausschreibungen ansehen",
+    "referralMicroLabel": "Empfehlungslink · Werbung",
+    "notGuaranteed": "nicht garantiert",
+    "checkedOnPrefix": "Geprüft am",
+    "whoItSuitsLabel": "Für wen geeignet",
+    "postedPayLabel": "Ausgeschriebene Vergütung",
+    "fieldLabel": "Fachgebiet",
+    "viewAllRoles": "Alle 8 offenen Rollen ansehen",
+    "readHowItWorks": "Ablauf & ehrliche FAQ lesen",
+    "externalLinkSr": "(öffnet in neuem Tab)"
+  },
+  "fields": {
+    "all": "Alle",
+    "law": "Recht",
+    "medicine": "Medizin",
+    "tech": "Technologie",
+    "finance": "Finanzen",
+    "language": "Sprache & Audio",
+    "general": "Generalist"
+  },
+  "audiences": {
+    "software": {
+      "label": "Software & IT",
+      "shortChoice": "Software & IT",
+      "description": "Entwicklerinnen, Softwareingenieure, Daten- und IT-Fachleute"
+    },
+    "medical": {
+      "label": "Medizin & Gesundheit",
+      "shortChoice": "Medizin & Gesundheit",
+      "description": "Ärztinnen, Pflegekräfte, Zahnmedizin, Pharmazie, Public Health"
+    },
+    "legal": {
+      "label": "Recht & Justiz",
+      "shortChoice": "Recht",
+      "description": "Rechtsanwälte, Volljuristen, Compliance- und Policy-Fachleute"
+    },
+    "finance": {
+      "label": "Finanzen & Wirtschaft",
+      "shortChoice": "Finanzen & Wirtschaft",
+      "description": "Rechnungswesen, Wirtschaftsprüfung, Banken, Analysten, Versicherungen"
+    },
+    "language": {
+      "label": "Sprachen & Übersetzung",
+      "shortChoice": "Sprachen",
+      "description": "Muttersprachler, Übersetzerinnen, Linguisten, Audio-Profis"
+    },
+    "office": {
+      "label": "Büro & Produktivität",
+      "shortChoice": "Büro-Tools",
+      "description": "Power-User von Excel, Word, PowerPoint und E-Mail-Programmen"
+    },
+    "general": {
+      "label": "Alle Fachrichtungen",
+      "shortChoice": "Etwas anderes",
+      "description": "starke Lese- und Schreibkompetenz ohne spezifischen Fachabschluss"
+    }
+  },
+  "rolesData": {
+    "legal-licensed": {
+      "title": "Legal Expert (zugelassene Rechtsanwältin / zugelassener Rechtsanwalt)",
+      "pay": "$100–150/Std.",
+      "whoItSuits": "Erfordert einen juristischen Abschluss (J.D., LL.B., LL.M. oder Staatsexamen) sowie eine aktuelle Anwaltszulassung."
+    },
+    "legal-general": {
+      "title": "Legal Expert (Rechtsexpertin / Rechtsexperte)",
+      "pay": "$60–150/Std.",
+      "whoItSuits": "Rechtspraxis, Compliance, Regulierung oder Public Policy."
+    },
+    "medical-expert": {
+      "title": "Medical Expert (Medizinische Fachkraft)",
+      "pay": "$60–180/Std.",
+      "whoItSuits": "Ärztinnen und Ärzte, Pflegefachkräfte, Zahnmedizin, Pharmazie sowie Public Health; klinische Qualifikation erforderlich."
+    },
+    "software-engineering": {
+      "title": "Software Engineering Expert (Softwareentwicklerin / Softwareentwickler)",
+      "pay": "$70–150/Std.",
+      "whoItSuits": "Ingenieurinnen und Entwickler, die produktive Software entwickeln und ausliefern."
+    },
+    "office-productivity": {
+      "title": "Office & Productivity Software Expert (Büro- & Produktivitätssoftware)",
+      "pay": "$60–70/Std.",
+      "whoItSuits": "Erfahrene Anwenderinnen und Anwender von Tabellenkalkulationen, Textverarbeitung, Präsentationen oder E-Mail-Systemen."
+    },
+    "finance-expert": {
+      "title": "Finance Expert (Finanzexpertin / Finanzexperte)",
+      "pay": "Vergütung je nach Projekt",
+      "whoItSuits": "Rechnungswesen, Wirtschaftsprüfung, Corporate Finance, Investment Banking, Vermögensverwaltung, Versicherungswesen und Aktuarwissenschaften."
+    },
+    "language-audio": {
+      "title": "Language & Audio Expert (Sprach- & Audiofachkraft)",
+      "pay": "$35–50/Std.",
+      "whoItSuits": "Linguistinnen, Übersetzer und Audio-Profis; gesuchte Sprachen umfassen unter anderem Finnisch, Französisch, Spanisch, Italienisch, Portugiesisch, Polnisch und Niederländisch."
+    },
+    "generalist-expert": {
+      "title": "Generalist Expert (Generalistin / Generalist)",
+      "pay": "$40–70/Std.",
+      "whoItSuits": "Alle mit ausgeprägter Lese- und Schreibkompetenz; kein spezifischer Fachabschluss erforderlich."
+    }
+  },
+  "home": {
+    "metaTitle": "KI-Trainer Job Remote in Europa — Edithsi",
+    "metaDescription": "Unabhängiger Leitfaden aus Helsinki für qualifizierte Fachkräfte in Finnland und Europa zu Remote-Vertragsrollen im KI-Training auf Mercor.",
+    "eyebrow": "Unabhängiger nordischer & europäischer Leitfaden",
+    "heroTitle": "Remote-Vertragsrollen im KI-Training für qualifizierte Fachkräfte in Finnland und Europa.",
+    "heroLead": "Ich arbeite selbst von Finnland aus als freiberuflicher Auftragnehmer für Mercor. Ich habe Edithsi aufgebaut, um Juristen, Medizinern, Softwareentwicklern, Finanzfachleuten und Sprachprofis einen sachlichen Überblick über die öffentlichen Ausschreibungen von Mercor zu geben – ohne Werbeversprechen.",
+    "iWorkInLabel": "Ich arbeite im Bereich:",
+    "roleCountSingular": "{count} Rolle",
+    "roleCountPlural": "{count} Rollen",
+    "realityHeading": "Was Sie vor einer Bewerbung wissen sollten",
+    "realityIntro": "Bevor Sie auf einen Link auf dieser Website klicken, lesen Sie bitte die wichtigsten Fakten, damit Sie realistisch einschätzen können, ob eine Bewerbung für Sie sinnvoll ist:",
+    "realityPoints": [
+      {
+        "title": "Kostenlose Bewerbung, keine Arbeitsgarantie",
+        "body": "Die Bewerbung ist völlig kostenlos – zahlen Sie niemals Geld für einen Job. Arbeit ist nicht garantiert; viele Bewerber warten wochenlang oder erhalten überhaupt kein Projekt."
+      },
+      {
+        "title": "Vergütung als Selbstständige/r in US-Dollar",
+        "body": "Wenn Sie einem Projekt zugeteilt werden, arbeiten Sie als unabhängiger Auftragnehmer (Independent Contractor) und werden in der Regel wöchentlich über Stripe in US-Dollar bezahlt."
+      },
+      {
+        "title": "Steuern und Sozialleistungen Ihres Wohnsitzlandes",
+        "body": "Steuern richten sich nach Ihrem Wohnsitzland. Beispiel Finnland: Einzelunternehmen (toiminimi), Steuervorauszahlung, YEL-Rentenversicherung ab 9.423 EUR/Jahr Arbeitseinkommen (2026) sowie Meldepflicht vor Tätigkeitsbeginn bei Bezug von Arbeitslosengeld."
+      },
+      {
+        "title": "Warum ich diesen Leitfaden betreibe",
+        "body": "Ich betreibe diese Website allein als in Finnland ansässiger Mercor-Auftragnehmer. Jeder Link zu Mercor enthält meinen Empfehlungscode, durch den ich bei einer erfolgreichen Vermittlung einen Empfehlungsbonus erhalten kann."
+      }
+    ],
+    "featuredHeading": "Ausgewählte offene Rollen",
+    "featuredSub": "Zusammengefasst aus öffentlichen Ausschreibungen. Alle Stundensätze sind unverbindliche Spannen und nicht garantiert.",
+    "generalCtaHeading": "Möchten Sie das allgemeine Mercor-Portal öffnen?",
+    "generalCtaBody": "Wenn Sie direkt im gesamten Stellenverzeichnis von Mercor stöbern möchten, können Sie es über meinen allgemeinen Empfehlungslink unten aufrufen."
+  },
+  "rolesPage": {
+    "metaTitle": "Offene KI-Trainingsrollen nach Beruf (2026) — Edithsi",
+    "metaDescription": "Übersicht über 8 Remote-Rollen im KI-Training für Software, Medizin, Recht, Finanzen und Sprachen auf Mercor ($35–180/Std., nicht garantiert).",
+    "eyebrow": "Öffentliches Rollenverzeichnis",
+    "title": "Offene Remote-Rollen im KI-Training",
+    "lead": "Jede unten aufgeführte Rolle wurde aus den offiziellen öffentlichen Stellenausschreibungen von Mercor zusammengefasst. Filtern Sie nach Ihrem Berufsfeld oder sortieren Sie nach der höchsten ausgeschriebenen Vergütung. Die Bewerbung ist kostenlos, Arbeit ist nicht garantiert, und jeder Bewerbungslink enthält meinen Empfehlungscode.",
+    "filterLabel": "Ich arbeite im Bereich:",
+    "filterAll": "Alle",
+    "sortLabel": "Sortieren nach",
+    "sortGroup": "Berufsgruppe (Standard)",
+    "sortPay": "Höchste Vergütung",
+    "sortAz": "A–Z",
+    "alsoOpenToYou": "Ebenfalls offen für Sie",
+    "alsoOpenDesc": "Kein spezifischer Fachabschluss erforderlich — offen für alle mit starker Lese- und Schreibkompetenz:",
+    "viewAudienceGuide": "Leitfaden für {audience} lesen",
+    "showingCount": "{count} von {total} Rollen werden angezeigt",
+    "emptyState": "Keine Rollen entsprechen diesem Filter."
+  },
+  "audiencePage": {
+    "eyebrow": "Für Sie · Berufsleitfaden",
+    "matchingRolesHeading": "Passende offene Rollen (sortiert nach höchster ausgeschriebener Vergütung)",
+    "beforeYouApplyHeading": "Vor der Bewerbung: Checkliste",
+    "faqHeading": "Häufige Fragen für dieses Berufsfeld",
+    "alsoOpenHeading": "Ebenfalls offen für Sie: Generalist Expert",
+    "alsoOpenBody": "Zusätzlich zu den Fachrollen steht Bewerberinnen und Bewerbern mit sehr guter Lese- und Schreibkompetenz auch der Generalist-Expert-Pool offen ($40–70/Std. ausgeschrieben, nicht garantiert).",
+    "browseAllRoles": "Alle 8 offenen Rollen vergleichen",
+    "needsContentNotice": "NEEDS CONTENT"
+  },
+  "howPage": {
+    "metaTitle": "Mercor Erfahrungen, Steuern & FAQ — Edithsi",
+    "metaDescription": "Sachliche Antworten zur Bewerbung bei Mercor: Auszahlung via Stripe in USD, Steuern und YEL in Finnland, Arbeitslosengeld und Datensicherheit.",
+    "eyebrow": "Ablauf & überprüfte Fakten",
+    "title": "Ablauf & ehrliche FAQ",
+    "lead": "Für das Training moderner KI-Modelle werden Fachleute benötigt, die Aufgaben erstellen, Modellantworten bewerten und Argumentationsketten prüfen. So läuft das Verfahren ab – gefolgt von acht nüchternen Fakten.",
+    "stepsHeading": "Vom Bewerbungsformular bis zum Projektauftrag",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Passende Ausschreibung auswählen",
+        "body": "Wählen Sie auf Mercor eine Rolle, die zu Ihrem Abschluss, Ihrer Zulassung oder Ihrer Berufserfahrung passt. Sie reichen Ihre Unterlagen kostenlos direkt bei Mercor ein."
+      },
+      {
+        "step": "02",
+        "title": "Auf Projektzuteilung warten (nicht garantiert)",
+        "body": "Die Aufnahme in den Bewerberpool bedeutet keine sofortige Beauftragung. Viele warten wochenlang oder erhalten nie ein Projektangebot."
+      },
+      {
+        "step": "03",
+        "title": "Honorararbeit und wöchentliche USD-Auszahlung",
+        "body": "Bei einer Projektzuteilung arbeiten Sie als selbstständiger Auftragnehmer. Die Auszahlung erfolgt in der Regel wöchentlich über Stripe in US-Dollar; um Steuern und Sozialabgaben kümmern Sie sich im eigenen Land selbst."
+      }
+    ],
+    "faqHeading": "Ehrliche FAQ (8 wesentliche Fakten)",
+    "faqIntro": "Ich veröffentliche unten ausschließlich gesicherte Fakten. Bitte lesen Sie diese vor einer Bewerbung sorgfältig durch.",
+    "faqs": [
+      {
+        "question": "1. Kostet die Bewerbung etwas?",
+        "answer": "Die Bewerbung ist kostenlos; zahlen Sie niemals jemandem Geld für einen Job."
+      },
+      {
+        "question": "2. Ist mir nach der Bewerbung Arbeit garantiert?",
+        "answer": "Arbeit ist nicht garantiert; viele Menschen warten wochenlang oder erhalten gar kein Projekt."
+      },
+      {
+        "question": "3. Wie und in welcher Währung werde ich bezahlt?",
+        "answer": "Sie werden als selbstständiger Auftragnehmer (Independent Contractor) bezahlt, in der Regel wöchentlich über Stripe in US-Dollar."
+      },
+      {
+        "question": "4. Wie funktionieren Steuern und Rentenversicherung?",
+        "answer": "Die Steuern hängen von Ihrem Wohnsitzland ab. Beispiel Finnland: Einzelunternehmen (toiminimi), Steuervorauszahlung und YEL-Rentenversicherung ab 9.423 EUR/Jahr Arbeitseinkommen (2026). Dies ist keine Steuerberatung."
+      },
+      {
+        "question": "5. Was gilt, wenn ich Arbeitslosengeld beziehe?",
+        "answer": "Wenn Sie Arbeitslosengeld beziehen, müssen Sie die selbstständige Tätigkeit melden, bevor Sie beginnen."
+      },
+      {
+        "question": "6. Woran erkenne ich echte E-Mails von Mercor?",
+        "answer": "Echte E-Mails von Mercor enden auf @mercor.com; für Projektkonten wird @mercor.expert verwendet."
+      },
+      {
+        "question": "7. Wer erhält meine Bewerbungsdaten und wie steht es um die Datensicherheit?",
+        "answer": "Sie teilen Ihre Daten direkt mit Mercor; Mercor hat im März 2026 einen Sicherheitsvorfall gemeldet."
+      },
+      {
+        "question": "8. Wer betreibt Edithsi?",
+        "answer": "Die Website wird von einem einzelnen in Finnland ansässigen Mercor-Auftragnehmer betrieben, der möglicherweise einen Empfehlungsbonus erhält."
+      }
+    ]
+  },
+  "privacyPage": {
+    "metaTitle": "Datenschutzerklärung (Ohne Cookies) — Edithsi",
+    "metaDescription": "Datenschutz bei Edithsi: keine Erhebung personenbezogener Daten, keine Cookies, keine Analyse-Tools und kurze Serverprotokolle bei Vercel Inc.",
+    "eyebrow": "Datenschutz",
+    "title": "Datenschutzerklärung",
+    "lastUpdatedLabel": "Zuletzt aktualisiert",
+    "intro": "Ich habe Edithsi als rein statische Informationsseite entwickelt. Ich erhebe keine personenbezogenen Daten, setze keine Cookies und verwende keine Analyse-Software.",
+    "sections": [
+      {
+        "heading": "1. Verantwortlicher",
+        "body": "Verantwortlicher für diese Website ist {name}, ansässig in {city}, erreichbar unter {email}."
+      },
+      {
+        "heading": "2. Keine Datenerhebung, keine Cookies, keine Analyse",
+        "body": "Auf dieser Website werden keine personenbezogenen Daten erhoben. Es gibt keine Benutzerkonten, Kontaktformulare, Cookies, Analyse-Skripte oder Tracking-Pixel."
+      },
+      {
+        "heading": "3. Hosting und Sicherheits-Serverprotokolle (Vercel Inc.)",
+        "body": "Diese Website wird bei Vercel Inc. gehostet. Beim Aufruf einer Seite oder eines /go/-Weiterleitungslinks speichert der Host Vercel Inc. kurzzeitig technische Serverprotokolle (IP-Adresse und Zeitpunkt) ausschließlich zu Sicherheitszwecken."
+      },
+      {
+        "heading": "4. Externe Links zu Mercor (eigenständiger Verantwortlicher)",
+        "body": "Wenn Sie auf einen Bewerbungs- oder Empfehlungslink zu Mercor klicken, verlassen Sie diese Website. Mercor ist ein eigenständiger Verantwortlicher mit eigener Datenschutzerklärung. Sie übermitteln Ihre Bewerbungsdaten direkt an Mercor."
+      },
+      {
+        "heading": "5. Kontakt",
+        "body": "Bei Fragen zum Datenschutz auf dieser Website erreichen Sie mich unter {email}."
+      }
+    ]
+  },
+  "legalPage": {
+    "metaTitle": "Impressum & Rechtliche Hinweise — Edithsi",
+    "metaDescription": "Betreiberangaben und rechtliche Hinweise für Edithsi: Unabhängigkeit von Mercor, Werbekennzeichnung und Prüfdatum 2026-11-05.",
+    "eyebrow": "Betreiberangaben & Rechtliches",
+    "title": "Impressum & Rechtliche Hinweise",
+    "intro": "Angaben zum Betreiber dieser Website, Offenlegung von Empfehlungslinks (Werbung) sowie Hinweise zur Aktualität der zusammengefassten Rollendaten.",
+    "operatorHeading": "Angaben zum Betreiber",
+    "nameLabel": "Name",
+    "cityLabel": "Stadt",
+    "emailLabel": "E-Mail",
+    "businessIdLabel": "Unternehmens-ID (Y-tunnus)",
+    "sections": [
+      {
+        "heading": "Unabhängige Website — keine Verbindung zu Mercor",
+        "body": "Edithsi ist eine unabhängige Website, die von einer Einzelperson in Finnland betrieben wird. Ich stehe in keiner geschäftlichen Verbindung zu Mercor und werde von Mercor weder unterstützt noch gesponsert. Mercor ist eine Marke ihres jeweiligen Inhabers."
+      },
+      {
+        "heading": "Offenlegung von Werbung und Empfehlungslinks",
+        "body": "Die Seiten dieser Website enthalten Empfehlungslinks (Referral-Links) zu Mercor und stellen kommerzielle Werbung dar. Wenn Sie über einen solchen Link zu Mercor wechseln und beauftragt werden, erhalte ich möglicherweise einen Empfehlungsbonus, ohne dass Ihnen Kosten entstehen."
+      },
+      {
+        "heading": "Stand der zusammengefassten Rollen- und Vergütungsangaben",
+        "body": "Alle Rollentitel, Anforderungsprofile und Vergütungsspannen wurden am {checkedOn} aus den öffentlichen Ausschreibungen von Mercor zusammengefasst und können sich jederzeit ändern. Angegebene Vergütungsspannen sind nicht garantiert."
+      }
+    ]
+  },
+  "footer": {
+    "trademarkDisclaimer": "Edithsi ist unabhängig und nicht mit Mercor verbunden, von Mercor unterstützt oder gesponsert. Mercor ist eine Marke ihres Inhabers. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.)",
+    "operatorLine": "Betrieben von {name} · {city} · {email}",
+    "businessIdLine": "Unternehmens-ID: {businessId}",
+    "audiencesHeading": "Für Sie (nach Fachgebiet)",
+    "linksHeading": "Datenschutz & Impressum"
+  }
+}

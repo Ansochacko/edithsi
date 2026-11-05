@@ -1,0 +1,18 @@
+---
+import type { Lang } from '../i18n';
+import { getDictionary } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+---
+
+<div class="ad-stamp-bar" role="region" aria-label={t.adStamp}>
+  <div class="container ad-stamp-bar__inner">
+    <span class="ad-stamp-badge">{t.adStamp}</span>
+    <p class="ad-stamp-note">{t.adStampNote}</p>
+  </div>
+</div>

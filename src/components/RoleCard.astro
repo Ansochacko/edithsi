@@ -1,0 +1,89 @@
+---
+import { CHECKED_ON, buildGoUrl } from '../config';
+import type { AudienceSlug, Lang } from '../i18n';
+import { getDictionary } from '../i18n';
+
+export interface RoleEntry {
+  id: string;
+  field: 'law' | 'medicine' | 'tech' | 'finance' | 'language' | 'general';
+  title: string;
+  pay: string;
+  maxPay: number;
+  minPay: number;
+  whoItSuits: string;
+  audiences: AudienceSlug[];
+  listingUrl: string;
+}
+
+interface Props {
+  role: RoleEntry;
+  lang: Lang;
+  src?: string;
+  headingLevel?: 'h2' | 'h3' | 'h4';
+}
+
+const { role, lang, src = 'roles', headingLevel = 'h3' } = Astro.props;
+const t = getDictionary(lang);
+
+const localizedRole =
+  (t.rolesData as Record<string, { title: string; pay: string; whoItSuits: string }>)[
+    role.id
+  ] ?? {
+    title: role.title,
+    pay: role.pay,
+    whoItSuits: role.whoItSuits,
+  };
+
+const fieldLabel =
+  (t.fields as Record<string, string>)[role.field] ?? role.field;
+
+const applyHref = buildGoUrl(role.id, src);
+const HeadingTag = headingLevel;
+---
+
+<article
+  class="role-card"
+  data-role-id={role.id}
+  data-field={role.field}
+  data-audiences={role.audiences.join(',')}
+  data-max-pay={String(role.maxPay)}
+  data-min-pay={String(role.minPay)}
+  data-title={localizedRole.title}
+>
+  <div class="role-card__top">
+    <div class="role-card__meta">
+      <span class="role-card__field">{fieldLabel}</span>
+    </div>
+
+    <HeadingTag class="role-card__title">{localizedRole.title}</HeadingTag>
+
+    <div class="role-card__pay-box">
+      <span class="role-card__pay-main">
+        {t.common.postedPayLabel}: {localizedRole.pay} ({t.common.notGuaranteed})
+      </span>
+      <span class="role-card__pay-disclaimer">
+        {t.common.checkedOnPrefix} <time datetime={CHECKED_ON}>{CHECKED_ON}</time>
+      </span>
+    </div>
+
+    <div>
+      <span class="role-card__suits-label">{t.common.whoItSuitsLabel}</span>
+      <p class="role-card__suits-text">{localizedRole.whoItSuits}</p>
+    </div>
+  </div>
+
+  <div class="role-card__footer">
+    <div class="role-card__apply-wrap">
+      <a
+        href={applyHref}
+        target="_blank"
+        rel="sponsored noopener noreferrer"
+        class="btn btn--primary role-card__apply-btn"
+      >
+        <span>{t.common.applyButton}</span>
+        <span class="sr-only"> — {localizedRole.title} {t.common.externalLinkSr}</span>
+      </a>
+      <span class="referral-micro">{t.common.referralMicroLabel}</span>
+    </div>
+  </div>
+</article>

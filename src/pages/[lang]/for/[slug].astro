@@ -1,0 +1,36 @@
+---
+import AudienceView from '../../../components/views/AudienceView.astro';
+import {
+  NON_DEFAULT_LANGUAGES,
+  AUDIENCE_SLUGS,
+  type Lang,
+  type AudienceSlug,
+} from '../../../i18n';
+
+export function getStaticPaths() {
+  const paths: Array<{
+    params: { lang: Lang; slug: AudienceSlug };
+    props: { lang: Lang; slug: AudienceSlug };
+  }> = [];
+
+  for (const lang of NON_DEFAULT_LANGUAGES) {
+    for (const slug of AUDIENCE_SLUGS) {
+      paths.push({
+        params: { lang, slug },
+        props: { lang, slug },
+      });
+    }
+  }
+
+  return paths;
+}
+
+interface Props {
+  lang: Lang;
+  slug: AudienceSlug;
+}
+
+const { lang, slug } = Astro.props;
+---
+
+<AudienceView lang={lang} slug={slug} />

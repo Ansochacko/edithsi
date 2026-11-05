@@ -1,0 +1,22 @@
+---
+import type { Lang } from '../i18n';
+import { getDictionary } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+---
+
+<div class="faq-list">
+  {
+    t.howPage.faqs.map((faq) => (
+      <article class="faq-item">
+        <h3 class="faq-item__q">{faq.question}</h3>
+        <p class="faq-item__a">{faq.answer}</p>
+      </article>
+    ))
+  }
+</div>

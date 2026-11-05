@@ -1,0 +1,309 @@
+{
+  "_comment": "NEEDS NATIVE REVIEW",
+  "lang": "sv",
+  "langName": "Swedish",
+  "langNative": "Svenska",
+  "suggestionPrompt": "Visa på svenska?",
+  "suggestionAction": "Byt till svenska",
+  "suggestionDismiss": "Stäng språkförslag",
+  "skipToContent": "Hoppa till huvudinnehåll",
+  "adStamp": "REKLAM",
+  "adStampNote": "Oberoende guide med värvningslänkar till Mercor. Jag kan få en värvningsbonus om du anlitas.",
+  "nav": {
+    "ariaLabel": "Huvudnavigering",
+    "home": "Hem",
+    "roles": "Lediga uppdrag",
+    "forYou": "För dig",
+    "howItWorks": "Så fungerar det & FAQ",
+    "privacy": "Integritet",
+    "legal": "Juridisk information",
+    "languageLabel": "Språk"
+  },
+  "common": {
+    "applyButton": "Ansök på Mercor",
+    "generalApplyButton": "Bläddra bland alla Mercor-uppdrag",
+    "referralMicroLabel": "värvningslänk · reklam",
+    "notGuaranteed": "ej garanterat",
+    "checkedOnPrefix": "Kontrollerad",
+    "whoItSuitsLabel": "Vem uppdraget passar",
+    "postedPayLabel": "Angivet arvode",
+    "fieldLabel": "Område",
+    "viewAllRoles": "Se alla 8 öppna uppdrag",
+    "readHowItWorks": "Läs hur det fungerar & ärlig FAQ",
+    "externalLinkSr": "(öppnas i ny flik)"
+  },
+  "fields": {
+    "all": "Alla",
+    "law": "Juridik",
+    "medicine": "Medicin & hälsa",
+    "tech": "Teknik & IT",
+    "finance": "Ekonomi & finans",
+    "language": "Språk & ljud",
+    "general": "Generalist"
+  },
+  "audiences": {
+    "software": {
+      "label": "Mjukvara & IT",
+      "shortChoice": "Mjukvara & IT",
+      "description": "utvecklare, mjukvaruingenjörer, data- och IT-specialister"
+    },
+    "medical": {
+      "label": "Medicin & hälsa",
+      "shortChoice": "Medicin & hälsa",
+      "description": "läkare, sjuksköterskor, tandläkare, apotekare, folkhälsa"
+    },
+    "legal": {
+      "label": "Juridik",
+      "shortChoice": "Juridik",
+      "description": "advokater, jurister, compliance- och policyspecialister"
+    },
+    "finance": {
+      "label": "Ekonomi & finans",
+      "shortChoice": "Ekonomi & finans",
+      "description": "redovisningsekonomer, revisorer, analytiker, bank och försäkring"
+    },
+    "language": {
+      "label": "Språk & översättning",
+      "shortChoice": "Språk",
+      "description": "modersmålstalare, översättare, lingvister, ljudspecialister"
+    },
+    "office": {
+      "label": "Kontorsprogram & produktivitet",
+      "shortChoice": "Kontorsverktyg",
+      "description": "avancerade användare av Excel, Word, PowerPoint och e-postverktyg"
+    },
+    "general": {
+      "label": "Alla bakgrunder",
+      "shortChoice": "Något annat",
+      "description": "starka läsare och skribenter utan krav på specifik yrkesexamen"
+    }
+  },
+  "rolesData": {
+    "legal-licensed": {
+      "title": "Legal Expert (legitimerad jurist / advokat)",
+      "pay": "$100–150/tim",
+      "whoItSuits": "Kräver juristexamen (J.D., LL.B. eller LL.M.) samt en giltig licens att utöva yrket."
+    },
+    "legal-general": {
+      "title": "Legal Expert (juridisk sakkunnig)",
+      "pay": "$60–150/tim",
+      "whoItSuits": "Juridisk rådgivning, compliance, regelverk eller offentlig policy."
+    },
+    "medical-expert": {
+      "title": "Medical Expert (medicinsk sakkunnig)",
+      "pay": "$60–180/tim",
+      "whoItSuits": "Läkare, sjuksköterskor, tandläkare, apotekare och folkhälsovetare; klinisk legitimation krävs."
+    },
+    "software-engineering": {
+      "title": "Software Engineering Expert (mjukvaruutvecklare)",
+      "pay": "$70–150/tim",
+      "whoItSuits": "Utvecklare och mjukvaruingenjörer som bygger och levererar produktionskod."
+    },
+    "office-productivity": {
+      "title": "Office & Productivity Software Expert (kontorsprogram)",
+      "pay": "$60–70/tim",
+      "whoItSuits": "Avancerade användare av kalkylblad, dokumenthantering, presentationer eller e-postverktyg."
+    },
+    "finance-expert": {
+      "title": "Finance Expert (ekonomi- och finanssakkunnig)",
+      "pay": "arvode sätts per projekt",
+      "whoItSuits": "Redovisning, revision, företagsfinansiering, investment banking, kapitalförvaltning, försäkring och aktuariematematik."
+    },
+    "language-audio": {
+      "title": "Language & Audio Expert (språk- och ljudsakkunnig)",
+      "pay": "$35–50/tim",
+      "whoItSuits": "Lingvister, översättare och ljudspecialister; språken omfattar bland annat finska, franska, spanska, italienska, portugisiska, polska och nederländska."
+    },
+    "generalist-expert": {
+      "title": "Generalist Expert (allmänsakkunnig)",
+      "pay": "$40–70/tim",
+      "whoItSuits": "Alla med mycket god läs- och skrivförmåga; inget krav på specifik yrkesexamen."
+    }
+  },
+  "home": {
+    "metaTitle": "AI-träning distansjobb i Norden — Edithsi",
+    "metaDescription": "Oberoende guide från Helsingfors som hjälper specialister i Finland och Europa att hitta distansuppdrag inom AI-träning på Mercor.",
+    "eyebrow": "Oberoende nordisk och europeisk referensguide",
+    "heroTitle": "Distansuppdrag inom AI-träning för kvalificerade specialister i Finland och Europa.",
+    "heroLead": "Jag arbetar själv som frilansande uppdragstagare hos Mercor med bas i Finland. Jag skapade Edithsi för att ge jurister, kliniker, ingenjörer, ekonomer och språkvetare en saklig och tydlig överblick över Mercors offentliga uppdragsannonser – utan överdrifter.",
+    "iWorkInLabel": "Jag arbetar inom:",
+    "roleCountSingular": "{count} uppdrag",
+    "roleCountPlural": "{count} uppdrag",
+    "realityHeading": "Vad du bör veta innan du ansöker",
+    "realityIntro": "Innan du klickar på någon länk på den här webbplatsen bör du läsa igenom grundfakta så att du kan avgöra om upplägget passar dig:",
+    "realityPoints": [
+      {
+        "title": "Gratis att ansöka, inget garanterat arbete",
+        "body": "Det är helt gratis att ansöka – betala aldrig någon för ett jobb. Arbete garanteras inte; många väntar i veckor eller får inget projekt alls."
+      },
+      {
+        "title": "Arvode som självständig uppdragstagare i USD",
+        "body": "Om du matchas med ett projekt arbetar du som självständig uppdragstagare (independent contractor) och får normalt betalt varje vecka via Stripe i amerikanska dollar."
+      },
+      {
+        "title": "Skatter och förmåner i ditt bosättningsland",
+        "body": "Skatter beror på vilket land du bor i. Exempel för Finland: enskild firma (toiminimi), förskottsskatt, FöPL-pensionsförsäkring (YEL) från 9 423 euro/år i arbetsinkomst (2026), samt anmälan om företagsverksamhet innan start om du får arbetslöshetsförmåner."
+      },
+      {
+        "title": "Varför jag driver den här guiden",
+        "body": "Jag driver den här webbplatsen på egen hand som uppdragstagare i Finland. Varje länk till Mercor innehåller min värvningskod, och jag kan få en värvningsbonus om du ansöker och får uppdrag."
+      }
+    ],
+    "featuredHeading": "Utvalda öppna uppdrag",
+    "featuredSub": "Sammanfattat från offentliga annonser. Angivna arvoden är intervall och är inte garanterade.",
+    "generalCtaHeading": "Vill du se hela Mercors uppdragskatalog?",
+    "generalCtaBody": "Om du föredrar att bläddra direkt i Mercors huvudkatalog kan du öppna den via min allmänna värvningslänk nedan."
+  },
+  "rolesPage": {
+    "metaTitle": "Lediga AI-träningsuppdrag per yrke (2026) — Edithsi",
+    "metaDescription": "Utforska 8 distansuppdrag inom AI-träning för utvecklare, läkare, jurister, ekonomer och språkspecialister ($35–180/tim angivet, ej garanterat).",
+    "eyebrow": "Offentlig uppdragskatalog",
+    "title": "Öppna distansuppdrag inom AI-träning",
+    "lead": "Varje uppdrag nedan har sammanfattats från Mercors officiella offentliga annonsportal. Filtrera efter din bakgrund eller sortera efter högsta angivna timarvode. Det är gratis att ansöka, arbete är inte garanterat, och varje ansökningslänk innehåller min värvningskod.",
+    "filterLabel": "Jag arbetar inom:",
+    "filterAll": "Alla",
+    "sortLabel": "Sortera efter",
+    "sortGroup": "Yrkesgrupp (standard)",
+    "sortPay": "Högsta arvode",
+    "sortAz": "A–Ö",
+    "alsoOpenToYou": "Även öppet för dig",
+    "alsoOpenDesc": "Kräver ingen specifik yrkesexamen — öppet för alla med stark läs- och skrivförmåga:",
+    "viewAudienceGuide": "Läs guiden för {audience}",
+    "showingCount": "Visar {count} av {total} uppdrag",
+    "emptyState": "Inga uppdrag matchar detta filter."
+  },
+  "audiencePage": {
+    "eyebrow": "För dig · Yrkesguide",
+    "matchingRolesHeading": "Matchande öppna uppdrag (sorterade efter högsta angivna arvode)",
+    "beforeYouApplyHeading": "Innan du ansöker: checklista",
+    "faqHeading": "Vanliga frågor för denna yrkesgrupp",
+    "alsoOpenHeading": "Även öppet för dig: Generalist Expert",
+    "alsoOpenBody": "Utöver specialistuppdragen kan alla med god läs- och skrivförmåga även ansöka till Generalist Expert ($40–70/tim angivet, ej garanterat).",
+    "browseAllRoles": "Jämför alla 8 öppna uppdrag",
+    "needsContentNotice": "NEEDS CONTENT"
+  },
+  "howPage": {
+    "metaTitle": "Så fungerar Mercor & ärlig FAQ — Edithsi",
+    "metaDescription": "Sakliga svar om att ansöka till Mercor från Norden: utbetalningar i USD via Stripe, skatt och FöPL/YEL i Finland, A-kassa och datasäkerhet.",
+    "eyebrow": "Process & konkreta fakta",
+    "title": "Så fungerar det & ärlig FAQ",
+    "lead": "AI-utvecklare anlitar ämnesspecialister för att formulera instruktioner, granska modellsvar och kvalitetssäkra resonemang. Här är hur processen fungerar i praktiken, följt av åtta faktabaserade svar.",
+    "stepsHeading": "Från ansökan till uppdrag i tre steg",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Välj ett uppdrag som matchar din kompetens",
+        "body": "Välj en annons hos Mercor som stämmer överens med din examen, legitimation eller yrkesbakgrund. Du skickar in din ansökan direkt till Mercor utan kostnad."
+      },
+      {
+        "step": "02",
+        "title": "Invänta eventuell projektmatchning (ej garanterat)",
+        "body": "Att bli godkänd i kandidatpoolen innebär inte garanterat arbete. Många väntar i veckor eller blir aldrig tilldelade något projekt."
+      },
+      {
+        "step": "03",
+        "title": "Uppdragsarbete och veckovis utbetalning i USD",
+        "body": "När du får ett aktivt projekt arbetar du som självständig uppdragstagare. Utbetalning sker normalt varje vecka via Stripe i amerikanska dollar, och du ansvarar själv för skatt och socialförsäkring."
+      }
+    ],
+    "faqHeading": "Ärlig FAQ (8 viktiga fakta)",
+    "faqIntro": "Nedan publicerar jag uteslutande verifierade fakta. Läs igenom dem noggrant innan du ansöker.",
+    "faqs": [
+      {
+        "question": "1. Kostar det något att ansöka?",
+        "answer": "Det är gratis att ansöka; betala aldrig någon för ett jobb."
+      },
+      {
+        "question": "2. Är jag garanterad arbete efter att jag har ansökt?",
+        "answer": "Arbete är inte garanterat; många väntar i veckor eller får inget projekt alls."
+      },
+      {
+        "question": "3. Hur och i vilken valuta får jag betalt?",
+        "answer": "Du får betalt som självständig uppdragstagare (independent contractor), vanligtvis varje vecka via Stripe, i amerikanska dollar (USD)."
+      },
+      {
+        "question": "4. Hur fungerar skatter och pensionsförsäkring?",
+        "answer": "Skatterna beror på ditt bosättningsland. Exempel från Finland: firma (toiminimi), förskottsskatt och FöPL-pensionsförsäkring (YEL) från 9 423 euro/år i arbetsinkomst (2026). Detta är inte skatterådgivning."
+      },
+      {
+        "question": "5. Vad gäller om jag har arbetslöshetsersättning?",
+        "answer": "Om du får arbetslöshetsförmån måste du anmäla företagsverksamhet eller sysselsättning i eget arbete innan du börjar."
+      },
+      {
+        "question": "6. Hur vet jag att ett e-postmeddelande från Mercor är äkta?",
+        "answer": "Äkta e-postadresser från Mercor slutar på @mercor.com; projektkonton använder @mercor.expert."
+      },
+      {
+        "question": "7. Vem får mina personuppgifter när jag ansöker, och hur är det med datasäkerheten?",
+        "answer": "Du delar dina uppgifter direkt med Mercor; Mercor rapporterade en säkerhetsincident i mars 2026."
+      },
+      {
+        "question": "8. Vem driver Edithsi och hur finansieras sidan?",
+        "answer": "Webbplatsen drivs av en Finland-baserad Mercor-uppdragstagare som kan få en värvningsbonus."
+      }
+    ]
+  },
+  "privacyPage": {
+    "metaTitle": "Integritetspolicy (Inga kakor) — Edithsi",
+    "metaDescription": "Integritetspolicy för Edithsi: inga personuppgifter samlas in, inga kakor, ingen analys och korta säkerhetsloggar hos Vercel Inc.",
+    "eyebrow": "Dataskydd & integritet",
+    "title": "Integritetspolicy",
+    "lastUpdatedLabel": "Senast uppdaterad",
+    "intro": "Jag har byggt Edithsi som en statisk informationssida som respekterar din integritet. Jag samlar inte in några personuppgifter, sätter inga kakor och använder ingen besöksanalys.",
+    "sections": [
+      {
+        "heading": "1. Personuppgiftsansvarig",
+        "body": "Personuppgiftsansvarig för denna webbplats är {name}, med säte i {city}, nåbar via e-post på {email}."
+      },
+      {
+        "heading": "2. Ingen insamling av personuppgifter, kakor eller analys",
+        "body": "Jag samlar inte in några personuppgifter på den här webbplatsen. Det finns inga användarkonton, kontaktformulär, kakor (cookies), analysskript eller spårningspixlar."
+      },
+      {
+        "heading": "3. Webbhotell och säkerhetsloggar (Vercel Inc.)",
+        "body": "Webbplatsen driftas hos Vercel Inc. När du besöker en sida eller klickar på en /go/-omdirigeringslänk sparar värden Vercel Inc. kortvariga serverloggar (IP-adress och tidpunkt) uteslutande för säkerhet och driftsäkerhet."
+      },
+      {
+        "heading": "4. Externa länkar till Mercor (separat personuppgiftsansvarig)",
+        "body": "När du klickar på en ansöknings- eller värvningslänk till Mercor lämnar du denna webbplats. Mercor är en separat personuppgiftsansvarig med egen integritetspolicy. Alla uppgifter du skickar in i din ansökan delas direkt med Mercor."
+      },
+      {
+        "heading": "5. Kontakt",
+        "body": "Om du har frågor om denna integritetspolicy kan du kontakta mig på {email}."
+      }
+    ]
+  },
+  "legalPage": {
+    "metaTitle": "Juridisk information & utgivare — Edithsi",
+    "metaDescription": "Juridiskt meddelande och operatörsuppgifter för Edithsi: oberoende ställning, reklammarkering och kontroll per 2026-11-05.",
+    "eyebrow": "Operatörs- & utgivarinformation",
+    "title": "Juridisk information",
+    "intro": "Uppgifter om den som driver webbplatsen, reklam- och värvningsupplysning samt ansvarsfriskrivning.",
+    "operatorHeading": "Uppgifter om operatören",
+    "nameLabel": "Namn",
+    "cityLabel": "Ort",
+    "emailLabel": "E-post",
+    "businessIdLabel": "FO-nummer (Y-tunnus)",
+    "sections": [
+      {
+        "heading": "Oberoende webbplats — ej ansluten till Mercor",
+        "body": "Edithsi är en oberoende webbplats som drivs av en privatperson i Finland. Jag är inte ansluten till, godkänd av eller sponsrad av Mercor. Mercor är ett varumärke som tillhör sin ägare."
+      },
+      {
+        "heading": "Information om reklam och värvningslänkar",
+        "body": "Sidorna på denna webbplats innehåller värvningslänkar (referral links) till Mercor och utgör marknadsföring/reklam. Om du går vidare via en sådan länk och anlitas för ett projekt kan jag få en värvningsbonus utan kostnad för dig."
+      },
+      {
+        "heading": "Uppgifter om uppdrag och arvoden",
+        "body": "Alla uppdragstitlar, behörighetskrav och angivna arvodesintervall har sammanfattats från Mercors offentliga annonser per {checkedOn} och kan ändras när som helst. Angivna arvoden är inte garanterade."
+      }
+    ]
+  },
+  "footer": {
+    "trademarkDisclaimer": "Edithsi är oberoende och inte anslutet till, godkänt eller sponsrat av Mercor. Mercor är ett varumärke som tillhör sin ägare. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.)",
+    "operatorLine": "Drivs av {name} · {city} · {email}",
+    "businessIdLine": "FO-nummer: {businessId}",
+    "audiencesHeading": "För dig (efter område)",
+    "linksHeading": "Integritet & juridik"
+  }
+}

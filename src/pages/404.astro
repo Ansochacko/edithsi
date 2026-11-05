@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_NAME } from '../config';
+import { AUDIENCE_SLUGS, getDictionary, getAudiencePath } from '../i18n';
+import { getAudiencePageContent } from '../data/audiencePages';
+
+const enDict = getDictionary('en');
+const fiDict = getDictionary('fi');
+
+const enAudiences = AUDIENCE_SLUGS.map((slug) => ({
+  slug,
+  label: enDict.audiences[slug].label,
+  href: getAudiencePath('en', slug),
+  content: getAudiencePageContent(slug, 'en'),
+}));
+
+const fiAudiences = AUDIENCE_SLUGS.map((slug) => ({
+  slug,
+  label: fiDict.audiences[slug].label,
+  href: getAudiencePath('fi', slug),
+  content: getAudiencePageContent(slug, 'fi'),
+}));
+---
+
+<BaseLayout
+  lang="en"
+  page="home"
+  title={`Page Not Found (404) — ${SITE_NAME}`}
+  description={`The page you requested could not be found on ${SITE_NAME}. Browse our 7 AI-training audience guides and open role listings.`}
+  noindex={true}
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Error 404 · Sivua ei löytynyt</span>
+      <h1>Page not found (404)</h1>
+      <p class="lead">
+        The address you followed does not exist or may have moved. Choose your professional field or open the role directory below.
+      </p>
+
+      <div class="btn-group" style="margin-bottom: var(--space-10);">
+        <a href="/" class="btn btn--primary">Home (English)</a>
+        <a href="/roles/" class="btn btn--secondary">Open roles (EN)</a>
+        <a href="/fi/" class="btn btn--secondary">Etusivu (Suomi)</a>
+        <a href="/fi/roles/" class="btn btn--secondary">Avoimet tehtävät (FI)</a>
+      </div>
+
+      <h2>For you: AI-training guides by profession (English)</h2>
+      <div class="facts-grid" style="margin-bottom: var(--space-10);">
+        {
+          enAudiences.map((item) => (
+            <div class="fact-card">
+              <h3 class="fact-card__title">
+                <a href={item.href}>{item.content.h1}</a>
+              </h3>
+              <p class="fact-card__body">{item.content.metaDescription}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <h2 lang="fi">Sinulle: tekoälytyön oppaat aloittain (Suomi)</h2>
+      <div class="facts-grid" lang="fi">
+        {
+          fiAudiences.map((item) => (
+            <div class="fact-card">
+              <h3 class="fact-card__title">
+                <a href={item.href}>{item.content.h1}</a>
+              </h3>
+              <p class="fact-card__body">{item.content.metaDescription}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

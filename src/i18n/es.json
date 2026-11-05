@@ -1,0 +1,309 @@
+{
+  "_comment": "NEEDS NATIVE REVIEW",
+  "lang": "es",
+  "langName": "Spanish",
+  "langNative": "Español",
+  "suggestionPrompt": "¿Leer esta página en español?",
+  "suggestionAction": "Cambiar a español",
+  "suggestionDismiss": "Cerrar sugerencia de idioma",
+  "skipToContent": "Saltar al contenido principal",
+  "adStamp": "PUBLICIDAD",
+  "adStampNote": "Guía independiente con enlaces de referido a Mercor. Puedo recibir una bonificación por recomendación si te contratan.",
+  "nav": {
+    "ariaLabel": "Navegación principal",
+    "home": "Inicio",
+    "roles": "Puestos abiertos",
+    "forYou": "Para ti",
+    "howItWorks": "Cómo funciona y FAQ",
+    "privacy": "Privacidad",
+    "legal": "Aviso legal",
+    "languageLabel": "Idioma"
+  },
+  "common": {
+    "applyButton": "Solicitar en Mercor",
+    "generalApplyButton": "Ver todas las ofertas en Mercor",
+    "referralMicroLabel": "enlace de referido · publicidad",
+    "notGuaranteed": "no garantizado",
+    "checkedOnPrefix": "Verificado el",
+    "whoItSuitsLabel": "A quién va dirigido",
+    "postedPayLabel": "Tarifa publicada",
+    "fieldLabel": "Área",
+    "viewAllRoles": "Ver los 8 puestos abiertos",
+    "readHowItWorks": "Leer cómo funciona y FAQ sinceras",
+    "externalLinkSr": "(se abre en una pestaña nueva)"
+  },
+  "fields": {
+    "all": "Todos",
+    "law": "Derecho",
+    "medicine": "Medicina y salud",
+    "tech": "Tecnología",
+    "finance": "Finanzas",
+    "language": "Idiomas y audio",
+    "general": "Generalista"
+  },
+  "audiences": {
+    "software": {
+      "label": "Software y TI",
+      "shortChoice": "Software y TI",
+      "description": "desarrolladores, ingenieros de software, especialistas en datos y TI"
+    },
+    "medical": {
+      "label": "Medicina y salud",
+      "shortChoice": "Medicina y salud",
+      "description": "médicos, enfermería, odontólogos, farmacéuticos, salud pública"
+    },
+    "legal": {
+      "label": "Derecho",
+      "shortChoice": "Derecho",
+      "description": "abogados colegiados, graduados en Derecho, compliance y políticas públicas"
+    },
+    "finance": {
+      "label": "Finanzas y empresa",
+      "shortChoice": "Finanzas y empresa",
+      "description": "contables, auditores, banca, analistas financieros y seguros"
+    },
+    "language": {
+      "label": "Idiomas y traducción",
+      "shortChoice": "Idiomas",
+      "description": "hablantes nativos, traductores, lingüistas y profesionales de audio"
+    },
+    "office": {
+      "label": "Ofimática y productividad",
+      "shortChoice": "Herramientas de oficina",
+      "description": "usuarios avanzados de Excel, Word, PowerPoint y herramientas de correo"
+    },
+    "general": {
+      "label": "Cualquier perfil",
+      "shortChoice": "Otro ámbito",
+      "description": "excelente lectura y redacción sin necesidad de titulación específica"
+    }
+  },
+  "rolesData": {
+    "legal-licensed": {
+      "title": "Legal Expert (abogado/a colegiado/a con licencia en vigor)",
+      "pay": "100–150 $/h",
+      "whoItSuits": "Requiere titulación en Derecho (J.D., LL.B., LL.M. o Grado/Licenciatura en Derecho) y licencia vigente para ejercer."
+    },
+    "legal-general": {
+      "title": "Legal Expert (especialista jurídico)",
+      "pay": "60–150 $/h",
+      "whoItSuits": "Práctica jurídica, cumplimiento normativo (compliance), regulación o políticas públicas."
+    },
+    "medical-expert": {
+      "title": "Medical Expert (especialista médico y sanitario)",
+      "pay": "60–180 $/h",
+      "whoItSuits": "Médicos, personal de enfermería, odontólogos, farmacéuticos y profesionales de salud pública; se exige acreditación clínica."
+    },
+    "software-engineering": {
+      "title": "Software Engineering Expert (ingeniero/a de software)",
+      "pay": "70–150 $/h",
+      "whoItSuits": "Ingenieros y desarrolladores que crean y despliegan software en producción."
+    },
+    "office-productivity": {
+      "title": "Office & Productivity Software Expert (software de ofimática)",
+      "pay": "60–70 $/h",
+      "whoItSuits": "Usuarios avanzados de hojas de cálculo, procesadores de texto, presentaciones o herramientas de correo electrónico."
+    },
+    "finance-expert": {
+      "title": "Finance Expert (especialista en finanzas)",
+      "pay": "tarifa fijada por proyecto",
+      "whoItSuits": "Contabilidad, auditoría, finanzas corporativas, banca de inversión, gestión de activos, seguros y ciencias actuariales."
+    },
+    "language-audio": {
+      "title": "Language & Audio Expert (especialista en lengua y audio)",
+      "pay": "35–50 $/h",
+      "whoItSuits": "Lingüistas, traductores y profesionales del audio; entre los idiomas figuran finés, francés, español, italiano, portugués, polaco y neerlandés."
+    },
+    "generalist-expert": {
+      "title": "Generalist Expert (especialista generalista)",
+      "pay": "40–70 $/h",
+      "whoItSuits": "Cualquier persona con excelente comprensión lectora y redacción; no requiere titulación específica."
+    }
+  },
+  "home": {
+    "metaTitle": "Entrenador de IA Remoto en Europa — Edithsi",
+    "metaDescription": "Guía independiente desde Helsinki para ayudar a especialistas en Finlandia y Europa a encontrar proyectos remotos de entrenamiento de IA en Mercor.",
+    "eyebrow": "Guía de referencia independiente para Finlandia y Europa",
+    "heroTitle": "Proyectos remotos de entrenamiento de IA para especialistas cualificados en Finlandia y Europa.",
+    "heroLead": "Trabajo desde Finlandia como contratista independiente en Mercor. Creé Edithsi para ofrecer a juristas, sanitarios, ingenieros, especialistas financieros y lingüistas un resumen claro y directo de las ofertas públicas de Mercor, sin exageraciones.",
+    "iWorkInLabel": "Trabajo en:",
+    "roleCountSingular": "{count} puesto",
+    "roleCountPlural": "{count} puestos",
+    "realityHeading": "Lo que debes saber antes de presentar tu solicitud",
+    "realityIntro": "Antes de abrir cualquier enlace de este sitio, lee estos datos básicos para valorar si el formato se adapta a tu situación:",
+    "realityPoints": [
+      {
+        "title": "Solicitud gratuita, sin trabajo garantizado",
+        "body": "Presentar una solicitud es totalmente gratis: nunca pagues a nadie por un empleo. El trabajo no está garantizado; muchas personas esperan semanas o no reciben ningún proyecto."
+      },
+      {
+        "title": "Pago como autónomo en dólares estadounidenses",
+        "body": "Si te asignan un proyecto, trabajas como contratista independiente (independent contractor) y normalmente cobras cada semana a través de Stripe en dólares estadounidenses (USD)."
+      },
+      {
+        "title": "Impuestos y prestaciones de tu país",
+        "body": "Los impuestos dependen de tu país de residencia. Ejemplo de Finlandia: alta como autónomo (toiminimi), pagos a cuenta de impuestos, seguro de pensiones YEL a partir de 9.423 EUR/año de ingresos del trabajo (2026) y obligación de declarar el trabajo por cuenta propia antes de empezar si cobras prestación por desempleo."
+      },
+      {
+        "title": "Por qué mantengo esta guía",
+        "body": "Gestiono esta web en solitario como contratista en Finlandia. Todos los enlaces a Mercor incluyen mi código de referido y puedo recibir una bonificación si te contratan en un proyecto."
+      }
+    ],
+    "featuredHeading": "Selección de puestos abiertos",
+    "featuredSub": "Resumidos a partir de las ofertas públicas. Las tarifas son rangos publicados y no están garantizadas.",
+    "generalCtaHeading": "¿Quieres ver el portal general de Mercor?",
+    "generalCtaBody": "Si prefieres explorar directamente el listado completo de ofertas en Mercor, puedes abrirlo mediante mi enlace general de referido."
+  },
+  "rolesPage": {
+    "metaTitle": "Puestos remotos de IA por profesión (2026) — Edithsi",
+    "metaDescription": "Explora 8 puestos remotos de entrenamiento de IA en software, medicina, derecho, finanzas e idiomas en Mercor (35–180 $/h, no garantizados).",
+    "eyebrow": "Directorio público de puestos",
+    "title": "Puestos remotos abiertos en entrenamiento de IA",
+    "lead": "Cada puesto que aparece a continuación se resume a partir del portal público oficial de Mercor. Filtra según tu perfil profesional u ordena por mayor tarifa horaria publicada. Solicitar es gratis, el trabajo no está garantizado y cada enlace incluye mi código de referido.",
+    "filterLabel": "Trabajo en:",
+    "filterAll": "Todos",
+    "sortLabel": "Ordenar por",
+    "sortGroup": "Grupo profesional (por defecto)",
+    "sortPay": "Mayor tarifa",
+    "sortAz": "A–Z",
+    "alsoOpenToYou": "También abierto para ti",
+    "alsoOpenDesc": "No requiere titulación específica — abierto a cualquier persona con sólida lectura y redacción:",
+    "viewAudienceGuide": "Leer guía para {audience}",
+    "showingCount": "Mostrando {count} de {total} puestos",
+    "emptyState": "Ningún puesto coincide con este filtro."
+  },
+  "audiencePage": {
+    "eyebrow": "Para ti · Guía por profesión",
+    "matchingRolesHeading": "Puestos abiertos compatibles (ordenados por mayor tarifa publicada)",
+    "beforeYouApplyHeading": "Antes de solicitar: lista de comprobación",
+    "faqHeading": "Preguntas frecuentes para este perfil",
+    "alsoOpenHeading": "También abierto para ti: Generalist Expert",
+    "alsoOpenBody": "Además de los puestos especializados, cualquier persona con buenas habilidades de lectura y redacción puede postularse a Generalist Expert (40–70 $/h publicados, no garantizados).",
+    "browseAllRoles": "Comparar los 8 puestos abiertos",
+    "needsContentNotice": "NEEDS CONTENT"
+  },
+  "howPage": {
+    "metaTitle": "Mercor opiniones, pagos y FAQ — Edithsi",
+    "metaDescription": "Respuestas claras sobre Mercor desde Finlandia y Europa: cobros semanales en USD por Stripe, impuestos y YEL 2026, desempleo y seguridad de datos.",
+    "eyebrow": "Proceso y datos verificados",
+    "title": "Cómo funciona y FAQ sinceras",
+    "lead": "Las empresas de inteligencia artificial necesitan especialistas que redacten instrucciones, evalúen respuestas de modelos y revisen razonamientos. Así funciona el proceso en la práctica, seguido de ocho respuestas basadas únicamente en hechos.",
+    "stepsHeading": "De la solicitud al proyecto en tres pasos",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Elige un puesto acorde a tus credenciales",
+        "body": "Selecciona en Mercor una oferta que encaje con tu titulación, colegiación o experiencia profesional. Envías tu solicitud directamente a Mercor sin coste alguno."
+      },
+      {
+        "step": "02",
+        "title": "Espera una posible asignación (no garantizada)",
+        "body": "Entrar en la bolsa de candidatos no garantiza recibir trabajo. Muchas personas esperan semanas o no llegan a recibir ningún proyecto."
+      },
+      {
+        "step": "03",
+        "title": "Trabajo como contratista y pagos semanales en USD",
+        "body": "Cuando participas en un proyecto activo, trabajas como profesional independiente. Los pagos suelen realizarse semanalmente mediante Stripe en dólares estadounidenses, y tú gestionas tus propios impuestos y cotizaciones."
+      }
+    ],
+    "faqHeading": "FAQ sinceras (8 datos esenciales)",
+    "faqIntro": "A continuación publico únicamente hechos verificados. Léelos con atención antes de presentar una solicitud.",
+    "faqs": [
+      {
+        "question": "1. ¿Cuesta dinero presentar una solicitud?",
+        "answer": "Solicitar es gratis; nunca pagues a nadie por un trabajo."
+      },
+      {
+        "question": "2. ¿Tengo trabajo garantizado tras enviar la solicitud?",
+        "answer": "El trabajo no está garantizado; muchas personas esperan semanas o no consiguen ningún proyecto."
+      },
+      {
+        "question": "3. ¿Cómo y en qué moneda se cobra?",
+        "answer": "Se cobra como contratista independiente (independent contractor), normalmente cada semana a través de Stripe, en dólares estadounidenses (USD)."
+      },
+      {
+        "question": "4. ¿Cómo funcionan los impuestos y la cotización para la jubilación?",
+        "answer": "Los impuestos dependen de tu país. Ejemplo de Finlandia: autónomo (toiminimi), pago fraccionado de impuestos y seguro de pensiones YEL a partir de 9.423 EUR/año de ingresos de trabajo (2026). Esto no constituye asesoramiento fiscal."
+      },
+      {
+        "question": "5. ¿Qué ocurre si cobro prestación por desempleo?",
+        "answer": "Si recibes prestación por desempleo, informa de tu actividad por cuenta propia antes de empezar."
+      },
+      {
+        "question": "6. ¿Cómo puedo comprobar si un correo de Mercor es auténtico?",
+        "answer": "Los correos auténticos de Mercor terminan en @mercor.com; las cuentas de proyecto utilizan @mercor.expert."
+      },
+      {
+        "question": "7. ¿Con quién comparto mis datos y qué hay de la seguridad?",
+        "answer": "Compartes tus datos directamente con Mercor; Mercor informó de un incidente de seguridad en marzo de 2026."
+      },
+      {
+        "question": "8. ¿Quién gestiona Edithsi?",
+        "answer": "El sitio lo gestiona un único contratista de Mercor residente en Finlandia que puede recibir una bonificación por referido."
+      }
+    ]
+  },
+  "privacyPage": {
+    "metaTitle": "Privacidad (Sin cookies) — Edithsi",
+    "metaDescription": "Aviso de privacidad de Edithsi: no se recopilan datos personales, sin cookies ni analítica, y registros breves de seguridad en Vercel Inc.",
+    "eyebrow": "Protección de datos",
+    "title": "Aviso de privacidad",
+    "lastUpdatedLabel": "Última actualización",
+    "intro": "He creado Edithsi como un sitio informativo estático que respeta tu privacidad. No recopilo datos personales, no instalo cookies ni utilizo herramientas de analítica.",
+    "sections": [
+      {
+        "heading": "1. Responsable del tratamiento",
+        "body": "El responsable del tratamiento de este sitio web es {name}, con domicilio en {city} y correo de contacto {email}."
+      },
+      {
+        "heading": "2. Sin recogida de datos personales, cookies ni analítica",
+        "body": "No recopilo datos personales en este sitio web. No existen cuentas de usuario, formularios de contacto, cookies, scripts de analítica ni píxeles de seguimiento."
+      },
+      {
+        "heading": "3. Alojamiento y registros técnicos de seguridad (Vercel Inc.)",
+        "body": "Este sitio está alojado en Vercel Inc. Al visitar una página o seguir una redirección /go/, el proveedor Vercel Inc. conserva a corto plazo registros del servidor (dirección IP y hora) exclusivamente por motivos de seguridad."
+      },
+      {
+        "heading": "4. Enlaces externos a Mercor (responsable independiente)",
+        "body": "Al hacer clic en un enlace de solicitud o referido hacia Mercor, abandonas este sitio web. Mercor es un responsable del tratamiento independiente con su propia política de privacidad. Compartes tus datos directamente con Mercor."
+      },
+      {
+        "heading": "5. Contacto",
+        "body": "Si tienes alguna pregunta sobre este aviso de privacidad, puedes escribirme a {email}."
+      }
+    ]
+  },
+  "legalPage": {
+    "metaTitle": "Aviso legal e información — Edithsi",
+    "metaDescription": "Aviso legal y datos del operador de Edithsi: independencia frente a Mercor, publicidad de referidos y revisión del 2026-11-05.",
+    "eyebrow": "Información del titular y aviso legal",
+    "title": "Aviso legal",
+    "intro": "Datos identificativos del titular del sitio web, comunicación sobre enlaces de referido (publicidad) y fecha de verificación de las ofertas.",
+    "operatorHeading": "Datos del operador",
+    "nameLabel": "Nombre del operador",
+    "cityLabel": "Ciudad",
+    "emailLabel": "Correo electrónico",
+    "businessIdLabel": "Identificador empresarial (Y-tunnus)",
+    "sections": [
+      {
+        "heading": "Sitio web independiente — no afiliado a Mercor",
+        "body": "Edithsi es un sitio web independiente gestionado por una sola persona desde Finlandia. No estoy afiliado, respaldado ni patrocinado por Mercor. Mercor es una marca registrada de su respectivo propietario."
+      },
+      {
+        "heading": "Aviso sobre publicidad y enlaces de referido",
+        "body": "Las páginas de este sitio contienen enlaces de referido hacia Mercor y constituyen publicidad comercial. Si accedes a Mercor mediante uno de mis enlaces y te contratan, puedo recibir una bonificación por recomendación sin coste adicional para ti."
+      },
+      {
+        "heading": "Exactitud de los resúmenes de puestos y tarifas",
+        "body": "Todos los títulos de puestos, perfiles requeridos y rangos de remuneración se resumieron a partir de las ofertas públicas de Mercor el {checkedOn} y pueden cambiar en cualquier momento. Las tarifas publicadas no están garantizadas."
+      }
+    ]
+  },
+  "footer": {
+    "trademarkDisclaimer": "Edithsi es independiente y no está afiliado, respaldado ni patrocinado por Mercor. Mercor es una marca registrada de su propietario. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.)",
+    "operatorLine": "Gestionado por {name} · {city} · {email}",
+    "businessIdLine": "ID empresarial: {businessId}",
+    "audiencesHeading": "Para ti (por profesión)",
+    "linksHeading": "Privacidad y aviso legal"
+  }
+}

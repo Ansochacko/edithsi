@@ -1,0 +1,181 @@
+---
+import { SITE_NAME } from '../config';
+import {
+  AUDIENCE_SLUGS,
+  getDictionary,
+  getPagePath,
+  getAudiencePath,
+  getAlternateLinks,
+  type Lang,
+  type PageKey,
+} from '../i18n';
+import type { CustomAlternate } from './LanguageSuggestion.astro';
+
+interface Props {
+  lang: Lang;
+  page?: PageKey;
+  customAlternates?: CustomAlternate[];
+}
+
+const { lang, page, customAlternates } = Astro.props;
+const t = getDictionary(lang);
+
+const alternates = customAlternates
+  ? customAlternates.map((alt) => ({
+      lang: alt.lang,
+      nativeName: getDictionary(alt.lang).langNative,
+      path: alt.path,
+      href: alt.href,
+    }))
+  : getAlternateLinks(page ?? 'home');
+
+const isAudiencePage = page?.startsWith('for/') ?? false;
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href={getPagePath(lang, 'home')} class="site-brand">
+      <span class="site-brand__mark" aria-hidden="true"></span>
+      <span>{SITE_NAME}</span>
+    </a>
+
+    <div class="site-nav-wrap">
+      <nav aria-label={t.nav.ariaLabel}>
+        <ul class="site-nav">
+          <li>
+            <a
+              href={getPagePath(lang, 'home')}
+              class="site-nav__link"
+              aria-current={page === 'home' ? 'page' : undefined}
+            >
+              {t.nav.home}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getPagePath(lang, 'roles')}
+              class="site-nav__link"
+              aria-current={page === 'roles' ? 'page' : undefined}
+            >
+              {t.nav.roles}
+            </a>
+          </li>
+          <li>
+            <details class="lang-menu nav-dropdown" id="for-you-menu-details">
+              <summary
+                class:list={[
+                  'site-nav__link',
+                  'nav-dropdown__summary',
+                  { 'site-nav__link--active': isAudiencePage },
+                ]}
+              >
+                <span>{t.nav.forYou}</span>
+                <svg class="lang-menu__caret" viewBox="0 0 12 8" aria-hidden="true">
+                  <path d="M1 1.5L6 6.5L11 1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </summary>
+              <ul class="lang-menu__list nav-dropdown__list" aria-label={t.nav.forYou}>
+                {
+                  AUDIENCE_SLUGS.map((slug) => {
+                    const audPath = getAudiencePath(lang, slug);
+                    const isCurrent = page === `for/${slug}`;
+                    return (
+                      <li>
+                        <a
+                          href={audPath}
+                          class="lang-menu__link"
+                          aria-current={isCurrent ? 'page' : undefined}
+                        >
+                          <span>{t.audiences[slug].label}</span>
+                        </a>
+                      </li>
+                    );
+                  })
+                }
+              </ul>
+            </details>
+          </li>
+          <li>
+            <a
+              href={getPagePath(lang, 'how-it-works')}
+              class="site-nav__link"
+              aria-current={page === 'how-it-works' ? 'page' : undefined}
+            >
+              {t.nav.howItWorks}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getPagePath(lang, 'privacy')}
+              class="site-nav__link"
+              aria-current={page === 'privacy' ? 'page' : undefined}
+            >
+              {t.nav.privacy}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getPagePath(lang, 'legal')}
+              class="site-nav__link"
+              aria-current={page === 'legal' ? 'page' : undefined}
+            >
+              {t.nav.legal}
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <details class="lang-menu" id="lang-menu-details">
+        <summary class="lang-menu__summary" aria-label={`${t.nav.languageLabel}: ${t.langNative}`}>
+          <span>{t.langNative}</span>
+          <svg class="lang-menu__caret" viewBox="0 0 12 8" aria-hidden="true">
+            <path d="M1 1.5L6 6.5L11 1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </summary>
+        <ul class="lang-menu__list" aria-label={t.nav.languageLabel}>
+          {
+            alternates.map((alt) => (
+              <li>
+                <a
+                  href={alt.path}
+                  lang={alt.lang}
+                  hreflang={alt.lang}
+                  class="lang-menu__link"
+                  aria-current={alt.lang === lang ? 'true' : undefined}
+                >
+                  <span>{alt.nativeName}</span>
+                  <span class="lang-menu__code">{alt.lang}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </details>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  (function () {
+    const menus = Array.from(document.querySelectorAll('#lang-menu-details, #for-you-menu-details'));
+    if (!menus.length) return;
+    document.addEventListener('click', function (e) {
+      menus.forEach(function (menu) {
+        if (menu.hasAttribute('open') && !menu.contains(e.target)) {
+          menu.removeAttribute('open');
+        }
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        menus.forEach(function (menu) {
+          if (menu.hasAttribute('open')) {
+            menu.removeAttribute('open');
+            const summary = menu.querySelector('summary');
+            if (summary) summary.focus();
+          }
+        });
+      }
+    });
+  })();
+</script>

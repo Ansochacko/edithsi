@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqList from '../FaqList.astro';
+import AuthorBox from '../AuthorBox.astro';
+import type { Lang } from '../../i18n';
+import { getDictionary, getPagePath } from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  page="how-it-works"
+  title={t.howPage.metaTitle}
+  description={t.howPage.metaDescription}
+  faqsSchema={t.howPage.faqs}
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">{t.howPage.eyebrow}</span>
+      <h1>{t.howPage.title}</h1>
+      <p class="lead">{t.howPage.lead}</p>
+
+      <h2>{t.howPage.stepsHeading}</h2>
+      <div class="steps-grid">
+        {
+          t.howPage.steps.map((s) => (
+            <article class="step-card">
+              <span class="step-card__num">{s.step}</span>
+              <h3 class="fact-card__title">{s.title}</h3>
+              <p class="fact-card__body">{s.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-heading">
+    <div class="container">
+      <h2 id="faq-heading">{t.howPage.faqHeading}</h2>
+      <p>{t.howPage.faqIntro}</p>
+      <FaqList lang={lang} />
+
+      <div class="btn-group" style="margin-top: var(--space-8);">
+        <a href={getPagePath(lang, 'roles')} class="btn btn--primary">
+          {t.common.viewAllRoles}
+        </a>
+      </div>
+
+      <AuthorBox lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

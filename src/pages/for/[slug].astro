@@ -1,0 +1,19 @@
+---
+import AudienceView from '../../components/views/AudienceView.astro';
+import { AUDIENCE_SLUGS, type AudienceSlug } from '../../i18n';
+
+export function getStaticPaths() {
+  return AUDIENCE_SLUGS.map((slug) => ({
+    params: { slug },
+    props: { slug },
+  }));
+}
+
+interface Props {
+  slug: AudienceSlug;
+}
+
+const { slug } = Astro.props;
+---
+
+<AudienceView lang="en" slug={slug} />

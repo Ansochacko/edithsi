@@ -1,0 +1,27 @@
+{
+  "name": "edithsi",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Edithsi — Independent multilingual guide helping credentialed professionals in Finland and Europe find remote AI-training work on Mercor's official listings.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && node scripts/indexnow.mjs",
+    "indexnow": "INDEXNOW_LIVE=1 node scripts/indexnow.mjs",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^5.1.0"
+  },
+  "devDependencies": {
+    "@fontsource/familjen-grotesk": "^5.1.0",
+    "@fontsource/source-serif-4": "^5.1.0",
+    "@types/node": "^22.0.0",
+    "axe-core": "^4.10.2",
+    "lighthouse": "^12.2.1",
+    "typescript": "^5.7.0"
+  }
+}

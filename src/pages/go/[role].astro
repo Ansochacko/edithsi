@@ -1,0 +1,70 @@
+---
+import rolesData from '../../data/roles.json';
+import { REFERRAL_CODE, GENERAL_REFERRAL_URL, SITE_NAME } from '../../config';
+
+export function getStaticPaths() {
+  const rolePaths = rolesData.map((role) => ({
+    params: { role: role.id },
+    props: {
+      title: role.title,
+      targetUrl: `${role.listingUrl}?referralCode=${REFERRAL_CODE}`,
+    },
+  }));
+
+  rolePaths.push({
+    params: { role: 'general-portal' },
+    props: {
+      title: 'Mercor General Application',
+      targetUrl: `${GENERAL_REFERRAL_URL}?referralCode=${REFERRAL_CODE}`,
+    },
+  });
+
+  return rolePaths;
+}
+
+const { title, targetUrl } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting to {title} — {SITE_NAME}</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="refresh" content={`0;url=${targetUrl}`} />
+    <link rel="canonical" href={targetUrl} />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background: #FAF8F5;
+        color: #14181D;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 1.5rem;
+      }
+      .card {
+        max-width: 32rem;
+        padding: 2rem;
+        background: #FFFFFF;
+        border: 1px solid #DCD6CC;
+      }
+      a {
+        color: #1B4332;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Opening official listing on Mercor…</h1>
+      <p>
+        You are leaving {SITE_NAME} via a referral link (AD). If you are not redirected automatically,
+        <a href={targetUrl} rel="sponsored noopener noreferrer">continue to {title} on Mercor</a>.
+      </p>
+    </main>
+  </body>
+</html>

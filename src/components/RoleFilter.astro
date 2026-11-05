@@ -1,0 +1,77 @@
+---
+import {
+  AUDIENCE_SLUGS,
+  getDictionary,
+  interpolate,
+  type Lang,
+} from '../i18n';
+
+interface Props {
+  lang: Lang;
+  totalRoles: number;
+}
+
+const { lang, totalRoles } = Astro.props;
+const t = getDictionary(lang);
+
+const initialCountText = interpolate(t.rolesPage.showingCount, {
+  count: totalRoles,
+  total: totalRoles,
+});
+---
+
+<div
+  class="filter-bar"
+  role="region"
+  aria-labelledby="role-filter-heading"
+  data-showing-template={t.rolesPage.showingCount}
+  data-total-roles={String(totalRoles)}
+>
+  <div class="filter-bar__header">
+    <span id="role-filter-heading" class="filter-bar__label">
+      {t.rolesPage.filterLabel}
+    </span>
+    <p id="role-filter-count" class="filter-bar__count" aria-live="polite">
+      {initialCountText}
+    </p>
+  </div>
+
+  <div class="filter-pills" role="group" aria-labelledby="role-filter-heading">
+    <a
+      href="?for=all#roles-directory"
+      class="filter-pill"
+      data-filter-for="all"
+      aria-current="true"
+    >
+      {t.rolesPage.filterAll}
+    </a>
+    {
+      AUDIENCE_SLUGS.map((slug) => (
+        <a
+          href={`?for=${slug}#group-${slug}`}
+          class="filter-pill"
+          data-filter-for={slug}
+        >
+          {t.audiences[slug].shortChoice}
+        </a>
+      ))
+    }
+  </div>
+
+  <div class="sort-bar">
+    <span id="role-sort-heading" class="filter-bar__label">
+      {t.rolesPage.sortLabel}:
+    </span>
+    <div class="sort-pills" role="group" aria-labelledby="role-sort-heading">
+      <label for="sort-mode-group" class="sort-pill" data-sort-target="group">
+        {t.rolesPage.sortGroup}
+      </label>
+      <label for="sort-mode-pay" class="sort-pill" data-sort-target="pay">
+        {t.rolesPage.sortPay}
+      </label>
+      <label for="sort-mode-az" class="sort-pill" data-sort-target="az">
+        {t.rolesPage.sortAz}
+      </label>
+    </div>
+  </div>
+</div>

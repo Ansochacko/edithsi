@@ -1,0 +1,308 @@
+{
+  "lang": "fi",
+  "langName": "Finnish",
+  "langNative": "Suomi",
+  "suggestionPrompt": "Näytä suomeksi?",
+  "suggestionAction": "Vaihda kieleksi suomi",
+  "suggestionDismiss": "Sulje kieliehdotus",
+  "skipToContent": "Siirry pääsisältöön",
+  "adStamp": "MAINOS",
+  "adStampNote": "Riippumaton opas, joka sisältää suosittelulinkkejä Mercoriin. Voin saada suosittelupalkkion, jos sinut valitaan projektiin.",
+  "nav": {
+    "ariaLabel": "Päävalikko",
+    "home": "Etusivu",
+    "roles": "Avoimet tehtävät",
+    "forYou": "Sinulle",
+    "howItWorks": "Miten se toimii & UKK",
+    "privacy": "Tietosuoja",
+    "legal": "Oikeudelliset tiedot",
+    "languageLabel": "Kieli"
+  },
+  "common": {
+    "applyButton": "Hae Mercorissa",
+    "generalApplyButton": "Selaa kaikkia Mercorin tehtäviä",
+    "referralMicroLabel": "suosittelulinkki · mainos",
+    "notGuaranteed": "ei taattu",
+    "checkedOnPrefix": "Tarkistettu",
+    "whoItSuitsLabel": "Kenelle tehtävä sopii",
+    "postedPayLabel": "Ilmoitettu palkkio",
+    "fieldLabel": "Ala",
+    "viewAllRoles": "Katso kaikki 8 avointa tehtävää",
+    "readHowItWorks": "Lue miten se toimii & rehellinen UKK",
+    "externalLinkSr": "(avautuu uuteen välilehteen)"
+  },
+  "fields": {
+    "all": "Kaikki",
+    "law": "Oikeustiede",
+    "medicine": "Lääketiede & terveys",
+    "tech": "Teknologia",
+    "finance": "Rahoitus & talous",
+    "language": "Kieli & ääni",
+    "general": "Yleisasiantuntija"
+  },
+  "audiences": {
+    "software": {
+      "label": "Ohjelmistot & IT",
+      "shortChoice": "Ohjelmistot & IT",
+      "description": "kehittäjät, ohjelmistoinsinöörit, data- ja IT-ammattilaiset"
+    },
+    "medical": {
+      "label": "Lääketiede & terveys",
+      "shortChoice": "Lääketiede & terveys",
+      "description": "lääkärit, sairaanhoitajat, hammaslääkärit, farmaseutit, kansanterveys"
+    },
+    "legal": {
+      "label": "Oikeustiede & laki",
+      "shortChoice": "Laki",
+      "description": "asianajajat, juristit, compliance- ja sääntelyasiantuntijat"
+    },
+    "finance": {
+      "label": "Talous & rahoitus",
+      "shortChoice": "Talous & liiketoiminta",
+      "description": "kirjanpitäjät, tilintarkastajat, pankki- ja rahoitusanalyytikot, vakuutusala"
+    },
+    "language": {
+      "label": "Kielet & kääntäminen",
+      "shortChoice": "Kielet",
+      "description": "äidinkieliset puhujat, kääntäjät, kielitieteilijät, äänialan osaajat"
+    },
+    "office": {
+      "label": "Toimisto-ohjelmistot",
+      "shortChoice": "Toimistotyökalut",
+      "description": "Excelin, Wordin, PowerPointin ja sähköpostityökalujen tehokäyttäjät"
+    },
+    "general": {
+      "label": "Kuka tahansa",
+      "shortChoice": "Muu tausta",
+      "description": "vahvat lukijat ja kirjoittajat ilman erillistä tutkintovaatimusta"
+    }
+  },
+  "rolesData": {
+    "legal-licensed": {
+      "title": "Legal Expert (luvan saanut lakimies / asianajaja)",
+      "pay": "$100–150/h",
+      "whoItSuits": "Edellyttää oikeustieteen tutkintoa (J.D., LL.B. tai LL.M. / OTM) sekä voimassa olevaa lupaa harjoittaa lakimiehen ammattia."
+    },
+    "legal-general": {
+      "title": "Legal Expert (oikeudellinen asiantuntija)",
+      "pay": "$60–150/h",
+      "whoItSuits": "Lakiasiainhoito, compliance, sääntely tai julkinen politiikka."
+    },
+    "medical-expert": {
+      "title": "Medical Expert (lääketieteen ja terveydenhuollon asiantuntija)",
+      "pay": "$60–180/h",
+      "whoItSuits": "Lääkärit, sairaanhoitajat, hammaslääkärit, proviisorit ja farmaseutit sekä kansanterveyden osaajat; kliininen pätevyys vaaditaan."
+    },
+    "software-engineering": {
+      "title": "Software Engineering Expert (ohjelmistokehittäjä)",
+      "pay": "$70–150/h",
+      "whoItSuits": "Ohjelmistoinsinöörit ja kehittäjät, jotka rakentavat ja julkaisevat tuotanto-ohjelmistoja."
+    },
+    "office-productivity": {
+      "title": "Office & Productivity Software Expert (toimisto-ohjelmistojen asiantuntija)",
+      "pay": "$60–70/h",
+      "whoItSuits": "Taulukkolaskennan, tekstinkäsittelyn, esitysgrafiikan ja sähköpostityökalujen vaativat ammattikäyttäjät."
+    },
+    "finance-expert": {
+      "title": "Finance Expert (rahoituksen ja talouden asiantuntija)",
+      "pay": "palkkio määräytyy projektikohtaisesti",
+      "whoItSuits": "Kirjanpito, tilintarkastus, yritysrahoitus, investointipankkitoiminta, varainhoito, vakuutusala ja vakuutusmatematiikka."
+    },
+    "language-audio": {
+      "title": "Language & Audio Expert (kieli- ja ääniasiantuntija)",
+      "pay": "$35–50/h",
+      "whoItSuits": "Kielitieteilijät, kääntäjät ja äänialan ammattilaiset; kielinä muun muassa suomi, ranska, espanja, italia, portugali, puola ja hollanti."
+    },
+    "generalist-expert": {
+      "title": "Generalist Expert (yleisasiantuntija)",
+      "pay": "$40–70/h",
+      "whoItSuits": "Kuka tahansa, jolla on vahva luku- ja kirjoitustaito; ei vaadi tiettyä tutkintoa tai ammattilupaa."
+    }
+  },
+  "home": {
+    "metaTitle": "Tekoälytyö ja etätyö asiantuntijoille — Edithsi",
+    "metaDescription": "Helsingistä ylläpidetty riippumaton opas, joka auttaa suomalaisia asiantuntijoita löytämään etätyönä tehtäviä tekoälyn koulutusprojekteja Mercorista.",
+    "eyebrow": "Riippumaton pohjoismainen ja eurooppalainen opas",
+    "heroTitle": "Etätyönä tehtäviä tekoälyn koulutusprojekteja tutkinnon suorittaneille asiantuntijoille Suomessa ja Euroopassa.",
+    "heroLead": "Toimin itse Suomesta käsin itsenäisenä Mercor-toimeksiantajana. Rakensin Edithsi-oppaan tarjotakseni juristeille, terveydenhuollon ammattilaisille, ohjelmistokehittäjille, talousosaajille ja kieliasiantuntijoille suoran ja realistisen katsauksen Mercorin julkisiin tehtäviin – ilman liioittelua.",
+    "iWorkInLabel": "Alani on:",
+    "roleCountSingular": "{count} tehtävä",
+    "roleCountPlural": "{count} tehtävää",
+    "realityHeading": "Mitä sinun kannattaa tietää ennen hakemista",
+    "realityIntro": "Lue nämä perusfaktat ennen kuin avaat yhtäkään linkkiä, jotta voit arvioida rauhassa, sopiiko malli omaan tilanteeseesi:",
+    "realityPoints": [
+      {
+        "title": "Ilmainen haku, työtä ei taata",
+        "body": "Hakeminen on täysin ilmaista – älä koskaan maksa kenellekään työpaikasta. Työtä ei taata; moni odottaa viikkoja tai jää kokonaan ilman projektia."
+      },
+      {
+        "title": "Palkkio itsenäisenä yrittäjänä dollareissa",
+        "body": "Jos saat projektin, työskentelet itsenäisenä toimeksiantajana (independent contractor) ja palkkio maksetaan yleensä viikoittain Stripen kautta Yhdysvaltain dollareissa (USD)."
+      },
+      {
+        "title": "Oman asuinmaasi verotus ja etuudet",
+        "body": "Verotus riippuu asuinmaastasi. Suomessa huomioitavia asioita ovat esimerkiksi toiminimi, ennakkovero, YEL-vakuutus työtulon ylittäessä 9 423 €/vuosi (2026) sekä yritystoiminnasta ilmoittaminen ennen aloitusta, jos saat työttömyysetuutta."
+      },
+      {
+        "title": "Miksi ylläpidän tätä sivustoa",
+        "body": "Ylläpidän tätä sivustoa yksin Suomessa asuvana toimeksiantajana. Jokainen sivuston Mercor-linkki sisältää suosittelukoodini, ja voin saada suosittelupalkkion, jos haet linkin kautta ja pääset projektiin."
+      }
+    ],
+    "featuredHeading": "Poimintoja avoimista tehtävistä",
+    "featuredSub": "Tiivistetty julkisista hakuilmoituksista. Palkkiot ovat ilmoitettuja vaihteluvälejä, eivätkä ne ole taattuja.",
+    "generalCtaHeading": "Haluatko selata Mercorin yleistä tehtäväsivua?",
+    "generalCtaBody": "Jos haluat tutustua suoraan Mercorin koko tehtävävalikoimaan, voit siirtyä sinne alla olevan yleisen suosittelulinkkini kautta."
+  },
+  "rolesPage": {
+    "metaTitle": "Avoimet tekoälytyöt aloittain (2026) — Edithsi",
+    "metaDescription": "Selaa 8 etätyönä tehtävää tekoälyn koulutusroolia koodauksen, lääketieteen, juridiikan, talouden ja suomen kielen osaajille ($35–180/h, ei taattu).",
+    "eyebrow": "Julkinen tehtäväluettelo",
+    "title": "Avoimet tekoälyn koulutustehtävät",
+    "lead": "Jokainen alla oleva tehtävä on tiivistetty Mercorin virallisista julkisista hakuilmoituksista. Suodata oman taustasi mukaan tai järjestä korkeimman ilmoitetun tuntipalkkion perusteella. Hakeminen on ilmaista, työtä ei taata, ja jokainen hakulinkki sisältää suosittelukoodini.",
+    "filterLabel": "Alani on:",
+    "filterAll": "Kaikki",
+    "sortLabel": "Järjestä",
+    "sortGroup": "Alaryhmä (oletus)",
+    "sortPay": "Korkein palkkio",
+    "sortAz": "A–Ö",
+    "alsoOpenToYou": "Avoinna myös sinulle",
+    "alsoOpenDesc": "Ei vaadi erillistä tutkintoa — avoinna kaikille vahvoille lukijoille ja kirjoittajille erikoisalojen rinnalla:",
+    "viewAudienceGuide": "Lue opas alalle: {audience}",
+    "showingCount": "Näytetään {count} / {total} tehtävää",
+    "emptyState": "Valitulla suodattimella ei löytynyt tehtäviä."
+  },
+  "audiencePage": {
+    "eyebrow": "Sinulle · Alakohtainen opas",
+    "matchingRolesHeading": "Soveltuvat avoimet tehtävät (järjestetty korkeimman palkkion mukaan)",
+    "beforeYouApplyHeading": "Tarkista ennen hakemista",
+    "faqHeading": "Usein kysyttyä tällä alalla",
+    "alsoOpenHeading": "Avoinna myös sinulle: Generalist Expert",
+    "alsoOpenBody": "Erikoistuneiden tehtävien lisäksi jokainen vahvan luku- ja kirjoitustaidon omaava hakija voi hakea Generalist Expert -pooliin ($40–70/h ilmoitettu, ei taattu).",
+    "browseAllRoles": "Vertaa kaikkia 8 avointa tehtävää",
+    "needsContentNotice": "NEEDS CONTENT"
+  },
+  "howPage": {
+    "metaTitle": "Mercor kokemuksia, verotus & UKK — Edithsi",
+    "metaDescription": "Suorat vastaukset Mercoriin hakemisesta Suomessa: Stripe-maksut dollareissa, toiminimi, ennakkovero, YEL-raja 2026, työttömyysturva ja tietoturva.",
+    "eyebrow": "Prosessi & faktat",
+    "title": "Miten se toimii & rehellinen UKK",
+    "lead": "Tekoälymallien kehittäjät tarvitsevat eri alojen asiantuntijoita laatimaan tehtävänantoja, arvioimaan mallien vastauksia ja tarkistamaan päättelyketjuja. Näin prosessi etenee käytännössä.",
+    "stepsHeading": "Hakeminen ja toimeksiantosuhde vaiheittain",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Valitse osaamistasi vastaava tehtävä",
+        "body": "Valitse Mercorin hakuilmoitus, joka vastaa tutkintoasi, ammattilupaasi tai työkokemustasi. Lähetät hakemuksen suoraan Mercorille täysin maksutta."
+      },
+      {
+        "step": "02",
+        "title": "Odota mahdollista projektikutsua (ei taattu)",
+        "body": "Hakijapooliin pääseminen ei tarkoita varmaa työtä. Moni hakija odottaa viikkoja tai ei saa yhtäkään projektitarjousta."
+      },
+      {
+        "step": "03",
+        "title": "Toimeksiantotyö ja viikoittaiset USD-maksut",
+        "body": "Kun sinut kiinnitetään projektiin, toimit itsenäisenä yrittäjänä tai toimeksiantajana. Palkkiot maksetaan yleensä viikoittain Stripen kautta Yhdysvaltain dollareissa, ja huolehdit itse verotuksestasi sekä eläkevakuutuksestasi."
+      }
+    ],
+    "faqHeading": "Rehellinen UKK (8 keskeistä faktaa)",
+    "faqIntro": "Julkaisen alla vain tarkistettuja tosiasioita. Lue nämä huolellisesti ennen kuin haet tehtäviin.",
+    "faqs": [
+      {
+        "question": "1. Maksaako hakeminen jotakin?",
+        "answer": "Hakeminen on ilmaista; älä koskaan maksa kenellekään työpaikasta."
+      },
+      {
+        "question": "2. Onko työn saaminen taattua hakemuksen jälkeen?",
+        "answer": "Työtä ei taata; monet odottavat viikkoja tai eivät saa lainkaan projektia."
+      },
+      {
+        "question": "3. Miten ja missä valuutassa palkkio maksetaan?",
+        "answer": "Palkkio maksetaan itsenäisenä toimeksiantajana (independent contractor), yleensä viikoittain Stripen kautta Yhdysvaltain dollareissa."
+      },
+      {
+        "question": "4. Miten verotus ja eläkevakuutus toimivat?",
+        "answer": "Verotus riippuu asuinmaastasi. Esimerkki Suomesta: toiminimi, ennakkovero ja YEL-eläkevakuutus, kun työtulo on vähintään 9 423 euroa vuodessa (2026). Tämä ei ole veroneuvontaa."
+      },
+      {
+        "question": "5. Entä jos saan työttömyysetuutta?",
+        "answer": "Jos saat työttömyysetuutta, ilmoita yritystoiminnasta tai työllistymisestä omassa työssä ennen kuin aloitat."
+      },
+      {
+        "question": "6. Mistä tunnistan aidon Mercorin sähköpostiviestin?",
+        "answer": "Aidot Mercorin sähköpostiosoitteet päättyvät @mercor.com-verkkotunnukseen; projektitileissä käytetään @mercor.expert-päätettä."
+      },
+      {
+        "question": "7. Kenelle luovutan tietoni hakiessani, ja entä tietoturva?",
+        "answer": "Jaat tietosi suoraan Mercorille; Mercor tiedotti tietoturvapoikkeamasta maaliskuussa 2026."
+      },
+      {
+        "question": "8. Kuka ylläpitää Edithsi-sivustoa?",
+        "answer": "Sivustoa ylläpitää yksi Suomessa toimiva Mercor-toimeksiantaja, joka voi ansaita suosittelupalkkion."
+      }
+    ]
+  },
+  "privacyPage": {
+    "metaTitle": "Tietosuojaseloste (Ei evästeitä) — Edithsi",
+    "metaDescription": "Edithsi-sivuston tietosuoja: ei henkilötietojen keräämistä, ei evästeitä eikä analytiikkaa. Tietoa Vercel Inc. -palvelinlokista.",
+    "eyebrow": "Tietosuoja",
+    "title": "Tietosuojaseloste",
+    "lastUpdatedLabel": "Päivitetty viimeksi",
+    "intro": "Toteutin Edithsi-sivuston staattisena oppaana, joka kunnioittaa yksityisyyttäsi. En kerää henkilötietoja, en aseta evästeitä enkä käytä kävijäseurantaohjelmistoja.",
+    "sections": [
+      {
+        "heading": "1. Rekisterinpitäjä",
+        "body": "Tämän verkkosivuston ylläpitäjä ja rekisterinpitäjä on {name}, kotipaikka {city}, sähköposti {email}."
+      },
+      {
+        "heading": "2. Ei henkilötietojen keräämistä, evästeitä tai analytiikkaa",
+        "body": "En kerää tällä sivustolla lainkaan henkilötietoja. Sivustolla ei ole käyttäjätilejä, yhteydenottolomakkeita, evästeitä, analytiikkaskriptejä eikä seurantapikseleitä."
+      },
+      {
+        "heading": "3. Palvelinympäristö ja tietoturvalokit (Vercel Inc.)",
+        "body": "Sivuston palveluntarjoajana toimii Vercel Inc. Kun vierailet sivustolla tai käytät /go/-ohjauslinkkiä, Vercel Inc. säilyttää lyhytaikaisesti tavanomaiset palvelinlokitiedot (IP-osoite ja pyynnön ajankohta) tietoturvan varmistamiseksi."
+      },
+      {
+        "heading": "4. Linkit Mercoriin (erillinen rekisterinpitäjä)",
+        "body": "Kun napsautat haku- tai suosittelulinkkiä Mercoriin, siirryt pois tältä sivustolta. Mercor on erillinen rekisterinpitäjä, jolla on oma tietosuojakäytäntönsä. Luovutat hakemustietosi suoraan Mercorille."
+      },
+      {
+        "heading": "5. Yhteydenotot",
+        "body": "Jos sinulla on kysyttävää tästä tietosuojaselosteesta, voit ottaa minuun yhteyttä osoitteeseen {email}."
+      }
+    ]
+  },
+  "legalPage": {
+    "metaTitle": "Oikeudelliset tiedot & ylläpitäjä — Edithsi",
+    "metaDescription": "Edithsi-sivuston ylläpitäjän tiedot, mainos- ja suosittelulinkkitiedote sekä tehtävätietojen tarkistuspäivä 2026-11-05.",
+    "eyebrow": "Ylläpitäjän & julkaisijan tiedot",
+    "title": "Oikeudelliset tiedot",
+    "intro": "Tiedot verkkosivuston ylläpitäjästä, kaupallisesta yhteistyöstä (suosittelulinkit) sekä tehtävätietojen tarkistuspäivämäärästä.",
+    "operatorHeading": "Ylläpitäjän tiedot",
+    "nameLabel": "Ylläpitäjän nimi",
+    "cityLabel": "Kotipaikka",
+    "emailLabel": "Sähköposti",
+    "businessIdLabel": "Y-tunnus",
+    "sections": [
+      {
+        "heading": "Riippumaton verkkosivusto — ei sidoksissa Mercoriin",
+        "body": "Edithsi on yhden henkilön Suomesta käsin ylläpitämä riippumaton verkkosivusto. En ole työsuhteessa Mercoriin, eikä Mercor sponsoroi tai tue tätä sivustoa. Mercor on omistajansa tavaramerkki."
+      },
+      {
+        "heading": "Mainos- ja suosittelulinkki-ilmoitus",
+        "body": "Tämän sivuston sivut sisältävät suosittelulinkkejä (referral links) Mercoriin ja ovat luonteeltaan mainontaa. Jos siirryt Mercoriin linkkini kautta ja työllistyt projektiin, voin saada suosittelupalkkion ilman, että siitä aiheutuu sinulle kuluja."
+      },
+      {
+        "heading": "Tehtävä- ja palkkiotietojen ajantasaisuus",
+        "body": "Kaikki tehtävänimikkeet, pätevyysvaatimukset ja ilmoitetut tuntipalkkiot on tiivistetty Mercorin julkisista hakuilmoituksista {checkedOn}, ja ne voivat muuttua. Ilmoitetut palkkiot eivät ole taattuja."
+      }
+    ]
+  },
+  "footer": {
+    "trademarkDisclaimer": "Edithsi on riippumaton sivusto, eikä se ole sidoksissa Mercoriin tai Mercorin tukema tai sponsoroima. Mercor on omistajansa tavaramerkki. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.)",
+    "operatorLine": "Ylläpitäjä: {name} · {city} · {email}",
+    "businessIdLine": "Y-tunnus: {businessId}",
+    "audiencesHeading": "Sinulle (aloittain)",
+    "linksHeading": "Tietosuoja & oikeudelliset tiedot"
+  }
+}

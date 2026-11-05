@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RoleCard, { type RoleEntry } from '../RoleCard.astro';
+import FaqList from '../FaqList.astro';
+import AuthorBox from '../AuthorBox.astro';
+import rolesRaw from '../../data/roles.json';
+import { getAudiencePageContent } from '../../data/audiencePages';
+import {
+  getDictionary,
+  getPagePath,
+  getAudiencePath,
+  type AudienceSlug,
+  type Lang,
+} from '../../i18n';
+
+interface Props {
+  lang: Lang;
+  slug: AudienceSlug;
+}
+
+const { lang, slug } = Astro.props;
+const t = getDictionary(lang);
+const content = getAudiencePageContent(slug, lang);
+const roles = rolesRaw as RoleEntry[];
+
+// Matching roles sorted by highest posted pay ("rate set per project" last)
+const matchingRoles = roles
+  .filter((r) => r.audiences.includes(slug))
+  .sort((a, b) => {
+    if (a.maxPay !== b.maxPay) return b.maxPay - a.maxPay;
+    return b.minPay - a.minPay;
+  });
+
+const generalistRole = roles.find((r) => r.id === 'generalist-expert')!;
+const showAlsoOpenGeneralist = slug !== 'general';
+
+const breadcrumbs = [
+  { name: t.nav.home, url: getPagePath(lang, 'home') },
+  { name: t.nav.roles, url: getPagePath(lang, 'roles') },
+  { name: t.audiences[slug].label, url: getAudiencePath(lang, slug) },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  page={`for/${slug}`}
+  title={content.metaTitle}
+  description={content.metaDescription}
+  breadcrumbs={breadcrumbs}
+  faqsSchema={content.faqs}
+  noindex={content.isThinContent}
+>
+  {
+    content.isThinContent ? (
+      <section class="section">
+        <div class="container">
+          <span class="eyebrow">{t.audiencePage.needsContentNotice}</span>
+          <h1>{content.h1}</h1>
+          <p class="lead">{t.audiencePage.needsContentNotice}</p>
+        </div>
+      </section>
+    ) : (
+      <>
+        <section class="section">
+          <div class="container">
+            <span class="eyebrow">
+              {t.audiencePage.eyebrow} · {t.audiences[slug].label}
+            </span>
+            <h1>{content.h1}</h1>
+            <div class="article-prose">
+              {content.paragraphs.map((p) => (
+                <p>{p}</p>
+              ))}
+            </div>
+            <div class="btn-group">
+              <a href="#matching-roles" class="btn btn--primary">
+                {t.audiencePage.matchingRolesHeading}
+              </a>
+              <a
+                href={`${getPagePath(lang, 'roles')}?for=${slug}`}
+                class="btn btn--secondary"
+              >
+                {t.audiencePage.browseAllRoles}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="matching-roles" aria-labelledby="matching-roles-heading">
+          <div class="container">
+            <h2 id="matching-roles-heading">{t.audiencePage.matchingRolesHeading}</h2>
+            <div class="ruled-role-index">
+              {matchingRoles.map((role) => (
+                <RoleCard
+                  role={role}
+                  lang={lang}
+                  src={`for-${slug}`}
+                  headingLevel="h3"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="checklist-heading">
+          <div class="container">
+            <h2 id="checklist-heading">{t.audiencePage.beforeYouApplyHeading}</h2>
+            <ul class="checklist-box">
+              {content.checklist.map((item) => (
+                <li class="checklist-box__item">{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="audience-faq-heading">
+          <div class="container">
+            <h2 id="audience-faq-heading">{t.audiencePage.faqHeading}</h2>
+            <FaqList items={content.faqs} />
+          </div>
+        </section>
+
+        {showAlsoOpenGeneralist && (
+          <section class="section section--compact" aria-labelledby="also-open-heading">
+            <div class="container">
+              <h2 id="also-open-heading">{t.audiencePage.alsoOpenHeading}</h2>
+              <p>{t.audiencePage.alsoOpenBody}</p>
+              <div class="ruled-role-index">
+                <RoleCard
+                  role={generalistRole}
+                  lang={lang}
+                  src={`for-${slug}-generalist`}
+                  headingLevel="h3"
+                />
+              </div>
+              <AuthorBox lang={lang} />
+            </div>
+          </section>
+        )}
+
+        {!showAlsoOpenGeneralist && (
+          <section class="section section--compact">
+            <div class="container">
+              <AuthorBox lang={lang} />
+            </div>
+          </section>
+        )}
+      </>
+    )
+  }
+</BaseLayout>

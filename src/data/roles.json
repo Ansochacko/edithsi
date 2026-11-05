@@ -1,0 +1,90 @@
+[
+  {
+    "id": "legal-licensed",
+    "field": "law",
+    "title": "Legal Expert (licensed lawyer)",
+    "pay": "$100–150/h",
+    "maxPay": 150,
+    "minPay": 100,
+    "whoItSuits": "Needs a law degree (J.D., LL.B. or LL.M.) and a current licence to practise.",
+    "audiences": ["legal"],
+    "listingUrl": "https://work.mercor.com/jobs/list_AAABnXhvagXHJt27tM9AQqyk/legal-experts"
+  },
+  {
+    "id": "legal-general",
+    "field": "law",
+    "title": "Legal Expert",
+    "pay": "$60–150/h",
+    "maxPay": 150,
+    "minPay": 60,
+    "whoItSuits": "Legal practice, compliance, regulation or policy.",
+    "audiences": ["legal"],
+    "listingUrl": "https://work.mercor.com/jobs/list_AAABoKOQUds_uf4uJMtGK64s/legal-expert"
+  },
+  {
+    "id": "medical-expert",
+    "field": "medicine",
+    "title": "Medical Expert",
+    "pay": "$60–180/h",
+    "maxPay": 180,
+    "minPay": 60,
+    "whoItSuits": "Doctors, nurses, dentists, pharmacists, public health; clinical credential required.",
+    "audiences": ["medical"],
+    "listingUrl": "https://work.mercor.com/jobs/list_AAABoKOPjbVqcleYq1NNjKxo/medical-expert"
+  },
+  {
+    "id": "software-engineering",
+    "field": "tech",
+    "title": "Software Engineering Expert",
+    "pay": "$70–150/h",
+    "maxPay": 150,
+    "minPay": 70,
+    "whoItSuits": "Engineers who build and ship software.",
+    "audiences": ["software"],
+    "listingUrl": "https://work.mercor.com/jobs/list_AAABoKOP6g9ZUjU9LdNBCqS7/software-engineering-expert"
+  },
+  {
+    "id": "office-productivity",
+    "field": "tech",
+    "title": "Office & Productivity Software Expert",
+    "pay": "$60–70/h",
+    "maxPay": 70,
+    "minPay": 60,
+    "whoItSuits": "High-level users of spreadsheets, documents, slides or email tools.",
+    "audiences": ["office", "finance"],
+    "listingUrl": "https://work.mercor.com/jobs/list_AAABoKOQsxXSV5vKwxhGnL5Z/office-productivity-software-expert"
+  },
+  {
+    "id": "finance-expert",
+    "field": "finance",
+    "title": "Finance Expert",
+    "pay": "rate set per project",
+    "maxPay": -1,
+    "minPay": -1,
+    "whoItSuits": "Accounting, audit, corporate finance, investment banking, asset management, insurance, actuarial.",
+    "audiences": ["finance"],
+    "listingUrl": "https://work.mercor.com/jobs/list_AAABoKOQo_tcpjmZ2_xLb7qN/finance-expert"
+  },
+  {
+    "id": "language-audio",
+    "field": "language",
+    "title": "Language & Audio Expert",
+    "pay": "$35–50/h",
+    "maxPay": 50,
+    "minPay": 35,
+    "whoItSuits": "Linguists, translators, audio professionals; languages include Finnish, French, Spanish, Italian, Portuguese, Polish, Dutch.",
+    "audiences": ["language"],
+    "listingUrl": "https://work.mercor.com/jobs/list_AAABoKOPMUFnRCU8QMZBH634/language-audio-expert"
+  },
+  {
+    "id": "generalist-expert",
+    "field": "general",
+    "title": "Generalist Expert",
+    "pay": "$40–70/h",
+    "maxPay": 70,
+    "minPay": 40,
+    "whoItSuits": "Anyone with strong reading and writing; no specific credential.",
+    "audiences": ["general"],
+    "listingUrl": "https://work.mercor.com/jobs/list_AAABoKORCF2dakrez4FCAo_G/generalist-expert"
+  }
+]

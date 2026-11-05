@@ -1,0 +1,14 @@
+---
+import HowItWorksView from '../../components/views/HowItWorksView.astro';
+import { NON_DEFAULT_LANGUAGES, type Lang } from '../../i18n';
+
+export function getStaticPaths() {
+  return NON_DEFAULT_LANGUAGES.map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params as { lang: Lang };
+---
+
+<HowItWorksView lang={lang} />

@@ -1,0 +1,311 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RoleFilter from '../RoleFilter.astro';
+import RoleCard, { type RoleEntry } from '../RoleCard.astro';
+import rolesRaw from '../../data/roles.json';
+import {
+  AUDIENCE_SLUGS,
+  getDictionary,
+  getAudiencePath,
+  interpolate,
+  type Lang,
+} from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+const roles = rolesRaw as RoleEntry[];
+
+// Sort helper: highest posted pay first, "rate set per project" (maxPay === -1) last
+function sortByHighestPay(list: RoleEntry[]): RoleEntry[] {
+  return [...list].sort((a, b) => {
+    if (a.maxPay !== b.maxPay) return b.maxPay - a.maxPay;
+    return b.minPay - a.minPay;
+  });
+}
+
+// Sort helper: A-Z by localized title
+function sortByAz(list: RoleEntry[]): RoleEntry[] {
+  return [...list].sort((a, b) => {
+    const titleA = (t.rolesData as Record<string, { title: string }>)[a.id]?.title ?? a.title;
+    const titleB = (t.rolesData as Record<string, { title: string }>)[b.id]?.title ?? b.title;
+    return titleA.localeCompare(titleB, lang);
+  });
+}
+
+const generalistRole = roles.find((r) => r.id === 'generalist-expert')!;
+const rolesByPay = sortByHighestPay(roles);
+const rolesByAz = sortByAz(roles);
+
+const audienceGroups = AUDIENCE_SLUGS.map((slug) => {
+  const matching = sortByHighestPay(
+    roles.filter((r) => r.audiences.includes(slug))
+  );
+  return {
+    slug,
+    label: t.audiences[slug].label,
+    shortChoice: t.audiences[slug].shortChoice,
+    description: t.audiences[slug].description,
+    guideHref: getAudiencePath(lang, slug),
+    guideLinkText: interpolate(t.rolesPage.viewAudienceGuide, {
+      audience: t.audiences[slug].label,
+    }),
+    roles: matching,
+    showAlsoOpenGeneralist: slug !== 'general',
+  };
+});
+---
+
+<BaseLayout
+  lang={lang}
+  page="roles"
+  title={t.rolesPage.metaTitle}
+  description={t.rolesPage.metaDescription}
+>
+  <section class="section" id="roles-directory">
+    <div class="container">
+      <span class="eyebrow">{t.rolesPage.eyebrow}</span>
+      <h1>{t.rolesPage.title}</h1>
+      <p class="lead">{t.rolesPage.lead}</p>
+
+      <!-- CSS-only radio inputs so Sort works even with JavaScript disabled -->
+      <input
+        type="radio"
+        name="role-sort-mode"
+        id="sort-mode-group"
+        class="sort-radio sr-only"
+        checked
+      />
+      <input
+        type="radio"
+        name="role-sort-mode"
+        id="sort-mode-pay"
+        class="sort-radio sr-only"
+      />
+      <input
+        type="radio"
+        name="role-sort-mode"
+        id="sort-mode-az"
+        class="sort-radio sr-only"
+      />
+
+      <RoleFilter lang={lang} totalRoles={roles.length} />
+
+      <div class="roles-views-wrapper">
+        <!-- View 1: Grouped by Audience (Default) -->
+        <div class="roles-view roles-view--group" id="roles-view-group">
+          {
+            audienceGroups.map((group) => (
+              <section
+                class="audience-group"
+                id={`group-${group.slug}`}
+                data-audience-group={group.slug}
+                aria-labelledby={`heading-group-${group.slug}`}
+              >
+                <div class="audience-group__header">
+                  <div>
+                    <h2 id={`heading-group-${group.slug}`} class="audience-group__title">
+                      {group.label}
+                    </h2>
+                    <p class="audience-group__desc">{group.description}</p>
+                  </div>
+                  <a href={group.guideHref} class="btn btn--secondary">
+                    {group.guideLinkText}
+                  </a>
+                </div>
+
+                <div class="roles-grid">
+                  {group.roles.map((role) => (
+                    <RoleCard
+                      role={role}
+                      lang={lang}
+                      src={`roles-${group.slug}`}
+                      headingLevel="h3"
+                    />
+                  ))}
+                </div>
+
+                {group.showAlsoOpenGeneralist && (
+                  <div class="also-open-box">
+                    <div class="also-open-box__header">
+                      <span class="eyebrow">{t.rolesPage.alsoOpenToYou}</span>
+                      <p class="also-open-box__desc">{t.rolesPage.alsoOpenDesc}</p>
+                    </div>
+                    <div class="roles-grid">
+                      <RoleCard
+                        role={generalistRole}
+                        lang={lang}
+                        src={`roles-${group.slug}-generalist`}
+                        headingLevel="h3"
+                      />
+                    </div>
+                  </div>
+                )}
+              </section>
+            ))
+          }
+        </div>
+
+        <!-- View 2: Sorted by Highest Posted Pay ("rate set per project" last) -->
+        <div class="roles-view roles-view--pay" id="roles-view-pay">
+          <div class="roles-grid">
+            {
+              rolesByPay.map((role) => (
+                <RoleCard
+                  role={role}
+                  lang={lang}
+                  src="roles-sort-pay"
+                  headingLevel="h2"
+                />
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- View 3: Sorted A–Z -->
+        <div class="roles-view roles-view--az" id="roles-view-az">
+          <div class="roles-grid">
+            {
+              rolesByAz.map((role) => (
+                <RoleCard
+                  role={role}
+                  lang={lang}
+                  src="roles-sort-az"
+                  headingLevel="h2"
+                />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  (function () {
+    const bar = document.querySelector('.filter-bar');
+    if (!bar) return;
+
+    const template = bar.getAttribute('data-showing-template') || '{count} / {total}';
+    const total = parseInt(bar.getAttribute('data-total-roles') || '8', 10);
+    const countEl = document.getElementById('role-filter-count');
+
+    const filterLinks = Array.from(bar.querySelectorAll('.filter-pill[data-filter-for]'));
+    const groups = Array.from(document.querySelectorAll('.audience-group[data-audience-group]'));
+    const flatCards = Array.from(
+      document.querySelectorAll('#roles-view-pay .role-card, #roles-view-az .role-card')
+    );
+
+    const radioGroup = document.getElementById('sort-mode-group');
+    const radioPay = document.getElementById('sort-mode-pay');
+    const radioAz = document.getElementById('sort-mode-az');
+
+    let currentFor = 'all';
+    let currentSort = 'group';
+
+    function updateUrl(forVal, sortVal) {
+      const url = new URL(window.location.href);
+      if (forVal && forVal !== 'all') {
+        url.searchParams.set('for', forVal);
+      } else {
+        url.searchParams.delete('for');
+      }
+      if (sortVal && sortVal !== 'group') {
+        url.searchParams.set('sort', sortVal);
+      } else {
+        url.searchParams.delete('sort');
+      }
+      url.hash = '';
+      window.history.replaceState({}, '', url.toString());
+    }
+
+    function applyState(forVal, sortVal, syncUrl) {
+      currentFor = forVal || 'all';
+      currentSort = sortVal || 'group';
+
+      if (currentSort === 'pay' && radioPay) radioPay.checked = true;
+      else if (currentSort === 'az' && radioAz) radioAz.checked = true;
+      else if (radioGroup) radioGroup.checked = true;
+
+      filterLinks.forEach(function (link) {
+        const val = link.getAttribute('data-filter-for');
+        if (val === currentFor) {
+          link.setAttribute('aria-current', 'true');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+
+      groups.forEach(function (grp) {
+        const gSlug = grp.getAttribute('data-audience-group');
+        if (currentFor === 'all' || gSlug === currentFor) {
+          grp.removeAttribute('hidden');
+        } else {
+          grp.setAttribute('hidden', '');
+        }
+      });
+
+      const matchedRoleIds = new Set();
+      flatCards.forEach(function (card) {
+        const auds = (card.getAttribute('data-audiences') || '').split(',');
+        const roleId = card.getAttribute('data-role-id') || '';
+        const match =
+          currentFor === 'all' ||
+          auds.includes(currentFor) ||
+          roleId === 'generalist-expert';
+        if (match) {
+          card.removeAttribute('hidden');
+          if (currentFor === 'all' || auds.includes(currentFor)) {
+            matchedRoleIds.add(roleId);
+          }
+        } else {
+          card.setAttribute('hidden', '');
+        }
+      });
+
+      const visibleCount = currentFor === 'all' ? total : matchedRoleIds.size;
+      if (countEl) {
+        countEl.textContent = template
+          .replace('{count}', String(visibleCount))
+          .replace('{total}', String(total));
+      }
+
+      if (syncUrl) {
+        updateUrl(currentFor, currentSort);
+      }
+    }
+
+    filterLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const selected = link.getAttribute('data-filter-for') || 'all';
+        applyState(selected, currentSort, true);
+      });
+    });
+
+    [
+      { el: radioGroup, mode: 'group' },
+      { el: radioPay, mode: 'pay' },
+      { el: radioAz, mode: 'az' },
+    ].forEach(function (item) {
+      if (!item.el) return;
+      item.el.addEventListener('change', function () {
+        if (item.el.checked) {
+          applyState(currentFor, item.mode, true);
+        }
+      });
+    });
+
+    // Read initial ?for=<slug>&sort=<mode> from URL on load
+    const params = new URLSearchParams(window.location.search);
+    const initFor = params.get('for') || 'all';
+    const initSort = params.get('sort') || 'group';
+    if (initFor !== 'all' || initSort !== 'group') {
+      applyState(initFor, initSort, false);
+    }
+  })();
+</script>

@@ -1,0 +1,309 @@
+{
+  "_comment": "NEEDS NATIVE REVIEW",
+  "lang": "fr",
+  "langName": "French",
+  "langNative": "Français",
+  "suggestionPrompt": "Lire cette page en français ?",
+  "suggestionAction": "Passer en français",
+  "suggestionDismiss": "Fermer la suggestion de langue",
+  "skipToContent": "Aller au contenu principal",
+  "adStamp": "PUBLICITÉ",
+  "adStampNote": "Guide indépendant contenant des liens de parrainage vers Mercor. Je peux percevoir une prime de parrainage si vous êtes retenu.",
+  "nav": {
+    "ariaLabel": "Navigation principale",
+    "home": "Accueil",
+    "roles": "Missions ouvertes",
+    "forYou": "Pour vous",
+    "howItWorks": "Fonctionnement & FAQ",
+    "privacy": "Confidentialité",
+    "legal": "Mentions légales",
+    "languageLabel": "Langue"
+  },
+  "common": {
+    "applyButton": "Postuler sur Mercor",
+    "generalApplyButton": "Voir toutes les offres Mercor",
+    "referralMicroLabel": "lien de parrainage · publicité",
+    "notGuaranteed": "non garanti",
+    "checkedOnPrefix": "Vérifié le",
+    "whoItSuitsLabel": "Profil recherché",
+    "postedPayLabel": "Tarif affiché",
+    "fieldLabel": "Domaine",
+    "viewAllRoles": "Voir les 8 missions ouvertes",
+    "readHowItWorks": "Lire le fonctionnement & la FAQ honnête",
+    "externalLinkSr": "(s'ouvre dans un nouvel onglet)"
+  },
+  "fields": {
+    "all": "Tous",
+    "law": "Droit",
+    "medicine": "Médecine & santé",
+    "tech": "Technologie",
+    "finance": "Finance",
+    "language": "Langues & audio",
+    "general": "Généraliste"
+  },
+  "audiences": {
+    "software": {
+      "label": "Logiciel & IT",
+      "shortChoice": "Logiciel & IT",
+      "description": "développeurs, ingénieurs logiciels, spécialistes data et IT"
+    },
+    "medical": {
+      "label": "Médecine & santé",
+      "shortChoice": "Médecine & santé",
+      "description": "médecins, infirmiers, dentistes, pharmaciens, santé publique"
+    },
+    "legal": {
+      "label": "Droit & juridique",
+      "shortChoice": "Droit",
+      "description": "avocats, diplômés en droit, conformité et politiques publiques"
+    },
+    "finance": {
+      "label": "Finance & entreprise",
+      "shortChoice": "Finance & entreprise",
+      "description": "comptables, auditeurs, banquiers, analystes financiers, assurance"
+    },
+    "language": {
+      "label": "Langues & traduction",
+      "shortChoice": "Langues",
+      "description": "locuteurs natifs, traducteurs, linguistes, professionnels de l'audio"
+    },
+    "office": {
+      "label": "Bureautique & productivité",
+      "shortChoice": "Outils bureautiques",
+      "description": "utilisateurs avancés d'Excel, Word, PowerPoint et outils d'e-mailing"
+    },
+    "general": {
+      "label": "Tous profils",
+      "shortChoice": "Autre domaine",
+      "description": "excellente maîtrise de la lecture et de la rédaction sans diplôme spécifique"
+    }
+  },
+  "rolesData": {
+    "legal-licensed": {
+      "title": "Legal Expert (avocat inscrit au barreau / juriste habilité)",
+      "pay": "100–150 $/h",
+      "whoItSuits": "Exige un diplôme de droit (J.D., LL.B., LL.M. ou Master en droit) ainsi qu'une licence d'exercice en cours de validité."
+    },
+    "legal-general": {
+      "title": "Legal Expert (expert juridique)",
+      "pay": "60–150 $/h",
+      "whoItSuits": "Pratique juridique, conformité (compliance), réglementation ou politiques publiques."
+    },
+    "medical-expert": {
+      "title": "Medical Expert (expert médical et de santé)",
+      "pay": "60–180 $/h",
+      "whoItSuits": "Médecins, infirmiers, chirurgiens-dentistes, pharmaciens et spécialistes de santé publique ; diplôme clinique exigé."
+    },
+    "software-engineering": {
+      "title": "Software Engineering Expert (ingénieur logiciel)",
+      "pay": "70–150 $/h",
+      "whoItSuits": "Ingénieurs et développeurs qui conçoivent et déploient des logiciels en production."
+    },
+    "office-productivity": {
+      "title": "Office & Productivity Software Expert (logiciels de bureautique)",
+      "pay": "60–70 $/h",
+      "whoItSuits": "Utilisateurs avancés de tableurs, traitements de texte, logiciels de présentation ou outils de messagerie."
+    },
+    "finance-expert": {
+      "title": "Finance Expert (expert financier)",
+      "pay": "tarif fixé par projet",
+      "whoItSuits": "Comptabilité, audit, finance d'entreprise, banque d'investissement, gestion d'actifs, assurance et actuariat."
+    },
+    "language-audio": {
+      "title": "Language & Audio Expert (expert linguistique et audio)",
+      "pay": "35–50 $/h",
+      "whoItSuits": "Linguistes, traducteurs et professionnels de l'audio ; les langues incluent notamment le finnois, le français, l'espagnol, l'italien, le portugais, le polonais et le néerlandais."
+    },
+    "generalist-expert": {
+      "title": "Generalist Expert (expert généraliste)",
+      "pay": "40–70 $/h",
+      "whoItSuits": "Toute personne disposant d'excellentes capacités de lecture et de rédaction ; aucun diplôme spécifique requis."
+    }
+  },
+  "home": {
+    "metaTitle": "Missions Entraîneur IA Télétravail — Edithsi",
+    "metaDescription": "Guide indépendant géré depuis Helsinki aidant les spécialistes en Finlande et en Europe à trouver des missions d’entraînement d’IA sur Mercor.",
+    "eyebrow": "Guide de référence indépendant pour la Finlande et l'Europe",
+    "heroTitle": "Missions d'entraînement d'IA à distance pour spécialistes qualifiés en Finlande et en Europe.",
+    "heroLead": "Je travaille moi-même depuis la Finlande comme prestataire indépendant sur Mercor. J'ai créé Edithsi afin d'offrir aux juristes, professionnels de santé, ingénieurs, financiers et linguistes une présentation claire et honnête des offres publiques de Mercor — sans promesses exagérées.",
+    "iWorkInLabel": "Je travaille dans :",
+    "roleCountSingular": "{count} mission",
+    "roleCountPlural": "{count} missions",
+    "realityHeading": "Ce qu'il faut savoir avant de postuler",
+    "realityIntro": "Avant de cliquer sur un lien de ce site, prenez connaissance des faits essentiels afin d'évaluer si ce fonctionnement correspond à votre situation :",
+    "realityPoints": [
+      {
+        "title": "Candidature gratuite, aucun travail garanti",
+        "body": "Postuler est entièrement gratuit — ne payez jamais personne pour un emploi. Le travail n'est pas garanti ; beaucoup de candidats attendent des semaines ou n'obtiennent aucun projet."
+      },
+      {
+        "title": "Rémunération d'indépendant en dollars US",
+        "body": "Si vous êtes affecté à un projet, vous intervenez en tant que prestataire indépendant (independent contractor) et êtes généralement payé chaque semaine via Stripe en dollars américains (USD)."
+      },
+      {
+        "title": "Fiscalité et allocations de votre pays",
+        "body": "Vos impôts dépendent de votre pays de résidence. Exemple en Finlande : statut toiminimi, acomptes d'impôt, assurance retraite YEL à partir de 9 423 EUR/an de revenu du travail (2026), et déclaration d'activité indépendante avant de commencer en cas d'allocations chômage."
+      },
+      {
+        "title": "Pourquoi je tiens ce guide",
+        "body": "Je gère ce site seul depuis la Finlande en tant que prestataire Mercor. Chaque lien vers Mercor contient mon code de parrainage, et je peux percevoir une prime si votre candidature aboutit à une mission."
+      }
+    ],
+    "featuredHeading": "Sélection de missions ouvertes",
+    "featuredSub": "Résumé à partir des annonces publiques. Les tarifs affichés sont des fourchettes indicatives et ne sont pas garantis.",
+    "generalCtaHeading": "Vous souhaitez consulter le portail général de Mercor ?",
+    "generalCtaBody": "Si vous préférez parcourir directement le catalogue complet des offres de Mercor, vous pouvez y accéder via mon lien de parrainage général ci-dessous."
+  },
+  "rolesPage": {
+    "metaTitle": "Missions IA ouvertes par métier (2026) — Edithsi",
+    "metaDescription": "Consultez 8 missions à distance d’entraînement d’IA en logiciel, médecine, droit, finance et langues sur Mercor (35–180 $/h, non garantis).",
+    "eyebrow": "Répertoire des offres publiques",
+    "title": "Missions d'entraînement d'IA ouvertes",
+    "lead": "Chaque offre ci-dessous est résumée à partir du portail public officiel de Mercor. Filtrez selon votre métier ou triez par rémunération horaire affichée. La candidature est gratuite, le travail n'est pas garanti et chaque lien inclut mon code de parrainage.",
+    "filterLabel": "Je travaille dans :",
+    "filterAll": "Tous",
+    "sortLabel": "Trier par",
+    "sortGroup": "Domaine (défaut)",
+    "sortPay": "Tarif le plus élevé",
+    "sortAz": "A–Z",
+    "alsoOpenToYou": "Également ouvert à votre profil",
+    "alsoOpenDesc": "Aucun diplôme spécifique requis — ouvert à toute personne dotée d'excellentes capacités de lecture et de rédaction :",
+    "viewAudienceGuide": "Lire le guide pour {audience}",
+    "showingCount": "Affichage de {count} sur {total} missions",
+    "emptyState": "Aucune mission ne correspond à ce filtre."
+  },
+  "audiencePage": {
+    "eyebrow": "Pour vous · Guide par métier",
+    "matchingRolesHeading": "Missions ouvertes correspondantes (triées par tarif affiché décroissant)",
+    "beforeYouApplyHeading": "Avant de postuler : liste de contrôle",
+    "faqHeading": "Questions fréquentes pour ce profil",
+    "alsoOpenHeading": "Également ouvert à votre profil : Generalist Expert",
+    "alsoOpenBody": "En complément des missions spécialisées, toute personne disposant d'excellentes compétences de lecture et d'écriture peut postuler au vivier Generalist Expert (40–70 $/h affichés, non garantis).",
+    "browseAllRoles": "Comparer les 8 missions ouvertes",
+    "needsContentNotice": "NEEDS CONTENT"
+  },
+  "howPage": {
+    "metaTitle": "Avis Mercor, fonctionnement & FAQ — Edithsi",
+    "metaDescription": "Réponses factuelles sur Mercor depuis la Finlande et l’Europe : paiement en USD via Stripe, fiscalité et YEL 2026, chômage et sécurité des données.",
+    "eyebrow": "Processus & faits vérifiés",
+    "title": "Fonctionnement & FAQ honnête",
+    "lead": "Les laboratoires d'IA font appel à des spécialistes métiers pour rédiger des consignes, évaluer les réponses des modèles et vérifier leurs raisonnements. Voici comment cela se passe concrètement, suivi de huit réponses factuelles.",
+    "stepsHeading": "De la candidature à la mission en trois étapes",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Choisir une offre adaptée à vos qualifications",
+        "body": "Sélectionnez sur Mercor une annonce correspondant à votre diplôme, votre habilitation ou votre expérience. Vous transmettez votre dossier directement à Mercor sans aucuns frais."
+      },
+      {
+        "step": "02",
+        "title": "Attendre une affectation éventuelle (non garantie)",
+        "body": "Figurer dans le vivier de candidats ne garantit pas une mission. Beaucoup attendent plusieurs semaines ou ne reçoivent aucune proposition de projet."
+      },
+      {
+        "step": "03",
+        "title": "Prestation indépendante et virements hebdomadaires en USD",
+        "body": "Lorsqu'un projet vous est confié, vous travaillez comme prestataire indépendant. Les paiements sont généralement effectués chaque semaine via Stripe en dollars américains, et vous déclarez vos revenus selon les règles de votre pays."
+      }
+    ],
+    "faqHeading": "FAQ honnête (8 faits essentiels)",
+    "faqIntro": "Je ne publie ci-dessous que des faits vérifiés. Lisez-les attentivement avant de postuler.",
+    "faqs": [
+      {
+        "question": "1. La candidature est-elle payante ?",
+        "answer": "Postuler est gratuit ; ne payez jamais personne pour obtenir un emploi."
+      },
+      {
+        "question": "2. Suis-je assuré d'obtenir du travail après avoir postulé ?",
+        "answer": "Le travail n'est pas garanti ; beaucoup de personnes attendent des semaines ou n'obtiennent aucun projet."
+      },
+      {
+        "question": "3. Comment et dans quelle devise suis-je rémunéré ?",
+        "answer": "Vous êtes rémunéré en tant que prestataire indépendant (independent contractor), généralement chaque semaine via Stripe, en dollars américains (USD)."
+      },
+      {
+        "question": "4. Comment fonctionnent les impôts et les cotisations retraite ?",
+        "answer": "La fiscalité dépend de votre pays. Exemple pour la Finlande : entreprise individuelle (toiminimi), acomptes d'impôt et assurance retraite YEL à partir de 9 423 EUR/an de revenu du travail (2026). Ceci ne constitue pas un conseil fiscal."
+      },
+      {
+        "question": "5. Que faire si je perçois des allocations chômage ?",
+        "answer": "Si vous touchez une allocation chômage, déclarez votre activité indépendante avant de commencer."
+      },
+      {
+        "question": "6. Comment vérifier qu'un e-mail de Mercor est authentique ?",
+        "answer": "Les véritables e-mails de Mercor se terminent par @mercor.com ; les comptes de projet utilisent @mercor.expert."
+      },
+      {
+        "question": "7. À qui mes données sont-elles transmises et qu'en est-il de la sécurité ?",
+        "answer": "Vous partagez vos données directement avec Mercor ; Mercor a signalé un incident de sécurité en mars 2026."
+      },
+      {
+        "question": "8. Qui gère Edithsi ?",
+        "answer": "Le site est géré par un seul prestataire Mercor basé en Finlande, susceptible de percevoir une prime de parrainage."
+      }
+    ]
+  },
+  "privacyPage": {
+    "metaTitle": "Confidentialité (Sans cookies) — Edithsi",
+    "metaDescription": "Politique de confidentialité d'Edithsi : aucune donnée personnelle collectée, aucun cookie, aucune analyse et journaux de sécurité Vercel Inc.",
+    "eyebrow": "Protection des données",
+    "title": "Politique de confidentialité",
+    "lastUpdatedLabel": "Dernière mise à jour",
+    "intro": "J'ai conçu Edithsi comme un site statique d'information respectueux de votre vie privée. Je ne collecte aucune donnée personnelle, ne dépose aucun cookie et n'utilise aucun outil d'analyse.",
+    "sections": [
+      {
+        "heading": "1. Responsable du traitement",
+        "body": "Le responsable du traitement de ce site est {name}, établi à {city}, joignable par e-mail à {email}."
+      },
+      {
+        "heading": "2. Aucune collecte de données personnelles, ni cookies, ni analyse",
+        "body": "Je ne collecte aucune donnée personnelle sur ce site. Il n'y a ni compte utilisateur, ni formulaire, ni cookie, ni script d'analyse, ni pixel de suivi."
+      },
+      {
+        "heading": "3. Hébergement et journaux de sécurité (Vercel Inc.)",
+        "body": "Ce site est hébergé par Vercel Inc. Lors de votre visite ou de l'utilisation d'une redirection /go/, l'hébergeur Vercel Inc. conserve à court terme des journaux serveur techniques (adresse IP et heure) uniquement à des fins de sécurité."
+      },
+      {
+        "heading": "4. Liens externes vers Mercor (responsable de traitement distinct)",
+        "body": "Lorsque vous cliquez sur un lien de candidature ou de parrainage vers Mercor, vous quittez ce site. Mercor est un responsable de traitement distinct disposant de sa propre politique de confidentialité. Vous partagez vos données directement avec Mercor."
+      },
+      {
+        "heading": "5. Contact",
+        "body": "Pour toute question relative à cette notice de confidentialité, vous pouvez m'écrire à {email}."
+      }
+    ]
+  },
+  "legalPage": {
+    "metaTitle": "Mentions légales & éditeur — Edithsi",
+    "metaDescription": "Mentions légales d'Edithsi : indépendance vis-à-vis de Mercor, transparence sur les liens de parrainage et vérification du 2026-11-05.",
+    "eyebrow": "Éditeur & mentions réglementaires",
+    "title": "Mentions légales",
+    "intro": "Informations concernant l'éditeur de ce site, la transparence sur les liens de parrainage (publicité) et l'exactitude des résumés d'offres.",
+    "operatorHeading": "Informations sur l'opérateur",
+    "nameLabel": "Nom de l'opérateur",
+    "cityLabel": "Ville",
+    "emailLabel": "E-mail",
+    "businessIdLabel": "Numéro d'entreprise (Y-tunnus)",
+    "sections": [
+      {
+        "heading": "Site indépendant — non affilié à Mercor",
+        "body": "Edithsi est un site indépendant géré par une seule personne en Finlande. Je ne suis ni affilié à Mercor, ni approuvé ou sponsorisé par Mercor. Mercor est une marque déposée appartenant à son propriétaire."
+      },
+      {
+        "heading": "Information sur la publicité et les liens de parrainage",
+        "body": "Les pages de ce site contiennent des liens de parrainage vers Mercor et constituent une communication commerciale (publicité). Si vous suivez un lien de parrainage et êtes retenu pour un projet, je peux percevoir une prime sans frais pour vous."
+      },
+      {
+        "heading": "Mise à jour des informations sur les missions",
+        "body": "Les intitulés de missions, profils recherchés et fourchettes de rémunération ont été résumés à partir des annonces publiques de Mercor le {checkedOn} et peuvent évoluer. Les rémunérations affichées ne sont pas garanties."
+      }
+    ]
+  },
+  "footer": {
+    "trademarkDisclaimer": "Edithsi est indépendant et n'est ni affilié à, ni approuvé ou sponsorisé par Mercor. Mercor est une marque de son propriétaire. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.)",
+    "operatorLine": "Édité par {name} · {city} · {email}",
+    "businessIdLine": "Identifiant d'entreprise : {businessId}",
+    "audiencesHeading": "Pour vous (par métier)",
+    "linksHeading": "Confidentialité & mentions légales"
+  }
+}

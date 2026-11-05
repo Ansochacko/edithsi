@@ -1,0 +1,57 @@
+---
+// Review with a lawyer before launch
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { CHECKED_ON, OPERATOR } from '../../config';
+import type { Lang } from '../../i18n';
+import { getDictionary, interpolate } from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+---
+<!-- Review with a lawyer before launch -->
+<BaseLayout
+  lang={lang}
+  page="legal"
+  title={t.legalPage.metaTitle}
+  description={t.legalPage.metaDescription}
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">{t.legalPage.eyebrow}</span>
+      <h1>{t.legalPage.title}</h1>
+      <p class="lead">{t.legalPage.intro}</p>
+
+      <h2>{t.legalPage.operatorHeading}</h2>
+      <dl class="legal-dl">
+        <dt>{t.legalPage.nameLabel}</dt>
+        <dd>{OPERATOR.name}</dd>
+        <dt>{t.legalPage.cityLabel}</dt>
+        <dd>{OPERATOR.city}</dd>
+        <dt>{t.legalPage.emailLabel}</dt>
+        <dd>{OPERATOR.email}</dd>
+        <dt>{t.legalPage.businessIdLabel}</dt>
+        <dd>{OPERATOR.businessId}</dd>
+      </dl>
+
+      {
+        t.legalPage.sections.map((sec) => (
+          <div class="prose-section">
+            <h2>{sec.heading}</h2>
+            <p>
+              {interpolate(sec.body, {
+                name: OPERATOR.name,
+                city: OPERATOR.city,
+                email: OPERATOR.email,
+                checkedOn: CHECKED_ON,
+              })}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
