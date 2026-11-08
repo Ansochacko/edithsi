@@ -1,7 +1,18 @@
 import type { APIRoute } from 'astro';
-import { SITE_NAME, SITE_URL, CHECKED_ON } from '../config';
-import { AUDIENCE_SLUGS, LANGUAGES, getAudiencePath } from '../i18n';
+import { SITE_NAME, SITE_URL, CHECKED_ON, ORGANIZATION_DESCRIPTION } from '../config';
+import {
+  AUDIENCE_SLUGS,
+  PLATFORM_SLUGS,
+  GUIDE_SLUGS,
+  LANGUAGES,
+  getAudiencePath,
+  getPlatformPath,
+  getGuidePath,
+  getPagePath,
+} from '../i18n';
 import { getAudiencePageContent } from '../data/audiencePages';
+import { getPlatformPageContent, getComparePageContent } from '../data/platformContent';
+import { getPayIndexPageContent, getGuidePageContent } from '../data/hubPagesContent';
 
 function escapeXml(str: string): string {
   return str
@@ -17,6 +28,54 @@ export const GET: APIRoute = () => {
   const items: string[] = [];
 
   for (const lang of LANGUAGES) {
+    const payIndex = getPayIndexPageContent(lang);
+    const payUrl = `${SITE_URL}${getPagePath(lang, 'pay-index')}`;
+    items.push(`    <item>
+      <title>${escapeXml(payIndex.title)}</title>
+      <link>${escapeXml(payUrl)}</link>
+      <guid isPermaLink="true">${escapeXml(payUrl)}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <description>${escapeXml(payIndex.metaDescription)}</description>
+      <dc:language>${escapeXml(lang)}</dc:language>
+    </item>`);
+
+    const compare = getComparePageContent(lang);
+    const compareUrl = `${SITE_URL}${getPagePath(lang, 'compare')}`;
+    items.push(`    <item>
+      <title>${escapeXml(compare.title)}</title>
+      <link>${escapeXml(compareUrl)}</link>
+      <guid isPermaLink="true">${escapeXml(compareUrl)}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <description>${escapeXml(compare.metaDescription)}</description>
+      <dc:language>${escapeXml(lang)}</dc:language>
+    </item>`);
+
+    for (const slug of PLATFORM_SLUGS) {
+      const pContent = getPlatformPageContent(lang, slug);
+      const url = `${SITE_URL}${getPlatformPath(lang, slug)}`;
+      items.push(`    <item>
+      <title>${escapeXml(pContent.title)}</title>
+      <link>${escapeXml(url)}</link>
+      <guid isPermaLink="true">${escapeXml(url)}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <description>${escapeXml(pContent.metaDescription)}</description>
+      <dc:language>${escapeXml(lang)}</dc:language>
+    </item>`);
+    }
+
+    for (const slug of GUIDE_SLUGS) {
+      const gContent = getGuidePageContent(lang, slug);
+      const url = `${SITE_URL}${getGuidePath(lang, slug)}`;
+      items.push(`    <item>
+      <title>${escapeXml(gContent.title)}</title>
+      <link>${escapeXml(url)}</link>
+      <guid isPermaLink="true">${escapeXml(url)}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <description>${escapeXml(gContent.metaDescription)}</description>
+      <dc:language>${escapeXml(lang)}</dc:language>
+    </item>`);
+    }
+
     for (const slug of AUDIENCE_SLUGS) {
       const content = getAudiencePageContent(slug, lang);
       if (content.isThinContent) continue;
@@ -35,9 +94,9 @@ export const GET: APIRoute = () => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>${escapeXml(SITE_NAME)} — Profession Guides</title>
+    <title>${escapeXml(SITE_NAME)} — AI-Training Pay Index, Platform Profiles &amp; Guides</title>
     <link>${SITE_URL}/</link>
-    <description>Independent multilingual guide helping credentialed professionals in Finland and Europe find remote AI-training work on Mercor's official listings.</description>
+    <description>${escapeXml(ORGANIZATION_DESCRIPTION)}</description>
     <language>en</language>
     <lastBuildDate>${pubDate}</lastBuildDate>
     <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />

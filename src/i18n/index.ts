@@ -23,13 +23,41 @@ export const AUDIENCE_SLUGS = [
 
 export type AudienceSlug = (typeof AUDIENCE_SLUGS)[number];
 
+export const PLATFORM_SLUGS = [
+  'mercor',
+  'mindrift',
+  'alignerr',
+  'outlier',
+  'micro1',
+  'handshake-ai',
+] as const;
+
+export type PlatformSlug = (typeof PLATFORM_SLUGS)[number];
+
+export const GUIDE_SLUGS = [
+  'remote-side-jobs-from-home',
+  'taxes-toiminimi-yel-finland',
+  'unemployment-benefits-ai-work',
+  'ai-interview-preparation',
+  'avoid-ai-job-scams',
+  'ai-training-for-phds-and-students',
+] as const;
+
+export type GuideSlug = (typeof GUIDE_SLUGS)[number];
+
 export type PageKey =
   | 'home'
   | 'roles'
+  | 'compare'
+  | 'pay-index'
+  | 'survey'
+  | 'glossary'
   | 'how-it-works'
   | 'privacy'
   | 'legal'
-  | `for/${AudienceSlug}`;
+  | `for/${AudienceSlug}`
+  | `platforms/${PlatformSlug}`
+  | `guides/${GuideSlug}`;
 
 export type Dictionary = typeof en;
 
@@ -56,6 +84,14 @@ export function getPagePath(lang: Lang, page: PageKey): string {
 
 export function getAudiencePath(lang: Lang, slug: AudienceSlug): string {
   return getPagePath(lang, `for/${slug}`);
+}
+
+export function getPlatformPath(lang: Lang, slug: PlatformSlug): string {
+  return getPagePath(lang, `platforms/${slug}`);
+}
+
+export function getGuidePath(lang: Lang, slug: GuideSlug): string {
+  return getPagePath(lang, `guides/${slug}`);
 }
 
 export function getAbsoluteUrl(lang: Lang, page: PageKey): string {

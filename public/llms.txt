@@ -1,0 +1,45 @@
+# Edithsi
+
+> Edithsi is an independent, six-language guide and pay index for credentialed professionals in Finland and Europe comparing remote AI-training work across Mercor, micro1, Outlier, Alignerr, Handshake AI, and Mindrift.
+
+- Canonical Site: https://edithsi.com
+- Languages: English (`/`), Finnish (`/fi/`), Swedish (`/sv/`), German (`/de/`), French (`/fr/`), Spanish (`/es/`)
+- Data Verification Date: 2026-11-05
+- Independence & Referral Disclosure: Edithsi is independent and not affiliated with, endorsed, or sponsored by Mercor or any listed platform. Apply links to Mercor contain my referral code (`02e0c12a-d634-4738-9686-04f28f31f52b`); links to micro1, Outlier, Alignerr, Handshake AI, and Mindrift use plain official URLs with no referral fee.
+
+## Original Data & Reference Hubs
+
+- [Edithsi AI Work Pay Index (2026-11)](https://edithsi.com/pay-index/): Posted hourly rate ranges ($15–180/h USD) by domain and platform, compiled strictly from official public listings with downloadable CSV.
+- [Download Pay Index CSV (2026-11)](https://edithsi.com/data/edithsi-ai-work-pay-index-2026-11.csv): Machine-readable CC BY 4.0 CSV dataset.
+- [Compare AI-Training Platforms](https://edithsi.com/compare/): Side-by-side comparison of Mercor, Mindrift, Alignerr, Outlier, micro1, and Handshake AI.
+- [State of AI-Training Work in Finland & Europe (Survey & Methodology)](https://edithsi.com/survey/): Anonymous contractor survey methodology and tracking metrics.
+- [AI-Training Glossary](https://edithsi.com/glossary/): Plain-language definitions of RLHF, rubrics, evals, standing pools, SFT, calibration tasks, and referral caps.
+- [Open Roles Directory](https://edithsi.com/roles/): Filterable directory of verified AI-training roles by profession and pay range.
+
+## Platform Profiles
+
+- [Mercor Profile & Review](https://edithsi.com/platforms/mercor/): $35–180/h posted across 8 pools; weekly USD payouts via Stripe; global remote.
+- [Mindrift Profile & Review](https://edithsi.com/platforms/mindrift/): $15–100+/h per completed task ($15–30/h entry, $60–100+/h domain experts); bi-weekly payouts; operated by Toloka AI BV.
+- [Alignerr Profile & Review](https://edithsi.com/platforms/alignerr/): $15–120/h on public role cards ($80/hr platform average badge); operated by Labelbox; note US ID verification caveat in official FAQ.
+- [Outlier Profile & Review](https://edithsi.com/platforms/outlier/): Weekly Tuesday payouts via PayPal, AirTM, or ACH; 50+ countries; operated by Scale AI.
+- [micro1 Profile & Review](https://edithsi.com/platforms/micro1/): Automated AI interview screening across engineering, finance, healthcare, and legal domains.
+- [Handshake AI Profile & Review](https://edithsi.com/platforms/handshake-ai/): Up to $17–150/h across fellowship tracks; strictly US-based with eligible US work authorization required.
+
+## Profession Hubs ("For You")
+
+- [For Software & Tech Engineers](https://edithsi.com/for/software/)
+- [For Doctors, Nurses & Healthcare](https://edithsi.com/for/medical/)
+- [For Lawyers & Legal Professionals](https://edithsi.com/for/legal/)
+- [For Finance, Accounting & Audit](https://edithsi.com/for/finance/)
+- [For Languages, Translation & Audio](https://edithsi.com/for/language/)
+- [For Office & Spreadsheet Specialists](https://edithsi.com/for/office/)
+- [For Any Degree & Strong Writing (Generalists)](https://edithsi.com/for/general/)
+
+## Practical Guides (Finland & Europe)
+
+- [Where AI-Training Fits Among Remote & Side Jobs from Home](https://edithsi.com/guides/remote-side-jobs-from-home/)
+- [Taxes, Prepayment Tax, Toiminimi & YEL (2026) in Finland & Europe](https://edithsi.com/guides/taxes-toiminimi-yel-finland/)
+- [AI-Training Work & Unemployment Benefits (Kela, TYJ & EU Rules)](https://edithsi.com/guides/unemployment-benefits-ai-work/)
+- [How Automated AI Interviews & Platform Assessments Work](https://edithsi.com/guides/ai-interview-preparation/)
+- [How to Spot Fake AI-Training Job Scams & Verify Platform Domains](https://edithsi.com/guides/avoid-ai-job-scams/)
+- [AI-Training Work for PhDs, Researchers & University Students](https://edithsi.com/guides/ai-training-for-phds-and-students/)

@@ -1,0 +1,230 @@
+[
+  {
+    "slug": "mercor",
+    "name": "Mercor",
+    "operator": "Mercor",
+    "official_url": "https://work.mercor.com",
+    "what_kind_of_work": "Domain-specific AI model evaluation (evals), multi-criteria rubric grading, prompt engineering, and expert reasoning verification across standing talent pools.",
+    "fields_they_hire_for": [
+      "Law (licensed lawyers & legal policy specialists)",
+      "Medicine (doctors, nurses, dentists, pharmacists, public health)",
+      "Software Engineering",
+      "Office & Productivity Software",
+      "Finance (accounting, audit, corporate finance, IB, actuarial)",
+      "Languages & Audio (Finnish, French, Spanish, Italian, Portuguese, Polish, Dutch)",
+      "Generalist reasoning & writing"
+    ],
+    "audiences": ["software", "medical", "legal", "finance", "language", "office", "general"],
+    "posted_pay_ranges": {
+      "summary": "$35–180/h (Finance: rate set per project; posted ranges, not guaranteed)",
+      "details": [
+        { "field": "Medicine", "role": "Medical Expert", "range": "$60–180/h", "source_url": "https://work.mercor.com/jobs/list_AAABoKOPjbVqcleYq1NNjKxo/medical-expert", "date": "2026-11-05" },
+        { "field": "Law", "role": "Legal Expert (licensed lawyer)", "range": "$100–150/h", "source_url": "https://work.mercor.com/jobs/list_AAABnXhvagXHJt27tM9AQqyk/legal-experts", "date": "2026-11-05" },
+        { "field": "Law", "role": "Legal Expert", "range": "$60–150/h", "source_url": "https://work.mercor.com/jobs/list_AAABoKOQUds_uf4uJMtGK64s/legal-expert", "date": "2026-11-05" },
+        { "field": "Software Engineering", "role": "Software Engineering Expert", "range": "$70–150/h", "source_url": "https://work.mercor.com/jobs/list_AAABoKOP6g9ZUjU9LdNBCqS7/software-engineering-expert", "date": "2026-11-05" },
+        { "field": "Office & Productivity", "role": "Office & Productivity Software Expert", "range": "$60–70/h", "source_url": "https://work.mercor.com/jobs/list_AAABoKOQsxXSV5vKwxhGnL5Z/office-productivity-software-expert", "date": "2026-11-05" },
+        { "field": "Generalist", "role": "Generalist Expert", "range": "$40–70/h", "source_url": "https://work.mercor.com/jobs/list_AAABoKORCF2dakrez4FCAo_G/generalist-expert", "date": "2026-11-05" },
+        { "field": "Languages & Audio", "role": "Language & Audio Expert", "range": "$35–50/h", "source_url": "https://work.mercor.com/jobs/list_AAABoKOPMUFnRCU8QMZBH634/language-audio-expert", "date": "2026-11-05" },
+        { "field": "Finance", "role": "Finance Expert", "range": "rate set per project", "source_url": "https://work.mercor.com/jobs/list_AAABoKOQo_tcpjmZ2_xLb7qN/finance-expert", "date": "2026-11-05" }
+      ],
+      "source_url": "https://work.mercor.com",
+      "source_date": "2026-11-05"
+    },
+    "how_payment_works": "Weekly payouts in USD via Stripe as an independent contractor (self-employed).",
+    "countries_accepted": "Global remote (including Finland, EU/EEA, UK, US, and Canada; individual project eligibility varies by client requirements).",
+    "application_steps": [
+      "Upload your résumé/CV on the official Mercor role listing.",
+      "Complete the automated AI video interview (~20 minutes) and any role-specific assessment.",
+      "Enter the standing talent pool and wait for project matching (work is not guaranteed).",
+      "Complete identity verification and Stripe payout setup when matched to a project."
+    ],
+    "referral_link": "https://t.mercor.com/Pq3VD",
+    "referral_code": "02e0c12a-d634-4738-9686-04f28f31f52b",
+    "last_checked": "2026-11-05"
+  },
+  {
+    "slug": "mindrift",
+    "name": "Mindrift",
+    "operator": "Toloka AI BV",
+    "official_url": "https://mindrift.ai/",
+    "what_kind_of_work": "Writing realistic domain prompts, evaluating AI-generated outputs, justifying assessments, and editing responses across 90+ specialized domains.",
+    "fields_they_hire_for": [
+      "STEM (research-level AI tasks)",
+      "Coding (code review, generation, automation across multiple languages)",
+      "Medicine (licensed US physicians reviewing clinical reasoning)",
+      "Management Consulting (strategy, operations, and M&A for MBB/senior consultants)",
+      "Law",
+      "Creative Writing & Editing",
+      "Linguistics (20+ languages)"
+    ],
+    "audiences": ["software", "medical", "legal", "finance", "language", "general"],
+    "posted_pay_ranges": {
+      "summary": "$15–100+/h ($15–30/h entry-level; $60–100+/h domain experts; Medicine up to $100/h; paid per completed task)",
+      "details": [
+        { "field": "Domain Experts (90+ domains)", "role": "Domain Expert AI Trainer", "range": "$60–100+/h", "source_url": "https://mindrift.ai/", "date": "2026-11-05" },
+        { "field": "Medicine", "role": "Medical AI Trainer (Licensed US Physicians)", "range": "Up to $100/h", "source_url": "https://mindrift.ai/", "date": "2026-11-05" },
+        { "field": "Management Consulting & Strategy", "role": "Consulting AI Trainer (MBB & Senior Consultants)", "range": "Up to $8,000/month (hourly rate TBD per task)", "source_url": "https://mindrift.ai/", "date": "2026-11-05" },
+        { "field": "STEM Research", "role": "STEM AI Trainer", "range": "Up to $6,400/month ($60–100+/h benchmark)", "source_url": "https://mindrift.ai/", "date": "2026-11-05" },
+        { "field": "Coding & Software", "role": "Coding AI Trainer", "range": "Up to $5,400/month ($60–100+/h benchmark)", "source_url": "https://mindrift.ai/", "date": "2026-11-05" },
+        { "field": "Entry-Level / Generalist Writing & QA", "role": "Entry-Level AI Trainer", "range": "$15–30/h", "source_url": "https://mindrift.ai/", "date": "2026-11-05" }
+      ],
+      "source_url": "https://mindrift.ai/",
+      "source_date": "2026-11-05"
+    },
+    "how_payment_works": "Bi-weekly payments as an independent contributor; paid per completed task with the task reward shown before you start (exact payment processor on public landing page: TBD; operated by Toloka AI BV).",
+    "countries_accepted": "Global remote across 20+ languages (including Finland and EU/EEA, subject to Toloka Platforms Eligibility and Geographic Restrictions; note that the Medicine track specifies licensed US physicians).",
+    "application_steps": [
+      "Submit your CV on mindrift.ai and indicate your domain, languages, and experience level.",
+      "Complete a domain or technical assessment to demonstrate your subject-matter skills.",
+      "Complete onboarding to access the platform and review process, then select available tasks."
+    ],
+    "referral_link": "",
+    "referral_code": "",
+    "last_checked": "2026-11-05"
+  },
+  {
+    "slug": "alignerr",
+    "name": "Alignerr",
+    "operator": "Labelbox, Inc.",
+    "official_url": "https://www.alignerr.com/",
+    "what_kind_of_work": "Aligning generative AI models on the Labelbox platform: designing coding challenges, grading outputs against strict rubrics, AI ethics review, map/location analysis, and voice/language dataset creation.",
+    "fields_they_hire_for": [
+      "Coding & Software Engineering",
+      "STEM & Research (PhDs, researchers, subject-matter experts)",
+      "General & Ethics (AI Ethics Reviewer, Data Labeling Specialist, Map & Location Data Analyst)",
+      "Languages & Audio (voice data and language specialists)",
+      "Talent Acquisition / Sourcing"
+    ],
+    "audiences": ["software", "language", "general"],
+    "posted_pay_ranges": {
+      "summary": "$15–120/h across public role cards (homepage badge cites $80/hr average pay; posted ranges, not guaranteed)",
+      "details": [
+        { "field": "General / Ethics", "role": "AI Ethics Reviewer", "range": "$40–120/h", "source_url": "https://www.alignerr.com/", "date": "2026-11-05" },
+        { "field": "General / Data Labeling", "role": "Data Labeling Specialist", "range": "$40–120/h", "source_url": "https://www.alignerr.com/", "date": "2026-11-05" },
+        { "field": "General / Geospatial", "role": "Map & Location Data Analyst", "range": "$40–120/h", "source_url": "https://www.alignerr.com/", "date": "2026-11-05" },
+        { "field": "Languages", "role": "AI Language Expert (Japanese / Portuguese examples on homepage)", "range": "$25–35/h", "source_url": "https://www.alignerr.com/", "date": "2026-11-05" },
+        { "field": "Recruiting / Sourcing", "role": "Talent Acquisition Specialist", "range": "$15–25/h", "source_url": "https://www.alignerr.com/", "date": "2026-11-05" },
+        { "field": "Coding & STEM", "role": "Coding & STEM Alignerr Roles", "range": "TBD per project (homepage cites $80/hr platform average)", "source_url": "https://www.alignerr.com/en/faqs", "date": "2026-11-05" }
+      ],
+      "source_url": "https://www.alignerr.com/",
+      "source_date": "2026-11-05"
+    },
+    "how_payment_works": "Independent contractor payouts; rates are listed in each project description before starting. Exact payment processor and payout frequency in public FAQ: TBD (configured during billing and contract setup after approval).",
+    "countries_accepted": "Global applicants welcomed in general FAQ, WITH IMPORTANT ID CAVEAT: Alignerr's official Visa FAQ states 'we only accept US Driver’s Licenses, US State IDs, US Work Permits or US Permanent Residence Cards for identity verification' via Persona, and phone verification is US/Canada only. European applicants should verify current non-US ID acceptance before investing time.",
+    "application_steps": [
+      "Sign in with your Google account on app.alignerr.com.",
+      "Upload your résumé (auto-fills profile in ~30 seconds) and set preferences.",
+      "Verify identity via Persona.",
+      "Browse available roles and complete required Zara™ interview or skills assessments.",
+      "Complete billing and contract setup once approved and enter project calibration."
+    ],
+    "referral_link": "",
+    "referral_code": "",
+    "last_checked": "2026-11-05"
+  },
+  {
+    "slug": "outlier",
+    "name": "Outlier",
+    "operator": "Scale AI / Smart Ecosystems",
+    "official_url": "https://outlier.ai/",
+    "what_kind_of_work": "Writing challenging domain problem/answer pairs, creating grading rubrics, and rating/ranking LLM responses to improve accuracy and safety.",
+    "fields_they_hire_for": [
+      "Coding & Software Engineering",
+      "STEM (Mathematics, Physics, Chemistry, Biology)",
+      "Languages (50+ countries, including European languages)",
+      "Generalist writing & reasoning (minimum Associate's degree required; Bachelor's, Master's, or PhD preferred)"
+    ],
+    "audiences": ["software", "language", "general"],
+    "posted_pay_ranges": {
+      "summary": "TBD (rates vary by expertise, project complexity, and location; tasking rate shown before starting each project)",
+      "details": [
+        { "field": "Coding, STEM, Languages & Generalist", "role": "Outlier AI Trainer / Expert Contributor", "range": "TBD — shown per project before tasking", "source_url": "https://outlier.ai/faq", "date": "2026-11-05" }
+      ],
+      "source_url": "https://outlier.ai/faq",
+      "source_date": "2026-11-05"
+    },
+    "how_payment_works": "Weekly payouts on Tuesdays (for work completed the previous Tuesday through Monday midnight UTC) via PayPal, AirTM, or ACH bank transfer, paid hourly or per task as an independent contractor.",
+    "countries_accepted": "50+ countries (including European countries); requires a valid government ID and mobile phone from your country of residence. No visa sponsorship.",
+    "application_steps": [
+      "Create your profile on outlier.ai.",
+      "Import and review your skills (current résumé and LinkedIn profile).",
+      "Verify your identity with a valid government ID and mobile phone from your country of residence.",
+      "Complete general skill screenings (30–90 minutes) and project-specific qualification assessments."
+    ],
+    "referral_link": "",
+    "referral_code": "",
+    "last_checked": "2026-11-05"
+  },
+  {
+    "slug": "micro1",
+    "name": "micro1",
+    "operator": "micro1 Inc.",
+    "official_url": "https://www.micro1.ai/experts",
+    "what_kind_of_work": "Human data generation for frontier AI labs, real-world reinforcement learning environments (Realm), contextual agent evaluations (Cortex), medical benchmarks (Medical Index), and robotics data.",
+    "fields_they_hire_for": [
+      "Software Engineering",
+      "Finance",
+      "Healthcare & Medicine",
+      "Legal",
+      "Academic Research & Robotics"
+    ],
+    "audiences": ["software", "medical", "legal", "finance", "general"],
+    "posted_pay_ranges": {
+      "summary": "TBD on public overview page ('Competitive compensation for expert knowledge'; role-specific rates listed on individual opportunities)",
+      "details": [
+        { "field": "Engineering, Finance, Healthcare & Legal", "role": "micro1 Domain Expert / AI Trainer", "range": "TBD per role listing", "source_url": "https://www.micro1.ai/experts", "date": "2026-11-05" }
+      ],
+      "source_url": "https://www.micro1.ai/experts",
+      "source_date": "2026-11-05"
+    },
+    "how_payment_works": "Independent contractor compensation; exact payout schedule and payment rail on public /experts page: TBD (confirm inside candidate portal during onboarding).",
+    "countries_accepted": "Global remote expert community (specific country restrictions per project: TBD on public page).",
+    "application_steps": [
+      "Apply for open domain opportunities on micro1.ai/experts/opportunities.",
+      "Take the automated AI interview (interview prep available at micro1.ai/interview-prep).",
+      "Complete onboarding if selected.",
+      "Start earning on matched frontier AI lab projects."
+    ],
+    "referral_link": "",
+    "referral_code": "",
+    "last_checked": "2026-11-05"
+  },
+  {
+    "slug": "handshake-ai",
+    "name": "Handshake AI",
+    "operator": "Handshake (Handshake AI Fellowship / MOVE Program)",
+    "official_url": "https://joinhandshake.com/move-program/",
+    "what_kind_of_work": "Academic and professional LLM training, model validation (MOVE), prompt creation, and domain evaluation for Associate's, Bachelor's, Master's, PhD, and Postdoc holders.",
+    "fields_they_hire_for": [
+      "Software Engineering",
+      "Finance (FP&A Analyst)",
+      "Game Development & PCB Tool Engineering",
+      "Philosophy & Humanities (PhDs & Postdocs)",
+      "Energy Professionals",
+      "Generalist AI Evaluation"
+    ],
+    "audiences": ["software", "finance", "general"],
+    "posted_pay_ranges": {
+      "summary": "Up to $17–150/h depending on track (US-based work authorization required)",
+      "details": [
+        { "field": "Software Engineering", "role": "Software Engineer Fellow", "range": "Up to $150/h", "source_url": "https://joinhandshake.com/move-program/", "date": "2026-11-05" },
+        { "field": "Engineering / Game Dev", "role": "Game Developer / PCB Tool Specialist", "range": "Up to $125/h", "source_url": "https://joinhandshake.com/move-program/", "date": "2026-11-05" },
+        { "field": "Humanities / Philosophy", "role": "Philosophy Expert (PhDs & Postdocs)", "range": "Up to $120/h", "source_url": "https://joinhandshake.com/move-program/", "date": "2026-11-05" },
+        { "field": "Finance & Energy", "role": "FP&A Analyst / Energy Professional", "range": "Up to $80/h", "source_url": "https://joinhandshake.com/move-program/", "date": "2026-11-05" },
+        { "field": "Generalist", "role": "AI Evaluation Specialist", "range": "Up to $17/h", "source_url": "https://joinhandshake.com/move-program/", "date": "2026-11-05" }
+      ],
+      "source_url": "https://joinhandshake.com/move-program/",
+      "source_date": "2026-11-05"
+    },
+    "how_payment_works": "Hourly payouts as an independent contractor ($500M+ total payouts cited on official page; exact payout rail on public landing page: TBD).",
+    "countries_accepted": "US-ONLY: Official page states 'To participate in the Handshake AI Fellowship, you must be based in the U.S. and have a valid work authorization that can be supported by Handshake. F-1 students who are eligible for CPT or OPT may be eligible. STEM OPT is not supported.' Not open to residents in Finland or Europe unless US-based with eligible authorization.",
+    "application_steps": [
+      "Sign up or log in at joinhandshake.com/move-program/.",
+      "Verify academic degree status (Associate's, Bachelor's, Master's, PhD, or Postdoc) and US work authorization.",
+      "Apply to matching fellowship tracks and complete onboarding."
+    ],
+    "referral_link": "",
+    "referral_code": "",
+    "last_checked": "2026-11-05"
+  }
+]

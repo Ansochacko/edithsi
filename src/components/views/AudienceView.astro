@@ -4,12 +4,17 @@ import RoleCard, { type RoleEntry } from '../RoleCard.astro';
 import FaqList from '../FaqList.astro';
 import AuthorBox from '../AuthorBox.astro';
 import rolesRaw from '../../data/roles.json';
+import payIndex from '../../data/pay-index/2026-11.json';
+import { CHECKED_ON, buildGoUrl } from '../../config';
 import { getAudiencePageContent } from '../../data/audiencePages';
 import {
   getDictionary,
   getPagePath,
   getAudiencePath,
+  getPlatformPath,
+  getGuidePath,
   type AudienceSlug,
+  type PlatformSlug,
   type Lang,
 } from '../../i18n';
 
@@ -23,13 +28,18 @@ const t = getDictionary(lang);
 const content = getAudiencePageContent(slug, lang);
 const roles = rolesRaw as RoleEntry[];
 
-// Matching roles sorted by highest posted pay ("rate set per project" last)
+// Matching Mercor roles sorted by highest posted pay ("rate set per project" last)
 const matchingRoles = roles
   .filter((r) => r.audiences.includes(slug))
   .sort((a, b) => {
     if (a.maxPay !== b.maxPay) return b.maxPay - a.maxPay;
     return b.minPay - a.minPay;
   });
+
+// Cross-platform entries from Pay Index for this audience (plus generalist fallback if needed)
+const crossPlatformEntries = payIndex.entries.filter(
+  (e) => e.audience === slug || (slug === 'office' && e.audience === 'general')
+);
 
 const generalistRole = roles.find((r) => r.id === 'generalist-expert')!;
 const showAlsoOpenGeneralist = slug !== 'general';
@@ -39,6 +49,145 @@ const breadcrumbs = [
   { name: t.nav.roles, url: getPagePath(lang, 'roles') },
   { name: t.audiences[slug].label, url: getAudiencePath(lang, slug) },
 ];
+
+const MULTI_PLATFORM_LABELS: Record<
+  Lang,
+  {
+    lastUpdated: string;
+    crossPlatformH2: string;
+    crossPlatformIntro: string;
+    colPlatform: string;
+    colRole: string;
+    colPay: string;
+    colEligibility: string;
+    colAction: string;
+    officialNoReferral: string;
+    viewProfile: string;
+    applyOfficial: string;
+    relatedHubsH2: string;
+    compareLink: string;
+    payIndexLink: string;
+    taxGuideLink: string;
+    interviewGuideLink: string;
+  }
+> = {
+  en: {
+    lastUpdated: 'Last updated',
+    crossPlatformH2: 'Which AI-training platforms hire in this field? (All 6 platforms compared)',
+    crossPlatformIntro:
+      'In addition to Mercor (where I earn a referral commission if you apply via my link and are hired), I track official public listings across Mindrift, Alignerr, Outlier, micro1, and Handshake AI using the exact same criteria and verification date (2026-11-05).',
+    colPlatform: 'Platform',
+    colRole: 'Role / Track',
+    colPay: 'Posted Pay Range (2026-11-05)',
+    colEligibility: 'Finland & EU Status',
+    colAction: 'Official Source / Apply',
+    officialNoReferral: 'official link · no referral',
+    viewProfile: 'Platform review',
+    applyOfficial: 'Official listing ↗',
+    relatedHubsH2: 'Related data hubs & practical guides',
+    compareLink: 'Compare all 6 AI-training platforms side by side',
+    payIndexLink: 'Edithsi AI Work Pay Index (Dataset & CSV)',
+    taxGuideLink: 'Taxes, prepayment tax, toiminimi & YEL (2026)',
+    interviewGuideLink: 'How automated AI interviews & assessments work',
+  },
+  fi: {
+    lastUpdated: 'Päivitetty viimeksi',
+    crossPlatformH2: 'Mitkä tekoälyalustat etsivät tämän alan osaajia? (Kaikki 6 alustaa vertailussa)',
+    crossPlatformIntro:
+      'Mercorin lisäksi (josta voin ansaita suosittelupalkkion linkkini kautta) seuraan Mindriftin, Alignerrin, Outlierin, micro1:n ja Handshake AI:n julkisia hakuja täysin samoilla kriteereillä ja tarkistuspäivällä (2026-11-05). Muiden alustojen linkit ovat suoria virallisia linkkejä ilman suosittelukoodia.',
+    colPlatform: 'Alusta',
+    colRole: 'Tehtävä / linja',
+    colPay: 'Ilmoitettu palkkio (2026-11-05)',
+    colEligibility: 'Suomi & EU -kelpoisuus',
+    colAction: 'Virallinen lähde / Haku',
+    officialNoReferral: 'virallinen linkki · ei suosittelukoodia',
+    viewProfile: 'Alustan arvio',
+    applyOfficial: 'Virallinen sivu ↗',
+    relatedHubsH2: 'Aiheeseen liittyvät vertailut ja käytännön oppaat',
+    compareLink: 'Vertaa kaikkia 6 tekoälyalustaa rinnakkain',
+    payIndexLink: 'Edithsi AI Work -palkkioindeksi (Dataset & CSV)',
+    taxGuideLink: 'Verotus, ennakkovero, toiminimi ja YEL (2026)',
+    interviewGuideLink: 'Miten automaattinen tekoälyhaastattelu toimii?',
+  },
+  sv: {
+    lastUpdated: 'Senast uppdaterad',
+    crossPlatformH2: 'Vilka AI-träningsplattformar anlitar inom detta område? (Alla 6 plattformar)',
+    crossPlatformIntro:
+      'Utöver Mercor (där jag kan få en värvningsbonus) granskar jag offentliga uppdrag hos Mindrift, Alignerr, Outlier, micro1 och Handshake AI med samma kriterier och kontroll-datum (2026-11-05).',
+    colPlatform: 'Plattform',
+    colRole: 'Roll / Spår',
+    colPay: 'Angivet spann (2026-11-05)',
+    colEligibility: 'Finland & EU-status',
+    colAction: 'Officiell källa / Ansök',
+    officialNoReferral: 'officiell länk · ingen värvningskod',
+    viewProfile: 'Plattformsprofil',
+    applyOfficial: 'Officiell sida ↗',
+    relatedHubsH2: 'Relaterade datahubbar och praktiska guider',
+    compareLink: 'Jämför alla 6 AI-träningsplattformar',
+    payIndexLink: 'Edithsi AI Work Ersättningsindex (CSV)',
+    taxGuideLink: 'Skatt, F-skatt, firma & YEL (2026)',
+    interviewGuideLink: 'Så fungerar automatiserade AI-intervjuer',
+  },
+  de: {
+    lastUpdated: 'Zuletzt aktualisiert',
+    crossPlatformH2: 'Welche KI-Trainingsplattformen suchen Fachkräfte in diesem Bereich? (Alle 6 Plattformen)',
+    crossPlatformIntro:
+      'Neben Mercor (wo ich eine Empfehlungsprovision erhalten kann) dokumentiere ich öffentliche Ausschreibungen auf Mindrift, Alignerr, Outlier, micro1 und Handshake AI nach denselben Kriterien (Stand: 2026-11-05).',
+    colPlatform: 'Plattform',
+    colRole: 'Rolle / Bereich',
+    colPay: 'Veröffentlichte Spanne (2026-11-05)',
+    colEligibility: 'Finnland & EU-Status',
+    colAction: 'Offizielle Quelle / Bewerbung',
+    officialNoReferral: 'offizieller Link · kein Empfehlungscode',
+    viewProfile: 'Plattform-Profil',
+    applyOfficial: 'Offizielle Seite ↗',
+    relatedHubsH2: 'Weiterführende Daten & Praxis-Ratgeber',
+    compareLink: 'Alle 6 KI-Trainingsplattformen im Vergleich',
+    payIndexLink: 'Edithsi KI-Honorar-Index (Datensatz & CSV)',
+    taxGuideLink: 'Steuern, Freiberufler, Toiminimi & YEL (2026)',
+    interviewGuideLink: 'Vorbereitung auf das automatisierte KI-Videointerview',
+  },
+  fr: {
+    lastUpdated: 'Dernière mise à jour',
+    crossPlatformH2: 'Quelles plateformes d’entraînement IA recrutent dans ce domaine ? (Les 6 plateformes)',
+    crossPlatformIntro:
+      'En plus de Mercor (où je peux percevoir une commission de parrainage), je recense les offres publiques de Mindrift, Alignerr, Outlier, micro1 et Handshake AI selon les mêmes critères (vérifié le 2026-11-05).',
+    colPlatform: 'Plateforme',
+    colRole: 'Rôle / Domaine',
+    colPay: 'Tarif affiché (2026-11-05)',
+    colEligibility: 'Statut Finlande & UE',
+    colAction: 'Source officielle / Postuler',
+    officialNoReferral: 'lien officiel · sans parrainage',
+    viewProfile: 'Profil plateforme',
+    applyOfficial: 'Page officielle ↗',
+    relatedHubsH2: 'Données de référence et guides pratiques',
+    compareLink: 'Comparer les 6 plateformes d’entraînement IA',
+    payIndexLink: 'Indice des tarifs IA Edithsi (CSV)',
+    taxGuideLink: 'Fiscalité, URSSAF, toiminimi et YEL (2026)',
+    interviewGuideLink: 'Comment fonctionne l’entretien vidéo IA ?',
+  },
+  es: {
+    lastUpdated: 'Última actualización',
+    crossPlatformH2: '¿Qué plataformas de entrenamiento de IA contratan en este campo? (Las 6 plataformas)',
+    crossPlatformIntro:
+      'Además de Mercor (donde puedo recibir una comisión por referido), recopilo las ofertas públicas de Mindrift, Alignerr, Outlier, micro1 y Handshake AI con los mismos criterios (verificado el 2026-11-05).',
+    colPlatform: 'Plataforma',
+    colRole: 'Rol / Especialidad',
+    colPay: 'Rango publicado (2026-11-05)',
+    colEligibility: 'Estado en Finlandia y UE',
+    colAction: 'Fuente oficial / Solicitar',
+    officialNoReferral: 'enlace oficial · sin código de referido',
+    viewProfile: 'Perfil de plataforma',
+    applyOfficial: 'Página oficial ↗',
+    relatedHubsH2: 'Datos originales y guías prácticas relacionadas',
+    compareLink: 'Comparar las 6 plataformas de entrenamiento de IA',
+    payIndexLink: 'Índice salarial de IA Edithsi (CSV)',
+    taxGuideLink: 'Impuestos, autónomos, toiminimi y YEL (2026)',
+    interviewGuideLink: 'Cómo funciona la entrevista automatizada de IA',
+  },
+};
+
+const mp = MULTI_PLATFORM_LABELS[lang];
 ---
 
 <BaseLayout
@@ -48,6 +197,7 @@ const breadcrumbs = [
   description={content.metaDescription}
   breadcrumbs={breadcrumbs}
   faqsSchema={content.faqs}
+  articleSchema={{ datePublished: CHECKED_ON, dateModified: CHECKED_ON }}
   noindex={content.isThinContent}
 >
   {
@@ -64,7 +214,8 @@ const breadcrumbs = [
         <section class="section">
           <div class="container">
             <span class="eyebrow">
-              {t.audiencePage.eyebrow} · {t.audiences[slug].label}
+              {t.audiencePage.eyebrow} · {t.audiences[slug].label} · {mp.lastUpdated}:{' '}
+              <time datetime={CHECKED_ON}>{CHECKED_ON}</time>
             </span>
             <h1>{content.h1}</h1>
             <div class="article-prose">
@@ -76,11 +227,8 @@ const breadcrumbs = [
               <a href="#matching-roles" class="btn btn--primary">
                 {t.audiencePage.matchingRolesHeading}
               </a>
-              <a
-                href={`${getPagePath(lang, 'roles')}?for=${slug}`}
-                class="btn btn--secondary"
-              >
-                {t.audiencePage.browseAllRoles}
+              <a href="#cross-platform-roles" class="btn btn--secondary">
+                {mp.compareLink}
               </a>
             </div>
           </div>
@@ -102,6 +250,90 @@ const breadcrumbs = [
           </div>
         </section>
 
+        <section class="section" id="cross-platform-roles" aria-labelledby="cross-platform-heading">
+          <div class="container">
+            <h2 id="cross-platform-heading">{mp.crossPlatformH2}</h2>
+            <p>{mp.crossPlatformIntro}</p>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">{mp.colPlatform}</th>
+                    <th scope="col">{mp.colRole}</th>
+                    <th scope="col">{mp.colPay}</th>
+                    <th scope="col">{mp.colEligibility}</th>
+                    <th scope="col">{mp.colAction}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {crossPlatformEntries.map((entry) => {
+                    const isMercor = entry.platform_slug === 'mercor';
+                    const mercorRole = isMercor
+                      ? roles.find((r) => r.url === entry.source_url)
+                      : undefined;
+                    const applyHref =
+                      isMercor && mercorRole
+                        ? buildGoUrl(mercorRole.id, `for-${slug}-table`)
+                        : entry.source_url;
+                    return (
+                      <tr>
+                        <td>
+                          <strong>
+                            <a href={getPlatformPath(lang, entry.platform_slug as PlatformSlug)}>
+                              {entry.platform_name}
+                            </a>
+                          </strong>
+                          <div class="table-sub">
+                            <a href={getPlatformPath(lang, entry.platform_slug as PlatformSlug)}>
+                              {mp.viewProfile} →
+                            </a>
+                          </div>
+                        </td>
+                        <td>
+                          <strong>{entry.platform_name}: {entry.role_title}</strong>
+                          <div class="table-sub">{entry.notes}</div>
+                        </td>
+                        <td class="mono-cell">
+                          <strong>{entry.posted_range}</strong>
+                          <div class="table-sub">{entry.pay_model}</div>
+                        </td>
+                        <td>{entry.eu_finland_status}</td>
+                        <td>
+                          {isMercor ? (
+                            <div class="table-action-cell">
+                              <a
+                                href={applyHref}
+                                target="_blank"
+                                rel="sponsored noopener noreferrer"
+                                class="table-apply-link"
+                              >
+                                {t.common.applyOnMercor} ↗
+                              </a>
+                              <span class="referral-micro">{t.common.referralMicroLabel}</span>
+                            </div>
+                          ) : (
+                            <div class="table-action-cell">
+                              <a
+                                href={applyHref}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="table-apply-link"
+                              >
+                                {mp.applyOfficial}
+                              </a>
+                              <span class="referral-micro">{mp.officialNoReferral}</span>
+                            </div>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section class="section" aria-labelledby="checklist-heading">
           <div class="container">
             <h2 id="checklist-heading">{t.audiencePage.beforeYouApplyHeading}</h2>
@@ -117,6 +349,34 @@ const breadcrumbs = [
           <div class="container">
             <h2 id="audience-faq-heading">{t.audiencePage.faqHeading}</h2>
             <FaqList items={content.faqs} />
+          </div>
+        </section>
+
+        <section class="section section--compact" aria-labelledby="related-hubs-heading">
+          <div class="container">
+            <h2 id="related-hubs-heading">{mp.relatedHubsH2}</h2>
+            <ul class="related-links-grid">
+              <li>
+                <a href={getPagePath(lang, 'compare')} class="related-card-link">
+                  {mp.compareLink} →
+                </a>
+              </li>
+              <li>
+                <a href={getPagePath(lang, 'pay-index')} class="related-card-link">
+                  {mp.payIndexLink} →
+                </a>
+              </li>
+              <li>
+                <a href={getGuidePath(lang, 'taxes-toiminimi-yel-finland')} class="related-card-link">
+                  {mp.taxGuideLink} →
+                </a>
+              </li>
+              <li>
+                <a href={getGuidePath(lang, 'ai-interview-preparation')} class="related-card-link">
+                  {mp.interviewGuideLink} →
+                </a>
+              </li>
+            </ul>
           </div>
         </section>
 

@@ -1,3 +1,50 @@
+# Edithsi (https://edithsi.com) — Search & AI Crawler Policy
+# Explicitly allow major search engines, AI search bots, and LLM training crawlers.
+
+User-agent: Googlebot
+Allow: /
+Disallow: /go/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /go/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /go/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /go/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /go/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /go/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /go/
+
+User-agent: Applebot
+Allow: /
+Disallow: /go/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /go/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /go/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /go/
+
 User-agent: *
 Allow: /
 Disallow: /go/

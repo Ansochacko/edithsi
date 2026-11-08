@@ -1,121 +1,141 @@
-# Edithsi — Ethical Off-Page SEO & Authority Outreach Plan (`OUTREACH.md`)
+# Edithsi — Ethical Off-Site Outreach & Entity Authority Plan (`seo/OUTREACH.md`)
 
 **Site:** Edithsi (`https://edithsi.com`)  
-**Operator:** Independent contractor based in Helsinki, Finland (always first-person `"I"`, never `"we"`; not affiliated with Mercor)  
+**Operator:** Independent contractor based in Helsinki, Finland (always first-person singular `"I"`, never `"we"`; not affiliated with Mercor or any platform reviewed)  
 **Last Verified:** `2026-11-05`
 
 ---
 
-## 1. Core Principles & Google Spam Policy Compliance
+## 1. Core Principles & Strict Anti-Spam Guardrails
 
-Because **Edithsi** is a single-person editorial resource in a high-trust career and taxation vertical, I strictly prohibit bought links, automated link exchanges, PBNs, or disguised referral link drops. Every off-page citation must be earned through **non-commercial informational spokes** (specifically `/fi/tekoalytyo-verotus-toiminimi-yel/`, `/fi/tekoalytyo-ja-tyottomyysturva/`, `/fi/huijausilmoitukset-tekoalytyo-tunnistaminen/`, and their English equivalents) that solve real problems for Finnish and European university-educated specialists.
+Because **Edithsi** operates in a high-trust career, compensation, and taxation vertical, I execute all off-site outreach manually under my own identity:
+
+- **Zero Paid Links or Link Schemes:** I explicitly prohibit buying backlinks, participating in automated link exchanges, using private blog networks (PBNs), or purchasing sponsored guest posts.
+- **Zero Fake Mentions or Sockpuppets:** I never create fake forum accounts, astroturfed reviews, or undisclosed promotional comments.
+- **Always Pitch Non-Commercial Data & Guides:** When reaching out to journalists, professional unions, or university career desks, I link exclusively to my open-data **Edithsi AI Work Pay Index** (`/pay-index/` and `/data/ai-work-pay-index.csv`, licensed under `CC BY 4.0`) or my non-commercial guides (`/guides/taxes-toiminimi-yel-finland/`, `/guides/unemployment-benefits-ai-work/`, `/guides/avoid-ai-job-scams/`), never raw `/go/` referral links.
 
 ---
 
-## 2. Finnish & Nordic Professional Associations (Target List & Pitch Strategy)
+## 2. Monthly "Edithsi AI Work Pay Index" Press & Data Pitch (Finnish & Nordic Media)
 
-Credentialed specialists in Finland rely heavily on their union or professional association publications when evaluating side-income (*sivutoimi*) or independent contracting (*toiminimi* / *kevytyrittäjyys*). I pitch my **non-commercial tax, YEL, and scam-prevention guides**—never raw referral pages—to career counselors and magazine editors at the following six organizations:
+On the **5th of every month**, immediately after updating `src/data/pay-index/YYYY-MM.json` and `/data/ai-work-pay-index.csv`, I send a concise data brief to technology, labor-market, and economics reporters at the following Finnish and Nordic publications:
 
-| Association | Target Audience | Matching Mercor Pool (`2026-11-05`) | Editorial / Career Contact Channel | Primary Angle to Pitch |
+| Publication | Country / Language | Desk / Beat | Primary Data Angle | Canonical Asset to Cite |
 | :--- | :--- | :--- | :--- | :--- |
-| **Juristiliitto** (The Union of Professionals in Legal Business) | Licensed lawyers, LL.M. (*OTM*) & legal counsel | Legal Expert (`$100–150/h` & `$60–150/h`) | *Juristiuutiset* editorial desk & career services (*urapalvelut*) | How legal AI evaluation rubrics work + US B2B contracting taxation under Vero.fi rules |
-| **Lääkäriliitto** (Finnish Medical Association) | Physicians (*LL*, *LT*) & clinical specialists | Medical Expert (`$60–180/h`) | *Lääkärilehti* & private-practice/side-income advisory | Clinical AI safety evaluation as remote non-patient side work (*sivutoimi*) |
-| **TEK — Tekniikan akateemiset** (Academic Engineers and Architects in Finland) | Software engineers, M.Sc. (Tech.) / *DI* | Software Engineering (`$70–150/h`) & Office (`$60–70/h`) | *TEK-lehti* & TEK Entrepreneur (*TEK Yrittäjä*) guides | First-person look at RLHF coding benchmarks and Stripe USD payouts for Finnish engineers |
-| **SKTL — Suomen kääntäjien ja tulkkien liitto** | Translators, linguists, audio & Finnish syntax experts | Language & Audio Expert (`$35–50/h` — explicitly includes Finnish) | *Kääntäjä–Översättaren* magazine & Section III/V mailing lists | Moving from post-editing MT to native Finnish LLM evaluation rubrics (`$35–50/h`) |
-| **Tieteentekijät** (Finnish Union of University Researchers and Teachers) | PhD candidates, postdocs, grant researchers | Domain experts + Generalist Expert (`$40–70/h`) | *Acatiimi* magazine & career transition workshops | How flexible AI evaluation contracts interact with grant work, YEL (`2026`), and Kela/TYJ rules |
-| **Suomen Ekonomit** (The Finnish Business School Graduates) | *KTM* graduates, auditors, actuaries, finance analysts | Finance Expert (`rate set per project`) & Office (`$60–70/h`) | *Ekonomi*-lehti & career coaching team | Financial modeling & rubric evaluation for LLMs + non-EU B2B reverse-charge VAT handling |
+| **Tivi** (*Tietoviikko*) | Finland (`fi`) | IT profession, developer salaries & AI | Posted USD/h rates (`$70–150/h`) for software engineering RLHF vs. local consulting | `https://edithsi.com/fi/pay-index/` |
+| **Kauppalehti** | Finland (`fi`) | Work life (*Työelämä*), entrepreneurship & taxation | High-skill remote USD contracting, foreign B2B invoicing, and 2026 YEL thresholds | `https://edithsi.com/fi/pay-index/` |
+| **Yle** (*Yle Uutiset / Talous & Digitreenit*) | Finland (`fi`) | Digital labor market & consumer scam awareness | Separating real domain-expert AI evaluation from Telegram/WhatsApp task scams | `https://edithsi.com/fi/guides/avoid-ai-job-scams/` |
+| **HS Visio** (*Helsingin Sanomat*) | Finland (`fi`) | Tech economy, AI labs & future of specialist work | Why US AI labs pay Finnish lawyers, doctors, and linguists `$35–180/h` for rubric evals | `https://edithsi.com/fi/pay-index/` |
+| **Talouselämä** | Finland (`fi`) | Macroeconomics, white-collar side income | Monthly rate movements across Mercor, micro1, Outlier, Alignerr, Handshake AI, and Mindrift | `https://edithsi.com/fi/pay-index/` |
+| **Breakit** | Sweden (`sv` / `en`) | Nordic tech startups & AI talent market | Nordic specialists training frontier LLMs on remote US contractor platforms | `https://edithsi.com/sv/pay-index/` |
+| **Di Digital** (*Dagens Industri*) | Sweden (`sv` / `en`) | Swedish tech sector & remote AI labor trends | Cross-platform hourly rate index (`CC BY 4.0` dataset) for European specialists | `https://edithsi.com/pay-index/` |
 
----
+### 2.1 Ready-to-Send Press Pitch Template — Finnish (`Tivi`, `Kauppalehti`, `Yle`, `HS Visio`, `Talouselämä`)
 
-## 3. Finnish & Nordic University Career Services Resource Pages
+**Subject:** Avoin datakooste (CC BY 4.0): Mitä suomalaisille juristeille, lääkäreille, koodareille ja kääntäjille maksetaan tekoälyn kouluttamisesta (Edithsi AI Work Pay Index)
 
-University career services (*urapalvelut* / *karriärservice*) maintain curated guides on remote international contracting, student/alumni side income, and spotting job scams. Because Edithsi has zero tracking cookies and transparent advertising disclosures, its educational spokes on **spotting fake WhatsApp/Telegram AI job scams** and **foreign contractor taxation** are ideal reference links for:
-
-1. **University of Helsinki (*Helsingin yliopisto*)** — Career Services (*Urapalvelut*) & JobTeaser informational bulletins (Faculty of Arts/Languages, Law, Medicine, Computer Science).
-2. **Aalto University (*Aalto-yliopisto*)** — Aalto Career Design Lab (School of Science, Engineering, and Business).
-3. **University of Turku (*Turun yliopisto*)** — UTU Career Services (Translation Studies, Law, Medicine, Software Engineering).
-4. **Tampere University (*Tampereen yliopisto*)** — Career Services (Languages/Translation, Computing, Medicine).
-5. **University of Oulu (*Oulun yliopisto*)** — Career Centre (Information Technology, Medicine, Humanities).
-6. **Åbo Akademi University** — Arbetsforum (Swedish-speaking graduates in Finland; bilingual Finnish-Swedish linguists, law, and tech).
-7. **Hanken School of Economics** — Hanken Career Services (Finance, accounting, audit, and bilingual business specialists in Helsinki and Vaasa).
-
----
-
-## 4. First-Person Guest Article & Resource Pitch Templates
-
-### 4.1 Finnish Pitch Template (For Union Editors & Career Advisors)
-
-**Subject:** Näkökulma / opas: Suomalaiset erityisasiantuntijat kielimallien kouluttajina (verotus, YEL ja huijausten tunnistaminen)
-
-> Hei [Vastaanottajan nimi],
+> Hei [Toimittajan etunimi],
 >
-> Olen helsinkiläinen itsenäinen ammatinharjoittaja ja kirjoitan teille koskien ilmiötä, joka näkyy yhä useamman suomalaisen korkeakoulutetun (erityisesti kääntäjien, juristien, ohjelmistokehittäjien ja tutkijoiden) työpöydällä: ulkomaisten tekoälyyritysten tarjoamat etäarviointitehtävät (ns. RLHF- ja rubriikkiarviointi).
+> Olen helsinkiläinen itsenäinen ammatinharjoittaja. Seuraan kuukausittain avoimeen dataan perustuvassa **Edithsi AI Work Pay Index** -indeksissäni (`https://edithsi.com/fi/pay-index/`), millaisia tuntipalkkioita yhdysvaltalaiset ja kansainväliset tekoälyalustat (Mercor, micro1, Outlier, Alignerr, Handshake AI ja Mindrift) maksavat suomalaisille ja eurooppalaisille erityisasiantuntijoille kielimallien kouluttamisesta (RLHF- ja rubriikkiarviointi).
 >
-> Koska alalla liikkuu sekä aitoja asiantuntijatehtäviä (esim. suomen kielen ja erityisalojen tehtävät 35–150 USD/h) että valitettavasti myös WhatsApp/Telegram-huijauksia, kokosin täysin evästeettömän ja läpinäkyvän tietopaketin **Edithsi** (`https://edithsi.com/fi/`). Sivusto ei ole sidoksissa Mercoriin, ja kerron avoimesti omalla nimelläni sekä suosittelulinkeistä että siitä, ettei työtunteja koskaan taata.
+> Marraskuun 2026 tarkistuskierroksen (`2026-11-05`) keskeiset havainnot:
+> - **Toimialakohtaiset ilmoitetut tuntipalkkiot:** Lääketieteen asiantuntijat `$60–180/h`, laillistetut juristit `$100–150/h` (oikeustieteen asiantuntijat `$60–150/h`), ohjelmistokehittäjät `$70–150/h`, toimisto-ohjelmistoasiantuntijat `$60–70/h`, yleisasiantuntijat `$40–70/h` sekä suomen kielen ja äänen asiantuntijat `$35–50/h`.
+> - **Tuntien ennustamattomuus:** Vaikka asiantuntijoiden tuntipalkkiot ovat korkeita, yksikään alusta ei takaa työtunteja – projektit ovat pätkäluonteisia toimeksiantoja.
+> - **Huijausten torjunta:** Kokosin samalla suomalaisille asiantuntijoille oppaan siitä, miten aidot (aina 100 % maksuttomat) asiantuntijapoolit erottaa WhatsAppissa ja Telegramissa leviävistä ennakkomaksuhuijauksista (`https://edithsi.com/fi/guides/avoid-ai-job-scams/`).
 >
-> Tarjoan mielelläni [Lehden/Järjestön nimi] lukijoille lyhyen, käytännönläheisen asiantuntijapuheenvuoron (tai vapaasti hyödynnettävän lähdelinkin) esimerkiksi seuraavista aiheista:
-> 1. **Ulkomaisen (USD/Stripe) työkorvauksen verotus Suomessa, ALV:n käänteinen/EU:n ulkopuolinen myynti ja vuoden 2026 YEL-raja.**
-> 2. **Miten sivutoiminen tekoälykoulutustyö vaikuttaa työttömyysturvaan ja soviteltuun päivärahaan (Kela / työttömyyskassat).**
-> 3. **Miten korkeakoulutettu erottaa aidon tekoälyarviointityön ennakkomaksuhuijauksista.**
->
-> Voin toimittaa valmiin 600–800 sanan tekstin täysin ilman kaupallisia tai suosittelulinkkejä. Kerrothan, jos aihe sopii tulevaan uutiskirjeeseen tai verkkolehteen!
+> Koko kuukausittainen CSV-aineisto (`https://edithsi.com/data/ai-work-pay-index.csv`) on vapaasti toimituksenne hyödynnettävissä `CC BY 4.0` -lisenssillä. Annan mielelläni lisätietoja tai haastattelun siitä, miten tekoälymallien asiantuntija-arviointi ja sen verotus (`Vero.fi` / `YEL 2026`) toimivat käytännössä Suomessa.
 >
 > Ystävällisin terveisin,  
 > [Oma nimi]  
-> Helsinki (`[oma sähköposti]`)
+> Itsenäinen ammatinharjoittaja, Helsinki  
+> `hello@edithsi.com` | `https://edithsi.com/fi/`
 
-### 4.2 English Pitch Template (For Nordic University Career Services & Tech Publications)
+### 2.2 Ready-to-Send Press Pitch Template — English (`Breakit`, `Di Digital`, Nordic & European Desks)
 
-**Subject:** Resource for students/alumni: Spotting fake remote AI job scams vs. real domain evaluation contracts (plus Finnish Vero/Kela rules)
+**Subject:** Open Data Brief (CC BY 4.0): Monthly hourly pay index for European specialists training frontier AI models (Edithsi AI Work Pay Index)
 
-> Hi [Name],
+> Hi [Journalist First Name],
 >
-> I am an independent contractor based in Helsinki. Over the past year, I noticed many graduates and specialists in Finland asking how remote AI-training contracts (evaluating prompts and rubrics in law, medicine, coding, and Finnish/European languages) actually work—and how to avoid the wave of fake Telegram/WhatsApp "task scams" impersonating tech companies.
+> I am an independent contractor based in Helsinki, Finland. Each month, I publish the **Edithsi AI Work Pay Index** (`https://edithsi.com/pay-index/`), an open-data benchmark (`CC BY 4.0`) tracking posted hourly USD compensation across six major remote AI-training platforms recruiting Nordic and European domain experts: Mercor, micro1, Outlier, Alignerr, Handshake AI, and Mindrift.
 >
-> I built an independent, cookie-free guide called **Edithsi** (`https://edithsi.com/`) that documents:
-> - How to distinguish real credentialed AI-training pools (which are always 100% free to apply to) from advance-fee scams (`/how-to-spot-fake-ai-job-scams/`).
-> - How USD payouts via Stripe are declared to the Finnish Tax Administration (`Vero.fi`), when YEL applies (`ETK.fi`), and how Kela/unemployment funds treat irregular contractor tasks (`/ai-training-taxes-finland-guide/`).
-> - Transparent disclosures: I clearly state that I am an independent contractor in Helsinki (not affiliated with Mercor), that work volume is never guaranteed, and where referral links appear.
+> Key data points from my `2026-11-05` verification pass:
+> - **Credentialed Specialist Rates vs. Generalist Work:** Posted hourly ranges span `$100–150/h` for licensed lawyers (`$60–150/h` general legal), `$60–180/h` for physicians and clinical specialists, `$70–150/h` for production software engineers, `$60–70/h` for advanced spreadsheet/office specialists, `$40–70/h` for generalists, and `$35–50/h` for native European language evaluators (including Finnish, Swedish, German, French, and Spanish).
+> - **The Unvarnished Reality:** Across all six platforms, contract hours are never guaranteed, automated AI video interviews act as strict filters, and contractors must handle their own local tax and social-security compliance (`Vero.fi`/`YEL` in Finland, `Skatteverket`/`F-skatt` in Sweden).
+> - **Raw Dataset:** The full CSV dataset is openly downloadable at `https://edithsi.com/data/ai-work-pay-index.csv`.
 >
-> If your career services team maintains a resource list on international freelancing or remote work safety, feel free to reference the non-commercial tax and scam-prevention guides, or let me know if a short guest Q&A for your newsletter would be useful.
+> If you are covering how Nordic white-collar specialists are supplementing their income by evaluating AI models—or the contrast between real domain-expert pools and Telegram task scams—feel free to cite the dataset or reach out with questions.
 >
 > Best regards,  
 > [Your Name]  
-> Helsinki, Finland (`[your email]`)
+> Independent Contractor, Helsinki, Finland  
+> `hello@edithsi.com` | `https://edithsi.com/`
 
 ---
 
-## 5. Reddit & Community Forum Participation Rules (`r/Suomi`, `r/Omatalous`, `r/cscareerquestionsEU`)
+## 3. Professional Union & Association Career Newsletter Outreach
 
-Finnish and European Reddit threads (`site:reddit.com "tekoäly" etätyö`, `"mercor kokemuksia"`, `"toiminimi ulkomainen asiakas"`) frequently rank in the top 5 of Google. However, self-promotional link dropping violates community rules and destroys credibility. I follow a strict **5-Rule Community Code**:
+Credentialed specialists in Finland rely on their professional unions when evaluating side income (*sivutoimi*) or independent contracting (*toiminimi*). I manually pitch my **non-commercial tax, unemployment-benefit, and scam-prevention guides** to career advisors and newsletter editors at six Finnish organizations:
 
-1. **Strict Zero-Referral-Link Rule on Forums:** Never post a `work.mercor.com/?referralCode=...` link or `/go/` link on Reddit, Jodel, Ylilauta, or Suomi24.
-2. **90% Standalone Value in the Comment Body:** When answering a question in `r/Omatalous` (e.g., *"Miten verotetaan jenkkifirmalta Stripellä tulevat palkkiot?"*) or `r/Suomi` / `r/cscareerquestionsEU`, write the complete, self-contained answer directly inside the Reddit comment citing `Vero.fi`, `ETK.fi`, or `Kela.fi`.
-3. **First-Person Transparency:** Always disclose in the first paragraph if I have personal experience as an independent contractor and never pretend to be a neutral bystander if mentioning my own site.
-4. **Link Only When Directly Asked or to Non-Commercial Tax/Scam Guides:** Only link to `/fi/tekoalytyo-verotus-toiminimi-yel/` or `/how-to-spot-fake-ai-job-scams/` when a thread specifically asks for a step-by-step breakdown, and explicitly note inside the comment: *"(Huom: oma ylläpitämäni sivu, jonka roolilistaussivulla on suosittelulinkkejä, mutta tämä vero-opas on puhtaasti tietopohjainen)."*
-5. **Never Use Sockpuppet Accounts:** Use a single, transparent personal Reddit handle (`u/[YourHandle]`).
+| Association | Target Audience | Matching Specialist Pool (`2026-11-05`) | Editorial / Career Contact Channel | Primary Non-Commercial Guide to Pitch |
+| :--- | :--- | :--- | :--- | :--- |
+| **Juristiliitto** (The Union of Professionals in Legal Business) | Licensed lawyers (*asianajaja*), LL.M. (*OTM*) & legal counsel | Legal Expert (`$100–150/h` & `$60–150/h` on Mercor) | *Juristiuutiset* editorial desk & career services (*urapalvelut*) | `/fi/guides/taxes-toiminimi-yel-finland/` & `/fi/for/legal/` |
+| **TEK — Tekniikan akateemiset** | Software engineers, M.Sc. (Tech.) / *DI* | Software Engineering (`$70–150/h`) & Office (`$60–70/h`) | *TEK-lehti* & TEK Yrittäjä (Entrepreneur) advisory | `/fi/guides/taxes-toiminimi-yel-finland/` & `/fi/for/software/` |
+| **SKTL — Suomen kääntäjien ja tulkkien liitto** | Translators, linguists, audio & Finnish syntax experts | Language & Audio Expert (`$35–50/h` — explicitly includes Finnish) | *Kääntäjä–Översättaren* magazine & Section III/V mailing lists | `/fi/for/language/` & `/fi/guides/taxes-toiminimi-yel-finland/` |
+| **Tieteentekijät** (Finnish Union of University Researchers and Teachers) | PhD candidates (*väitöskirjatutkija*), postdocs, university teachers | Domain experts + PhDs & Students guide (`$40–150/h`) | *Acatiimi* magazine & career transition workshops | `/fi/guides/ai-training-for-phds-and-students/` & `/fi/guides/unemployment-benefits-ai-work/` |
+| **Suomen Ekonomit** | *KTM* graduates, auditors, actuaries, finance analysts | Finance Expert (`rate set per project`) & Office (`$60–70/h`) | *Ekonomi*-lehti & career coaching team | `/fi/for/finance/` & `/fi/guides/taxes-toiminimi-yel-finland/` |
+| **Lääkäriliitto** (Finnish Medical Association) | Physicians (*LL*, *LT*) & clinical specialists | Medical Expert (`$60–180/h`) | *Lääkärilehti* & private-practice/side-income advisory | `/fi/for/medical/` & `/fi/guides/taxes-toiminimi-yel-finland/` |
+
+### 3.1 Union Career Newsletter Email Template (Finnish)
+
+**Subject:** Tietopaketti jäsenillenne: Ulkomaisen tekoälyarviointityön verotus (Vero.fi / YEL 2026), työttömyysturva ja huijausten tunnistaminen
+
+> Hei [Vastaanottajan nimi],
+>
+> Olen helsinkiläinen itsenäinen ammatinharjoittaja. Yhä useampi suomalainen korkeakoulutettu (erityisesti juristit, lääkärit, diplomi-insinöörit, kääntäjät, tutkijat ja ekonomit) törmää nykyään ulkomaisten tekoälyalustojen tarjoamiin etäarviointitehtäviin.
+>
+> Koska ulkomaisiin USD-palkkioihin, vuoden 2026 YEL-rajaan (`9 425,25 €`), soviteltuun työttömyyspäivärahaan sekä valitettaviin WhatsApp/Telegram-huijauksiin liittyy paljon epäselvyyttä, julkaisin evästeettömän ja läpinäkyvän suomenkielisen opassarjan **Edithsi**-sivustolla:
+> - **Verotus, toiminimi ja YEL 2026:** `https://edithsi.com/fi/guides/taxes-toiminimi-yel-finland/`
+> - **Tekoälytyö ja työttömyysturva (Kela / kassat):** `https://edithsi.com/fi/guides/unemployment-benefits-ai-work/`
+> - **Tekoälytyöhuijausten tunnistaminen:** `https://edithsi.com/fi/guides/avoid-ai-job-scams/`
+>
+> Kerrothan, mikäli nämä ei-kaupalliset oppaat ovat hyödyllisiä jäsenneuvonnallenne tai uutiskirjeenne vinkkilistalle!
+>
+> Ystävällisin terveisin,  
+> [Oma nimi], Helsinki (`hello@edithsi.com`)
 
 ---
 
-## 6. Linkable Asset Blueprint: *"State of AI Training Work in Finland & the Nordics"* Survey Report
+## 4. Helpful, Disclosed Participation Rules for Reddit & Specialist Forums
 
-To earn natural editorial backlinks from Finnish tech and economics media (*Tivi*, *Mikrobitti*, *Talouselämä*, *Kauppalehti*, *Yle Digi*) without outreach fatigue, I will publish an annual open-data study at `/state-of-ai-training-work-finland-nordics/` (and `/fi/tekoalytyon-tila-suomessa-tutkimus/`).
+Threads on `r/Suomi`, `r/Omatalous`, `r/cscareerquestionsEU`, and translator/developer forums frequently discuss remote AI evaluation work and foreign contractor taxes. To contribute authentically without violating community self-promotion rules or search spam policies, I follow five strict rules:
 
-### 6.1 Methodology & Ethical Data Guardrails
-- **Sample Target:** `N >= 100` anonymous responses collected from Finland- and Nordic-based contractors who have applied to or worked on at least one AI-evaluation platform (Mercor, Outlier, DataAnnotation, micro1, Alignerr, Toloka, etc.).
-- **Cookieless Collection:** Hosted via a zero-cookie, GDPR-compliant form with zero IP logging and no email collection.
-- **Strict Honesty:** Report exact sample size (`N`), median vs. mean values, and survivorship bias caveats (including the percentage of applicants who completed an AI interview but received `0` paid hours).
+1. **Never Post Referral Links (`/go/` or `?referralCode=`) on Forums:** I never drop Mercor referral links or affiliate redirects on Reddit, Jodel, Suomi24, Hacker News, or Discord.
+2. **Write the Complete Answer Inside the Comment First:** When someone asks in `r/Omatalous` *"Miten verotetaan jenkkifirmalta Stripellä tulevat palkkiot?"* or in `r/cscareerquestionsEU` *"Are Mercor / Outlier coding evals legit in Europe?"*, I provide a complete, standalone answer directly in the comment citing official sources (`Vero.fi`, `ETK.fi`, `Kela.fi`).
+3. **Explicit First-Person Disclosure Every Time:** Whenever I reference **Edithsi**, I explicitly disclose my ownership and referral model in the same sentence:
+   - *Finnish disclosure:* `"Huom: ylläpidän itse Edithsi.com-sivustoa (sivuston Mercor-roolilinkeissä on suosittelukoodi, mutta vero-opas ja palkkaindeksi ovat avointa tietoa ilman mainoslinkkejä)."`
+   - *English disclosure:* `"Disclosure: I run Edithsi.com as an independent contractor in Helsinki (the site uses Mercor referral links on role pages, though the tax guide and Pay Index CSV are non-commercial)."`
+4. **Never Promise Guaranteed Hours or Easy Income:** In every community reply, I emphasize that AI evaluation contracts have strict vetting, zero guaranteed weekly hours, and variable project lifetimes.
+5. **Single Real Identity Only:** I post from a single personal account and never upvote or reply to my own posts from secondary accounts.
 
-### 6.2 Core Questionnaire (8 Questions)
-1. **Primary Country of Tax Residence:** Finland / Sweden / Norway / Denmark / Other EU.
-2. **Highest Completed Qualification:** Bachelor's / Master's (*FM, OTM, KTM, DI*) / Licentiate or PhD / Medical or Legal License / Other.
-3. **Primary Domain Evaluated:** Finnish/Nordic Language / Software Engineering / Law / Medicine / Finance / Generalist.
-4. **Platforms Applied To vs. Platforms That Assigned Paid Work:** (Measures real application-to-project conversion rates across platforms).
-5. **Posted Hourly Rate vs. Effective Realized Hourly Rate (USD/h):** Accounts for unpaid onboarding, rubric reading, and platform downtime.
-6. **Monthly Hours Availability:** How predictable or sporadic was task availability (`0 h/wk`, `1–5 h/wk`, `6–15 h/wk`, `16+ h/wk`)?
-7. **Tax & Invoicing Structure Used in Finland:** Private individual (*tulonhankkimistoiminta* on personal tax return) / *Toiminimi* (sole proprietor) / *Osakeyhtiö* (`Oy`) / Invoicing service (*kevytyrittäjä*).
-8. **Biggest Challenge Faced:** Task droughts / Automated AI interviews / USD-to-EUR FX fees / Uncertainty around Kela & unemployment funds (`TYJ`) / YEL threshold anxiety.
+---
 
-### 6.3 Deliverables & Press Pitch
-- **Visual Deliverables:** 4 accessible, inline SVG charts (using `DESIGN.md` tokens `#1D4ED8`, `#0F766E`, `#B45309`, `#18181B`) + downloadable raw anonymized CSV dataset under `CC BY 4.0`.
-- **Headline Hook for Finnish Tech Journalists:** *"Kysely: Mitä suomalaiset korkeakoulutetut oikeasti tienaavat tekoälyn kouluttamisella – ja kuinka moni jää kokonaan ilman tunteja?"* (Highlighting both the high hourly rates for specialists and the reality that contract hours are never guaranteed).
+## 5. Entity Consistency Checklist (`sameAs` Verification for GEO & Knowledge Graph)
+
+Generative AI engines (ChatGPT Search, Perplexity, Gemini, Claude, and Google AI Mode) cross-check off-site entity profiles against the JSON-LD `@graph` (`Organization` and `Person` schemas) emitted on `https://edithsi.com`.
+
+I maintain strict entity consistency across my public profiles using the exact canonical one-sentence description defined in `src/config.ts`:
+
+> **Canonical One-Sentence `Edithsi` Description:**  
+> `"Edithsi is an independent, six-language guide and pay index for credentialed professionals in Finland and Europe comparing remote AI-training work across Mercor, micro1, Outlier, Alignerr, Handshake AI, and Mindrift."`
+
+### Verification Checklist
+
+- [ ] **LinkedIn Profile (`https://www.linkedin.com/in/ansochacko/`):**
+  - List **Edithsi** (`https://edithsi.com`) under *Experience / Projects* with the exact one-sentence description above.
+  - Ensure location is set to **Helsinki, Finland** matching the `Person` and `Organization` JSON-LD on `https://edithsi.com`.
+- [ ] **GitHub Repository (`https://github.com/Ansochacko/edithsi`) & Profile (`https://github.com/Ansochacko`):**
+  - Set the repository *About / Description* field on `https://github.com/Ansochacko/edithsi` to the exact one-sentence description above.
+  - Set the repository *Website* URL field to `https://edithsi.com`.
+  - Include a link to the open-data CSV (`https://edithsi.com/data/ai-work-pay-index.csv`, `CC BY 4.0`) in the repository `README.md`.
+- [ ] **Bidirectional `sameAs` Alignment:**
+  - Verify that `src/config.ts` (`SAME_AS_URLS`) and `src/components/JsonLd.astro` reference `https://www.linkedin.com/in/ansochacko/`, `https://github.com/Ansochacko`, and `https://github.com/Ansochacko/edithsi`, creating a closed, verifiable bidirectional link loop between the website and both external profiles.

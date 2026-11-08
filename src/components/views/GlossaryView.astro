@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqList from '../FaqList.astro';
+import AuthorBox from '../AuthorBox.astro';
+import { CHECKED_ON } from '../../config';
+import { getGlossaryPageContent } from '../../data/hubPagesContent';
+import { getDictionary, getPagePath, type Lang } from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+const content = getGlossaryPageContent(lang);
+
+const breadcrumbs = [
+  { name: t.nav.home, url: getPagePath(lang, 'home') },
+  { name: content.h1, url: getPagePath(lang, 'glossary') },
+];
+
+const UI_LABELS: Record<
+  Lang,
+  {
+    lastUpdated: string;
+    tableH2: string;
+    colTerm: string;
+    colDef: string;
+    colExample: string;
+    termsH2: string;
+    faqH2: string;
+  }
+> = {
+  en: {
+    lastUpdated: 'Last updated',
+    tableH2: 'Quick reference table of core AI-training terms',
+    colTerm: 'Term',
+    colDef: 'One-sentence definition',
+    colExample: 'Practical role context',
+    termsH2: 'What do RLHF, rubrics, evals, and standing pools mean in practice?',
+    faqH2: 'Frequently asked questions about AI-training terminology',
+  },
+  fi: {
+    lastUpdated: 'Päivitetty viimeksi',
+    tableH2: 'Keskeisten tekoälykoulutustermien pikataulukko',
+    colTerm: 'Termi',
+    colDef: 'Yhden virkkeen määritelmä',
+    colExample: 'Käytännön yhteys työhön',
+    termsH2: 'Mitä RLHF, arviointimatriisit (rubrics), evals ja osaajapoolit tarkoittavat käytännössä?',
+    faqH2: 'Usein kysytyt kysymykset tekoälykoulutuksen sanastosta',
+  },
+  sv: {
+    lastUpdated: 'Senast uppdaterad',
+    tableH2: 'Snabböversikt över centrala AI-träningsbegrepp',
+    colTerm: 'Begrepp',
+    colDef: 'Definition i en mening',
+    colExample: 'Praktiskt sammanhang',
+    termsH2: 'Vad betyder RLHF, rubrics, evals och stående pooler i praktiken?',
+    faqH2: 'Vanliga frågor om AI-träningsbegrepp',
+  },
+  de: {
+    lastUpdated: 'Zuletzt aktualisiert',
+    tableH2: 'Schnellübersicht der wichtigsten KI-Trainingsbegriffe',
+    colTerm: 'Begriff',
+    colDef: 'Ein-Satz-Definition',
+    colExample: 'Praxisbezug',
+    termsH2: 'Was bedeuten RLHF, Rubrics, Evals und Standing Pools in der Praxis?',
+    faqH2: 'Häufige Fragen zu Fachbegriffen im KI-Training',
+  },
+  fr: {
+    lastUpdated: 'Dernière mise à jour',
+    tableH2: 'Tableau récapitulatif des termes clés de l’entraînement IA',
+    colTerm: 'Terme',
+    colDef: 'Définition en une phrase',
+    colExample: 'Contexte pratique',
+    termsH2: 'Que signifient concrètement RLHF, rubrics, evals et viviers permanents ?',
+    faqH2: 'Questions fréquentes sur le vocabulaire de l’entraînement IA',
+  },
+  es: {
+    lastUpdated: 'Última actualización',
+    tableH2: 'Tabla de referencia rápida de términos de entrenamiento de IA',
+    colTerm: 'Término',
+    colDef: 'Definición en una frase',
+    colExample: 'Contexto práctico',
+    termsH2: '¿Qué significan en la práctica RLHF, rúbricas, evals y bolsas permanentes?',
+    faqH2: 'Preguntas frecuentes sobre la terminología de entrenamiento de IA',
+  },
+};
+
+const ui = UI_LABELS[lang];
+---
+
+<BaseLayout
+  lang={lang}
+  page="glossary"
+  title={content.title}
+  description={content.metaDescription}
+  breadcrumbs={breadcrumbs}
+  articleSchema={{ datePublished: CHECKED_ON, dateModified: CHECKED_ON }}
+  faqsSchema={content.faqs}
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">
+        Edithsi Glossary · {ui.lastUpdated}: <time datetime={CHECKED_ON}>{CHECKED_ON}</time>
+      </span>
+      <h1>{content.h1}</h1>
+
+      <div class="direct-answer-box">
+        <p class="direct-answer-box__text">{content.directAnswer}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="glossary-table-heading">
+    <div class="container">
+      <h2 id="glossary-table-heading">{ui.tableH2}</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">{ui.colTerm}</th>
+              <th scope="col">{ui.colDef}</th>
+              <th scope="col">{ui.colExample}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {content.terms.map((item) => (
+              <tr>
+                <td>
+                  <strong>
+                    <a href={`#term-${item.id}`}>{item.term}</a>
+                  </strong>
+                </td>
+                <td>{item.firstSentenceDefinition}</td>
+                <td>{item.exampleRole}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="glossary-terms-heading">
+    <div class="container">
+      <h2 id="glossary-terms-heading">{ui.termsH2}</h2>
+      <div class="facts-grid">
+        {content.terms.map((item) => (
+          <article class="fact-card" id={`term-${item.id}`}>
+            <h3 class="fact-card__title">{item.term}</h3>
+            <p class="fact-card__body" style="margin-bottom: var(--space-3);">
+              <strong>{item.firstSentenceDefinition}</strong>
+            </p>
+            <p class="fact-card__body">{item.details}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="glossary-faq-heading">
+    <div class="container">
+      <h2 id="glossary-faq-heading">{ui.faqH2}</h2>
+      <FaqList items={content.faqs} />
+      <AuthorBox lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

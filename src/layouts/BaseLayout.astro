@@ -19,6 +19,7 @@ import {
   buildJsonLdGraph,
   type BreadcrumbItem,
   type FaqSchemaItem,
+  type DatasetSchemaOptions,
 } from '../utils/schema';
 
 interface Props {
@@ -35,6 +36,7 @@ interface Props {
     dateModified: string;
   };
   faqsSchema?: FaqSchemaItem[];
+  datasetSchema?: DatasetSchemaOptions;
   noindex?: boolean;
 }
 
@@ -49,6 +51,7 @@ const {
   breadcrumbs,
   articleSchema,
   faqsSchema,
+  datasetSchema,
   noindex = false,
 } = Astro.props;
 
@@ -92,6 +95,7 @@ const jsonLd = buildJsonLdGraph({
   breadcrumbs: finalBreadcrumbs,
   article: articleSchema,
   faqs: faqsSchema,
+  dataset: datasetSchema,
 });
 
 const ogLocaleMap: Record<Lang, string> = {

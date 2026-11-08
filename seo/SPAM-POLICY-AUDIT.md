@@ -1,63 +1,78 @@
-# Google Spam-Policy & Content Quality Audit (`/seo/SPAM-POLICY-AUDIT.md`)
+# Edithsi — Google May 2026 Spam Policies & Content Quality Audit (`seo/SPAM-POLICY-AUDIT.md`)
 
 **Audit Date:** `2026-11-05`  
 **Site:** Edithsi (`https://edithsi.com`)  
-**Total Built Routes Audited:** `83` static HTML pages (`30` core pages + `36` profession hubs + `16` full-length EN/FI spoke guides + `1` custom 404 page) + `32` gated non-EN/FI spoke drafts.
+**Operator:** Independent contractor based in Helsinki, Finland (always first-person singular `"I"`, never `"we"`; not affiliated with Mercor or any platform reviewed)  
+**Policy Reference:** Google Search Spam Policies (including the **May 2026 Spam Policy Updates**, which explicitly extend Google's core spam enforcement, scaled content abuse rules, and structured-data guardrails to **Google AI Overviews** and **Google AI Mode**).  
+**Total Indexable Canonical URLs Audited:** `174` static HTML pages (`29` canonical routes × `6` languages: `en`, `fi`, `sv`, `de`, `fr`, `es`) + `9` non-indexed `/go/<role>/` referral redirect routes (`noindex, nofollow`) + `/404` (`noindex`).
 
 ---
 
-## 1. Guardrail Verification Matrix
+## 1. Google May 2026 Spam Policy Guardrail Verification Matrix
 
-| Spam-Policy Guardrail | Implementation & Verification | Status |
+| Google May 2026 Spam Policy Guardrail | Implementation & Verification on `https://edithsi.com` | Audit Status |
 | :--- | :--- | :---: |
-| **No `JobPosting` Structured Data** | Checked all 83 generated HTML files. Zero `JobPosting` schemas exist anywhere. Only `WebSite`, `Person`, `BreadcrumbList`, `Article`, and `FAQPage` are emitted. | **PASS (0 violations)** |
-| **No Scaled Content Abuse / Doorway Pages** | Zero city×profession matrix pages (e.g., no `/helsinki-lawyer-ai-jobs/`, `/tampere-lawyer-ai-jobs/`). Only 6 discipline hubs per language matching the 8 official roles in `src/data/roles.json`. | **PASS** |
-| **No Unreviewed Machine Translations** | All non-English/Finnish spoke drafts (`sv`, `de`, `fr`, `es`) carry `reviewStatus: "NEEDS NATIVE REVIEW"` and `draft: true` in frontmatter. `src/utils/guides.ts` blocks them from being built or indexed. | **PASS** |
-| **No Income Promises** | Every pay mention across all 83 pages includes the posted range, `"not guaranteed"` (`ei taattu` / `ej garanterat` / `nicht garantiert` / `non garanti` / `no garantizado`), and the verification date `2026-11-05`. | **PASS** |
-| **No Fake Reviews, Testimonials, or Stats** | Zero invented user reviews, star ratings (`AggregateRating`), fake contractor earnings claims, or "as seen in" media badges. | **PASS** |
-| **Affiliate & Referral Link Compliance** | Every link to `mercor.com` includes `rel="sponsored noopener noreferrer"`, `target="_blank"`, and `?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b`. Every page renders the localized ad stamp (`AD` / `MAINOS` / `REKLAM` / `WERBUNG` / `PUBLICITÉ` / `PUBLICIDAD`) under the header. | **PASS** |
-| **No Keyword Stuffing, Hidden Text, or Cloaking** | Verified via DOM & CSS audit. All text is visible, natural editorial prose written in first-person singular ("I" / "minä"). | **PASS** |
+| **Zero Scaled Content Abuse / Doorway Pages** | I generate zero city×profession matrix pages (e.g., no `/helsinki-lawyer-ai-jobs/`, `/tampere-lawyer-ai-jobs/`) and zero near-duplicate keyword-variation pages. Every query in `/seo/query-map.csv` (`240` queries across `6` languages) maps to **one** canonical page. | **PASS (0 violations)** |
+| **Zero Keyword Stuffing, Hidden Text, or Cloaking** | Verified via DOM & CSS inspection across all `174` indexable pages. All content is visible, human-readable first-person prose (`"I"`). Server responses to `Googlebot`, `Google-Extended`, `OAI-SearchBot`, `PerplexityBot`, and human browsers are 100% identical. | **PASS (0 violations)** |
+| **Zero Fabricated Reviews, Testimonials, or Stats** | Zero invented user quotes, fake `AggregateRating` / `Review` stars, fabricated contractor earnings claims, or fake media badges. All hourly rates cite `src/data/roles.json`, `src/data/platforms.json`, and `src/data/pay-index/2026-11.json` (`checkedOn: 2026-11-05`). | **PASS (0 violations)** |
+| **Zero Income Promises or Get-Rich-Quick Claims** | Every page and role card states the posted USD rate range alongside an explicit warning that work volume and weekly hours are **never guaranteed** (`not guaranteed` / `ei taattu` / `ej garanterat` / `nicht garantiert` / `non garanti` / `no garantizado`). Risky queries (`"easy money online"`, `"guaranteed AI income"`) are explicitly marked `EXCLUDE` in `/seo/query-map.csv`. | **PASS (0 violations)** |
+| **Zero Mercor or Third-Party Trademark Misuse** | The brand name **Edithsi** (`https://edithsi.com`) is a standalone independent identity with zero trademark confusion, zero comic/movie acronym references, and an explicit non-affiliation disclaimer in the header/footer of every page (`"I am an independent contractor in Helsinki, not affiliated with Mercor or any platform reviewed"`). | **PASS (0 violations)** |
+| **Zero `JobPosting` Schema Misuse** | Because Edithsi is an independent informational guide and pay index—not the direct employer of record—zero `JobPosting` JSON-LD schemas are emitted on any page. Only accurate `Organization`, `Person`, `WebSite`, `WebPage`, `Dataset`, `Article`, `FAQPage`, and `BreadcrumbList` schemas are used. | **PASS (0 violations)** |
+| **Affiliate & Referral Link Transparency (`rel="sponsored"`)** | Every outbound Mercor referral link routes through `/go/<role>/` with `rel="sponsored noopener noreferrer"`, visible localized ad disclosures (`AD` / `MAINOS` / `REKLAM` / `WERBUNG` / `PUBLICITÉ` / `PUBLICIDAD`), and a dedicated `/disclosure/` page in all 6 languages. | **PASS (0 violations)** |
+| **Site Reputation Abuse & Link Spam Compliance** | Zero third-party hosted parasite content, zero paid links, and zero link exchanges (`seo/OUTREACH.md`). | **PASS (0 violations)** |
 
 ---
 
-## 2. Pages Merged, Blocked, Improved, or Noindexed
+## 2. Table of Consolidated, Merged & Noindexed Routes (Preventing Cannibalization & Thin Pages)
 
-### A. Merged Pages (Preventing Thin Near-Duplicate Doorway Pages)
-1. **Merged Two Legal Roles into One Law Hub per Language (`/ai-training-for-lawyers/`, `/fi/tekoalytyo-juristeille/`, etc.):**
-   - *Why:* `src/data/roles.json` contains two legal roles: `Legal Expert (licensed lawyer)` (`$100–150/h` posted) and `Legal Expert` (`$60–150/h` posted). Creating separate hubs for "Licensed Lawyer AI Jobs" vs. "Legal Compliance AI Jobs" would have produced overlapping doorway pages targeting the same intent. Merging both cards into a single comprehensive Law Hub gives visitors a clear side-by-side comparison of credential requirements.
-2. **Merged Two Tech Roles into One Technology Hub per Language (`/ai-training-for-software-engineers/`, `/fi/tekoalytyo-ohjelmistokehittajille/`, etc.):**
-   - *Why:* Merged `Software Engineering Expert` (`$70–150/h` posted) and `Office & Productivity Software Expert` (`$60–70/h` posted) into the Technology Hub (`field: "tech"`) instead of spinning up a thin standalone "Spreadsheet AI Jobs" hub.
-3. **Consolidated Country Tax & Benefit Variants into Comprehensive Guides:**
-   - *Why:* Rather than generating separate thin pages for "Toiminimi AI work", "Ennakkovero AI work", and "YEL 2026 AI work", all three are consolidated into `/ai-training-taxes-finland-guide/` (`1,443` body words) and `/fi/tekoalytyo-verotus-toiminimi-yel/` (`1,306` body words).
+To guarantee that every search query in `/seo/query-map.csv` resolves to **one** authoritative canonical URL—and to eliminate duplicate or thin pages that could trigger Google's May 2026 Scaled Content Abuse or Doorway filters in Search, AI Overviews, and AI Mode—I executed the following architectural consolidations:
 
-### B. Noindexed & Build-Gated Pages
-1. **`/404/` (`dist/404.html`):**
-   - *Action:* Added `<meta name="robots" content="noindex, follow" />` and excluded from `sitemap.xml`. Retained full internal links to EN and FI hubs so visitors who hit a broken link can navigate easily.
-2. **All 32 Non-EN/FI Spoke Articles (`sv`, `de`, `fr`, `es` in `/seo/articles/{sv,de,fr,es}/`):**
-   - *Action:* Marked `reviewStatus: "NEEDS NATIVE REVIEW"` and `draft: true` in YAML frontmatter and excluded from build output until a native C2 speaker verifies terminology for `Skatteverket`/`Försäkringskassan` (`sv`), `Finanzamt`/`Bundesagentur für Arbeit` (`de`), `URSSAF`/`France Travail` (`fr`), and `Agencia Tributaria`/`RETA`/`SEPE` (`es`).
-
-### C. Pages Flagged for Improvement in Month 2–3
-1. **The 24 Secondary-Language Profession Hubs (`/sv/ai-traning-for-*`, `/de/ki-training-fuer-*`, `/fr/entrainement-ia-pour-*`, `/es/entrenamiento-ia-para-*`):**
-   - *Current state:* Each page is clean, accurate, and includes country-specific regulatory pointers (e.g., `Skatteverket`, `Finanzamt`, `URSSAF`, `Agencia Tributaria`) plus localized role cards (`~350–450` words per page).
-   - *Recommendation:* While useful for navigation and `hreflang` completeness across the 6 languages, these 24 hubs have lower word counts than the English and Finnish hubs/spokes. Before launching off-page outreach in Sweden, DACH, France, or Spain, expand each hub to `800–1,000+` words with a native reviewer and publish the corresponding localized tax and unemployment spoke articles. If Google Search Console shows "Crawled - currently not indexed" on any `sv`/`de`/`fr`/`es` hub during Month 1, toggle `noindex={true}` on `sv`/`de`/`fr`/`es` hubs until the native-reviewed spoke articles go live in Month 3.
-2. **Privacy & Legal Notice Pages (`/*/privacy/` and `/*/legal/`):**
-   - *Current state:* Required for user trust and legal compliance; currently indexed (`200 OK`).
-   - *Recommendation:* Replace placeholder operator values (`[Your name]`, `[your email]`, `[Y-tunnus or empty]`) in `src/config.ts` and complete lawyer review before launch. Optionally set `noindex={true}` on `/privacy/` and `/legal/` if you prefer search engines to focus crawl budget exclusively on hubs and guides.
+| Legacy / Potential Duplicate Source | Consolidated Canonical Destination (`en` + `/{lang}/...`) | Consolidation & Spam-Compliance Rationale |
+| :--- | :--- | :--- |
+| Legacy standalone `/seo/articles/{lang}/is-mercor-legit-review.md` drafts | `/platforms/mercor/` (`/{lang}/platforms/mercor/`) | Consolidated standalone Mercor review articles into the canonical `/platforms/mercor/` review template so `"is Mercor legit"`, `"Mercor review"`, and `"Mercor hourly pay"` map to a single authoritative URL per language. |
+| Legacy standalone `/seo/articles/{lang}/mercor-vs-outlier-vs-micro1.md` & `/open-ai-training-pools-ledger.md` drafts | `/compare/` (`/{lang}/compare/`) & `/pay-index/` (`/{lang}/pay-index/`) | Merged multi-platform comparison drafts into the canonical 6-platform comparison matrix (`/compare/`) and the monthly open-data **Edithsi AI Work Pay Index** (`/pay-index/`), preventing overlapping comparison pages. |
+| Legacy standalone `/seo/articles/{lang}/mercor-ai-interview-guide.md` drafts | `/guides/ai-interview-preparation/` (`/{lang}/guides/ai-interview-preparation/`) | Consolidated platform interview tips into one comprehensive, cross-platform AI video interview preparation guide covering Mercor, micro1, and rubric assessments. |
+| Legacy standalone `/seo/articles/{lang}/ai-training-taxes-finland-guide.md` drafts + `toiminimi` / `ennakkovero` / `YEL 2026` query variants | `/guides/taxes-toiminimi-yel-finland/` (`/{lang}/guides/taxes-toiminimi-yel-finland/`) | Consolidated all Finnish and European contractor tax, VAT (`Vero.fi`), prepayment tax (`ennakkovero`), and `YEL 2026` (`ETK.fi`) queries into a single comprehensive guide per language rather than spinning up thin sub-topic pages. |
+| Legacy standalone `/seo/articles/{lang}/ai-training-unemployment-benefits-finland.md` drafts | `/guides/unemployment-benefits-ai-work/` (`/{lang}/guides/unemployment-benefits-ai-work/`) | Consolidated Kela, unemployment fund (*työttömyyskassa* / *A-kassa*), and irregular side-income (*soviteltu päiväraha*) queries into one canonical guide per language. |
+| Legacy standalone `/seo/articles/{lang}/how-to-spot-fake-ai-job-scams.md` drafts | `/guides/avoid-ai-job-scams/` (`/{lang}/guides/avoid-ai-job-scams/`) | Consolidated Telegram/WhatsApp advance-fee scam warnings and domain verification checklists into one canonical consumer-protection guide per language. |
+| Legacy standalone `/seo/articles/{lang}/ai-training-glossary-rlhf-evals-rubrics.md` drafts | `/glossary/` (`/{lang}/glossary/`) | Consolidated RLHF, rubric evaluation, SFT, and red-teaming definitions into the canonical `/glossary/` route per language. |
+| Two separate legal roles (`Legal Expert (licensed lawyer)` `$100–150/h` & `Legal Expert` `$60–150/h`) | `/for/legal/` (`/{lang}/for/legal/`) | Merged both legal pools into a single Legal Audience Hub (`/for/legal/`) so lawyers and LL.M. (*OTM*) graduates can compare bar-licensed vs. general legal requirements side by side without doorway splitting. |
+| Broad remote-work queries (`"remote jobs Finland"`, `"side jobs from home"`, `"etätyö kotoa"`, `"sivutyö kotoa"`, `"extrajobb hemifrån"`, `"Nebenjob von zu Hause"`) | `/guides/remote-side-jobs-from-home/` (`/{lang}/guides/remote-side-jobs-from-home/`) | Mapped **all** broad work-from-home and side-job query variations in each language to ONE honest guide (`/guides/remote-side-jobs-from-home/`) that transparently explains vetting difficulty and non-guaranteed hours. |
+| PhD, postdoc, and university student AI work queries | `/guides/ai-training-for-phds-and-students/` (`/{lang}/guides/ai-training-for-phds-and-students/`) | Consolidated graduate-researcher and student queries (comparing Mercor domain pools and Handshake AI fellowships) into one dedicated academic guide per language. |
+| Outbound referral redirect routes (`/go/legal-licensed/`, `/go/legal-general/`, `/go/medical-expert/`, `/go/software-engineering/`, `/go/office-productivity/`, `/go/finance-expert/`, `/go/language-audio/`, `/go/generalist-expert/`, `/go/general-referral/`) | `noindex, nofollow` + `Disallow: /go/` in `public/robots.txt` + excluded from `/sitemap.xml` | `/go/<role>/` routes exist strictly for transparent first-party referral redirection (`?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b`) and cookieless click attribution (`?src=`). Carrying `<meta name="robots" content="noindex, nofollow" />` and `Disallow: /go/` ensures search engines and AI crawlers never index thin redirect pages or pass unvetted PageRank through affiliate hops. |
 
 ---
 
-## 3. Complete Inventory of Published Indexable Pages (82 URLs)
+## 3. Complete Inventory of Canonical Indexable Routes (`29` Routes × `6` Languages = `174` Pages)
 
-- **30 Core Pages (`en`, `fi`, `sv`, `de`, `fr`, `es` × 5):** Home, Open Roles, How It Works & Honest FAQ, Privacy, Legal Notice — **PASS (100% compliant)**
-- **12 Primary Profession Hubs (`en`, `fi` × 6):** Law, Medicine, Software Engineering, Language & Audio, Finance, Generalist — **PASS (100% compliant)**
-- **24 Secondary Profession Hubs (`sv`, `de`, `fr`, `es` × 6):** Country-adapted hubs — **PASS (Flagged for expansion to 800+ words with native reviewer in Month 2–3)**
-- **16 Long-Form Spoke Guides (`8 EN` + `8 FI`, `1,230–1,625` body words each):**
-  1. `/is-mercor-legit-review/` & `/fi/mercor-kokemuksia-arvostelu/`
-  2. `/mercor-ai-interview-guide/` & `/fi/mercor-tekoalyhaastattelu-opas/`
-  3. `/mercor-vs-outlier-vs-micro1/` & `/fi/mercor-vs-outlier-vs-micro1-vertailu/`
-  4. `/ai-training-taxes-finland-guide/` & `/fi/tekoalytyo-verotus-toiminimi-yel/`
-  5. `/ai-training-unemployment-benefits-finland/` & `/fi/tekoalytyo-ja-tyottomyysturva/`
-  6. `/how-to-spot-fake-ai-job-scams/` & `/fi/huijausilmoitukset-tekoalytyo-tunnistaminen/`
-  7. `/ai-training-glossary-rlhf-evals-rubrics/` & `/fi/tekoalykoulutuksen-sanasto-rlhf-evals/`
-  8. `/open-ai-training-pools-ledger/` & `/fi/avoimet-tekoalypoolit-ja-seuranta/`
-  — **PASS (100% compliant)**
+Every single page below returns HTTP `200`, includes a self-referencing `<link rel="canonical">`, full 6-language + `x-default` `<link rel="alternate" hreflang="...">` tags, and valid JSON-LD `@graph`:
+
+1. **7 Core & Discovery Pages (× 6 languages = `42` pages):**
+   - `/` (Homepage Hub)
+   - `/roles/` (Open Roles Directory)
+   - `/compare/` (6-Platform Comparison Matrix: Mercor, micro1, Outlier, Alignerr, Handshake AI, Mindrift)
+   - `/pay-index/` (Monthly Edithsi AI Work Pay Index + `Dataset` schema + `CC BY 4.0` CSV download)
+   - `/how-it-works/` (Process & Honest FAQ)
+   - `/glossary/` (AI Training, RLHF & Rubric Evaluation Glossary)
+   - `/about/` (First-Person Operator Background & Editorial Methodology)
+2. **3 Legal & Transparency Pages (× 6 languages = `18` pages):**
+   - `/disclosure/` (Referral & Advertising Disclosure)
+   - `/privacy/` (Zero-Cookie Privacy Notice)
+   - `/legal/` (Legal Notice & Operator Information)
+3. **7 Profession Audience Hubs (`/for/<slug>/` × 6 languages = `42` pages):**
+   - `/for/legal/` (Lawyers & Legal Experts — `$100–150/h` & `$60–150/h`)
+   - `/for/medical/` (Doctors, Nurses & Clinical Experts — `$60–180/h`)
+   - `/for/software/` (Software Engineers — `$70–150/h`)
+   - `/for/language/` (Language, Translation & Audio Experts — `$35–50/h`)
+   - `/for/finance/` (Finance, Accounting & Audit Experts — `rate set per project`)
+   - `/for/office/` (Office & Productivity Software Specialists — `$60–70/h`)
+   - `/for/general/` (Generalist Experts — `$40–70/h`)
+4. **6 Platform Review Pages (`/platforms/<slug>/` × 6 languages = `36` pages):**
+   - `/platforms/mercor/`, `/platforms/micro1/`, `/platforms/outlier/`, `/platforms/alignerr/`, `/platforms/handshake-ai/`, `/platforms/mindrift/`
+5. **6 Answer-First Editorial Guides (`/guides/<slug>/` × 6 languages = `36` pages):**
+   - `/guides/taxes-toiminimi-yel-finland/`
+   - `/guides/unemployment-benefits-ai-work/`
+   - `/guides/avoid-ai-job-scams/`
+   - `/guides/ai-interview-preparation/`
+   - `/guides/remote-side-jobs-from-home/`
+   - `/guides/ai-training-for-phds-and-students/`

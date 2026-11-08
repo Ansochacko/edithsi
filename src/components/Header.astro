@@ -30,6 +30,17 @@ const alternates = customAlternates
   : getAlternateLinks(page ?? 'home');
 
 const isAudiencePage = page?.startsWith('for/') ?? false;
+const isPlatformPage = page === 'compare' || (page?.startsWith('platforms/') ?? false);
+
+const NAV_EXTRAS: Record<Lang, { compare: string; payIndex: string }> = {
+  en: { compare: 'Compare Platforms', payIndex: 'Pay Index' },
+  fi: { compare: 'Vertaa alustoja', payIndex: 'Palkkioindeksi' },
+  sv: { compare: 'Jämför plattformar', payIndex: 'Ersättningsindex' },
+  de: { compare: 'Plattform-Vergleich', payIndex: 'Honorar-Index' },
+  fr: { compare: 'Comparer les plateformes', payIndex: 'Indice des tarifs' },
+  es: { compare: 'Comparar plataformas', payIndex: 'Índice salarial' },
+};
+const extras = NAV_EXTRAS[lang];
 ---
 
 <header class="site-header">
@@ -97,29 +108,29 @@ const isAudiencePage = page?.startsWith('for/') ?? false;
           </li>
           <li>
             <a
+              href={getPagePath(lang, 'compare')}
+              class="site-nav__link"
+              aria-current={isPlatformPage ? 'page' : undefined}
+            >
+              {extras.compare}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getPagePath(lang, 'pay-index')}
+              class="site-nav__link"
+              aria-current={page === 'pay-index' ? 'page' : undefined}
+            >
+              {extras.payIndex}
+            </a>
+          </li>
+          <li>
+            <a
               href={getPagePath(lang, 'how-it-works')}
               class="site-nav__link"
               aria-current={page === 'how-it-works' ? 'page' : undefined}
             >
               {t.nav.howItWorks}
-            </a>
-          </li>
-          <li>
-            <a
-              href={getPagePath(lang, 'privacy')}
-              class="site-nav__link"
-              aria-current={page === 'privacy' ? 'page' : undefined}
-            >
-              {t.nav.privacy}
-            </a>
-          </li>
-          <li>
-            <a
-              href={getPagePath(lang, 'legal')}
-              class="site-nav__link"
-              aria-current={page === 'legal' ? 'page' : undefined}
-            >
-              {t.nav.legal}
             </a>
           </li>
         </ul>

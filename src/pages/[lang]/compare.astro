@@ -1,0 +1,12 @@
+---
+import CompareView from '../../components/views/CompareView.astro';
+import { NON_DEFAULT_LANGUAGES, type Lang } from '../../i18n';
+
+export function getStaticPaths() {
+  return NON_DEFAULT_LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Lang };
+---
+
+<CompareView lang={lang} />

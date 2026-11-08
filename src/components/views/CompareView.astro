@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqList from '../FaqList.astro';
+import AuthorBox from '../AuthorBox.astro';
+import platforms from '../../data/platforms.json';
+import { CHECKED_ON, buildGoUrl } from '../../config';
+import { getComparePageContent } from '../../data/platformContent';
+import {
+  PLATFORM_SLUGS,
+  getDictionary,
+  getPagePath,
+  getPlatformPath,
+  getGuidePath,
+  type PlatformSlug,
+  type Lang,
+} from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+const content = getComparePageContent(lang);
+
+const breadcrumbs = [
+  { name: t.nav.home, url: getPagePath(lang, 'home') },
+  { name: content.h1, url: getPagePath(lang, 'compare') },
+];
+
+const UI_LABELS: Record<
+  Lang,
+  {
+    lastUpdated: string;
+    tableH2: string;
+    officialNoRef: string;
+    officialLinkText: string;
+    readProfileText: string;
+    profilesHeading: string;
+    faqHeading: string;
+  }
+> = {
+  en: {
+    lastUpdated: 'Last updated',
+    tableH2: `Side-by-side comparison of 6 AI-training platforms (Checked ${CHECKED_ON})`,
+    officialNoRef: 'official link · no referral',
+    officialLinkText: 'Official site ↗',
+    readProfileText: 'Full review →',
+    profilesHeading: 'Read individual platform profiles & guides',
+    faqHeading: 'Frequently asked questions about comparing AI-training platforms',
+  },
+  fi: {
+    lastUpdated: 'Päivitetty viimeksi',
+    tableH2: `6 tekoälyn koulutusalustan rinnakkaisvertailu (Tarkistettu ${CHECKED_ON})`,
+    officialNoRef: 'virallinen linkki · ei suosittelukoodia',
+    officialLinkText: 'Virallinen sivu ↗',
+    readProfileText: 'Lue arvio →',
+    profilesHeading: 'Tutustu alustakohtaisiin arvioihin ja oppaisiin',
+    faqHeading: 'Usein kysytyt kysymykset tekoälyalustojen vertailusta',
+  },
+  sv: {
+    lastUpdated: 'Senast uppdaterad',
+    tableH2: `Jämförelse av 6 AI-träningsplattformar sida vid sida (Kontrollerat ${CHECKED_ON})`,
+    officialNoRef: 'officiell länk · ingen värvningskod',
+    officialLinkText: 'Officiell sida ↗',
+    readProfileText: 'Läs profil →',
+    profilesHeading: 'Läs plattformsprofiler och praktiska guider',
+    faqHeading: 'Vanliga frågor om att jämföra AI-träningsplattformar',
+  },
+  de: {
+    lastUpdated: 'Zuletzt aktualisiert',
+    tableH2: `6 KI-Trainingsplattformen im direkten Vergleich (Stand ${CHECKED_ON})`,
+    officialNoRef: 'offizieller Link · kein Empfehlungscode',
+    officialLinkText: 'Offizielle Seite ↗',
+    readProfileText: 'Zum Profil →',
+    profilesHeading: 'Einzelprofile der Plattformen & Praxis-Ratgeber',
+    faqHeading: 'Häufige Fragen zum Vergleich von KI-Trainingsplattformen',
+  },
+  fr: {
+    lastUpdated: 'Dernière mise à jour',
+    tableH2: `Comparatif côte à côte de 6 plateformes d’entraînement IA (Vérifié le ${CHECKED_ON})`,
+    officialNoRef: 'lien officiel · sans parrainage',
+    officialLinkText: 'Site officiel ↗',
+    readProfileText: 'Voir le profil →',
+    profilesHeading: 'Consulter les profils détaillés et guides pratiques',
+    faqHeading: 'Questions fréquentes sur la comparaison des plateformes IA',
+  },
+  es: {
+    lastUpdated: 'Última actualización',
+    tableH2: `Comparativa de 6 plataformas de entrenamiento de IA (Verificado el ${CHECKED_ON})`,
+    officialNoRef: 'enlace oficial · sin código de referido',
+    officialLinkText: 'Sitio oficial ↗',
+    readProfileText: 'Ver perfil →',
+    profilesHeading: 'Explorar perfiles detallados de plataformas y guías',
+    faqHeading: 'Preguntas frecuentes al comparar plataformas de entrenamiento de IA',
+  },
+};
+
+const ui = UI_LABELS[lang];
+---
+
+<BaseLayout
+  lang={lang}
+  page="compare"
+  title={content.title}
+  description={content.metaDescription}
+  breadcrumbs={breadcrumbs}
+  articleSchema={{ datePublished: CHECKED_ON, dateModified: CHECKED_ON }}
+  faqsSchema={content.faqs}
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">
+        Edithsi · {ui.lastUpdated}: <time datetime={CHECKED_ON}>{CHECKED_ON}</time>
+      </span>
+      <h1>{content.h1}</h1>
+
+      <div class="direct-answer-box">
+        <p class="direct-answer-box__text">{content.directAnswer}</p>
+      </div>
+
+      <div class="disclosure-banner" role="note">
+        <p>{content.fairnessDisclosure}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="compare-table-heading">
+    <div class="container">
+      <h2 id="compare-table-heading">{ui.tableH2}</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              {content.tableHeaders.map((h) => (
+                <th scope="col">{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {content.rows.map((row) => {
+              const p = platforms.find((item) => item.slug === row.slug)!;
+              const isMercor = row.slug === 'mercor';
+              const applyHref = isMercor
+                ? buildGoUrl('general-portal', 'compare-table')
+                : p.official_url;
+              return (
+                <tr>
+                  <td>
+                    <strong>
+                      <a href={getPlatformPath(lang, row.slug as PlatformSlug)}>{row.platformCell}</a>
+                    </strong>
+                    <div class="table-sub">
+                      <a href={getPlatformPath(lang, row.slug as PlatformSlug)}>
+                        {ui.readProfileText}
+                      </a>
+                    </div>
+                  </td>
+                  <td class="mono-cell">{row.payCell}</td>
+                  <td>{row.paymentCell}</td>
+                  <td>{row.fieldsCell}</td>
+                  <td>{row.eligibilityCell}</td>
+                  <td>{row.screeningCell}</td>
+                  <td>
+                    {isMercor ? (
+                      <div class="table-action-cell">
+                        <a
+                          href={applyHref}
+                          target="_blank"
+                          rel="sponsored noopener noreferrer"
+                          class="table-apply-link"
+                        >
+                          {t.common.applyOnMercor} ↗
+                        </a>
+                        <span class="referral-micro">{t.common.referralMicroLabel}</span>
+                      </div>
+                    ) : (
+                      <div class="table-action-cell">
+                        <a
+                          href={applyHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="table-apply-link"
+                        >
+                          {ui.officialLinkText}
+                        </a>
+                        <span class="referral-micro">{ui.officialNoRef}</span>
+                      </div>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {content.sections.map((sec, idx) => (
+    <section class="section" aria-labelledby={`compare-sec-${idx}`}>
+      <div class="container">
+        <h2 id={`compare-sec-${idx}`}>{sec.h2}</h2>
+        <div class="article-prose">
+          {sec.paragraphs.map((p) => (
+            <p>{p}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section" aria-labelledby="compare-faq-heading">
+    <div class="container">
+      <h2 id="compare-faq-heading">{ui.faqHeading}</h2>
+      <FaqList items={content.faqs} />
+    </div>
+  </section>
+
+  <section class="section section--compact" aria-labelledby="compare-profiles-heading">
+    <div class="container">
+      <h2 id="compare-profiles-heading">{ui.profilesHeading}</h2>
+      <ul class="related-links-grid">
+        {PLATFORM_SLUGS.map((slug) => {
+          const p = platforms.find((item) => item.slug === slug)!;
+          return (
+            <li>
+              <a href={getPlatformPath(lang, slug)} class="related-card-link">
+                {p.name} — {p.posted_pay_ranges.summary.split('(')[0].trim()} →
+              </a>
+            </li>
+          );
+        })}
+        <li>
+          <a href={getPagePath(lang, 'pay-index')} class="related-card-link">
+            Edithsi AI Work Pay Index (Dataset & CSV) →
+          </a>
+        </li>
+        <li>
+          <a href={getGuidePath(lang, 'taxes-toiminimi-yel-finland')} class="related-card-link">
+            Taxes, Toiminimi & YEL Guide (2026) →
+          </a>
+        </li>
+      </ul>
+      <AuthorBox lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

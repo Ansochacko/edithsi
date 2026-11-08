@@ -1,0 +1,241 @@
+language,query,intent,target_page,status
+en,ai training jobs,informational-commercial,/,ACTIVE — Canonical homepage hub
+en,remote ai trainer jobs europe,informational-commercial,/,ACTIVE — Canonical homepage hub
+en,open ai training roles,transactional-referral,/roles/,ACTIVE — Canonical open roles directory
+en,rlhf specialist jobs remote,informational-commercial,/roles/,ACTIVE — Canonical open roles directory
+en,data annotation jobs for domain experts,informational-commercial,/roles/,ACTIVE — Canonical open roles directory
+en,ai training platforms comparison,commercial-investigation,/compare/,ACTIVE — Canonical 6-platform comparison matrix
+en,how much do ai trainers get paid per hour,informational-commercial,/pay-index/,ACTIVE — Canonical monthly Pay Index dataset
+en,ai trainer hourly rates 2026,informational-commercial,/pay-index/,ACTIVE — Canonical monthly Pay Index dataset
+en,what is rlhf and rubric evaluation,informational,/glossary/,ACTIVE — Canonical AI evaluation glossary
+en,how remote ai evaluation contracts work,informational,/how-it-works/,ACTIVE — Canonical process & honest FAQ page
+en,ai training jobs for lawyers,informational-commercial,/for/legal/,ACTIVE — Canonical Legal audience page
+en,remote legal side work for licensed attorneys,informational-commercial,/for/legal/,ACTIVE — Consolidated to Legal audience page
+en,ai training jobs for doctors and nurses,informational-commercial,/for/medical/,ACTIVE — Canonical Medical audience page
+en,clinical ai evaluation side work for physicians,informational-commercial,/for/medical/,ACTIVE — Consolidated to Medical audience page
+en,ai coding evaluation jobs for software engineers,informational-commercial,/for/software/,ACTIVE — Canonical Software audience page
+en,remote rlhf coding jobs python typescript,informational-commercial,/for/software/,ACTIVE — Consolidated to Software audience page
+en,ai training jobs for translators and linguists,informational-commercial,/for/language/,ACTIVE — Canonical Language & Audio audience page
+en,finnish language ai evaluator remote,informational-commercial,/for/language/,ACTIVE — Consolidated to Language & Audio audience page
+en,ai training jobs for accountants and finance experts,informational-commercial,/for/finance/,ACTIVE — Canonical Finance audience page
+en,financial modeling ai evaluation contracts,informational-commercial,/for/finance/,ACTIVE — Consolidated to Finance audience page
+en,spreadsheet and office software ai evaluation jobs,informational-commercial,/for/office/,ACTIVE — Canonical Office & Productivity audience page
+en,generalist ai trainer remote jobs,informational-commercial,/for/general/,ACTIVE — Canonical Generalist audience page
+en,ai training jobs for phds and university students,informational-commercial,/guides/ai-training-for-phds-and-students/,ACTIVE — Canonical PhDs & Students guide
+en,is mercor legit,commercial-investigation,/platforms/mercor/,ACTIVE — Canonical Mercor platform review
+en,mercor review and hourly pay,commercial-investigation,/platforms/mercor/,ACTIVE — Consolidated to Mercor platform review
+en,is micro1 legit ai recruiter,commercial-investigation,/platforms/micro1/,ACTIVE — Canonical micro1 platform review
+en,outlier ai review and pay rates,commercial-investigation,/platforms/outlier/,ACTIVE — Canonical Outlier platform review
+en,alignerr ai review labelbox,commercial-investigation,/platforms/alignerr/,ACTIVE — Canonical Alignerr platform review
+en,handshake ai fellowship review,commercial-investigation,/platforms/handshake-ai/,ACTIVE — Canonical Handshake AI platform review
+en,mindrift ai tutor review toloka,commercial-investigation,/platforms/mindrift/,ACTIVE — Canonical Mindrift platform review
+en,mercor vs outlier vs mindrift,commercial-investigation,/compare/,ACTIVE — Consolidated to 6-platform comparison matrix
+en,how to prepare for ai video interview mercor micro1,informational,/guides/ai-interview-preparation/,ACTIVE — Canonical AI interview preparation guide
+en,taxes on foreign ai contractor income finland toiminimi yel,informational,/guides/taxes-toiminimi-yel-finland/,ACTIVE — Canonical Finland & EU tax/YEL guide
+en,yel threshold 2026 self employed contractor finland,informational,/guides/taxes-toiminimi-yel-finland/,ACTIVE — Consolidated to Finland & EU tax/YEL guide
+en,unemployment benefits and irregular ai freelance work kela,informational,/guides/unemployment-benefits-ai-work/,ACTIVE — Canonical Unemployment Benefits guide
+en,how to spot fake ai job scams telegram whatsapp,informational,/guides/avoid-ai-job-scams/,ACTIVE — Canonical Scam-Prevention guide
+en,remote jobs finland English speaking,informational-commercial,/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest Remote Side Jobs guide
+en,side jobs from home for professionals,informational-commercial,/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest Remote Side Jobs guide
+en,easy money online ai jobs no experience,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+en,guaranteed passive income ai training,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+fi,tekoälyn kouluttaja etätyö,informational-commercial,/fi/,ACTIVE — Canonical FI homepage hub
+fi,tekoälytyö suomessa,informational-commercial,/fi/,ACTIVE — Canonical FI homepage hub
+fi,avoimet tekoälykouluttajan roolit,transactional-referral,/fi/roles/,ACTIVE — Canonical FI open roles directory
+fi,rlhf asiantuntija etätyö,informational-commercial,/fi/roles/,ACTIVE — Consolidated to FI open roles directory
+fi,kielimallien kouluttaminen asiantuntijatyö,informational-commercial,/fi/roles/,ACTIVE — Consolidated to FI open roles directory
+fi,tekoälyalustojen vertailu mercor outlier mindrift,commercial-investigation,/fi/compare/,ACTIVE — Canonical FI 6-platform comparison matrix
+fi,tekoälyn kouluttaja palkka suomessa,informational-commercial,/fi/pay-index/,ACTIVE — Canonical FI monthly Pay Index dataset
+fi,paljonko tekoälyn kouluttaja tienaa tunnissa,informational-commercial,/fi/pay-index/,ACTIVE — Consolidated to FI monthly Pay Index dataset
+fi,mikä on rlhf ja rubriikkiarviointi sanasto,informational,/fi/glossary/,ACTIVE — Canonical FI AI evaluation glossary
+fi,miten tekoälyn koulutustyö toimii käytännössä,informational,/fi/how-it-works/,ACTIVE — Canonical FI process & honest FAQ page
+fi,etätyö juristille tekoäly,informational-commercial,/fi/for/legal/,ACTIVE — Canonical FI Legal audience page
+fi,juristi sivutyö kotoa käsin,informational-commercial,/fi/for/legal/,ACTIVE — Consolidated to FI Legal audience page
+fi,lääkäri sivutyö etänä tekoäly,informational-commercial,/fi/for/medical/,ACTIVE — Canonical FI Medical audience page
+fi,sairaanhoitaja ja erikoislääkäri tekoälyn koulutus,informational-commercial,/fi/for/medical/,ACTIVE — Consolidated to FI Medical audience page
+fi,ohjelmistokehittäjä etätyö tekoälykoulutus,informational-commercial,/fi/for/software/,ACTIVE — Canonical FI Software audience page
+fi,koodari sivutyö rlhf python typescript,informational-commercial,/fi/for/software/,ACTIVE — Consolidated to FI Software audience page
+fi,suomen kielen asiantuntija etätyö tekoäly,informational-commercial,/fi/for/language/,ACTIVE — Canonical FI Language & Audio audience page
+fi,kääntäjä sivutyö kielimallien arviointi,informational-commercial,/fi/for/language/,ACTIVE — Consolidated to FI Language & Audio audience page
+fi,taloushallinnon asiantuntija ja tilintarkastaja etätyö,informational-commercial,/fi/for/finance/,ACTIVE — Canonical FI Finance audience page
+fi,rahoitusalan asiantuntija tekoälyn kouluttaja,informational-commercial,/fi/for/finance/,ACTIVE — Consolidated to FI Finance audience page
+fi,toimisto-ohjelmistojen ja excel-asiantuntijan etätyö,informational-commercial,/fi/for/office/,ACTIVE — Canonical FI Office & Productivity audience page
+fi,yleisasiantuntija tekoälyn kouluttaja etätyö,informational-commercial,/fi/for/general/,ACTIVE — Canonical FI Generalist audience page
+fi,tekoälytyö jatko-opiskelijalle tutkijalle ja opiskelijalle,informational-commercial,/fi/guides/ai-training-for-phds-and-students/,ACTIVE — Canonical FI PhDs & Students guide
+fi,onko mercor luotettava,commercial-investigation,/fi/platforms/mercor/,ACTIVE — Canonical FI Mercor platform review
+fi,mercor kokemuksia ja tuntipalkka,commercial-investigation,/fi/platforms/mercor/,ACTIVE — Consolidated to FI Mercor platform review
+fi,micro1 kokemuksia tekoälyhaastattelu,commercial-investigation,/fi/platforms/micro1/,ACTIVE — Canonical FI micro1 platform review
+fi,outlier ai kokemuksia suomi,commercial-investigation,/fi/platforms/outlier/,ACTIVE — Canonical FI Outlier platform review
+fi,alignerr kokemuksia suomen kieli,commercial-investigation,/fi/platforms/alignerr/,ACTIVE — Canonical FI Alignerr platform review
+fi,handshake ai kokemuksia korkeakouluopiskelijat,commercial-investigation,/fi/platforms/handshake-ai/,ACTIVE — Canonical FI Handshake AI platform review
+fi,mindrift kokemuksia tekoälykoulutus,commercial-investigation,/fi/platforms/mindrift/,ACTIVE — Canonical FI Mindrift platform review
+fi,parhaat alustat tekoälyn koulutustyöhön,commercial-investigation,/fi/compare/,ACTIVE — Consolidated to FI 6-platform comparison matrix
+fi,miten valmistautua tekoälyhaastatteluun mercor micro1,informational,/fi/guides/ai-interview-preparation/,ACTIVE — Canonical FI AI interview preparation guide
+fi,tekoälytyö verotus toiminimi yel,informational,/fi/guides/taxes-toiminimi-yel-finland/,ACTIVE — Canonical FI tax/toiminimi/YEL guide
+fi,ennakkovero ja yel-raja 2026 ulkomainen toimeksiantaja,informational,/fi/guides/taxes-toiminimi-yel-finland/,ACTIVE — Consolidated to FI tax/toiminimi/YEL guide
+fi,tekoälytyö ja työttömyysturva kela soviteltu päiväraha,informational,/fi/guides/unemployment-benefits-ai-work/,ACTIVE — Canonical FI Unemployment Benefits guide
+fi,miten tunnistaa tekoälytyö huijaus whatsapp telegram,informational,/fi/guides/avoid-ai-job-scams/,ACTIVE — Canonical FI Scam-Prevention guide
+fi,etätyö kotoa suomi asiantuntijatyö,informational-commercial,/fi/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest FI Remote Side Jobs guide
+fi,sivutyö kotoa korkeakoulutetulle,informational-commercial,/fi/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest FI Remote Side Jobs guide
+fi,helppoa rahaa netissä tekoälyllä ilman kokemusta,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+fi,varma passiivinen tulo tekoälytyö,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+sv,ai-träning jobb på distans,informational-commercial,/sv/,ACTIVE — Canonical SV homepage hub
+sv,ai-tränare distansarbete europa,informational-commercial,/sv/,ACTIVE — Canonical SV homepage hub
+sv,öppna roller inom ai-träning,transactional-referral,/sv/roles/,ACTIVE — Canonical SV open roles directory
+sv,rlhf specialist jobb hemifrån,informational-commercial,/sv/roles/,ACTIVE — Consolidated to SV open roles directory
+sv,dataannotering för ämnesexperter,informational-commercial,/sv/roles/,ACTIVE — Consolidated to SV open roles directory
+sv,jämförelse av plattformar för ai-träning,commercial-investigation,/sv/compare/,ACTIVE — Canonical SV 6-platform comparison matrix
+sv,vad tjänar en ai-tränare i timmen,informational-commercial,/sv/pay-index/,ACTIVE — Canonical SV monthly Pay Index dataset
+sv,ai-tränare timlön 2026 statistik,informational-commercial,/sv/pay-index/,ACTIVE — Consolidated to SV monthly Pay Index dataset
+sv,vad är rlhf och rubrikutvärdering ordlista,informational,/sv/glossary/,ACTIVE — Canonical SV AI evaluation glossary
+sv,hur fungerar ai-träningsuppdrag på distans,informational,/sv/how-it-works/,ACTIVE — Canonical SV process & honest FAQ page
+sv,ai-träning för jurister och advokater,informational-commercial,/sv/for/legal/,ACTIVE — Canonical SV Legal audience page
+sv,extrajobb för jurister på distans,informational-commercial,/sv/for/legal/,ACTIVE — Consolidated to SV Legal audience page
+sv,ai-träning för läkare och sjuksköterskor,informational-commercial,/sv/for/medical/,ACTIVE — Canonical SV Medical audience page
+sv,medicinsk ai-utvärdering sidouppdrag läkare,informational-commercial,/sv/for/medical/,ACTIVE — Consolidated to SV Medical audience page
+sv,ai-träning för mjukvaruutvecklare,informational-commercial,/sv/for/software/,ACTIVE — Canonical SV Software audience page
+sv,distansuppdrag programmerare rlhf kodgranskning,informational-commercial,/sv/for/software/,ACTIVE — Consolidated to SV Software audience page
+sv,ai-träning för översättare och språkexperter,informational-commercial,/sv/for/language/,ACTIVE — Canonical SV Language & Audio audience page
+sv,svenska och finska språkgranskare ai-modeller,informational-commercial,/sv/for/language/,ACTIVE — Consolidated to SV Language & Audio audience page
+sv,ai-träning för ekonomer och revisorer,informational-commercial,/sv/for/finance/,ACTIVE — Canonical SV Finance audience page
+sv,finansiell modellering ai-uppdrag distans,informational-commercial,/sv/for/finance/,ACTIVE — Consolidated to SV Finance audience page
+sv,ai-utvärdering för kontorsprogram och kalkylbladsexperter,informational-commercial,/sv/for/office/,ACTIVE — Canonical SV Office & Productivity audience page
+sv,ai-träning för generalister på distans,informational-commercial,/sv/for/general/,ACTIVE — Canonical SV Generalist audience page
+sv,ai-träning för doktorander och studenter,informational-commercial,/sv/guides/ai-training-for-phds-and-students/,ACTIVE — Canonical SV PhDs & Students guide
+sv,är mercor seriöst omdöme,commercial-investigation,/sv/platforms/mercor/,ACTIVE — Canonical SV Mercor platform review
+sv,mercor recension och timlön,commercial-investigation,/sv/platforms/mercor/,ACTIVE — Consolidated to SV Mercor platform review
+sv,micro1 omdöme ai-intervju,commercial-investigation,/sv/platforms/micro1/,ACTIVE — Canonical SV micro1 platform review
+sv,outlier ai omdöme sverige,commercial-investigation,/sv/platforms/outlier/,ACTIVE — Canonical SV Outlier platform review
+sv,alignerr ai recension språkprojekt,commercial-investigation,/sv/platforms/alignerr/,ACTIVE — Canonical SV Alignerr platform review
+sv,handshake ai fellowship omdöme,commercial-investigation,/sv/platforms/handshake-ai/,ACTIVE — Canonical SV Handshake AI platform review
+sv,mindrift omdöme ai-skribent,commercial-investigation,/sv/platforms/mindrift/,ACTIVE — Canonical SV Mindrift platform review
+sv,mercor vs outlier vs mindrift jämförelse,commercial-investigation,/sv/compare/,ACTIVE — Consolidated to SV 6-platform comparison matrix
+sv,förberedelse inför automatiserad ai-intervju,informational,/sv/guides/ai-interview-preparation/,ACTIVE — Canonical SV AI interview preparation guide
+sv,skatteverket f-skatt enskild firma utländsk uppdragsgivare ai,informational,/sv/guides/taxes-toiminimi-yel-finland/,ACTIVE — Canonical SV Nordic/EU tax guide
+sv,moms och egenavgifter vid konsultuppdrag åt usa-företag,informational,/sv/guides/taxes-toiminimi-yel-finland/,ACTIVE — Consolidated to SV Nordic/EU tax guide
+sv,a-kassa och bisyssla vid oregelbundna ai-uppdrag,informational,/sv/guides/unemployment-benefits-ai-work/,ACTIVE — Canonical SV Unemployment Benefits guide
+sv,undvik falska ai-jobbbedrägerier på whatsapp och telegram,informational,/sv/guides/avoid-ai-job-scams/,ACTIVE — Canonical SV Scam-Prevention guide
+sv,extrajobb hemifrån för akademiker,informational-commercial,/sv/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest SV Remote Side Jobs guide
+sv,distansjobb hemifrån seriösa sidor,informational-commercial,/sv/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest SV Remote Side Jobs guide
+sv,snabba pengar online med ai utan erfarenhet,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+sv,garanterad inkomst ai-jobb hemifrån,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+de,ki-trainer jobs remote,informational-commercial,/de/,ACTIVE — Canonical DE homepage hub
+de,ki-training heimarbeit für fachexperten,informational-commercial,/de/,ACTIVE — Canonical DE homepage hub
+de,offene ki-training rollen,transactional-referral,/de/roles/,ACTIVE — Canonical DE open roles directory
+de,rlhf spezialist remote aufträge,informational-commercial,/de/roles/,ACTIVE — Consolidated to DE open roles directory
+de,datenannotation für akademiker und experten,informational-commercial,/de/roles/,ACTIVE — Consolidated to DE open roles directory
+de,ki-trainingsplattformen im vergleich,commercial-investigation,/de/compare/,ACTIVE — Canonical DE 6-platform comparison matrix
+de,was verdient ein ki-trainer pro stunde,informational-commercial,/de/pay-index/,ACTIVE — Canonical DE monthly Pay Index dataset
+de,ki-trainer stundensatz 2026 übersicht,informational-commercial,/de/pay-index/,ACTIVE — Consolidated to DE monthly Pay Index dataset
+de,was ist rlhf und rubrik-evaluierung glossar,informational,/de/glossary/,ACTIVE — Canonical DE AI evaluation glossary
+de,wie funktioniert ki-training auf honorarbasis,informational,/de/how-it-works/,ACTIVE — Canonical DE process & honest FAQ page
+de,ki-training für juristen und rechtsanwälte,informational-commercial,/de/for/legal/,ACTIVE — Canonical DE Legal audience page
+de,juristische nebentätigkeit remote für volljuristen,informational-commercial,/de/for/legal/,ACTIVE — Consolidated to DE Legal audience page
+de,ki-training für ärzte und medizinisches fachpersonal,informational-commercial,/de/for/medical/,ACTIVE — Canonical DE Medical audience page
+de,medizinische ki-evaluierung nebenjob für ärzte,informational-commercial,/de/for/medical/,ACTIVE — Consolidated to DE Medical audience page
+de,ki-training für softwareentwickler,informational-commercial,/de/for/software/,ACTIVE — Canonical DE Software audience page
+de,remote coding evals python typescript für entwickler,informational-commercial,/de/for/software/,ACTIVE — Consolidated to DE Software audience page
+de,ki-training für übersetzer und linguisten,informational-commercial,/de/for/language/,ACTIVE — Canonical DE Language & Audio audience page
+de,sprachmodell-evaluierung für sprachexperten,informational-commercial,/de/for/language/,ACTIVE — Consolidated to DE Language & Audio audience page
+de,ki-training für finanzexperten und wirtschaftsprüfer,informational-commercial,/de/for/finance/,ACTIVE — Canonical DE Finance audience page
+de,finanzmodellierung ki-evaluierung freiberuflich,informational-commercial,/de/for/finance/,ACTIVE — Consolidated to DE Finance audience page
+de,ki-evaluierung für bürosoftware und tabellenkalkulation,informational-commercial,/de/for/office/,ACTIVE — Canonical DE Office & Productivity audience page
+de,ki-training für generalisten remote,informational-commercial,/de/for/general/,ACTIVE — Canonical DE Generalist audience page
+de,ki-training für doktoranden und studierende,informational-commercial,/de/guides/ai-training-for-phds-and-students/,ACTIVE — Canonical DE PhDs & Students guide
+de,ist mercor seriös erfahrungen,commercial-investigation,/de/platforms/mercor/,ACTIVE — Canonical DE Mercor platform review
+de,mercor bewertung und stundenlohn,commercial-investigation,/de/platforms/mercor/,ACTIVE — Consolidated to DE Mercor platform review
+de,micro1 erfahrungen ki-interview,commercial-investigation,/de/platforms/micro1/,ACTIVE — Canonical DE micro1 platform review
+de,outlier ai erfahrungen deutschland,commercial-investigation,/de/platforms/outlier/,ACTIVE — Canonical DE Outlier platform review
+de,alignerr ai bewertung und projekte,commercial-investigation,/de/platforms/alignerr/,ACTIVE — Canonical DE Alignerr platform review
+de,handshake ai fellowship erfahrungen,commercial-investigation,/de/platforms/handshake-ai/,ACTIVE — Canonical DE Handshake AI platform review
+de,mindrift erfahrungen ki-tutor,commercial-investigation,/de/platforms/mindrift/,ACTIVE — Canonical DE Mindrift platform review
+de,mercor vs outlier vs mindrift vergleich,commercial-investigation,/de/compare/,ACTIVE — Consolidated to DE 6-platform comparison matrix
+de,vorbereitung auf das automatisierte ki-video-interview,informational,/de/guides/ai-interview-preparation/,ACTIVE — Canonical DE AI interview preparation guide
+de,finanzamt freiberufler steuern ausländische auftraggeber ki,informational,/de/guides/taxes-toiminimi-yel-finland/,ACTIVE — Canonical DE EU/Nordic tax guide
+de,umsatzsteuer drittland usa dienstleistung ki-training,informational,/de/guides/taxes-toiminimi-yel-finland/,ACTIVE — Consolidated to DE EU/Nordic tax guide
+de,arbeitslosengeld und nebenverdienst bei ki-honorararbeit,informational,/de/guides/unemployment-benefits-ai-work/,ACTIVE — Canonical DE Unemployment Benefits guide
+de,unseriöse ki-job-abzocke auf whatsapp und telegram erkennen,informational,/de/guides/avoid-ai-job-scams/,ACTIVE — Canonical DE Scam-Prevention guide
+de,nebenjob von zu hause für akademiker,informational-commercial,/de/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest DE Remote Side Jobs guide
+de,seriöse remote-nebentätigkeit von zu hause,informational-commercial,/de/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest DE Remote Side Jobs guide
+de,schnelles geld online mit ki ohne vorkenntnisse,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+de,garantiertes passives einkommen durch ki-jobs,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+fr,emploi entraîneur ia télétravail,informational-commercial,/fr/,ACTIVE — Canonical FR homepage hub
+fr,missions d'évaluation ia à distance europe,informational-commercial,/fr/,ACTIVE — Canonical FR homepage hub
+fr,rôles ouverts en entraînement d'ia,transactional-referral,/fr/roles/,ACTIVE — Canonical FR open roles directory
+fr,missions rlhf freelance pour experts,informational-commercial,/fr/roles/,ACTIVE — Consolidated to FR open roles directory
+fr,annotation de données spécialisée à distance,informational-commercial,/fr/roles/,ACTIVE — Consolidated to FR open roles directory
+fr,comparatif des plateformes d'entraînement ia,commercial-investigation,/fr/compare/,ACTIVE — Canonical FR 6-platform comparison matrix
+fr,combien gagne un entraîneur ia de l'heure,informational-commercial,/fr/pay-index/,ACTIVE — Canonical FR monthly Pay Index dataset
+fr,tarif horaire entraîneur ia 2026 baromètre,informational-commercial,/fr/pay-index/,ACTIVE — Consolidated to FR monthly Pay Index dataset
+fr,qu'est-ce que le rlhf et l'évaluation par grille glossaire,informational,/fr/glossary/,ACTIVE — Canonical FR AI evaluation glossary
+fr,comment fonctionne le travail d'évaluation d'ia en freelance,informational,/fr/how-it-works/,ACTIVE — Canonical FR process & honest FAQ page
+fr,entraînement ia pour avocats et juristes,informational-commercial,/fr/for/legal/,ACTIVE — Canonical FR Legal audience page
+fr,activité complémentaire à distance pour juristes,informational-commercial,/fr/for/legal/,ACTIVE — Consolidated to FR Legal audience page
+fr,entraînement ia pour médecins et professionnels de santé,informational-commercial,/fr/for/medical/,ACTIVE — Canonical FR Medical audience page
+fr,évaluation médicale d'ia en télétravail pour cliniciens,informational-commercial,/fr/for/medical/,ACTIVE — Consolidated to FR Medical audience page
+fr,entraînement ia pour ingénieurs logiciels,informational-commercial,/fr/for/software/,ACTIVE — Canonical FR Software audience page
+fr,missions freelance développeur évaluation de code ia,informational-commercial,/fr/for/software/,ACTIVE — Consolidated to FR Software audience page
+fr,entraînement ia pour traducteurs et linguistes,informational-commercial,/fr/for/language/,ACTIVE — Canonical FR Language & Audio audience page
+fr,évaluateur de modèles de langue français à distance,informational-commercial,/fr/for/language/,ACTIVE — Consolidated to FR Language & Audio audience page
+fr,entraînement ia pour experts financiers et auditeurs,informational-commercial,/fr/for/finance/,ACTIVE — Canonical FR Finance audience page
+fr,modélisation financière évaluation ia en indépendant,informational-commercial,/fr/for/finance/,ACTIVE — Consolidated to FR Finance audience page
+fr,évaluation ia pour experts bureautique et tableurs,informational-commercial,/fr/for/office/,ACTIVE — Canonical FR Office & Productivity audience page
+fr,entraînement ia pour généralistes à distance,informational-commercial,/fr/for/general/,ACTIVE — Canonical FR Generalist audience page
+fr,entraînement ia pour doctorants et étudiants,informational-commercial,/fr/guides/ai-training-for-phds-and-students/,ACTIVE — Canonical FR PhDs & Students guide
+fr,mercor est-il fiable avis,commercial-investigation,/fr/platforms/mercor/,ACTIVE — Canonical FR Mercor platform review
+fr,avis mercor et rémunération horaire,commercial-investigation,/fr/platforms/mercor/,ACTIVE — Consolidated to FR Mercor platform review
+fr,avis micro1 entretien vidéo ia,commercial-investigation,/fr/platforms/micro1/,ACTIVE — Canonical FR micro1 platform review
+fr,outlier ai avis france télétravail,commercial-investigation,/fr/platforms/outlier/,ACTIVE — Canonical FR Outlier platform review
+fr,alignerr ai avis missions linguistiques,commercial-investigation,/fr/platforms/alignerr/,ACTIVE — Canonical FR Alignerr platform review
+fr,handshake ai fellowship avis étudiants,commercial-investigation,/fr/platforms/handshake-ai/,ACTIVE — Canonical FR Handshake AI platform review
+fr,mindrift avis rédacteur ia toloka,commercial-investigation,/fr/platforms/mindrift/,ACTIVE — Canonical FR Mindrift platform review
+fr,comparatif mercor vs outlier vs mindrift,commercial-investigation,/fr/compare/,ACTIVE — Consolidated to FR 6-platform comparison matrix
+fr,préparer un entretien vidéo automatisé par ia,informational,/fr/guides/ai-interview-preparation/,ACTIVE — Canonical FR AI interview preparation guide
+fr,urssaf micro-entrepreneur fiscalité client américain ia,informational,/fr/guides/taxes-toiminimi-yel-finland/,ACTIVE — Canonical FR EU/Nordic tax guide
+fr,déclarer des revenus stripe en dollars travail ia,informational,/fr/guides/taxes-toiminimi-yel-finland/,ACTIVE — Consolidated to FR EU/Nordic tax guide
+fr,france travail allocation chômage et missions ia irrégulières,informational,/fr/guides/unemployment-benefits-ai-work/,ACTIVE — Canonical FR Unemployment Benefits guide
+fr,éviter les arnaques aux faux emplois ia sur whatsapp et telegram,informational,/fr/guides/avoid-ai-job-scams/,ACTIVE — Canonical FR Scam-Prevention guide
+fr,travail à domicile complément de revenu pour diplômés,informational-commercial,/fr/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest FR Remote Side Jobs guide
+fr,missions sérieuses à domicile en télétravail,informational-commercial,/fr/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest FR Remote Side Jobs guide
+fr,argent facile en ligne avec l'ia sans diplôme,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+fr,revenu passif garanti entraînement ia,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+es,trabajo de entrenador de ia remoto,informational-commercial,/es/,ACTIVE — Canonical ES homepage hub
+es,evaluador de inteligencia artificial desde casa europa,informational-commercial,/es/,ACTIVE — Canonical ES homepage hub
+es,roles abiertos de entrenamiento de ia,transactional-referral,/es/roles/,ACTIVE — Canonical ES open roles directory
+es,proyectos rlhf remoto para especialistas,informational-commercial,/es/roles/,ACTIVE — Consolidated to ES open roles directory
+es,anotación de datos avanzada para profesionales,informational-commercial,/es/roles/,ACTIVE — Consolidated to ES open roles directory
+es,comparativa de plataformas de entrenamiento de ia,commercial-investigation,/es/compare/,ACTIVE — Canonical ES 6-platform comparison matrix
+es,cuánto gana un entrenador de ia por hora,informational-commercial,/es/pay-index/,ACTIVE — Canonical ES monthly Pay Index dataset
+es,tarifas por hora entrenador ia 2026 índice salarial,informational-commercial,/es/pay-index/,ACTIVE — Consolidated to ES monthly Pay Index dataset
+es,qué es rlhf y evaluación por rúbricas glosario,informational,/es/glossary/,ACTIVE — Canonical ES AI evaluation glossary
+es,cómo funciona el trabajo de entrenamiento de ia independiente,informational,/es/how-it-works/,ACTIVE — Canonical ES process & honest FAQ page
+es,entrenamiento de ia para abogados y juristas,informational-commercial,/es/for/legal/,ACTIVE — Canonical ES Legal audience page
+es,trabajo extra remoto para abogados colegiados,informational-commercial,/es/for/legal/,ACTIVE — Consolidated to ES Legal audience page
+es,entrenamiento de ia para médicos y personal sanitario,informational-commercial,/es/for/medical/,ACTIVE — Canonical ES Medical audience page
+es,evaluación médica de ia desde casa para facultativos,informational-commercial,/es/for/medical/,ACTIVE — Consolidated to ES Medical audience page
+es,entrenamiento de ia para ingenieros de software,informational-commercial,/es/for/software/,ACTIVE — Canonical ES Software audience page
+es,evaluación de código rlhf remoto python typescript,informational-commercial,/es/for/software/,ACTIVE — Consolidated to ES Software audience page
+es,entrenamiento de ia para traductores y lingüistas,informational-commercial,/es/for/language/,ACTIVE — Canonical ES Language & Audio audience page
+es,evaluador de modelos de lenguaje en español remoto,informational-commercial,/es/for/language/,ACTIVE — Consolidated to ES Language & Audio audience page
+es,entrenamiento de ia para expertos en finanzas y auditores,informational-commercial,/es/for/finance/,ACTIVE — Canonical ES Finance audience page
+es,modelado financiero evaluación de ia para analistas,informational-commercial,/es/for/finance/,ACTIVE — Consolidated to ES Finance audience page
+es,evaluación de ia para expertos en ofimática y hojas de cálculo,informational-commercial,/es/for/office/,ACTIVE — Canonical ES Office & Productivity audience page
+es,entrenamiento de ia para generalistas remoto,informational-commercial,/es/for/general/,ACTIVE — Canonical ES Generalist audience page
+es,entrenamiento de ia para doctorandos y estudiantes universitarios,informational-commercial,/es/guides/ai-training-for-phds-and-students/,ACTIVE — Canonical ES PhDs & Students guide
+es,es mercor fiable opiniones,commercial-investigation,/es/platforms/mercor/,ACTIVE — Canonical ES Mercor platform review
+es,opiniones de mercor y pago por hora,commercial-investigation,/es/platforms/mercor/,ACTIVE — Consolidated to ES Mercor platform review
+es,opiniones de micro1 entrevista por ia,commercial-investigation,/es/platforms/micro1/,ACTIVE — Canonical ES micro1 platform review
+es,outlier ai opiniones españa y europa,commercial-investigation,/es/platforms/outlier/,ACTIVE — Canonical ES Outlier platform review
+es,alignerr ai opiniones proyectos en español,commercial-investigation,/es/platforms/alignerr/,ACTIVE — Canonical ES Alignerr platform review
+es,handshake ai fellowship opiniones estudiantes,commercial-investigation,/es/platforms/handshake-ai/,ACTIVE — Canonical ES Handshake AI platform review
+es,mindrift opiniones tutor de ia toloka,commercial-investigation,/es/platforms/mindrift/,ACTIVE — Canonical ES Mindrift platform review
+es,comparativa mercor vs outlier vs mindrift,commercial-investigation,/es/compare/,ACTIVE — Consolidated to ES 6-platform comparison matrix
+es,cómo preparar una entrevista de vídeo automatizada con ia,informational,/es/guides/ai-interview-preparation/,ACTIVE — Canonical ES AI interview preparation guide
+es,agencia tributaria autónomo impuestos cliente extranjero ia,informational,/es/guides/taxes-toiminimi-yel-finland/,ACTIVE — Canonical ES EU/Nordic tax guide
+es,facturar en dólares por stripe trabajo de entrenamiento ia,informational,/es/guides/taxes-toiminimi-yel-finland/,ACTIVE — Consolidated to ES EU/Nordic tax guide
+es,prestación por desempleo sepe e ingresos irregulares de ia,informational,/es/guides/unemployment-benefits-ai-work/,ACTIVE — Canonical ES Unemployment Benefits guide
+es,cómo detectar estafas de falsos empleos de ia en whatsapp y telegram,informational,/es/guides/avoid-ai-job-scams/,ACTIVE — Canonical ES Scam-Prevention guide
+es,trabajo remoto desde casa para profesionales titulados,informational-commercial,/es/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest ES Remote Side Jobs guide
+es,ingresos extra desde casa trabajo serio para especialistas,informational-commercial,/es/guides/remote-side-jobs-from-home/,ACTIVE — Consolidated to honest ES Remote Side Jobs guide
+es,dinero fácil por internet con ia sin experiencia,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails
+es,ingresos pasivos garantizados entrenando ia,risky-spam,EXCLUDE,EXCLUDED — Violates spam/quality guardrails

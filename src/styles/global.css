@@ -1764,4 +1764,177 @@ a.filter-pill:hover {
   padding: var(--space-1) 0;
 }
 
+/* ==========================================================================
+   Answer-First Direct Answer Box, Disclosure Banner & Multi-Platform Data Tables
+   ========================================================================== */
+.direct-answer-box {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-6);
+  padding: var(--space-5) var(--space-6);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: var(--radius-md);
+}
 
+.direct-answer-box__text {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.55;
+  max-width: none;
+}
+
+.disclosure-banner {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  border-left: 4px solid var(--warning-border);
+  border-radius: var(--radius-md);
+  color: var(--warning-text);
+}
+
+.disclosure-banner p {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--warning-text);
+  max-width: none;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  text-align: left;
+  min-width: 640px;
+}
+
+.data-table th,
+.data-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.data-table thead th {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.data-table tbody th {
+  color: var(--text-primary);
+  font-weight: 700;
+  width: 220px;
+  background-color: var(--bg-subtle);
+}
+
+.data-table td {
+  color: var(--text-secondary);
+}
+
+.data-table a {
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+.table-sub {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.mono-cell {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+}
+
+.table-action-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.table-apply-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--accent-subtle);
+  color: var(--accent-text) !important;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.table-apply-link:hover {
+  background-color: var(--accent-primary);
+  color: var(--accent-on-primary) !important;
+  text-decoration: none;
+}
+
+.compact-ol {
+  margin: 0;
+  padding-left: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.related-links-grid {
+  list-style: none;
+  margin: var(--space-5) 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .related-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.related-card-link {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.related-card-link:hover {
+  background-color: var(--bg-subtle);
+  color: var(--accent-text);
+  text-decoration: none;
+}
+
+.author-box__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}

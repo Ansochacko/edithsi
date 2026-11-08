@@ -1,0 +1,12 @@
+---
+import PlatformView from '../../components/views/PlatformView.astro';
+import { PLATFORM_SLUGS, type PlatformSlug } from '../../i18n';
+
+export function getStaticPaths() {
+  return PLATFORM_SLUGS.map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params as { slug: PlatformSlug };
+---
+
+<PlatformView lang="en" slug={slug} />

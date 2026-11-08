@@ -1,0 +1,516 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqList from '../FaqList.astro';
+import AuthorBox from '../AuthorBox.astro';
+import platforms from '../../data/platforms.json';
+import rolesRaw from '../../data/roles.json';
+import { CHECKED_ON, buildGoUrl } from '../../config';
+import { getPlatformPageContent } from '../../data/platformContent';
+import {
+  PLATFORM_SLUGS,
+  getDictionary,
+  getPagePath,
+  getPlatformPath,
+  getAudiencePath,
+  type AudienceSlug,
+  type PlatformSlug,
+  type Lang,
+} from '../../i18n';
+
+interface Props {
+  lang: Lang;
+  slug: PlatformSlug;
+}
+
+const { lang, slug } = Astro.props;
+const t = getDictionary(lang);
+const platform = platforms.find((p) => p.slug === slug)!;
+const content = getPlatformPageContent(lang, slug);
+const isMercor = slug === 'mercor';
+
+const breadcrumbs = [
+  { name: t.nav.home, url: getPagePath(lang, 'home') },
+  { name: 'Compare Platforms', url: getPagePath(lang, 'compare') },
+  { name: platform.name, url: getPlatformPath(lang, slug) },
+];
+
+const UI_LABELS: Record<
+  Lang,
+  {
+    lastUpdated: string;
+    directAnswerLabel: string;
+    disclosureLabel: string;
+    factsH2: string;
+    colFact: string;
+    colValue: string;
+    rowOperator: string;
+    rowOfficialUrl: string;
+    rowWorkType: string;
+    rowPayRange: string;
+    rowPayment: string;
+    rowCountries: string;
+    rowSteps: string;
+    rowReferral: string;
+    rowChecked: string;
+    referralYes: string;
+    referralNo: string;
+    rolesTableH2: string;
+    colField: string;
+    colRole: string;
+    colPostedRange: string;
+    colDate: string;
+    colSource: string;
+    officialLinkLabel: string;
+    noReferralMicro: string;
+    matchingAudiencesH2: string;
+    compareOthersH2: string;
+    faqH2: string;
+  }
+> = {
+  en: {
+    lastUpdated: 'Last updated',
+    directAnswerLabel: 'Direct answer',
+    disclosureLabel: 'Referral & editorial fairness disclosure',
+    factsH2: `What are the key facts about ${platform.name}? (Verified ${CHECKED_ON})`,
+    colFact: 'Criterion',
+    colValue: `${platform.name} Verified Fact (${CHECKED_ON})`,
+    rowOperator: 'Platform & Operator',
+    rowOfficialUrl: 'Official Public Website',
+    rowWorkType: 'Type of AI-Training Work',
+    rowPayRange: 'Posted Hourly Pay Range',
+    rowPayment: 'How Payment Works',
+    rowCountries: 'Countries & EU/Finland Eligibility',
+    rowSteps: 'Application & Screening Steps',
+    rowReferral: 'Edithsi Referral Link Status',
+    rowChecked: 'Last Checked Date',
+    referralYes: 'Yes — Apply links use my Mercor referral code (02e0c12a-d634-4738-9686-04f28f31f52b)',
+    referralNo: 'None — Plain official link with zero referral commission',
+    rolesTableH2: `What roles and posted pay ranges does ${platform.name} list publicly?`,
+    colField: 'Field / Domain',
+    colRole: 'Role / Track',
+    colPostedRange: 'Posted Pay Range',
+    colDate: 'Checked Date',
+    colSource: 'Official Source / Apply',
+    officialLinkLabel: `Visit ${platform.name} official page ↗`,
+    noReferralMicro: 'official link · no referral',
+    matchingAudiencesH2: `Which profession hubs match ${platform.name}?`,
+    compareOthersH2: 'Compare with other AI-training platforms',
+    faqH2: `Frequently asked questions about ${platform.name}`,
+  },
+  fi: {
+    lastUpdated: 'Päivitetty viimeksi',
+    directAnswerLabel: 'Suora vastaus',
+    disclosureLabel: 'Suosittelu- ja riippumattomuusseloste',
+    factsH2: `Mitkä ovat ${platform.name}-alustan keskeiset faktat? (Tarkistettu ${CHECKED_ON})`,
+    colFact: 'Kriteeri',
+    colValue: `${platform.name} — Tarkistettu tieto (${CHECKED_ON})`,
+    rowOperator: 'Alusta ja ylläpitäjä',
+    rowOfficialUrl: 'Virallinen verkkosivusto',
+    rowWorkType: 'Tekoälytyön luonne',
+    rowPayRange: 'Ilmoitettu tuntipalkkioväli',
+    rowPayment: 'Maksutapa ja aikataulu',
+    rowCountries: 'Maat sekä Suomi/EU-kelpoisuus',
+    rowSteps: 'Hakuprosessi ja arviointivaiheet',
+    rowReferral: 'Edithsi-suosittelulinkin tila',
+    rowChecked: 'Tarkistuspäivämäärä',
+    referralYes: 'Kyllä — Hakulinkit sisältävät Mercor-suosittelukoodini (02e0c12a-d634-4738-9686-04f28f31f52b)',
+    referralNo: 'Ei suosittelusuhdetta — Suora virallinen linkki ilman palkkiota',
+    rolesTableH2: `Mitä tehtäviä ja palkkiovälejä ${platform.name} ilmoittaa julkisesti?`,
+    colField: 'Toimiala',
+    colRole: 'Tehtävä / linja',
+    colPostedRange: 'Ilmoitettu palkkio',
+    colDate: 'Tarkistettu',
+    colSource: 'Virallinen lähde / Haku',
+    officialLinkLabel: `Avaa ${platform.name} virallinen sivu ↗`,
+    noReferralMicro: 'virallinen linkki · ei suosittelukoodia',
+    matchingAudiencesH2: `Mitkä ammattialat sopivat ${platform.name}-alustalle?`,
+    compareOthersH2: 'Vertaa muihin tekoälyn koulutusalustoihin',
+    faqH2: `Usein kysytyt kysymykset: ${platform.name}`,
+  },
+  sv: {
+    lastUpdated: 'Senast uppdaterad',
+    directAnswerLabel: 'Direkt svar',
+    disclosureLabel: 'Värvnings- och oberoendeinformation',
+    factsH2: `Vilka är nyckelfakta om ${platform.name}? (Kontrollerat ${CHECKED_ON})`,
+    colFact: 'Kriterium',
+    colValue: `${platform.name} — Kontrollerad uppgift (${CHECKED_ON})`,
+    rowOperator: 'Plattform & Operatör',
+    rowOfficialUrl: 'Officiell webbplats',
+    rowWorkType: 'Typ av AI-träningsarbete',
+    rowPayRange: 'Angivet ersättningsspann',
+    rowPayment: 'Utbetalningssätt',
+    rowCountries: 'Länder samt Finland/EU-behörighet',
+    rowSteps: 'Ansökningssteg',
+    rowReferral: 'Värvningsstatus på Edithsi',
+    rowChecked: 'Senast kontrollerad',
+    referralYes: 'Ja — Länkar använder min Mercor-värvningskod (02e0c12a-d634-4738-9686-04f28f31f52b)',
+    referralNo: 'Ingen — Direkt officiell länk utan provision',
+    rolesTableH2: `Vilka roller och ersättningar listar ${platform.name} offentligt?`,
+    colField: 'Område',
+    colRole: 'Roll / Spår',
+    colPostedRange: 'Angivet spann',
+    colDate: 'Kontrollerat',
+    colSource: 'Officiell källa / Ansök',
+    officialLinkLabel: `Besök ${platform.name} officiella sida ↗`,
+    noReferralMicro: 'officiell länk · ingen värvningskod',
+    matchingAudiencesH2: `Vilka yrkesgrupper matchar ${platform.name}?`,
+    compareOthersH2: 'Jämför med andra AI-träningsplattformar',
+    faqH2: `Vanliga frågor om ${platform.name}`,
+  },
+  de: {
+    lastUpdated: 'Zuletzt aktualisiert',
+    directAnswerLabel: 'Direkte Antwort',
+    disclosureLabel: 'Transparenz- & Empfehlungshinweis',
+    factsH2: `Was sind die wichtigsten Fakten zu ${platform.name}? (Geprüft am ${CHECKED_ON})`,
+    colFact: 'Kriterium',
+    colValue: `${platform.name} — Geprüfter Fakt (${CHECKED_ON})`,
+    rowOperator: 'Plattform & Betreiber',
+    rowOfficialUrl: 'Offizielle Website',
+    rowWorkType: 'Art der KI-Trainingsarbeit',
+    rowPayRange: 'Veröffentlichte Honorarspanne',
+    rowPayment: 'Auszahlungsmodell',
+    rowCountries: 'Länder & Finnland/EU-Zulassung',
+    rowSteps: 'Bewerbungsschritte',
+    rowReferral: 'Edithsi-Empfehlungsstatus',
+    rowChecked: 'Prüfdatum',
+    referralYes: 'Ja — Links enthalten meinen Mercor-Empfehlungscode (02e0c12a-d634-4738-9686-04f28f31f52b)',
+    referralNo: 'Nein — Direkter offizieller Link ohne Provision',
+    rolesTableH2: `Welche Rollen und Honorarspannen nennt ${platform.name} öffentlich?`,
+    colField: 'Fachbereich',
+    colRole: 'Rolle / Track',
+    colPostedRange: 'Veröffentlichte Spanne',
+    colDate: 'Prüfdatum',
+    colSource: 'Offizielle Quelle / Bewerbung',
+    officialLinkLabel: `Offizielle ${platform.name}-Seite öffnen ↗`,
+    noReferralMicro: 'offizieller Link · kein Empfehlungscode',
+    matchingAudiencesH2: `Welche Berufsgruppen passen zu ${platform.name}?`,
+    compareOthersH2: 'Mit anderen KI-Trainingsplattformen vergleichen',
+    faqH2: `Häufig gestellte Fragen zu ${platform.name}`,
+  },
+  fr: {
+    lastUpdated: 'Dernière mise à jour',
+    directAnswerLabel: 'Réponse directe',
+    disclosureLabel: 'Transparence et parrainage',
+    factsH2: `Quels sont les faits clés sur ${platform.name} ? (Vérifié le ${CHECKED_ON})`,
+    colFact: 'Critère',
+    colValue: `${platform.name} — Fait vérifié (${CHECKED_ON})`,
+    rowOperator: 'Plateforme et opérateur',
+    rowOfficialUrl: 'Site officiel public',
+    rowWorkType: 'Nature du travail d’entraînement IA',
+    rowPayRange: 'Fourchette horaire affichée',
+    rowPayment: 'Fonctionnement des paiements',
+    rowCountries: 'Pays et éligibilité Finlande/UE',
+    rowSteps: 'Étapes de candidature',
+    rowReferral: 'Statut de parrainage Edithsi',
+    rowChecked: 'Date de vérification',
+    referralYes: 'Oui — Les liens incluent mon code de parrainage Mercor (02e0c12a-d634-4738-9686-04f28f31f52b)',
+    referralNo: 'Aucun — Lien officiel direct sans commission',
+    rolesTableH2: `Quels rôles et tarifs ${platform.name} publie-t-il officiellement ?`,
+    colField: 'Domaine',
+    colRole: 'Rôle / Filière',
+    colPostedRange: 'Tarif affiché',
+    colDate: 'Vérifié le',
+    colSource: 'Source officielle / Postuler',
+    officialLinkLabel: `Visiter le site officiel ${platform.name} ↗`,
+    noReferralMicro: 'lien officiel · sans parrainage',
+    matchingAudiencesH2: `Quels profils professionnels correspondent à ${platform.name} ?`,
+    compareOthersH2: 'Comparer avec les autres plateformes d’entraînement IA',
+    faqH2: `Questions fréquentes sur ${platform.name}`,
+  },
+  es: {
+    lastUpdated: 'Última actualización',
+    directAnswerLabel: 'Respuesta directa',
+    disclosureLabel: 'Aviso de transparencia y referidos',
+    factsH2: `¿Cuáles son los datos clave sobre ${platform.name}? (Verificado el ${CHECKED_ON})`,
+    colFact: 'Criterio',
+    colValue: `${platform.name} — Dato verificado (${CHECKED_ON})`,
+    rowOperator: 'Plataforma y operador',
+    rowOfficialUrl: 'Sitio web oficial',
+    rowWorkType: 'Tipo de trabajo de entrenamiento de IA',
+    rowPayRange: 'Rango por hora publicado',
+    rowPayment: 'Cómo funciona el pago',
+    rowCountries: 'Países y elegibilidad en Finlandia/UE',
+    rowSteps: 'Pasos de solicitud',
+    rowReferral: 'Estado de enlace de referido en Edithsi',
+    rowChecked: 'Fecha de verificación',
+    referralYes: 'Sí — Los enlaces incluyen mi código de referido de Mercor (02e0c12a-d634-4738-9686-04f28f31f52b)',
+    referralNo: 'Ninguno — Enlace oficial directo sin comisión',
+    rolesTableH2: `¿Qué roles y tarifas publica oficialmente ${platform.name}?`,
+    colField: 'Campo / Dominio',
+    colRole: 'Rol / Especialidad',
+    colPostedRange: 'Rango publicado',
+    colDate: 'Fecha',
+    colSource: 'Fuente oficial / Solicitar',
+    officialLinkLabel: `Visitar página oficial de ${platform.name} ↗`,
+    noReferralMicro: 'enlace oficial · sin código de referido',
+    matchingAudiencesH2: `¿Qué perfiles profesionales encajan con ${platform.name}?`,
+    compareOthersH2: 'Comparar con otras plataformas de entrenamiento de IA',
+    faqH2: `Preguntas frecuentes sobre ${platform.name}`,
+  },
+};
+
+const ui = UI_LABELS[lang];
+---
+
+<BaseLayout
+  lang={lang}
+  page={`platforms/${slug}`}
+  title={content.title}
+  description={content.metaDescription}
+  breadcrumbs={breadcrumbs}
+  articleSchema={{ datePublished: CHECKED_ON, dateModified: CHECKED_ON }}
+  faqsSchema={content.faqs}
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">
+        {platform.name} · {ui.lastUpdated}: <time datetime={CHECKED_ON}>{CHECKED_ON}</time>
+      </span>
+      <h1>{content.h1}</h1>
+
+      <div class="direct-answer-box" role="region" aria-label={ui.directAnswerLabel}>
+        <p class="direct-answer-box__text">{content.directAnswer}</p>
+      </div>
+
+      <div class="disclosure-banner" role="note" aria-label={ui.disclosureLabel}>
+        <p>{content.fairnessDisclosure}</p>
+      </div>
+
+      <div class="btn-group">
+        {isMercor ? (
+          <div class="role-card__apply-wrap">
+            <a
+              href={buildGoUrl('general-portal', `platform-${slug}`)}
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+              class="btn btn--primary"
+            >
+              <span>{t.common.applyOnMercor}</span>
+              <span class="sr-only"> {t.common.externalLinkSr}</span>
+            </a>
+            <span class="referral-micro">{t.common.referralMicroLabel}</span>
+          </div>
+        ) : (
+          <div class="role-card__apply-wrap">
+            <a
+              href={platform.official_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary"
+            >
+              <span>{ui.officialLinkLabel}</span>
+            </a>
+            <span class="referral-micro">{ui.noReferralMicro}</span>
+          </div>
+        )}
+        <a href={getPagePath(lang, 'compare')} class="btn btn--secondary">
+          {ui.compareOthersH2}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="platform-facts-heading">
+    <div class="container">
+      <h2 id="platform-facts-heading">{ui.factsH2}</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">{ui.colFact}</th>
+              <th scope="col">{ui.colValue}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">{ui.rowOperator}</th>
+              <td>{platform.name} ({platform.operator})</td>
+            </tr>
+            <tr>
+              <th scope="row">{ui.rowOfficialUrl}</th>
+              <td>
+                <a href={platform.official_url} target="_blank" rel="noopener noreferrer">
+                  {platform.official_url} ↗
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{ui.rowWorkType}</th>
+              <td>{platform.name}: {platform.what_kind_of_work}</td>
+            </tr>
+            <tr>
+              <th scope="row">{ui.rowPayRange}</th>
+              <td class="mono-cell">
+                <strong>{platform.posted_pay_ranges.summary}</strong> (Source:{' '}
+                <a href={platform.posted_pay_ranges.source_url} target="_blank" rel="noopener noreferrer">
+                  {platform.posted_pay_ranges.source_url}
+                </a>
+                , checked {platform.posted_pay_ranges.source_date})
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{ui.rowPayment}</th>
+              <td>{platform.name}: {platform.how_payment_works}</td>
+            </tr>
+            <tr>
+              <th scope="row">{ui.rowCountries}</th>
+              <td>{platform.name}: {platform.countries_accepted}</td>
+            </tr>
+            <tr>
+              <th scope="row">{ui.rowSteps}</th>
+              <td>
+                <ol class="compact-ol">
+                  {platform.application_steps.map((step) => (
+                    <li>{step}</li>
+                  ))}
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">{ui.rowReferral}</th>
+              <td>{isMercor ? ui.referralYes : ui.referralNo}</td>
+            </tr>
+            <tr>
+              <th scope="row">{ui.rowChecked}</th>
+              <td>
+                <time datetime={platform.last_checked}>{platform.last_checked}</time>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="platform-roles-heading">
+    <div class="container">
+      <h2 id="platform-roles-heading">{ui.rolesTableH2}</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">{ui.colField}</th>
+              <th scope="col">{ui.colRole}</th>
+              <th scope="col">{ui.colPostedRange}</th>
+              <th scope="col">{ui.colDate}</th>
+              <th scope="col">{ui.colSource}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {platform.posted_pay_ranges.details.map((item) => {
+              const matchingMercorRole = isMercor
+                ? rolesRaw.find((r) => r.url === item.source_url)
+                : undefined;
+              const href =
+                isMercor && matchingMercorRole
+                  ? buildGoUrl(matchingMercorRole.id, `platform-${slug}`)
+                  : item.source_url;
+              return (
+                <tr>
+                  <td>{item.field}</td>
+                  <td>
+                    <strong>{platform.name}: {item.role}</strong>
+                  </td>
+                  <td class="mono-cell">
+                    <strong>{item.range}</strong>
+                  </td>
+                  <td>{item.date}</td>
+                  <td>
+                    {isMercor ? (
+                      <div class="table-action-cell">
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="sponsored noopener noreferrer"
+                          class="table-apply-link"
+                        >
+                          {t.common.applyOnMercor} ↗
+                        </a>
+                        <span class="referral-micro">{t.common.referralMicroLabel}</span>
+                      </div>
+                    ) : (
+                      <div class="table-action-cell">
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="table-apply-link"
+                        >
+                          {ui.officialLinkLabel}
+                        </a>
+                        <span class="referral-micro">{ui.noReferralMicro}</span>
+                      </div>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {content.sections.map((sec, idx) => (
+    <section class="section" aria-labelledby={`sec-h2-${idx}`}>
+      <div class="container">
+        <h2 id={`sec-h2-${idx}`}>{sec.h2}</h2>
+        <div class="article-prose">
+          {sec.paragraphs.map((p) => (
+            <p>{p}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section" aria-labelledby="platform-faq-heading">
+    <div class="container">
+      <h2 id="platform-faq-heading">{ui.faqH2}</h2>
+      <FaqList items={content.faqs} />
+    </div>
+  </section>
+
+  <section class="section section--compact" aria-labelledby="matching-audiences-heading">
+    <div class="container">
+      <h2 id="matching-audiences-heading">{ui.matchingAudiencesH2}</h2>
+      <ul class="related-links-grid">
+        {platform.audiences.map((aud) => (
+          <li>
+            <a href={getAudiencePath(lang, aud as AudienceSlug)} class="related-card-link">
+              {t.audiences[aud as AudienceSlug].label} →
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <h2 id="compare-others-heading" style="margin-top: var(--space-8);">
+        {ui.compareOthersH2}
+      </h2>
+      <ul class="related-links-grid">
+        <li>
+          <a href={getPagePath(lang, 'compare')} class="related-card-link">
+            Compare All 6 Platforms →
+          </a>
+        </li>
+        <li>
+          <a href={getPagePath(lang, 'pay-index')} class="related-card-link">
+            Edithsi AI Work Pay Index (CSV) →
+          </a>
+        </li>
+        {PLATFORM_SLUGS.filter((s) => s !== slug).map((otherSlug) => {
+          const other = platforms.find((p) => p.slug === otherSlug)!;
+          return (
+            <li>
+              <a href={getPlatformPath(lang, otherSlug)} class="related-card-link">
+                {other.name} ({other.posted_pay_ranges.summary.split('(')[0].trim()}) →
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+
+      <AuthorBox lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

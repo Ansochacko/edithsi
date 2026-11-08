@@ -4,13 +4,21 @@ import { CHECKED_ON, SITE_NAME } from '../../config';
 import {
   LANGUAGES,
   AUDIENCE_SLUGS,
+  PLATFORM_SLUGS,
+  GUIDE_SLUGS,
   getDictionary,
   type Lang,
-  type PageKey,
 } from '../../i18n';
 import { getAudiencePageContent } from '../../data/audiencePages';
+import { getPlatformPageContent, getComparePageContent } from '../../data/platformContent';
+import {
+  getPayIndexPageContent,
+  getSurveyPageContent,
+  getGlossaryPageContent,
+  getGuidePageContent,
+} from '../../data/hubPagesContent';
 
-interface OgItem {
+interface OgItem extends Record<string, any> {
   id: string;
   lang: Lang;
   title: string;
@@ -84,6 +92,44 @@ export const getStaticPaths: GetStaticPaths = () => {
       });
     }
 
+    // Compare, Pay Index, Survey, Glossary
+    const compare = getComparePageContent(lang);
+    items.push({
+      id: `compare-${lang}`,
+      lang,
+      title: compare.h1,
+      eyebrow: `${SITE_NAME} · Platform Comparison`,
+      adStamp: t.adStamp,
+    });
+
+    const payIndex = getPayIndexPageContent(lang);
+    items.push({
+      id: `pay-index-${lang}`,
+      lang,
+      title: payIndex.h1,
+      eyebrow: `${SITE_NAME} · AI Work Pay Index`,
+      adStamp: t.adStamp,
+    });
+
+    const survey = getSurveyPageContent(lang);
+    items.push({
+      id: `survey-${lang}`,
+      lang,
+      title: survey.h1,
+      eyebrow: `${SITE_NAME} · Survey & Methodology`,
+      adStamp: t.adStamp,
+    });
+
+    const glossary = getGlossaryPageContent(lang);
+    items.push({
+      id: `glossary-${lang}`,
+      lang,
+      title: glossary.h1,
+      eyebrow: `${SITE_NAME} · AI-Training Glossary`,
+      adStamp: t.adStamp,
+    });
+
+    // Audience pages
     for (const slug of AUDIENCE_SLUGS) {
       const audContent = getAudiencePageContent(slug, lang);
       items.push({
@@ -91,6 +137,30 @@ export const getStaticPaths: GetStaticPaths = () => {
         lang,
         title: audContent.h1,
         eyebrow: `${SITE_NAME} · ${t.audiences[slug].label}`,
+        adStamp: t.adStamp,
+      });
+    }
+
+    // Platform pages
+    for (const slug of PLATFORM_SLUGS) {
+      const pContent = getPlatformPageContent(lang, slug);
+      items.push({
+        id: `platforms-${slug}-${lang}`,
+        lang,
+        title: pContent.h1,
+        eyebrow: `${SITE_NAME} · Platform Profile`,
+        adStamp: t.adStamp,
+      });
+    }
+
+    // Guide pages
+    for (const slug of GUIDE_SLUGS) {
+      const gContent = getGuidePageContent(lang, slug);
+      items.push({
+        id: `guides-${slug}-${lang}`,
+        lang,
+        title: gContent.h1,
+        eyebrow: `${SITE_NAME} · Practical Guide`,
         adStamp: t.adStamp,
       });
     }
@@ -136,7 +206,7 @@ export const GET: APIRoute = async ({ props }) => {
       CHECKED_ON
     )} · Lang: ${escapeXml(
     lang.toUpperCase()
-  )} · Independent guide (Not affiliated with Mercor)</text>
+  )} · Independent hub &amp; pay index</text>
   </svg>`;
 
   const pngBuffer = await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toBuffer();

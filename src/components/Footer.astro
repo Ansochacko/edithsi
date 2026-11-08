@@ -1,13 +1,17 @@
 ---
-import { OPERATOR } from '../config';
+import { OPERATOR, LINKEDIN_URL, GITHUB_URL } from '../config';
 import {
   AUDIENCE_SLUGS,
+  PLATFORM_SLUGS,
   getDictionary,
   getPagePath,
   getAudiencePath,
+  getPlatformPath,
+  getGuidePath,
   interpolate,
   type Lang,
 } from '../i18n';
+import platforms from '../data/platforms.json';
 
 interface Props {
   lang: Lang;
@@ -25,6 +29,111 @@ const operatorLine = interpolate(t.footer.operatorLine, {
 const businessIdLine = OPERATOR.businessId
   ? interpolate(t.footer.businessIdLine, { businessId: OPERATOR.businessId })
   : '';
+
+const FOOTER_LABELS: Record<
+  Lang,
+  {
+    platformsHeading: string;
+    compare: string;
+    payIndex: string;
+    survey: string;
+    glossary: string;
+    guidesHeading: string;
+    guideRemote: string;
+    guideTax: string;
+    guideBenefits: string;
+    guideInterview: string;
+    guideScams: string;
+    guidePhds: string;
+  }
+> = {
+  en: {
+    platformsHeading: 'Platforms & Original Data',
+    compare: 'Compare 6 AI Platforms',
+    payIndex: 'Edithsi AI Work Pay Index',
+    survey: 'State of AI Work Survey',
+    glossary: 'AI-Training Glossary',
+    guidesHeading: 'Guides & Disclosures',
+    guideRemote: 'Remote & Side Jobs Guide',
+    guideTax: 'Taxes, Toiminimi & YEL (2026)',
+    guideBenefits: 'Unemployment Benefits & AI Work',
+    guideInterview: 'AI Interview Preparation',
+    guideScams: 'Spot Fake AI Job Scams',
+    guidePhds: 'Guide for PhDs & Students',
+  },
+  fi: {
+    platformsHeading: 'Alustat ja tutkimusdata',
+    compare: 'Vertaa 6 tekoälyalustaa',
+    payIndex: 'Edithsi AI Work -palkkioindeksi',
+    survey: 'Tekoälytyön tila Suomessa -kysely',
+    glossary: 'Tekoälykoulutuksen sanasto',
+    guidesHeading: 'Oppaat ja lakitiedot',
+    guideRemote: 'Etätyö ja sivutyö kotoa -opas',
+    guideTax: 'Verotus, toiminimi ja YEL (2026)',
+    guideBenefits: 'Työttömyysturva ja tekoälytyö',
+    guideInterview: 'Tekoälyhaastatteluun valmistautuminen',
+    guideScams: 'Tunnista tekoälytyöhuijaukset',
+    guidePhds: 'Opas tutkijoille ja opiskelijoille',
+  },
+  sv: {
+    platformsHeading: 'Plattformar & Originaldata',
+    compare: 'Jämför 6 AI-plattformar',
+    payIndex: 'Edithsi AI Work Ersättningsindex',
+    survey: 'Enkät om AI-arbete i Norden',
+    glossary: 'AI-träningsordlista',
+    guidesHeading: 'Guider & Juridik',
+    guideRemote: 'Guide till distans- & extrajobb',
+    guideTax: 'Skatt, F-skatt & YEL (2026)',
+    guideBenefits: 'A-kassa och AI-träningsarbete',
+    guideInterview: 'Förberedelse inför AI-intervju',
+    guideScams: 'Undvik falska AI-jobbannonser',
+    guidePhds: 'Guide för doktorander & studenter',
+  },
+  de: {
+    platformsHeading: 'Plattformen & Originaldaten',
+    compare: '6 KI-Plattformen im Vergleich',
+    payIndex: 'Edithsi KI-Honorar-Index',
+    survey: 'Umfrage: KI-Arbeit in Europa',
+    glossary: 'KI-Training-Glossar',
+    guidesHeading: 'Ratgeber & Rechtliches',
+    guideRemote: 'Ratgeber: Remote- & Nebenjobs',
+    guideTax: 'Steuern, Freiberufler & YEL (2026)',
+    guideBenefits: 'Arbeitslosengeld & KI-Arbeit',
+    guideInterview: 'KI-Videointerview Vorbereitung',
+    guideScams: 'Gefälschte KI-Jobangebote erkennen',
+    guidePhds: 'Ratgeber für Promovierende & Studierende',
+  },
+  fr: {
+    platformsHeading: 'Plateformes & Données',
+    compare: 'Comparer 6 plateformes IA',
+    payIndex: 'Indice des tarifs IA Edithsi',
+    survey: 'Enquête sur le travail IA en Europe',
+    glossary: 'Glossaire de l’entraînement IA',
+    guidesHeading: 'Guides & Mentions légales',
+    guideRemote: 'Guide télétravail & revenu complémentaire',
+    guideTax: 'Fiscalité, URSSAF & YEL (2026)',
+    guideBenefits: 'Allocations chômage et travail IA',
+    guideInterview: 'Préparer l’entretien vidéo IA',
+    guideScams: 'Repérer les fausses offres d’emploi IA',
+    guidePhds: 'Guide pour doctorants et étudiants',
+  },
+  es: {
+    platformsHeading: 'Plataformas y Datos',
+    compare: 'Comparar 6 plataformas de IA',
+    payIndex: 'Índice salarial de IA Edithsi',
+    survey: 'Encuesta sobre trabajo de IA en Europa',
+    glossary: 'Glosario de entrenamiento de IA',
+    guidesHeading: 'Guías y Aviso legal',
+    guideRemote: 'Guía de trabajo remoto e ingresos extra',
+    guideTax: 'Impuestos, autónomos y YEL (2026)',
+    guideBenefits: 'Prestación por desempleo y trabajo IA',
+    guideInterview: 'Preparación para la entrevista de IA',
+    guideScams: 'Detectar ofertas falsas de empleo en IA',
+    guidePhds: 'Guía para doctorandos y estudiantes',
+  },
+};
+
+const fl = FOOTER_LABELS[lang];
 ---
 
 <footer class="site-footer">
@@ -33,6 +142,13 @@ const businessIdLine = OPERATOR.businessId
       <p class="site-footer__disclaimer">{t.footer.trademarkDisclaimer}</p>
       <p class="site-footer__operator">{operatorLine}</p>
       {businessIdLine && <p class="site-footer__operator">{businessIdLine}</p>}
+      <p class="site-footer__operator">
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" class="site-footer__link">LinkedIn ↗</a>
+        {' · '}
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" class="site-footer__link">GitHub ↗</a>
+        {' · '}
+        <a href="/llms.txt" class="site-footer__link">llms.txt</a>
+      </p>
     </div>
 
     <div class="site-footer__nav-cols">
@@ -51,9 +167,77 @@ const businessIdLine = OPERATOR.businessId
         </ul>
       </nav>
 
-      <nav aria-label={t.footer.linksHeading}>
-        <span class="site-footer__heading">{t.footer.linksHeading}</span>
+      <nav aria-label={fl.platformsHeading}>
+        <span class="site-footer__heading">{fl.platformsHeading}</span>
         <ul class="site-footer__links">
+          <li>
+            <a href={getPagePath(lang, 'compare')} class="site-footer__link">
+              {fl.compare}
+            </a>
+          </li>
+          <li>
+            <a href={getPagePath(lang, 'pay-index')} class="site-footer__link">
+              {fl.payIndex}
+            </a>
+          </li>
+          <li>
+            <a href={getPagePath(lang, 'survey')} class="site-footer__link">
+              {fl.survey}
+            </a>
+          </li>
+          <li>
+            <a href={getPagePath(lang, 'glossary')} class="site-footer__link">
+              {fl.glossary}
+            </a>
+          </li>
+          {
+            PLATFORM_SLUGS.map((slug) => {
+              const p = platforms.find((item) => item.slug === slug);
+              return (
+                <li>
+                  <a href={getPlatformPath(lang, slug)} class="site-footer__link">
+                    {p?.name ?? slug}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </nav>
+
+      <nav aria-label={fl.guidesHeading}>
+        <span class="site-footer__heading">{fl.guidesHeading}</span>
+        <ul class="site-footer__links">
+          <li>
+            <a href={getGuidePath(lang, 'remote-side-jobs-from-home')} class="site-footer__link">
+              {fl.guideRemote}
+            </a>
+          </li>
+          <li>
+            <a href={getGuidePath(lang, 'taxes-toiminimi-yel-finland')} class="site-footer__link">
+              {fl.guideTax}
+            </a>
+          </li>
+          <li>
+            <a href={getGuidePath(lang, 'unemployment-benefits-ai-work')} class="site-footer__link">
+              {fl.guideBenefits}
+            </a>
+          </li>
+          <li>
+            <a href={getGuidePath(lang, 'ai-interview-preparation')} class="site-footer__link">
+              {fl.guideInterview}
+            </a>
+          </li>
+          <li>
+            <a href={getGuidePath(lang, 'avoid-ai-job-scams')} class="site-footer__link">
+              {fl.guideScams}
+            </a>
+          </li>
+          <li>
+            <a href={getGuidePath(lang, 'ai-training-for-phds-and-students')} class="site-footer__link">
+              {fl.guidePhds}
+            </a>
+          </li>
           <li>
             <a href={getPagePath(lang, 'roles')} class="site-footer__link">
               {t.nav.roles}

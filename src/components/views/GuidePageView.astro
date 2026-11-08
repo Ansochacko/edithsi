@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqList from '../FaqList.astro';
+import AuthorBox from '../AuthorBox.astro';
+import { getGuidePageContent, type GuideSlug } from '../../data/hubPagesContent';
+import {
+  getDictionary,
+  getPagePath,
+  getGuidePath,
+  getAudiencePath,
+  type AudienceSlug,
+  type Lang,
+} from '../../i18n';
+
+interface Props {
+  lang: Lang;
+  slug: GuideSlug;
+}
+
+const { lang, slug } = Astro.props;
+const t = getDictionary(lang);
+const content = getGuidePageContent(lang, slug);
+
+const hubAudienceSlug = (content.hubSlug.replace(/^\/for\/|\/$/g, '') || 'general') as AudienceSlug;
+const hubUrl = getAudiencePath(lang, hubAudienceSlug);
+const hubLabel = t.audiences[hubAudienceSlug]?.label ?? hubAudienceSlug;
+
+const breadcrumbs = [
+  { name: t.nav.home, url: getPagePath(lang, 'home') },
+  { name: hubLabel, url: hubUrl },
+  { name: content.h1, url: getGuidePath(lang, slug) },
+];
+
+const UI_LABELS: Record<
+  Lang,
+  {
+    lastUpdated: string;
+    sourcesH2: string;
+    relatedH2: string;
+    faqH2: string;
+    hubLinkPrefix: string;
+  }
+> = {
+  en: {
+    lastUpdated: 'Last updated',
+    sourcesH2: 'Official sources & regulatory references cited in this guide',
+    relatedH2: 'Related hubs & practical guides',
+    faqH2: 'Frequently asked questions',
+    hubLinkPrefix: 'Profession hub:',
+  },
+  fi: {
+    lastUpdated: 'Päivitetty viimeksi',
+    sourcesH2: 'Tässä oppaassa viitatut viranomaislähteet ja viralliset sivut',
+    relatedH2: 'Aiheeseen liittyvät ammattialasivut ja käytännön oppaat',
+    faqH2: 'Usein kysytyt kysymykset',
+    hubLinkPrefix: 'Ammattialasivu:',
+  },
+  sv: {
+    lastUpdated: 'Senast uppdaterad',
+    sourcesH2: 'Officiella källor och myndighetslänkar i denna guide',
+    relatedH2: 'Relaterade yrkeshubbar och praktiska guider',
+    faqH2: 'Vanliga frågor',
+    hubLinkPrefix: 'Yrkeshubb:',
+  },
+  de: {
+    lastUpdated: 'Zuletzt aktualisiert',
+    sourcesH2: 'Offizielle Quellen und Behördenlinks in diesem Ratgeber',
+    relatedH2: 'Verwandte Berufsgruppen-Seiten & Praxis-Ratgeber',
+    faqH2: 'Häufig gestellte Fragen',
+    hubLinkPrefix: 'Berufsgruppe:',
+  },
+  fr: {
+    lastUpdated: 'Dernière mise à jour',
+    sourcesH2: 'Sources officielles et références citées dans ce guide',
+    relatedH2: 'Pages métiers et guides pratiques associés',
+    faqH2: 'Questions fréquentes',
+    hubLinkPrefix: 'Filière métier :',
+  },
+  es: {
+    lastUpdated: 'Última actualización',
+    sourcesH2: 'Fuentes oficiales y organismos citados en esta guía',
+    relatedH2: 'Páginas profesionales y guías prácticas relacionadas',
+    faqH2: 'Preguntas frecuentes',
+    hubLinkPrefix: 'Especialidad:',
+  },
+};
+
+const ui = UI_LABELS[lang];
+---
+
+<BaseLayout
+  lang={lang}
+  page={`guides/${slug}`}
+  title={content.title}
+  description={content.metaDescription}
+  breadcrumbs={breadcrumbs}
+  articleSchema={{ datePublished: content.lastUpdated, dateModified: content.lastUpdated }}
+  faqsSchema={content.faqs}
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">
+        Edithsi Guide · {ui.lastUpdated}:{' '}
+        <time datetime={content.lastUpdated}>{content.lastUpdated}</time>
+      </span>
+      <h1>{content.h1}</h1>
+
+      <div class="direct-answer-box">
+        <p class="direct-answer-box__text">{content.directAnswer}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="guide-table-heading">
+    <div class="container">
+      <h2 id="guide-table-heading">{content.table.caption}</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              {content.table.headers.map((h) => (
+                <th scope="col">{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {content.table.rows.map((row) => (
+              <tr>
+                {row.map((cell, cIdx) =>
+                  cIdx === 0 ? (
+                    <td>
+                      <strong>{cell}</strong>
+                    </td>
+                  ) : (
+                    <td>{cell}</td>
+                  )
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {content.sections.map((sec, idx) => (
+    <section class="section" aria-labelledby={`guide-sec-${idx}`}>
+      <div class="container">
+        <h2 id={`guide-sec-${idx}`}>{sec.h2}</h2>
+        <div class="article-prose">
+          {sec.paragraphs.map((p) => (
+            <p>{p}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section" aria-labelledby="guide-sources-heading">
+    <div class="container">
+      <h2 id="guide-sources-heading">{ui.sourcesH2}</h2>
+      <ul class="checklist-box">
+        {content.sources.map((src) => (
+          <li class="checklist-box__item">
+            <a href={src.url} target="_blank" rel="noopener noreferrer">
+              <strong>{src.label}</strong> ({src.url}) ↗
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="guide-faq-heading">
+    <div class="container">
+      <h2 id="guide-faq-heading">{ui.faqH2}</h2>
+      <FaqList items={content.faqs} />
+    </div>
+  </section>
+
+  <section class="section section--compact" aria-labelledby="guide-related-heading">
+    <div class="container">
+      <h2 id="guide-related-heading">{ui.relatedH2}</h2>
+      <ul class="related-links-grid">
+        <li>
+          <a href={hubUrl} class="related-card-link">
+            {ui.hubLinkPrefix} {hubLabel} →
+          </a>
+        </li>
+        <li>
+          <a href={getPagePath(lang, 'compare')} class="related-card-link">
+            Compare 6 AI-Training Platforms →
+          </a>
+        </li>
+        <li>
+          <a href={getPagePath(lang, 'pay-index')} class="related-card-link">
+            Edithsi AI Work Pay Index (Dataset & CSV) →
+          </a>
+        </li>
+        {content.relatedGuides.map((relSlug) => {
+          const relContent = getGuidePageContent(lang, relSlug);
+          return (
+            <li>
+              <a href={getGuidePath(lang, relSlug)} class="related-card-link">
+                {relContent.h1} →
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+
+      <AuthorBox lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

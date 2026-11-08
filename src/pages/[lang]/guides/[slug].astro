@@ -1,0 +1,19 @@
+---
+import GuidePageView from '../../../components/views/GuidePageView.astro';
+import {
+  NON_DEFAULT_LANGUAGES,
+  GUIDE_SLUGS,
+  type Lang,
+  type GuideSlug,
+} from '../../../i18n';
+
+export function getStaticPaths() {
+  return NON_DEFAULT_LANGUAGES.flatMap((lang) =>
+    GUIDE_SLUGS.map((slug) => ({ params: { lang, slug } }))
+  );
+}
+
+const { lang, slug } = Astro.params as { lang: Lang; slug: GuideSlug };
+---
+
+<GuidePageView lang={lang} slug={slug} />

@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqList from '../FaqList.astro';
+import AuthorBox from '../AuthorBox.astro';
+import { CHECKED_ON } from '../../config';
+import { getSurveyPageContent } from '../../data/hubPagesContent';
+import { getDictionary, getPagePath, type Lang } from '../../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+const content = getSurveyPageContent(lang);
+
+const breadcrumbs = [
+  { name: t.nav.home, url: getPagePath(lang, 'home') },
+  { name: content.h1, url: getPagePath(lang, 'survey') },
+];
+
+const UI_LABELS: Record<
+  Lang,
+  {
+    lastUpdated: string;
+    metricsH2: string;
+    colMetric: string;
+    colScope: string;
+    colStatus: string;
+    faqH2: string;
+  }
+> = {
+  en: {
+    lastUpdated: 'Last updated',
+    metricsH2: 'What metrics will the State of AI-Training Work report measure?',
+    colMetric: 'Research Metric',
+    colScope: 'Definition & Scope',
+    colStatus: 'Current Status (2026-11-05)',
+    faqH2: 'Frequently asked questions about the survey & methodology',
+  },
+  fi: {
+    lastUpdated: 'Päivitetty viimeksi',
+    metricsH2: 'Mitä mittareita Tekoälytyön tila Suomessa ja Euroopassa -selvitys seuraa?',
+    colMetric: 'Tutkimusmittari',
+    colScope: 'Määritelmä ja rajaus',
+    colStatus: 'Nykyinen tila (2026-11-05)',
+    faqH2: 'Usein kysytyt kysymykset kyselystä ja tutkimusmenetelmästä',
+  },
+  sv: {
+    lastUpdated: 'Senast uppdaterad',
+    metricsH2: 'Vilka mätvärden undersöker rapporten om AI-träningsarbete i Norden och Europa?',
+    colMetric: 'Mätvärde',
+    colScope: 'Definition & omfattning',
+    colStatus: 'Status (2026-11-05)',
+    faqH2: 'Vanliga frågor om enkäten och metoden',
+  },
+  de: {
+    lastUpdated: 'Zuletzt aktualisiert',
+    metricsH2: 'Welche Kennzahlen erhebt die Studie zur KI-Trainingsarbeit in Finnland & Europa?',
+    colMetric: 'Kennzahl',
+    colScope: 'Definition & Umfang',
+    colStatus: 'Aktueller Status (2026-11-05)',
+    faqH2: 'Häufige Fragen zur Umfrage und Methodik',
+  },
+  fr: {
+    lastUpdated: 'Dernière mise à jour',
+    metricsH2: 'Quels indicateurs l’enquête sur le travail d’entraînement IA en Europe mesure-t-elle ?',
+    colMetric: 'Indicateur',
+    colScope: 'Définition et périmètre',
+    colStatus: 'Statut actuel (2026-11-05)',
+    faqH2: 'Questions fréquentes sur l’enquête et la méthodologie',
+  },
+  es: {
+    lastUpdated: 'Última actualización',
+    metricsH2: '¿Qué métricas medirá el informe sobre el trabajo de entrenamiento de IA en Europa?',
+    colMetric: 'Métrica de estudio',
+    colScope: 'Definición y alcance',
+    colStatus: 'Estado actual (2026-11-05)',
+    faqH2: 'Preguntas frecuentes sobre la encuesta y metodología',
+  },
+};
+
+const ui = UI_LABELS[lang];
+---
+
+<BaseLayout
+  lang={lang}
+  page="survey"
+  title={content.title}
+  description={content.metaDescription}
+  breadcrumbs={breadcrumbs}
+  articleSchema={{ datePublished: CHECKED_ON, dateModified: CHECKED_ON }}
+  faqsSchema={content.faqs}
+>
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">
+        Edithsi Research · {ui.lastUpdated}: <time datetime={CHECKED_ON}>{CHECKED_ON}</time>
+      </span>
+      <h1>{content.h1}</h1>
+
+      <div class="direct-answer-box">
+        <p class="direct-answer-box__text">{content.directAnswer}</p>
+      </div>
+
+      <div class="btn-group">
+        <a href={getPagePath(lang, 'pay-index')} class="btn btn--primary">
+          View Live Edithsi AI Work Pay Index →
+        </a>
+        <a href={getPagePath(lang, 'compare')} class="btn btn--secondary">
+          Compare All 6 Platforms →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="survey-metrics-heading">
+    <div class="container">
+      <h2 id="survey-metrics-heading">{ui.metricsH2}</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">{ui.colMetric}</th>
+              <th scope="col">{ui.colScope}</th>
+              <th scope="col">{ui.colStatus}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {content.plannedMetricsTable.map((row) => (
+              <tr>
+                <td>
+                  <strong>{row.metric}</strong>
+                </td>
+                <td>{row.scope}</td>
+                <td class="mono-cell">{row.status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {content.methodologySections.map((sec, idx) => (
+    <section class="section" aria-labelledby={`survey-sec-${idx}`}>
+      <div class="container">
+        <h2 id={`survey-sec-${idx}`}>{sec.h2}</h2>
+        <div class="article-prose">
+          {sec.paragraphs.map((p) => (
+            <p>{p}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section" aria-labelledby="survey-faq-heading">
+    <div class="container">
+      <h2 id="survey-faq-heading">{ui.faqH2}</h2>
+      <FaqList items={content.faqs} />
+      <AuthorBox lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

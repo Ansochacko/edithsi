@@ -1,0 +1,19 @@
+---
+import PlatformView from '../../../components/views/PlatformView.astro';
+import {
+  NON_DEFAULT_LANGUAGES,
+  PLATFORM_SLUGS,
+  type Lang,
+  type PlatformSlug,
+} from '../../../i18n';
+
+export function getStaticPaths() {
+  return NON_DEFAULT_LANGUAGES.flatMap((lang) =>
+    PLATFORM_SLUGS.map((slug) => ({ params: { lang, slug } }))
+  );
+}
+
+const { lang, slug } = Astro.params as { lang: Lang; slug: PlatformSlug };
+---
+
+<PlatformView lang={lang} slug={slug} />

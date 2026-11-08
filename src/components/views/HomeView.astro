@@ -3,12 +3,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import RoleCard, { type RoleEntry } from '../RoleCard.astro';
 import AuthorBox from '../AuthorBox.astro';
 import rolesRaw from '../../data/roles.json';
-import { buildGoUrl } from '../../config';
+import platforms from '../../data/platforms.json';
+import { buildGoUrl, CHECKED_ON } from '../../config';
 import {
   AUDIENCE_SLUGS,
+  PLATFORM_SLUGS,
   getDictionary,
   getPagePath,
   getAudiencePath,
+  getPlatformPath,
+  getGuidePath,
   interpolate,
   type Lang,
 } from '../../i18n';
@@ -40,6 +44,132 @@ const audienceChoices = AUDIENCE_SLUGS.map((slug) => {
     href: getAudiencePath(lang, slug),
   };
 });
+
+const HUB_HOME_COPY: Record<
+  Lang,
+  {
+    hubHeading: string;
+    hubLead: string;
+    compareCta: string;
+    payIndexCta: string;
+    glossaryCta: string;
+    surveyCta: string;
+    guidesHeading: string;
+    guidesSub: string;
+    guideLinks: Array<{ slug: 'remote-side-jobs-from-home' | 'taxes-toiminimi-yel-finland' | 'unemployment-benefits-ai-work' | 'ai-interview-preparation' | 'avoid-ai-job-scams' | 'ai-training-for-phds-and-students'; title: string; desc: string }>;
+  }
+> = {
+  en: {
+    hubHeading: 'Compare 6 AI-Training Platforms & Original Pay Data',
+    hubLead: `I track official public listings, payment rails, and European eligibility across Mercor, Mindrift, Alignerr, Outlier, micro1, and Handshake AI (last checked ${CHECKED_ON}).`,
+    compareCta: 'Compare All 6 Platforms',
+    payIndexCta: 'Edithsi AI Work Pay Index (CSV)',
+    glossaryCta: 'RLHF & Evals Glossary',
+    surveyCta: 'State of AI Work Survey',
+    guidesHeading: 'Practical Guides for Finland & Europe',
+    guidesSub: 'Answer-first guides on taxes, social security, automated interviews, and avoiding scams.',
+    guideLinks: [
+      { slug: 'remote-side-jobs-from-home', title: 'Where AI-Training Fits Among Remote & Side Jobs', desc: 'Honest comparison of AI evaluation vs. traditional remote employment and freelancing.' },
+      { slug: 'taxes-toiminimi-yel-finland', title: 'Taxes, Prepayment Tax, Toiminimi & YEL (2026)', desc: 'How USD payouts, Vero.fi prepayment taxes, and the EUR 9,423 YEL threshold work.' },
+      { slug: 'unemployment-benefits-ai-work', title: 'AI-Training Work & Unemployment Benefits', desc: 'Why you must report self-employment to Kela, TYJ, or EU authorities before starting.' },
+      { slug: 'ai-interview-preparation', title: 'How Automated AI Video Interviews Work', desc: 'What to expect on Mercor, micro1 Zara, Outlier, and Mindrift assessments.' },
+      { slug: 'avoid-ai-job-scams', title: 'How to Spot Fake AI Job Scams', desc: 'Verify @mercor.com and @mercor.expert domains and never pay upfront fees.' },
+      { slug: 'ai-training-for-phds-and-students', title: 'AI-Training Work for PhDs & University Students', desc: 'Academic STEM, humanities, and coding tracks open to European researchers.' },
+    ],
+  },
+  fi: {
+    hubHeading: 'Vertaa 6 tekoälyalustaa ja tutustu avoimeen palkkioindeksiin',
+    hubLead: `Seuraan Mercorin, Mindriftin, Alignerrin, Outlierin, micro1:n ja Handshake AI:n julkisia hakuilmoituksia, maksutapoja ja Suomi/EU-kelpoisuutta (tarkistettu ${CHECKED_ON}).`,
+    compareCta: 'Vertaa kaikkia 6 alustaa',
+    payIndexCta: 'Edithsi AI Work -palkkioindeksi (CSV)',
+    glossaryCta: 'RLHF- ja Evals-sanasto',
+    surveyCta: 'Tekoälytyön tila -kysely',
+    guidesHeading: 'Käytännön oppaat Suomeen ja Eurooppaan',
+    guidesSub: 'Suorat vastaukset verotuksesta, YEL-vakuutuksesta, työttömyysturvasta ja tekoälyhaastatteluista.',
+    guideLinks: [
+      { slug: 'remote-side-jobs-from-home', title: 'Mihin tekoälytyö sijoittuu etä- ja sivutöiden joukossa?', desc: 'Rehellinen vertailu tekoälyn koulutustyön ja perinteisen etätyön eroista.' },
+      { slug: 'taxes-toiminimi-yel-finland', title: 'Verotus, ennakkovero, toiminimi ja YEL (2026)', desc: 'Näin USD-palkkiot, OmaVero-ennakkovero ja vuoden 2026 YEL-raja (9 423 €) toimivat.' },
+      { slug: 'unemployment-benefits-ai-work', title: 'Tekoälytyö ja työttömyysturva Suomessa', desc: 'Miksi sivutoimisesta yrittäjyydestä on ilmoitettava ennen työn aloittamista.' },
+      { slug: 'ai-interview-preparation', title: 'Miten automaattinen tekoälyhaastattelu toimii?', desc: 'Käytännön valmistautuminen Mercorin, micro1:n, Outlierin ja Mindriftin testeihin.' },
+      { slug: 'avoid-ai-job-scams', title: 'Näin tunnistat tekoälytyöhön liittyvät huijaukset', desc: 'Tarkista @mercor.com ja @mercor.expert -osoitteet äläkä koskaan maksa hakemisesta.' },
+      { slug: 'ai-training-for-phds-and-students', title: 'Tekoälytyö tutkijoille, tohtoreille ja opiskelijoille', desc: 'Akateemiset tehtävät eurooppalaisille jatko-opiskelijoille ja korkeakouluopiskelijoille.' },
+    ],
+  },
+  sv: {
+    hubHeading: 'Jämför 6 AI-träningsplattformar & öppet ersättningsindex',
+    hubLead: `Jag granskar offentliga uppdrag, utbetalningar och EU/Finland-behörighet på Mercor, Mindrift, Alignerr, Outlier, micro1 och Handshake AI (kontrollerat ${CHECKED_ON}).`,
+    compareCta: 'Jämför alla 6 plattformar',
+    payIndexCta: 'Edithsi Ersättningsindex (CSV)',
+    glossaryCta: 'RLHF & Evals-ordlista',
+    surveyCta: 'Enkät om AI-arbete',
+    guidesHeading: 'Praktiska guider för Finland, Sverige & Europa',
+    guidesSub: 'Direkta svar om skatt, F-skatt, YEL, a-kassa och automatiserade AI-intervjuer.',
+    guideLinks: [
+      { slug: 'remote-side-jobs-from-home', title: 'Var passar AI-träning bland distans- och extrajobb?', desc: 'Ärlig genomgång av när AI-utvärdering passar och när det inte ersätter fast jobb.' },
+      { slug: 'taxes-toiminimi-yel-finland', title: 'Skatt, F-skatt, firma & YEL (2026)', desc: 'Så fungerar USD-utbetalningar, Skatteverket, Vero.fi och YEL-gränsen 9 423 €.' },
+      { slug: 'unemployment-benefits-ai-work', title: 'AI-arbete och arbetslöshetsersättning (A-kassa & Kela)', desc: 'Varför du måste anmäla uppdragsarbete innan du börjar arbeta.' },
+      { slug: 'ai-interview-preparation', title: 'Så fungerar automatiserade AI-intervjuer', desc: 'Förbered dig inför Mercor, micro1, Outlier och Mindrift.' },
+      { slug: 'avoid-ai-job-scams', title: 'Så avslöjar du falska AI-jobbannonser', desc: 'Kontrollera @mercor.com och @mercor.expert och betala aldrig avgifter.' },
+      { slug: 'ai-training-for-phds-and-students', title: 'AI-träningsarbete för doktorander & studenter', desc: 'Akademiska spår för forskare och universitetsstudenter i Europa.' },
+    ],
+  },
+  de: {
+    hubHeading: '6 KI-Trainingsplattformen im Vergleich & Honorar-Index',
+    hubLead: `Ich dokumentiere öffentliche Ausschreibungen, Auszahlungswege und EU-Zulassung bei Mercor, Mindrift, Alignerr, Outlier, micro1 und Handshake AI (geprüft am ${CHECKED_ON}).`,
+    compareCta: 'Alle 6 Plattformen vergleichen',
+    payIndexCta: 'Edithsi KI-Honorar-Index (CSV)',
+    glossaryCta: 'RLHF & Evals Glossar',
+    surveyCta: 'Umfrage zur KI-Arbeit',
+    guidesHeading: 'Praxis-Ratgeber für Finnland & Europa (DACH)',
+    guidesSub: 'Direkte Antworten zu Steuern, Sozialversicherung, KI-Interviews und Sicherheit.',
+    guideLinks: [
+      { slug: 'remote-side-jobs-from-home', title: 'Wo passt KI-Training unter Remote- & Nebenjobs?', desc: 'Ehrliche Einordnung zwischen KI-Honorararbeit und klassischer Festanstellung.' },
+      { slug: 'taxes-toiminimi-yel-finland', title: 'Steuern, Freiberufler, Toiminimi & YEL (2026)', desc: 'USD-Auszahlungen, Finanzamt, Vero.fi und die YEL-Grenze von 9.423 €.' },
+      { slug: 'unemployment-benefits-ai-work', title: 'KI-Arbeit & Arbeitslosengeld (Kela, Agentur für Arbeit)', desc: 'Warum Nebentätigkeiten vorab gemeldet werden müssen.' },
+      { slug: 'ai-interview-preparation', title: 'Vorbereitung auf das automatisierte KI-Interview', desc: 'Ablauf bei Mercor, micro1, Outlier und Mindrift.' },
+      { slug: 'avoid-ai-job-scams', title: 'Gefälschte KI-Jobangebote sicher erkennen', desc: 'Offizielle Domains (@mercor.com, @mercor.expert) prüfen und Gebührenfallen meiden.' },
+      { slug: 'ai-training-for-phds-and-students', title: 'KI-Training für Promovierende & Studierende', desc: 'MINT-, Rechts- und Geisteswissenschafts-Projekte für Akademiker.' },
+    ],
+  },
+  fr: {
+    hubHeading: 'Comparer 6 plateformes d’entraînement IA & Indice des tarifs',
+    hubLead: `Je vérifie les offres publiques, les paiements et l’éligibilité en Europe sur Mercor, Mindrift, Alignerr, Outlier, micro1 et Handshake AI (vérifié le ${CHECKED_ON}).`,
+    compareCta: 'Comparer les 6 plateformes',
+    payIndexCta: 'Indice des tarifs IA Edithsi (CSV)',
+    glossaryCta: 'Glossaire RLHF & Evals',
+    surveyCta: 'Enquête sur le travail IA',
+    guidesHeading: 'Guides pratiques pour la Finlande et l’Europe',
+    guidesSub: 'Réponses directes sur la fiscalité, les allocations chômage et les entretiens IA.',
+    guideLinks: [
+      { slug: 'remote-side-jobs-from-home', title: 'Où se situe l’entraînement IA parmi les emplois à distance ?', desc: 'Comparaison honnête entre missions IA freelance et emploi salarié.' },
+      { slug: 'taxes-toiminimi-yel-finland', title: 'Fiscalité, URSSAF, toiminimi et YEL (2026)', desc: 'Paiements en USD, micro-entreprise, Vero.fi et seuil YEL de 9 423 €.' },
+      { slug: 'unemployment-benefits-ai-work', title: 'Travail IA et allocations chômage (Kela, France Travail)', desc: 'Pourquoi déclarer toute activité indépendante avant de commencer.' },
+      { slug: 'ai-interview-preparation', title: 'Comment réussir l’entretien vidéo IA automatisé', desc: 'Fonctionnement des tests sur Mercor, micro1, Outlier et Mindrift.' },
+      { slug: 'avoid-ai-job-scams', title: 'Repérer les fausses offres d’emploi IA', desc: 'Vérifier les domaines @mercor.com et @mercor.expert.' },
+      { slug: 'ai-training-for-phds-and-students', title: 'Entraînement IA pour doctorants et étudiants', desc: 'Missions académiques et scientifiques ouvertes en Europe.' },
+    ],
+  },
+  es: {
+    hubHeading: 'Compara 6 plataformas de entrenamiento de IA e Índice salarial',
+    hubLead: `Verifico las ofertas públicas, métodos de pago y elegibilidad en Europa de Mercor, Mindrift, Alignerr, Outlier, micro1 y Handshake AI (comprobado el ${CHECKED_ON}).`,
+    compareCta: 'Comparar las 6 plataformas',
+    payIndexCta: 'Índice salarial de IA Edithsi (CSV)',
+    glossaryCta: 'Glosario RLHF y Evals',
+    surveyCta: 'Encuesta de trabajo en IA',
+    guidesHeading: 'Guías prácticas para Finlandia y Europa',
+    guidesSub: 'Respuestas directas sobre impuestos, desempleo, entrevistas de IA y seguridad.',
+    guideLinks: [
+      { slug: 'remote-side-jobs-from-home', title: '¿Dónde encaja el entrenamiento de IA entre los trabajos remotos?', desc: 'Comparativa honesta entre proyectos freelance de IA y empleo tradicional.' },
+      { slug: 'taxes-toiminimi-yel-finland', title: 'Impuestos, autónomos, toiminimi y YEL (2026)', desc: 'Cobros en USD, Agencia Tributaria, Vero.fi y umbral YEL de 9.423 €.' },
+      { slug: 'unemployment-benefits-ai-work', title: 'Trabajo en IA y prestación por desempleo (Kela, SEPE)', desc: 'Por qué debes comunicar el trabajo por cuenta propia antes de empezar.' },
+      { slug: 'ai-interview-preparation', title: 'Cómo funciona la entrevista automatizada de IA', desc: 'Preparación práctica para Mercor, micro1, Outlier y Mindrift.' },
+      { slug: 'avoid-ai-job-scams', title: 'Cómo detectar ofertas falsas de trabajo en IA', desc: 'Verifica los dominios oficiales @mercor.com y @mercor.expert.' },
+      { slug: 'ai-training-for-phds-and-students', title: 'Trabajo de entrenamiento de IA para doctorandos y estudiantes', desc: 'Proyectos académicos y técnicos disponibles en Europa.' },
+    ],
+  },
+};
+
+const hc = HUB_HOME_COPY[lang];
 ---
 
 <BaseLayout
@@ -57,8 +187,11 @@ const audienceChoices = AUDIENCE_SLUGS.map((slug) => {
         <a href={getPagePath(lang, 'roles')} class="btn btn--primary">
           {t.common.viewAllRoles}
         </a>
-        <a href={getPagePath(lang, 'how-it-works')} class="btn btn--secondary">
-          {t.common.readHowItWorks}
+        <a href={getPagePath(lang, 'compare')} class="btn btn--secondary">
+          {hc.compareCta}
+        </a>
+        <a href={getPagePath(lang, 'pay-index')} class="btn btn--secondary">
+          {hc.payIndexCta}
         </a>
       </div>
 
@@ -79,6 +212,43 @@ const audienceChoices = AUDIENCE_SLUGS.map((slug) => {
             ))
           }
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="platforms-hub-heading">
+    <div class="container">
+      <h2 id="platforms-hub-heading">{hc.hubHeading}</h2>
+      <p>{hc.hubLead}</p>
+      <div class="audience-choices-grid">
+        {
+          PLATFORM_SLUGS.map((slug) => {
+            const p = platforms.find((item) => item.slug === slug)!;
+            return (
+              <a href={getPlatformPath(lang, slug)} class="audience-choice">
+                <div class="audience-choice__top">
+                  <span class="audience-choice__title">{p.name}</span>
+                  <span class="audience-choice__badge">{p.last_checked}</span>
+                </div>
+                <span class="audience-choice__desc">{p.posted_pay_ranges.summary}</span>
+              </a>
+            );
+          })
+        }
+      </div>
+      <div class="btn-group" style="margin-top: var(--space-6);">
+        <a href={getPagePath(lang, 'compare')} class="btn btn--primary">
+          {hc.compareCta}
+        </a>
+        <a href={getPagePath(lang, 'pay-index')} class="btn btn--secondary">
+          {hc.payIndexCta}
+        </a>
+        <a href={getPagePath(lang, 'glossary')} class="btn btn--secondary">
+          {hc.glossaryCta}
+        </a>
+        <a href={getPagePath(lang, 'survey')} class="btn btn--secondary">
+          {hc.surveyCta}
+        </a>
       </div>
     </div>
   </section>
@@ -115,6 +285,25 @@ const audienceChoices = AUDIENCE_SLUGS.map((slug) => {
         <a href={getPagePath(lang, 'roles')} class="btn btn--secondary">
           {t.common.viewAllRoles}
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="guides-hub-heading">
+    <div class="container">
+      <h2 id="guides-hub-heading">{hc.guidesHeading}</h2>
+      <p>{hc.guidesSub}</p>
+      <div class="audience-choices-grid">
+        {
+          hc.guideLinks.map((g) => (
+            <a href={getGuidePath(lang, g.slug)} class="audience-choice">
+              <div class="audience-choice__top">
+                <span class="audience-choice__title">{g.title}</span>
+              </div>
+              <span class="audience-choice__desc">{g.desc}</span>
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>
