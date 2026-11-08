@@ -46,6 +46,16 @@
       "source": "/go/general-portal/:path*",
       "destination": "https://t.mercor.com/Pq3VD?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
       "permanent": false
+    },
+    {
+      "source": "/go/micro1/:path*",
+      "destination": "https://refer.micro1.ai/referral/jobs?referralCode=ad081063-9c31-41f4-8c1d-210fee47018c&utm_source=referral&utm_medium=share&utm_campaign=job_referral",
+      "permanent": false
+    },
+    {
+      "source": "/go/micro1",
+      "destination": "https://refer.micro1.ai/referral/jobs?referralCode=ad081063-9c31-41f4-8c1d-210fee47018c&utm_source=referral&utm_medium=share&utm_campaign=job_referral",
+      "permanent": false
     }
   ],
   "headers": [

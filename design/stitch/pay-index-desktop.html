@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed-variant":"#00429b","on-error":"#ffffff","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#8f0c2a","inverse-surface":"#253143","on-primary":"#ffffff","tertiary-fixed-dim":"#ffb692","surface-variant":"#d7e3fb","on-secondary-fixed":"#40000d","secondary-fixed":"#ffdada","on-secondary":"#ffffff","secondary-fixed-dim":"#ffb3b6","background":"#f9f9ff","primary-fixed-dim":"#b0c6ff","tertiary-fixed":"#ffdbcb","on-tertiary-container":"#ffc6ac","surface-dim":"#cfdaf2","inverse-primary":"#b0c6ff","outline":"#737784","surface-container":"#e7eeff","surface":"#f9f9ff","tertiary-container":"#993f00","on-background":"#101c2d","on-primary-fixed":"#001945","inverse-on-surface":"#ebf1ff","on-surface":"#101c2d","on-primary-container":"#c2d2ff","outline-variant":"#c3c6d5","on-secondary-container":"#68001a","surface-container-highest":"#d7e3fb","on-error-container":"#93000a","secondary-container":"#ff6475","tertiary":"#742e00","error":"#ba1a1a","error-container":"#ffdad6","primary":"#003f94","on-tertiary-fixed":"#341100","secondary":"#b02a3f","on-surface-variant":"#434652","surface-bright":"#f9f9ff","on-tertiary-fixed-variant":"#793000","primary-fixed":"#d9e2ff","surface-container-high":"#dee9ff","primary-container":"#1c56b8","on-tertiary":"#ffffff","surface-container-low":"#f0f3ff","surface-tint":"#225abc"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","margin-desktop":"3rem","space-xl":"2.5rem","space-md":"1rem","gutter-desktop":"2rem","gutter":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","section-gap-mobile":"4rem","margin":"1.5rem","section-gap-desktop":"8rem"},"fontFamily":{"section-index":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-base":["\"Source Serif 4\""],"display-hero":["Space Grotesk"],"headline-sm":["Space Grotesk"],"title-md":["Space Grotesk"],"label-numeric":["Space Grotesk"],"label-sm":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-sm":["\"Source Serif 4\""],"body-lg":["\"Source Serif 4\""]},"fontSize":{"section-index":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"display-hero-mobile":["38px",{"lineHeight":"41.8px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["33.2px",{"lineHeight":"40px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-base":["17px",{"lineHeight":"26px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"58.8px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["26.5px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"title-md":["21.25px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"500"}],"label-numeric":["17px",{"lineHeight":"22px","letterSpacing":"0.02em","fontWeight":"600"}],"label-sm":["13.6px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["41.5px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13.6px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["21.25px",{"lineHeight":"32px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-base text-body-base antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant"><div class="h-24 w-full flex flex-col justify-between"><div class="h-16 w-full max-w-[1200px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-baseline gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Edithsi</span><span class="font-label-sm text-label-sm text-outline border-l border-outline-variant pl-space-sm hidden sm:inline uppercase tracking-wider">Nordic AI Work Registry</span></div><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="open-roles" href="#">Open roles</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="for-you" href="#">For you</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="how-it-works" href="#">How it works</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="questions" href="#">Questions</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="compare" href="#">Compare</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="pay-index" href="#">Pay Index</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-space-sm py-space-xs border border-outline-variant"><span class="material-symbols-outlined text-[16px] text-outline">language</span><span class="tracking-wider">EN · FI · SV · DE · FR · ES</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full bg-surface-container-low border-t border-outline-variant"><div class="h-full max-w-[1200px] mx-auto px-gutter flex items-center"><div class="border-l-[3px] border-secondary pl-space-sm flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-secondary font-bold tracking-widest uppercase">AD</span><span class="font-label-sm text-label-sm text-outline">·</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Independent site, not an official Mercor page. Links are referral links; I may earn a bonus. Applying is always free.</span></div></div></div></div></header><main class="w-full pt-24 bg-surface min-h-[calc(100vh-24rem)]"><div class="flex flex-col w-full">
+<!-- Sub-header Breadcrumb / Ledger Registry Marker -->
+<div class="w-full bg-surface border-b border-outline-variant">
+<div class="max-w-[1200px] mx-auto px-gutter py-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-section-index text-section-index text-primary font-bold">LEDGER VOL. IV</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface tracking-wider">SECTION 05: COMPENSATION BENCHMARKS</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">SERIES 2026.11-FI</span>
+</div>
+<div class="hidden md:flex items-center gap-space-md text-outline">
+<span class="flex items-center gap-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          HELSINKI SYNC: 14:42 EET
+        </span>
+<span>AUDIT STATUS: DECLARED VALID</span>
+</div>
+</div>
+</div>
+<!-- Primary Asymmetric Container -->
+<div class="max-w-[1200px] mx-auto px-gutter w-full py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<!-- COLUMNS 1–3: The Index Rail (Fixed Technical Register Meta) -->
+<aside class="lg:col-span-3 flex flex-col gap-space-lg">
+<div class="sticky top-28 flex flex-col gap-space-md">
+<div class="border-t-2 border-primary pt-space-sm">
+<span class="font-section-index text-section-index tracking-widest text-outline uppercase block">FIELD REGISTRY</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight block">05 // PAY INDEX</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs block">AI Evaluation &amp; RLHF Labor Compensations</span>
+</div>
+<!-- Technical Dossier Specs Box -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md flex flex-col gap-space-sm">
+<div class="flex justify-between items-baseline border-b border-outline-variant pb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Cohort Base</span>
+<span class="font-label-numeric text-label-numeric text-on-surface" style="font-variant-numeric: tabular-nums;">142 Contractors</span>
+</div>
+<div class="flex justify-between items-baseline border-b border-outline-variant pb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Audited On</span>
+<span class="font-label-numeric text-label-numeric text-on-surface" style="font-variant-numeric: tabular-nums;">05 Nov 2026</span>
+</div>
+<div class="flex justify-between items-baseline border-b border-outline-variant pb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Jurisdiction</span>
+<span class="font-label-sm text-label-sm text-on-surface">EEA / Nordics</span>
+</div>
+<div class="flex justify-between items-baseline border-b border-outline-variant pb-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Target Model</span>
+<span class="font-label-sm text-label-sm text-on-surface">Frontier Reasoning</span>
+</div>
+<div class="flex justify-between items-baseline">
+<span class="font-label-sm text-label-sm text-outline uppercase">Classification</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">PUBLIC CITATION</span>
+</div>
+</div>
+<!-- Section Navigation Anchor Rail -->
+<nav class="flex flex-col text-on-surface-variant font-label-sm text-label-sm border-l border-outline-variant pl-space-sm space-y-space-xs">
+<a class="hover:text-primary transition-colors py-1 flex items-center justify-between" href="#summary-metrics">
+<span>05.1 Summary Aggregates</span>
+<span class="text-outline">§</span>
+</a>
+<a class="hover:text-primary transition-colors py-1 flex items-center justify-between font-semibold text-primary" href="#benchmark-table">
+<span>05.2 Comparative Ledger</span>
+<span class="text-outline">§</span>
+</a>
+<a class="hover:text-primary transition-colors py-1 flex items-center justify-between" href="#rate-distribution">
+<span>05.3 Dispersion &amp; Density</span>
+<span class="text-outline">§</span>
+</a>
+<a class="hover:text-primary transition-colors py-1 flex items-center justify-between" href="#methodology-notes">
+<span>05.4 Sampling Methodology</span>
+<span class="text-outline">§</span>
+</a>
+<a class="hover:text-primary transition-colors py-1 flex items-center justify-between" href="#statutory-withholding">
+<span>05.5 Nordic Tax &amp; YEL Notes</span>
+<span class="text-outline">§</span>
+</a>
+</nav>
+<!-- Archival Authenticity Seal -->
+<div class="p-space-sm bg-surface-container-low border border-outline-variant text-on-surface-variant font-body-sm text-body-sm space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Independent Ledger</span>
+</div>
+<p class="leading-relaxed">All figures derive from verified contractor payslips, bank statements, or official onboarding documentation within our verified alumni network.</p>
+</div>
+</div>
+</aside>
+<!-- COLUMNS 4–12: Primary Content Ledger -->
+<section class="lg:col-span-9 flex flex-col gap-space-xl">
+<!-- Header & Editorial Lead -->
+<div class="flex flex-col gap-space-md border-b border-outline-variant pb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<span class="font-section-index text-section-index text-primary uppercase tracking-widest bg-surface-container px-space-xs py-0.5 border border-outline-variant">
+              05 // COMPENSATION LEDGER · BENCHMARK SURVEY
+            </span>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span>
+<span>Updated: 5 Nov 2026 · Bi-weekly validation</span>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-semibold">
+            Edithsi AI Work Pay Index
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Quarterly benchmark of verified hourly compensation ranges, project billing rates, and effective disbursement structures across prominent frontier AI evaluation platforms for European &amp; Nordic domain specialists.
+          </p>
+<!-- Interactive Controls Toolbar -->
+<div class="pt-space-sm flex flex-wrap items-center justify-between gap-space-md bg-surface-container-low p-space-sm border border-outline-variant">
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Quarter Picker -->
+<div class="flex items-center bg-surface-container-lowest border border-outline-variant px-space-sm py-1.5 gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Period:</span>
+<select class="bg-transparent font-label-sm text-label-sm font-semibold text-on-surface outline-none cursor-pointer" id="quarterSelector">
+<option selected="" value="Q4-2026">Q4 2026 (Nov Verified)</option>
+<option value="Q3-2026">Q3 2026 (Aug Verified)</option>
+<option value="Q2-2026">Q2 2026 (May Verified)</option>
+<option value="Q1-2026">Q1 2026 (Feb Verified)</option>
+</select>
+</div>
+<!-- Currency Switcher Toggle -->
+<div class="inline-flex border border-outline-variant bg-surface-container-lowest p-0.5" role="group">
+<button class="px-space-sm py-1 font-label-sm text-label-sm font-bold bg-primary text-on-primary transition-colors" id="currencyUSD" type="button">
+                  USD ($)
+                </button>
+<button class="px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" id="currencyEUR" type="button">
+                  EUR (€) equiv.
+                </button>
+</div>
+</div>
+<!-- Download Button -->
+<button class="inline-flex items-center gap-space-xs bg-surface-container-lowest hover:bg-surface-container text-primary border border-outline-variant px-space-md py-1.5 font-label-sm text-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[18px]">sim_card_download</span>
+<span>Download Raw CSV (v2026.11)</span>
+</button>
+</div>
+</div>
+<!-- 05.1 Summary Aggregates / Key Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md" id="summary-metrics">
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-section-index text-section-index uppercase">Aggregate Median</span>
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</div>
+<div class="my-space-xs">
+<span class="rate-val font-headline-md text-headline-md text-primary font-bold" data-eur="60" data-usd="65" style="font-variant-numeric: tabular-nums;">$65</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ hour</span>
+</div>
+<div class="text-outline font-label-sm text-label-sm flex items-center gap-1 border-t border-outline-variant pt-space-xs">
+<span class="text-primary font-semibold">▲ +$5/h</span> vs Q3 2026
+            </div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-section-index text-section-index uppercase">Peak Observed Rate</span>
+<span class="material-symbols-outlined text-[18px]">star_rate</span>
+</div>
+<div class="my-space-xs">
+<span class="rate-val font-headline-md text-headline-md text-primary font-bold" data-eur="165" data-usd="180" style="font-variant-numeric: tabular-nums;">$180</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ hour</span>
+</div>
+<div class="text-outline font-label-sm text-label-sm border-t border-outline-variant pt-space-xs truncate">
+              Clinical MD / Complex Antitrust
+            </div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-section-index text-section-index uppercase">Weekly Cohort Yield</span>
+<span class="material-symbols-outlined text-[18px]">date_range</span>
+</div>
+<div class="my-space-xs">
+<span class="range-val font-headline-sm text-headline-sm text-on-surface font-semibold" data-eur-range="€1,100 – €3,300" data-usd-range="$1,200 – $3,600" style="font-variant-numeric: tabular-nums;">$1,200 – $3,600</span>
+</div>
+<div class="text-outline font-label-sm text-label-sm border-t border-outline-variant pt-space-xs">
+              Basis: 15–25h/week allocation
+            </div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-space-xs">
+<span class="font-section-index text-section-index uppercase">Disbursement Integrity</span>
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<div class="my-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-bold" style="font-variant-numeric: tabular-nums;">98.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">on-time</span>
+</div>
+<div class="text-outline font-label-sm text-label-sm border-t border-outline-variant pt-space-xs">
+              Zero defaults reported via Stripe/Deel
+            </div>
+</div>
+</div>
+<!-- 05.2 Core Benchmark Table Section -->
+<div class="flex flex-col gap-space-md" id="benchmark-table">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm border-b border-outline-variant pb-space-sm">
+<div>
+<span class="font-section-index text-section-index text-outline uppercase tracking-wider">INDEX TABLE 05.2</span>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Specialization Rate Ledger &amp; Platform Clearance</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Showing 7 benchmarked domains across 6 platforms</span>
+</div>
+<!-- Filter Pills Row -->
+<div class="flex flex-wrap gap-1.5 items-center pb-space-xs" id="disciplineFilters">
+<button class="filter-btn active bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-1 font-semibold rounded-none transition-colors" data-filter="all">All Disciplines</button>
+<button class="filter-btn bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm px-space-sm py-1 border border-outline-variant transition-colors" data-filter="legal">Law &amp; Regulation</button>
+<button class="filter-btn bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm px-space-sm py-1 border border-outline-variant transition-colors" data-filter="medical">Medicine &amp; Clinical</button>
+<button class="filter-btn bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm px-space-sm py-1 border border-outline-variant transition-colors" data-filter="engineering">Engineering &amp; Systems</button>
+<button class="filter-btn bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm px-space-sm py-1 border border-outline-variant transition-colors" data-filter="finance">Finance &amp; Modeling</button>
+<button class="filter-btn bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm px-space-sm py-1 border border-outline-variant transition-colors" data-filter="linguistics">Linguistics &amp; Nordic</button>
+<button class="filter-btn bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm px-space-sm py-1 border border-outline-variant transition-colors" data-filter="generalist">Generalist &amp; PhD</button>
+</div>
+<!-- Structured Benchmark Ledger (Flat Hairline Design) -->
+<div class="overflow-x-auto border border-outline-variant bg-surface-container-lowest">
+<table class="w-full text-left border-collapse" id="payTable">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant text-outline font-label-sm text-label-sm tracking-wider uppercase">
+<th class="py-space-sm px-space-md font-semibold">Specialization &amp; Role Title</th>
+<th class="py-space-sm px-space-md font-semibold">Primary Platform</th>
+<th class="py-space-sm px-space-md font-semibold text-right">Posted Range</th>
+<th class="py-space-sm px-space-md font-semibold text-right">Median Rate</th>
+<th class="py-space-sm px-space-md font-semibold">Payout Protocol</th>
+<th class="py-space-sm px-space-md font-semibold">Assessment Barrier</th>
+<th class="py-space-sm px-space-md font-semibold text-center">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant font-label-sm text-label-sm text-on-surface">
+<!-- ROW 1: Legal Expert -->
+<tr class="hover:bg-surface-container-low transition-colors table-row-item" data-category="legal">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface text-[15px]">Legal Reasoning Expert (JD / LL.M)</span>
+<span class="text-outline text-body-sm font-body-sm">Antitrust, statutory statutory compliance, EU GDPR synthesis</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">Mercor</span>
+<span class="text-primary text-[11px] font-bold uppercase bg-surface-container px-1">Verified</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-bold text-primary text-[15px]" style="font-variant-numeric: tabular-nums;">
+<span class="rate-range-cell" data-eur="€100 – €148/h" data-usd="$110 – $160/h">$110 – $160/h</span>
+</td>
+<td class="py-space-md px-space-md text-right font-semibold text-on-surface" style="font-variant-numeric: tabular-nums;">
+<span class="rate-single-cell" data-eur="€124/h" data-usd="$135/h">$135/h</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface-variant">Weekly Stripe ACH / Direct Wire</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-secondary rounded-none"></span>
+<span class="text-on-surface">High (Bar Exam / Juris Test)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-xs py-0.5 font-bold uppercase text-[11px] bg-surface-container text-primary border border-outline-variant">Open Cohort</span>
+</td>
+</tr>
+<!-- ROW 2: Medical Expert -->
+<tr class="hover:bg-surface-container-low transition-colors table-row-item" data-category="medical">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface text-[15px]">Medical Diagnostician (Licensed MD)</span>
+<span class="text-outline text-body-sm font-body-sm">Clinical pathology reasoning, pharmacology checks, ICD-11 validation</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">Alignerr / Mercor</span>
+<span class="text-outline text-[11px]">Mixed</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-bold text-primary text-[15px]" style="font-variant-numeric: tabular-nums;">
+<span class="rate-range-cell" data-eur="€110 – €165/h" data-usd="$120 – $180/h">$120 – $180/h</span>
+</td>
+<td class="py-space-md px-space-md text-right font-semibold text-on-surface" style="font-variant-numeric: tabular-nums;">
+<span class="rate-single-cell" data-eur="€138/h" data-usd="$150/h">$150/h</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface-variant">Bi-weekly Deel transfer</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-secondary rounded-none"></span>
+<span class="text-on-surface">Rigorous (License Verification)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-xs py-0.5 font-bold uppercase text-[11px] bg-surface-container text-primary border border-outline-variant">Active Intake</span>
+</td>
+</tr>
+<!-- ROW 3: Software Engineering -->
+<tr class="hover:bg-surface-container-low transition-colors table-row-item" data-category="engineering">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface text-[15px]">Senior Systems / Compiler Engineer</span>
+<span class="text-outline text-body-sm font-body-sm">C++, Rust, CUDA kernel optimization, concurrency verification</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">Mercor / micro1</span>
+<span class="text-primary text-[11px] font-bold uppercase bg-surface-container px-1">High Demand</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-bold text-primary text-[15px]" style="font-variant-numeric: tabular-nums;">
+<span class="rate-range-cell" data-eur="€69 – €129/h" data-usd="$75 – $140/h">$75 – $140/h</span>
+</td>
+<td class="py-space-md px-space-md text-right font-semibold text-on-surface" style="font-variant-numeric: tabular-nums;">
+<span class="rate-single-cell" data-eur="€87/h" data-usd="$95/h">$95/h</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface-variant">Weekly Stripe / Wise EUR</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-primary rounded-none"></span>
+<span class="text-on-surface">High (LeetCode Hard + AI interview)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-xs py-0.5 font-bold uppercase text-[11px] bg-surface-container text-primary border border-outline-variant">Open Cohort</span>
+</td>
+</tr>
+<!-- ROW 4: Quantitative Finance -->
+<tr class="hover:bg-surface-container-low transition-colors table-row-item" data-category="finance">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface text-[15px]">Financial Modeling &amp; Valuation (CFA)</span>
+<span class="text-outline text-body-sm font-body-sm">Discounted cash flows, stochastic options pricing, actuarial math</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">Outlier / Alignerr</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-bold text-primary text-[15px]" style="font-variant-numeric: tabular-nums;">
+<span class="rate-range-cell" data-eur="€55 – €101/h" data-usd="$60 – $110/h">$60 – $110/h</span>
+</td>
+<td class="py-space-md px-space-md text-right font-semibold text-on-surface" style="font-variant-numeric: tabular-nums;">
+<span class="rate-single-cell" data-eur="€74/h" data-usd="$80/h">$80/h</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface-variant">Weekly PayPal / Hyperwallet</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-primary rounded-none"></span>
+<span class="text-on-surface">Medium-High (Valuation Exam)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-xs py-0.5 font-bold uppercase text-[11px] bg-surface-container text-primary border border-outline-variant">Active Intake</span>
+</td>
+</tr>
+<!-- ROW 5: Linguistics & Localization -->
+<tr class="hover:bg-surface-container-low transition-colors table-row-item" data-category="linguistics">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface text-[15px]">Nordic Native Linguist (FI / SV / NO / DA)</span>
+<span class="text-outline text-body-sm font-body-sm">Morphology, nuanced dialect syntax, synthetic voice annotation</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">Mindrift / Handshake AI</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-bold text-primary text-[15px]" style="font-variant-numeric: tabular-nums;">
+<span class="rate-range-cell" data-eur="€37 – €69/h" data-usd="$40 – $75/h">$40 – $75/h</span>
+</td>
+<td class="py-space-md px-space-md text-right font-semibold text-on-surface" style="font-variant-numeric: tabular-nums;">
+<span class="rate-single-cell" data-eur="€48/h" data-usd="$52/h">$52/h</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface-variant">Monthly Direct Wire (SEPA)</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-outline rounded-none"></span>
+<span class="text-on-surface">Moderate (Grammar/Fluency Test)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-xs py-0.5 font-bold uppercase text-[11px] bg-surface-container text-on-surface-variant border border-outline-variant">Waitlist Pool</span>
+</td>
+</tr>
+<!-- ROW 6: Productivity & ERP -->
+<tr class="hover:bg-surface-container-low transition-colors table-row-item" data-category="generalist">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface text-[15px]">ERP &amp; Spreadsheet Automation Architect</span>
+<span class="text-outline text-body-sm font-body-sm">SAP scripts, nested VBA/DAX logic, complex relational audits</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">Mercor</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-bold text-primary text-[15px]" style="font-variant-numeric: tabular-nums;">
+<span class="rate-range-cell" data-eur="€50 – €87/h" data-usd="$55 – $95/h">$55 – $95/h</span>
+</td>
+<td class="py-space-md px-space-md text-right font-semibold text-on-surface" style="font-variant-numeric: tabular-nums;">
+<span class="rate-single-cell" data-eur="€64/h" data-usd="$70/h">$70/h</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface-variant">Weekly Stripe ACH</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-primary rounded-none"></span>
+<span class="text-on-surface">Technical Assessment (Excel/SQL)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-xs py-0.5 font-bold uppercase text-[11px] bg-surface-container text-primary border border-outline-variant">Active Intake</span>
+</td>
+</tr>
+<!-- ROW 7: Generalist Reasoning / Academic PhD -->
+<tr class="hover:bg-surface-container-low transition-colors table-row-item" data-category="generalist">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface text-[15px]">General Scientific Reasoning (STEM PhD)</span>
+<span class="text-outline text-body-sm font-body-sm">Theoretical physics, chemistry mechanisms, graduate proof review</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-semibold text-on-surface">Alignerr / Outlier</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right font-bold text-primary text-[15px]" style="font-variant-numeric: tabular-nums;">
+<span class="rate-range-cell" data-eur="€46 – €83/h" data-usd="$50 – $90/h">$50 – $90/h</span>
+</td>
+<td class="py-space-md px-space-md text-right font-semibold text-on-surface" style="font-variant-numeric: tabular-nums;">
+<span class="rate-single-cell" data-eur="€60/h" data-usd="$65/h">$65/h</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface-variant">Weekly Hyperwallet / PayPal</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-primary rounded-none"></span>
+<span class="text-on-surface">Medium (Degree Verification)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-block px-space-xs py-0.5 font-bold uppercase text-[11px] bg-surface-container text-primary border border-outline-variant">Open Cohort</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center text-outline font-label-sm text-label-sm pt-space-xs gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Rates listed reflect contractual base gross billable hourly rates. Project incentives and rush bonuses not included.</span>
+</div>
+<span class="font-section-index text-section-index uppercase">LEDGER KEY: Q4-BENCH-2026</span>
+</div>
+</div>
+<!-- 05.3 Visual Dispersion & Frequency Chart -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg flex flex-col gap-space-md" id="rate-distribution">
+<div class="flex flex-col sm:flex-row justify-between sm:items-center gap-space-xs border-b border-outline-variant pb-space-sm">
+<div>
+<span class="font-section-index text-section-index text-outline uppercase tracking-wider">VISUAL LEDGER 05.3</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Compensation Band Density (Nordic Contractor Sample)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">n = 142 Verified Hourly Contracts</span>
+</div>
+<!-- Inline Technical SVG Histogram -->
+<div class="w-full pt-space-sm">
+<svg class="w-full h-44 text-primary" fill="none" viewbox="0 0 800 160" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid lines -->
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.1" x1="40" x2="780" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.1" x1="40" x2="780" y1="60" y2="60"></line>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.1" x1="40" x2="780" y1="100" y2="100"></line>
+<line stroke="currentColor" stroke-opacity="0.25" x1="40" x2="780" y1="140" y2="140"></line>
+<!-- Frequency Bars with technical hairline styling -->
+<!-- $20-$40 band -->
+<rect fill="#1C56B8" fill-opacity="0.2" height="28" stroke="#1C56B8" stroke-width="1" width="60" x="70" y="112"></rect>
+<text class="text-[11px] font-sans fill-slate-600" font-family="Space Grotesk" text-anchor="middle" x="100" y="105">11 (8%)</text>
+<text class="text-[11px] font-sans fill-slate-500" font-family="Space Grotesk" text-anchor="middle" x="100" y="154">$20–40</text>
+<!-- $40-$60 band -->
+<rect fill="#1C56B8" fill-opacity="0.35" height="72" stroke="#1C56B8" stroke-width="1" width="60" x="180" y="68"></rect>
+<text class="text-[11px] font-sans fill-slate-600" font-family="Space Grotesk" text-anchor="middle" x="210" y="61">32 (23%)</text>
+<text class="text-[11px] font-sans fill-slate-500" font-family="Space Grotesk" text-anchor="middle" x="210" y="154">$40–60</text>
+<!-- $60-$80 band (Modal Peak) -->
+<rect fill="#1C56B8" fill-opacity="0.85" height="108" stroke="#1C56B8" stroke-width="1" width="60" x="290" y="32"></rect>
+<text class="text-[11px] font-sans font-bold fill-primary" font-family="Space Grotesk" text-anchor="middle" x="320" y="25">48 (34%)</text>
+<text class="text-[11px] font-sans fill-slate-500 font-bold" font-family="Space Grotesk" text-anchor="middle" x="320" y="154">$60–80</text>
+<!-- $80-$110 band -->
+<rect fill="#1C56B8" fill-opacity="0.45" height="64" stroke="#1C56B8" stroke-width="1" width="60" x="400" y="76"></rect>
+<text class="text-[11px] font-sans fill-slate-600" font-family="Space Grotesk" text-anchor="middle" x="430" y="69">27 (19%)</text>
+<text class="text-[11px] font-sans fill-slate-500" font-family="Space Grotesk" text-anchor="middle" x="430" y="154">$80–110</text>
+<!-- $110-$150 band -->
+<rect fill="#1C56B8" fill-opacity="0.3" height="36" stroke="#1C56B8" stroke-width="1" width="60" x="510" y="104"></rect>
+<text class="text-[11px] font-sans fill-slate-600" font-family="Space Grotesk" text-anchor="middle" x="540" y="97">16 (11%)</text>
+<text class="text-[11px] font-sans fill-slate-500" font-family="Space Grotesk" text-anchor="middle" x="540" y="154">$110–150</text>
+<!-- $150-$180+ band -->
+<rect fill="#B02A3F" fill-opacity="0.7" height="16" stroke="#B02A3F" stroke-width="1" width="60" x="620" y="124"></rect>
+<text class="text-[11px] font-sans font-bold fill-[#B02A3F]" font-family="Space Grotesk" text-anchor="middle" x="650" y="117">8 (5%)</text>
+<text class="text-[11px] font-sans fill-slate-500" font-family="Space Grotesk" text-anchor="middle" x="650" y="154">$150–180+</text>
+<!-- Median Annotation Marker -->
+<line stroke="#003F94" stroke-dasharray="2 2" stroke-width="1.5" x1="330" x2="330" y1="12" y2="140"></line>
+<circle cx="330" cy="12" fill="#003F94" r="3"></circle>
+<text class="text-[10px] font-sans fill-primary uppercase font-bold" font-family="Space Grotesk" x="338" y="16">Median: $65/h</text>
+</svg>
+</div>
+<div class="border-t border-outline-variant pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">Observation:</span> 76% of all verified Finnish and Nordic participants fall within the <span class="font-semibold text-primary">$40–$110/hour</span> bracket. Specialized compensation beyond $140/hour remains strictly constrained to verified medical licenses (MD) and active European bar registrations.
+          </div>
+</div>
+<!-- 05.4 Editorial Methodology & Sampling Integrity -->
+<div class="flex flex-col gap-space-md border-t border-outline-variant pt-space-xl" id="methodology-notes">
+<div class="flex items-center gap-space-xs">
+<span class="font-section-index text-section-index text-primary uppercase tracking-widest bg-surface-container px-space-xs py-0.5 border border-outline-variant">
+              05.4 // METHODOLOGICAL PROTOCOL
+            </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+            Methodology &amp; Sampling Integrity
+          </h2>
+<div class="space-y-space-md text-on-surface font-body-base text-body-base leading-relaxed max-w-prose">
+<p>
+              The Edithsi AI Work Pay Index is curated as an empirical audit rather than a self-reported impressionistic poll. Because AI evaluation work is governed by rigid Non-Disclosure Agreements (NDAs) that deter candid compensation discussions, wage disparity across different recruiting funnels has historically remained opaque.
+            </p>
+<p>
+              To construct this registry, data points are collected through three strictly gated channels:
+            </p>
+<ol class="list-decimal pl-space-lg space-y-space-xs text-on-surface-variant font-body-base">
+<li><strong class="text-on-surface">Redacted Compensation Contracts:</strong> Direct submission of initial engagement agreements, statement of work (SOW) documents, and formal platform offer sheets, audited by our research desk.</li>
+<li><strong class="text-on-surface">Disbursement Slips:</strong> Regular bi-weekly payment verification via Stripe Express, Deel, Wise, and Hyperwallet remittance summaries.</li>
+<li><strong class="text-on-surface">Institutional Sourcing Requisitions:</strong> Direct inspection of enterprise client rate tables requested by foundation model labs specifically targeting the Nordic-Baltic knowledge pool.</li>
+</ol>
+<p>
+              Rates fluctuate dynamically in response to foundation model training cycles. When frontier labs reach the terminal pre-release evaluation phase for high-stakes capability sets (e.g. doctoral biology, legal discovery synthesis, distributed systems architecture), emergency surge premiums of up to 40% are frequently introduced for 6–10 week sprint intervals before returning to baseline medians.
+            </p>
+</div>
+<!-- 05.5 Nordic Tax & YEL Notes -->
+<div class="bg-surface-container-low border-l-4 border-secondary border border-outline-variant p-space-md flex flex-col gap-space-sm mt-space-sm" id="statutory-withholding">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Statutory Tax &amp; Withholding Guidance (Finland / Nordics)</span>
+<span class="font-section-index text-section-index text-outline">VERO FI REF-91</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              All rates exhibited throughout this registry reflect gross contractor billables (US Dollar / Euro equivalents) prior to local value-added taxes, municipal income taxes, or national declarations. Platforms such as Mercor, micro1, Outlier, and Alignerr classify European contributors as independent contractor entities (<em class="italic">itsenäinen ammatinharjoittaja / toiminimi</em>).
+            </p>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 list-disc pl-space-md">
+<li><strong>Finland (Vero):</strong> Gross proceeds must be reported under business income or overseas work income. Contributors earning above the annual statutory threshold (€9,010.28 in 2024/2026) are legally obligated to maintain independent Entrepreneur Pension Insurance (<em class="italic">Yrittäjän eläkevakuutus / YEL</em>).</li>
+<li><strong>Sweden (Skatteverket):</strong> Income falls under <em class="italic">F-skatt</em> self-employment declarations.</li>
+<li><strong>Value Added Tax (VAT):</strong> Export of professional evaluation services to United States corporations typically qualifies as reverse-charge VAT outside EU territory, subject to formal tax account review.</li>
+</ul>
+</div>
+<!-- Data Archival References Ledger -->
+<div class="pt-space-md border-t border-outline-variant">
+<span class="font-section-index text-section-index text-outline uppercase tracking-wider block mb-space-sm">Data Sources &amp; Public Records Registry</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="border border-outline-variant p-space-sm bg-surface-container-lowest">
+<span class="font-bold text-on-surface block">ARC-2026-MERCOR-REV4</span>
+<span class="text-outline text-body-sm">48 verified candidate payouts across legal, computer science, and generalist tracks. Updated bi-weekly.</span>
+</div>
+<div class="border border-outline-variant p-space-sm bg-surface-container-lowest">
+<span class="font-bold text-on-surface block">ARC-2026-OUTLIER-SCALE-V2</span>
+<span class="text-outline text-body-sm">34 contractor audit slips, accounting for tier-based tier dropoffs and prompt evaluation incentives.</span>
+</div>
+<div class="border border-outline-variant p-space-sm bg-surface-container-lowest">
+<span class="font-bold text-on-surface block">ARC-2026-ALIGNERR-SPEC-09</span>
+<span class="text-outline text-body-sm">29 verified medical and mathematics domain screening completions across the Nordics.</span>
+</div>
+<div class="border border-outline-variant p-space-sm bg-surface-container-lowest">
+<span class="font-bold text-on-surface block">ARC-2026-MICRO1-ENG-03</span>
+<span class="text-outline text-body-sm">31 senior developer placement confirmations via automated video interview pipelines.</span>
+</div>
+</div>
+</div>
+<!-- Historical Export Callout -->
+<div class="p-space-lg bg-surface-container-lowest border border-outline-variant flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md mt-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Historical Time-Series Repository</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg">
+                Access the complete anonymized dataset containing 24 months of compensation trajectories, platform intake spikes, and country-level variances.
+              </p>
+</div>
+<button class="inline-flex items-center gap-space-xs bg-primary hover:bg-[#00347a] text-on-primary font-label-sm text-label-sm font-semibold px-space-lg py-2.5 rounded-none transition-colors shrink-0">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download full dataset (.CSV, 240 KB)</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Interactive JavaScript logic for Currency switch and Category filtering -->
+<script>
+    (function initPayIndex() {
+      // 1. Currency Switcher Handling
+      const btnUSD = document.getElementById('currencyUSD');
+      const btnEUR = document.getElementById('currencyEUR');
+      let currentCurrency = 'USD';
+
+      function updateCurrency(curr) {
+        currentCurrency = curr;
+        if (curr === 'USD') {
+          btnUSD.className = 'px-space-sm py-1 font-label-sm text-label-sm font-bold bg-primary text-on-primary transition-colors';
+          btnEUR.className = 'px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors';
+        } else {
+          btnEUR.className = 'px-space-sm py-1 font-label-sm text-label-sm font-bold bg-primary text-on-primary transition-colors';
+          btnUSD.className = 'px-space-sm py-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors';
+        }
+
+        // Update single metric cards
+        document.querySelectorAll('.rate-val').forEach(el => {
+          const val = curr === 'USD' ? '$' + el.getAttribute('data-usd') : '€' + el.getAttribute('data-eur');
+          el.textContent = val;
+        });
+
+        // Update range metric cards
+        document.querySelectorAll('.range-val').forEach(el => {
+          const val = curr === 'USD' ? el.getAttribute('data-usd-range') : el.getAttribute('data-eur-range');
+          el.textContent = val;
+        });
+
+        // Update table cells
+        document.querySelectorAll('.rate-range-cell').forEach(el => {
+          el.textContent = curr === 'USD' ? el.getAttribute('data-usd') : el.getAttribute('data-eur');
+        });
+
+        document.querySelectorAll('.rate-single-cell').forEach(el => {
+          el.textContent = curr === 'USD' ? el.getAttribute('data-usd') : el.getAttribute('data-eur');
+        });
+      }
+
+      if (btnUSD && btnEUR) {
+        btnUSD.addEventListener('click', () => updateCurrency('USD'));
+        btnEUR.addEventListener('click', () => updateCurrency('EUR'));
+      }
+
+      // 2. Discipline Filter Handling
+      const filterButtons = document.querySelectorAll('#disciplineFilters .filter-btn');
+      const tableRows = document.querySelectorAll('#payTable .table-row-item');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Toggle UI state
+          filterButtons.forEach(b => {
+            b.className = 'filter-btn bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm px-space-sm py-1 border border-outline-variant transition-colors';
+          });
+          btn.className = 'filter-btn active bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-1 font-semibold rounded-none transition-colors';
+
+          const target = btn.getAttribute('data-filter');
+          tableRows.forEach(row => {
+            const cat = row.getAttribute('data-category');
+            if (target === 'all' || cat === target) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 3. Quarter selector simulation
+      const quarterSelect = document.getElementById('quarterSelector');
+      if (quarterSelect) {
+        quarterSelect.addEventListener('change', (e) => {
+          console.info('Switched historical pay index register slice:', e.target.value);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant py-space-xl mt-section-gap-mobile lg:mt-section-gap-desktop"><div class="max-w-[1200px] mx-auto px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop border-b border-outline-variant pb-space-xl"><div class="flex flex-col gap-space-sm"><h4 class="font-section-index text-section-index uppercase text-outline tracking-wider">Who Runs This</h4><div class="font-body-sm text-body-sm text-on-surface space-y-space-xs"><p class="font-semibold">M. Virtanen</p><p class="text-on-surface-variant">Helsinki, Finland</p><p><a class="text-primary hover:underline" href="mailto:hello@edithsi.com">hello@edithsi.com</a></p></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-section-index text-section-index uppercase text-outline tracking-wider">Index Registry</h4><ul class="font-label-sm text-label-sm space-y-space-xs text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="open-roles" href="#">Open roles catalog</a></li><li><a class="hover:text-on-surface transition-colors" data-path="pay-index" href="#">Pay Index &amp; compensation</a></li><li><a class="hover:text-on-surface transition-colors" data-path="compare" href="#">Platform comparison ledger</a></li><li><a class="hover:text-on-surface transition-colors" data-path="how-it-works" href="#">Vetting protocol &amp; guides</a></li><li><a class="hover:text-on-surface transition-colors" data-path="questions" href="#">Frequently queried items</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-section-index text-section-index uppercase text-outline tracking-wider">Statutory Disclosures</h4><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Edithsi is independent and not affiliated with Mercor. All trademarks belong to respective holders. Field guides are maintained for factual analysis and labor market transparency.</p></div><div class="flex flex-col gap-space-sm"><h4 class="font-section-index text-section-index uppercase text-outline tracking-wider">Legal &amp; Privacy</h4><ul class="font-label-sm text-label-sm space-y-space-xs text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="privacy-notice" href="#">Privacy notice &amp; GDPR</a></li><li><a class="hover:text-on-surface transition-colors" data-path="editorial-standards" href="#">Editorial &amp; compensation policy</a></li><li><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of documentation use</a></li><li><a class="hover:text-on-surface transition-colors" data-path="cookie-settings" href="#">Cookie registry settings</a></li></ul></div></div><div class="pt-space-md flex flex-col sm:flex-row justify-between items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline">© 2024 Edithsi. Nordic AI Work Registry. Utilitarian Field Edition.</span><span class="font-section-index text-section-index text-outline">REG-FI-0091-HELSINKI</span></div></div></footer></body></html>

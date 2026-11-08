@@ -1,6 +1,8 @@
 export const SITE_URL = "https://edithsi.com";
 export const REFERRAL_CODE = "02e0c12a-d634-4738-9686-04f28f31f52b";
 export const GENERAL_REFERRAL_URL = "https://t.mercor.com/Pq3VD";
+export const MICRO1_REFERRAL_URL =
+  "https://refer.micro1.ai/referral/jobs?referralCode=ad081063-9c31-41f4-8c1d-210fee47018c&utm_source=referral&utm_medium=share&utm_campaign=job_referral";
 export const CHECKED_ON = "2026-11-05";
 
 export const OPERATOR = {
@@ -29,5 +31,12 @@ export function buildReferralUrl(listingUrl: string): string {
 }
 
 export function buildGoUrl(roleSlug: string, src: string): string {
+  if (roleSlug === 'micro1') {
+    return `/go/micro1/?src=${encodeURIComponent(src)}`;
+  }
   return `/go/${roleSlug}/?src=${encodeURIComponent(src)}&referralCode=${REFERRAL_CODE}`;
+}
+
+export function buildMicro1GoUrl(src: string): string {
+  return `/go/micro1/?src=${encodeURIComponent(src)}`;
 }

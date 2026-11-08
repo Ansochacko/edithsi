@@ -12,7 +12,10 @@ const t = getDictionary(lang);
 
 <div class="ad-stamp-bar" role="region" aria-label={t.adStamp}>
   <div class="container ad-stamp-bar__inner">
-    <span class="ad-stamp-badge">{t.adStamp}</span>
-    <p class="ad-stamp-note">{t.adStampNote}</p>
+    <div class="ad-stamp-box">
+      <span class="ad-stamp-badge">{t.adStamp}</span>
+      <span class="ad-stamp-divider" aria-hidden="true">·</span>
+      <p class="ad-stamp-note">{t.adStampNote}</p>
+    </div>
   </div>
 </div>

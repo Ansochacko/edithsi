@@ -4,7 +4,7 @@ import FaqList from '../FaqList.astro';
 import AuthorBox from '../AuthorBox.astro';
 import payIndex from '../../data/pay-index/2026-11.json';
 import rolesRaw from '../../data/roles.json';
-import { SITE_URL, CHECKED_ON, buildGoUrl } from '../../config';
+import { SITE_URL, CHECKED_ON, buildGoUrl, buildMicro1GoUrl } from '../../config';
 import { getPayIndexPageContent } from '../../data/hubPagesContent';
 import {
   getDictionary,
@@ -43,6 +43,7 @@ const UI_LABELS: Record<
     citationHeading: string;
     citationText: string;
     faqHeading: string;
+    micro1ApplyText: string;
   }
 > = {
   en: {
@@ -54,6 +55,7 @@ const UI_LABELS: Record<
     citationHeading: 'How to cite this dataset (CC BY 4.0)',
     citationText: `Journalists, researchers, and AI assistants may freely cite this dataset under Creative Commons Attribution 4.0 (CC BY 4.0). Recommended attribution: "Edithsi AI Work Pay Index (${payIndex.edition}), compiled from official public platform listings on ${payIndex.sample_date}, https://edithsi.com/pay-index/".`,
     faqHeading: 'Frequently asked questions about the Edithsi AI Work Pay Index',
+    micro1ApplyText: 'Browse micro1 jobs ↗',
   },
   fi: {
     lastUpdated: 'Otantapäivä ja tarkistettu',
@@ -64,6 +66,7 @@ const UI_LABELS: Record<
     citationHeading: 'Näin viittaat tähän aineistoon (CC BY 4.0)',
     citationText: `Toimittajat, tutkijat ja tekoälyavustajat voivat viitata aineistoon vapaasti Creative Commons CC BY 4.0 -lisenssillä: "Edithsi AI Work Pay Index (${payIndex.edition}), koottu alustojen julkisista hakuilmoituksista ${payIndex.sample_date}, https://edithsi.com/fi/pay-index/".`,
     faqHeading: 'Usein kysytyt kysymykset Edithsi-palkkioindeksistä',
+    micro1ApplyText: 'Selaa micro1-tehtäviä ↗',
   },
   sv: {
     lastUpdated: 'Urvalsdatum & senast kontrollerad',
@@ -74,6 +77,7 @@ const UI_LABELS: Record<
     citationHeading: 'Så citerar du detta dataset (CC BY 4.0)',
     citationText: `Journalister och forskare kan fritt citera detta dataset under CC BY 4.0: "Edithsi AI Work Pay Index (${payIndex.edition}), kontrollerat ${payIndex.sample_date}, https://edithsi.com/sv/pay-index/".`,
     faqHeading: 'Vanliga frågor om Edithsi AI Work Pay Index',
+    micro1ApplyText: 'Utforska micro1-jobb ↗',
   },
   de: {
     lastUpdated: 'Stichtag & zuletzt geprüft',
@@ -84,6 +88,7 @@ const UI_LABELS: Record<
     citationHeading: 'Zitierhinweis für Medien & Forschung (CC BY 4.0)',
     citationText: `Journalisten und Forschende können diesen Datensatz unter CC BY 4.0 frei zitieren: "Edithsi AI Work Pay Index (${payIndex.edition}), erhoben am ${payIndex.sample_date}, https://edithsi.com/de/pay-index/".`,
     faqHeading: 'Häufige Fragen zum Edithsi KI-Honorar-Index',
+    micro1ApplyText: 'micro1-Jobs ansehen ↗',
   },
   fr: {
     lastUpdated: 'Date d’échantillonnage et vérification',
@@ -94,6 +99,7 @@ const UI_LABELS: Record<
     citationHeading: 'Comment citer ce jeu de données (CC BY 4.0)',
     citationText: `Les journalistes et chercheurs peuvent citer librement ce jeu de données sous licence CC BY 4.0 : « Edithsi AI Work Pay Index (${payIndex.edition}), vérifié le ${payIndex.sample_date}, https://edithsi.com/fr/pay-index/ ».`,
     faqHeading: 'Questions fréquentes sur l’indice des tarifs IA Edithsi',
+    micro1ApplyText: 'Consulter les missions micro1 ↗',
   },
   es: {
     lastUpdated: 'Fecha de muestra y verificación',
@@ -104,6 +110,7 @@ const UI_LABELS: Record<
     citationHeading: 'Cómo citar este conjunto de datos (CC BY 4.0)',
     citationText: `Periodistas e investigadores pueden citar libremente este conjunto de datos bajo licencia CC BY 4.0: "Edithsi AI Work Pay Index (${payIndex.edition}), verificado el ${payIndex.sample_date}, https://edithsi.com/es/pay-index/".`,
     faqHeading: 'Preguntas frecuentes sobre el Índice salarial de IA Edithsi',
+    micro1ApplyText: 'Ver empleos en micro1 ↗',
   },
 };
 
@@ -169,13 +176,15 @@ const ui = UI_LABELS[lang];
           <tbody>
             {payIndex.entries.map((entry) => {
               const isMercor = entry.platform_slug === 'mercor';
+              const isMicro1 = entry.platform_slug === 'micro1';
               const mercorRole = isMercor
-                ? rolesRaw.find((r) => r.url === entry.source_url)
+                ? rolesRaw.find((r) => r.listingUrl === entry.source_url)
                 : undefined;
-              const applyHref =
-                isMercor && mercorRole
-                  ? buildGoUrl(mercorRole.id, 'pay-index')
-                  : entry.source_url;
+              const applyHref = isMercor
+                ? buildGoUrl(mercorRole?.id ?? 'general-portal', 'pay-index')
+                : isMicro1
+                ? buildMicro1GoUrl('pay-index')
+                : entry.source_url;
               return (
                 <tr>
                   <td>
@@ -208,7 +217,19 @@ const ui = UI_LABELS[lang];
                           rel="sponsored noopener noreferrer"
                           class="table-apply-link"
                         >
-                          {t.common.applyOnMercor} ↗
+                          {t.common.applyButton} ↗
+                        </a>
+                        <span class="referral-micro">{t.common.referralMicroLabel}</span>
+                      </div>
+                    ) : isMicro1 ? (
+                      <div class="table-action-cell">
+                        <a
+                          href={applyHref}
+                          target="_blank"
+                          rel="sponsored noopener noreferrer"
+                          class="table-apply-link"
+                        >
+                          {ui.micro1ApplyText}
                         </a>
                         <span class="referral-micro">{t.common.referralMicroLabel}</span>
                       </div>

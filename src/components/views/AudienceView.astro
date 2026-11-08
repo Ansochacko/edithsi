@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RoleCard, { type RoleEntry } from '../RoleCard.astro';
+import Micro1Callout from '../Micro1Callout.astro';
 import FaqList from '../FaqList.astro';
 import AuthorBox from '../AuthorBox.astro';
 import rolesRaw from '../../data/roles.json';
 import payIndex from '../../data/pay-index/2026-11.json';
-import { CHECKED_ON, buildGoUrl } from '../../config';
+import { CHECKED_ON, buildGoUrl, buildMicro1GoUrl } from '../../config';
 import { getAudiencePageContent } from '../../data/audiencePages';
 import {
   getDictionary,
@@ -69,6 +70,7 @@ const MULTI_PLATFORM_LABELS: Record<
     payIndexLink: string;
     taxGuideLink: string;
     interviewGuideLink: string;
+    micro1ApplyText: string;
   }
 > = {
   en: {
@@ -89,6 +91,7 @@ const MULTI_PLATFORM_LABELS: Record<
     payIndexLink: 'Edithsi AI Work Pay Index (Dataset & CSV)',
     taxGuideLink: 'Taxes, prepayment tax, toiminimi & YEL (2026)',
     interviewGuideLink: 'How automated AI interviews & assessments work',
+    micro1ApplyText: 'Browse micro1 jobs ↗',
   },
   fi: {
     lastUpdated: 'Päivitetty viimeksi',
@@ -108,6 +111,7 @@ const MULTI_PLATFORM_LABELS: Record<
     payIndexLink: 'Edithsi AI Work -palkkioindeksi (Dataset & CSV)',
     taxGuideLink: 'Verotus, ennakkovero, toiminimi ja YEL (2026)',
     interviewGuideLink: 'Miten automaattinen tekoälyhaastattelu toimii?',
+    micro1ApplyText: 'Selaa micro1-tehtäviä ↗',
   },
   sv: {
     lastUpdated: 'Senast uppdaterad',
@@ -127,6 +131,7 @@ const MULTI_PLATFORM_LABELS: Record<
     payIndexLink: 'Edithsi AI Work Ersättningsindex (CSV)',
     taxGuideLink: 'Skatt, F-skatt, firma & YEL (2026)',
     interviewGuideLink: 'Så fungerar automatiserade AI-intervjuer',
+    micro1ApplyText: 'Utforska micro1-jobb ↗',
   },
   de: {
     lastUpdated: 'Zuletzt aktualisiert',
@@ -146,6 +151,7 @@ const MULTI_PLATFORM_LABELS: Record<
     payIndexLink: 'Edithsi KI-Honorar-Index (Datensatz & CSV)',
     taxGuideLink: 'Steuern, Freiberufler, Toiminimi & YEL (2026)',
     interviewGuideLink: 'Vorbereitung auf das automatisierte KI-Videointerview',
+    micro1ApplyText: 'micro1-Jobs ansehen ↗',
   },
   fr: {
     lastUpdated: 'Dernière mise à jour',
@@ -165,6 +171,7 @@ const MULTI_PLATFORM_LABELS: Record<
     payIndexLink: 'Indice des tarifs IA Edithsi (CSV)',
     taxGuideLink: 'Fiscalité, URSSAF, toiminimi et YEL (2026)',
     interviewGuideLink: 'Comment fonctionne l’entretien vidéo IA ?',
+    micro1ApplyText: 'Consulter les missions micro1 ↗',
   },
   es: {
     lastUpdated: 'Última actualización',
@@ -184,6 +191,7 @@ const MULTI_PLATFORM_LABELS: Record<
     payIndexLink: 'Índice salarial de IA Edithsi (CSV)',
     taxGuideLink: 'Impuestos, autónomos, toiminimi y YEL (2026)',
     interviewGuideLink: 'Cómo funciona la entrevista automatizada de IA',
+    micro1ApplyText: 'Ver empleos en micro1 ↗',
   },
 };
 
@@ -247,6 +255,8 @@ const mp = MULTI_PLATFORM_LABELS[lang];
                 />
               ))}
             </div>
+
+            <Micro1Callout lang={lang} src={`for-${slug}`} />
           </div>
         </section>
 
@@ -268,12 +278,15 @@ const mp = MULTI_PLATFORM_LABELS[lang];
                 <tbody>
                   {crossPlatformEntries.map((entry) => {
                     const isMercor = entry.platform_slug === 'mercor';
+                    const isMicro1 = entry.platform_slug === 'micro1';
                     const mercorRole = isMercor
-                      ? roles.find((r) => r.url === entry.source_url)
+                      ? roles.find((r) => r.listingUrl === entry.source_url)
                       : undefined;
                     const applyHref =
                       isMercor && mercorRole
                         ? buildGoUrl(mercorRole.id, `for-${slug}-table`)
+                        : isMicro1
+                        ? buildMicro1GoUrl(`for-${slug}-table`)
                         : entry.source_url;
                     return (
                       <tr>
@@ -307,7 +320,19 @@ const mp = MULTI_PLATFORM_LABELS[lang];
                                 rel="sponsored noopener noreferrer"
                                 class="table-apply-link"
                               >
-                                {t.common.applyOnMercor} ↗
+                                {t.common.applyButton} ↗
+                              </a>
+                              <span class="referral-micro">{t.common.referralMicroLabel}</span>
+                            </div>
+                          ) : isMicro1 ? (
+                            <div class="table-action-cell">
+                              <a
+                                href={applyHref}
+                                target="_blank"
+                                rel="sponsored noopener noreferrer"
+                                class="table-apply-link"
+                              >
+                                {mp.micro1ApplyText}
                               </a>
                               <span class="referral-micro">{t.common.referralMicroLabel}</span>
                             </div>

@@ -263,8 +263,8 @@
         "body": "This website is hosted by Vercel Inc. When you visit a page or follow a /go/ redirect link, the host Vercel Inc. keeps short-term server logs (IP address, request time, and requested path) strictly for security and service reliability."
       },
       {
-        "heading": "4. External links to Mercor (separate data controller)",
-        "body": "When you click an application or referral link to Mercor, you leave this website. Mercor is a separate data controller with its own privacy policy and terms. Any personal data, résumé, or interview responses you submit on Mercor are shared directly with Mercor."
+        "heading": "4. External links to Mercor and micro1 (separate data controllers)",
+        "body": "When you click an application or referral link to Mercor or micro1, you leave this website. Mercor and micro1 are separate data controllers with their own privacy policies and terms. Any personal data, résumé, or interview responses you submit on their platforms are shared directly with them."
       },
       {
         "heading": "5. Contact",
@@ -285,12 +285,12 @@
     "businessIdLabel": "Business ID (Y-tunnus)",
     "sections": [
       {
-        "heading": "Independent website — not affiliated with Mercor",
-        "body": "Edithsi is an independent website run by one individual in Finland. I am not affiliated with, endorsed by, or sponsored by Mercor. Mercor is a trademark of its owner."
+        "heading": "Independent website — not affiliated with Mercor or micro1",
+        "body": "Edithsi is an independent website run by one individual in Finland. I am not affiliated with, endorsed by, or sponsored by Mercor or micro1. All trademarks belong to their owners."
       },
       {
         "heading": "Advertising and referral link disclosure",
-        "body": "Pages on this website contain referral links to Mercor and constitute commercial advertising. If you follow a referral link from this site and are hired onto a Mercor project, I may earn a referral bonus at no cost to you."
+        "body": "Pages on this website contain referral links to Mercor and micro1 and constitute commercial advertising. If you follow a referral link from this site and are hired or contract on a project, I may earn a referral bonus at no cost to you."
       },
       {
         "heading": "Accuracy of role and pay summaries",
@@ -299,7 +299,7 @@
     ]
   },
   "footer": {
-    "trademarkDisclaimer": "Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.",
+    "trademarkDisclaimer": "Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor or micro1. All trademarks belong to their owners.",
     "operatorLine": "Operated by {name} · {city} · {email}",
     "businessIdLine": "Business ID: {businessId}",
     "audiencesHeading": "For you (by field)",

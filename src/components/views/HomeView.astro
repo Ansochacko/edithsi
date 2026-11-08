@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import RoleCard, { type RoleEntry } from '../RoleCard.astro';
 import AuthorBox from '../AuthorBox.astro';
 import rolesRaw from '../../data/roles.json';
 import platforms from '../../data/platforms.json';
@@ -15,7 +14,9 @@ import {
   getGuidePath,
   interpolate,
   type Lang,
+  type AudienceSlug,
 } from '../../i18n';
+import type { RoleEntry } from '../RoleCard.astro';
 
 interface Props {
   lang: Lang;
@@ -25,10 +26,19 @@ const { lang } = Astro.props;
 const t = getDictionary(lang);
 const roles = rolesRaw as RoleEntry[];
 const featuredRoles = [...roles]
-  .sort((a, b) => b.maxPay - a.maxPay || b.minPay - a.minPay)
-  .slice(0, 4);
+  .sort((a, b) => b.maxPay - a.maxPay || b.minPay - a.minPay);
 
 const generalReferralHref = buildGoUrl('general-portal', 'home');
+
+const MICRO1_PREVIEW_LABELS: Record<Lang, string> = {
+  en: 'Also hiring experts: micro1 →',
+  fi: 'Myös asiantuntijoita hakeva alusta: micro1 →',
+  sv: 'Anlitar även experter: micro1 →',
+  de: 'Sucht ebenfalls Experten: micro1 →',
+  fr: 'Recrute également des experts : micro1 →',
+  es: 'También contrata especialistas: micro1 →',
+};
+const micro1PreviewText = MICRO1_PREVIEW_LABELS[lang] ?? MICRO1_PREVIEW_LABELS.en;
 
 const audienceChoices = AUDIENCE_SLUGS.map((slug) => {
   const matchingCount = roles.filter((r) => r.audiences.includes(slug)).length;
@@ -39,7 +49,9 @@ const audienceChoices = AUDIENCE_SLUGS.map((slug) => {
   return {
     slug,
     shortChoice: t.audiences[slug].shortChoice,
+    label: t.audiences[slug].label,
     description: t.audiences[slug].description,
+    count: matchingCount,
     countLabel,
     href: getAudiencePath(lang, slug),
   };
@@ -170,6 +182,60 @@ const HUB_HOME_COPY: Record<
 };
 
 const hc = HUB_HOME_COPY[lang];
+
+const STAGES_BY_LANG: Record<
+  Lang,
+  Array<{ stage: string; time: string; title: string; desc: string }>
+> = {
+  en: [
+    { stage: 'STAGE 01', time: '5–10 MIN', title: 'Apply with CV', desc: 'Verify your academic degrees, board certifications, and work background through standard document upload.' },
+    { stage: 'STAGE 02', time: '~20 MIN', title: 'AI Interview', desc: 'Complete a brief asynchronous video dialogue and domain-specific prompt evaluation to assess factual depth.' },
+    { stage: 'STAGE 03', time: '48–72H', title: 'Get Verified', desc: 'Credentials vetted by audit teams. Your profile enters the designated qualified talent pool index.' },
+    { stage: 'STAGE 04', time: 'DISPATCH', title: 'Receive Invites', desc: 'Matched directly to frontier AI foundation model training tasks as enterprise client batches open (not guaranteed).' },
+  ],
+  fi: [
+    { stage: 'STAGE 01', time: '5–10 MIN', title: 'Hae CV:llä', desc: 'Valitse osaamistasi vastaava hakuilmoitus ja lähetä perustiedot sekä ansioluettelosi ilmaiseksi.' },
+    { stage: 'STAGE 02', time: '~20 MIN', title: 'Tekoälyhaastattelu', desc: 'Suorita lyhyt automaattinen videohaastattelu ja alakohtainen arviointitehtävä.' },
+    { stage: 'STAGE 03', time: '48–72 H', title: 'Vahvistus', desc: 'Asiantuntijatiimi tarkistaa profiilisi ja liittää sinut hyväksyttyyn osaajapooliin.' },
+    { stage: 'STAGE 04', time: 'DISPATCH', title: 'Projektikutsut', desc: 'Saat toimeksiantokutsuja suoraan tekoälykehittäjien projektieriin kysynnän mukaan (ei taattu).' },
+  ],
+  sv: [
+    { stage: 'STAGE 01', time: '5–10 MIN', title: 'Ansök med CV', desc: 'Välj det fält som matchar din bakgrund och ladda upp dina uppgifter helt kostnadsfritt.' },
+    { stage: 'STAGE 02', time: '~20 MIN', title: 'AI-intervju', desc: 'Genomför en kort asynkron videointervju och domänspecifik utvärdering.' },
+    { stage: 'STAGE 03', time: '48–72 H', title: 'Verifiering', desc: 'Din profil granskas och läggs till i det kvalificerade expertregistret.' },
+    { stage: 'STAGE 04', time: 'DISPATCH', title: 'Projektinbjudningar', desc: 'Få uppdragserbjudanden när nya projektomgångar öppnas (ej garanterat).' },
+  ],
+  de: [
+    { stage: 'STAGE 01', time: '5–10 MIN', title: 'Mit Lebenslauf bewerben', desc: 'Wählen Sie das passende Fachgebiet und laden Sie Ihre Unterlagen kostenfrei hoch.' },
+    { stage: 'STAGE 02', time: '~20 MIN', title: 'KI-Interview', desc: 'Kurzes asynchrones Videointerview und fachspezifische Testaufgaben zur Genauigkeit.' },
+    { stage: 'STAGE 03', time: '48–72 STD.', title: 'Überprüfung', desc: 'Nach Prüfung der Qualifikationen wird Ihr Profil in den Talent-Pool aufgenommen.' },
+    { stage: 'STAGE 04', time: 'DISPATCH', title: 'Projekteinladungen', desc: 'Direkte Projektanfragen, sobald passende Kundenchargen starten (keine Garantie).' },
+  ],
+  fr: [
+    { stage: 'STAGE 01', time: '5–10 MIN', title: 'Postuler avec CV', desc: 'Choisissez votre domaine d’expertise et soumettez votre dossier gratuitement.' },
+    { stage: 'STAGE 02', time: '~20 MIN', title: 'Entretien IA', desc: 'Court entretien vidéo asynchrone et évaluation pratique de votre rigueur factuelle.' },
+    { stage: 'STAGE 03', time: '48–72 H', title: 'Validation', desc: 'Votre profil est vérifié puis intégré au vivier d’experts qualifiés.' },
+    { stage: 'STAGE 04', time: 'DISPATCH', title: 'Invitations projets', desc: 'Propositions de missions directes selon l’ouverture des lots de travail (non garanti).' },
+  ],
+  es: [
+    { stage: 'STAGE 01', time: '5–10 MIN', title: 'Postular con CV', desc: 'Selecciona tu área de especialización y envía tu perfil de forma totalmente gratuita.' },
+    { stage: 'STAGE 02', time: '~20 MIN', title: 'Entrevista de IA', desc: 'Breve entrevista en vídeo asíncrona y evaluación técnica de precisión conceptual.' },
+    { stage: 'STAGE 03', time: '48–72 H', title: 'Verificación', desc: 'Validación de credenciales e incorporación al registro de especialistas cualificados.' },
+    { stage: 'STAGE 04', time: 'DISPATCH', title: 'Invitaciones a proyectos', desc: 'Notificaciones de asignación directa cuando se abren lotes de trabajo (no garantizado).' },
+  ],
+};
+
+const STEPS = STAGES_BY_LANG[lang] ?? STAGES_BY_LANG.en;
+
+const getLocalizedRole = (id: string, role: RoleEntry) => {
+  const rolesDict = t.rolesData as Record<string, { title: string; pay: string; whoItSuits: string }> | undefined;
+  const match = rolesDict?.[id];
+  return {
+    title: match?.title || role.title,
+    pay: match?.pay || role.pay,
+    whoItSuits: match?.whoItSuits || role.whoItSuits,
+  };
+};
 ---
 
 <BaseLayout
@@ -178,154 +244,350 @@ const hc = HUB_HOME_COPY[lang];
   title={t.home.metaTitle}
   description={t.home.metaDescription}
 >
-  <section class="section">
-    <div class="container">
-      <span class="eyebrow">{t.home.eyebrow}</span>
-      <h1>{t.home.heroTitle}</h1>
-      <p class="lead">{t.home.heroLead}</p>
-      <div class="btn-group">
-        <a href={getPagePath(lang, 'roles')} class="btn btn--primary">
-          {t.common.viewAllRoles}
-        </a>
-        <a href={getPagePath(lang, 'compare')} class="btn btn--secondary">
-          {hc.compareCta}
-        </a>
-        <a href={getPagePath(lang, 'pay-index')} class="btn btn--secondary">
-          {hc.payIndexCta}
-        </a>
-      </div>
+  <div class="stitch-canvas">
+    <!-- 01 // FIELD REGISTRY (HERO) -->
+    <section class="stitch-section" aria-labelledby="hero-title">
+      <div class="container stitch-grid">
+        <!-- Rail Prefix (Col 1-3) -->
+        <aside class="stitch-rail">
+          <span class="section-index">01 // FIELD REGISTRY</span>
+          <span class="section-meta">ISSUE 2026.11 · HELSINKI</span>
+          <div class="archive-spec-box hidden lg:block">
+            ARCHIVE REF: FI-MERC-POOL<br />
+            STATUS: VERIFIED OPEN<br />
+            DISPATCH: NORTH EUROPE
+          </div>
+        </aside>
 
-      <div class="audience-selector" aria-labelledby="i-work-in-heading">
-        <h2 id="i-work-in-heading" class="audience-selector__label">
-          {t.home.iWorkInLabel}
-        </h2>
-        <div class="audience-choices-grid">
-          {
-            audienceChoices.map((item) => (
-              <a href={item.href} class="audience-choice">
-                <div class="audience-choice__top">
-                  <span class="audience-choice__title">{item.shortChoice}</span>
-                  <span class="audience-choice__badge">{item.countLabel}</span>
-                </div>
-                <span class="audience-choice__desc">{item.description}</span>
-              </a>
-            ))
-          }
+        <!-- Hero Main (Col 4-8) -->
+        <div class="stitch-hero-content">
+          <div class="hero-header-stack">
+            <span class="eyebrow">{t.home.eyebrow}</span>
+            <h1 id="hero-title" class="hero-display-h1">
+              {t.home.heroTitle}
+            </h1>
+          </div>
+          <p class="lead">
+            {t.home.heroLead}
+          </p>
+          <div class="btn-group">
+            <a href="#talent-pools" class="btn btn--primary">
+              {t.common.viewAllRoles}
+            </a>
+            <a href="#faq-section" class="btn btn--secondary">
+              {t.home.faqCta ?? 'Read the honest FAQ →'}
+            </a>
+          </div>
+          <div class="status-indicator-bar">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="status-text">{t.home.statusNote ?? 'Nordic independent contractor standard · Updated bi-weekly'}</span>
+          </div>
+        </div>
+
+        <!-- Hero Data Panel (Col 9-12) -->
+        <div class="stitch-hero-panel">
+          <div class="hero-data-panel">
+            <div class="hero-data-panel__header">
+              <span>INDEX LEDGER SPEC</span>
+              <span class="text-accent-secondary">Direct Intake</span>
+            </div>
+            <div class="hero-data-panel__stat">
+              <span class="hero-data-panel__number">$35–180<span class="hero-data-panel__unit">/h</span></span>
+              <span class="hero-data-panel__label">posted compensation ranges</span>
+            </div>
+            <div class="hero-data-panel__stat hero-data-panel__stat--bordered">
+              <span class="hero-data-panel__number">~20 min</span>
+              <span class="hero-data-panel__label">asynchronous video interview</span>
+            </div>
+            <div class="hero-data-panel__stat hero-data-panel__stat--bordered">
+              <div class="hero-data-panel__free-row">
+                <span class="hero-data-panel__number">€0</span>
+                <span class="hero-data-panel__sub">(zero cost)</span>
+              </div>
+              <span class="hero-data-panel__label">to apply (always free)</span>
+            </div>
+            <div class="hero-data-panel__footer">
+              <span>Checked {CHECKED_ON}</span>
+              <span class="font-mono">NOT GUARANTEED</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" aria-labelledby="platforms-hub-heading">
-    <div class="container">
-      <h2 id="platforms-hub-heading">{hc.hubHeading}</h2>
-      <p>{hc.hubLead}</p>
-      <div class="audience-choices-grid">
-        {
-          PLATFORM_SLUGS.map((slug) => {
-            const p = platforms.find((item) => item.slug === slug)!;
-            return (
-              <a href={getPlatformPath(lang, slug)} class="audience-choice">
-                <div class="audience-choice__top">
-                  <span class="audience-choice__title">{p.name}</span>
-                  <span class="audience-choice__badge">{p.last_checked}</span>
-                </div>
-                <span class="audience-choice__desc">{p.posted_pay_ranges.summary}</span>
-              </a>
-            );
-          })
-        }
-      </div>
-      <div class="btn-group mt-space-6">
-        <a href={getPagePath(lang, 'compare')} class="btn btn--primary">
-          {hc.compareCta}
-        </a>
-        <a href={getPagePath(lang, 'pay-index')} class="btn btn--secondary">
-          {hc.payIndexCta}
-        </a>
-        <a href={getPagePath(lang, 'glossary')} class="btn btn--secondary">
-          {hc.glossaryCta}
-        </a>
-        <a href={getPagePath(lang, 'survey')} class="btn btn--secondary">
-          {hc.surveyCta}
-        </a>
-      </div>
-    </div>
-  </section>
+    <!-- 02 // DISCIPLINE FILTER -->
+    <section class="stitch-section" aria-labelledby="discipline-heading">
+      <div class="container stitch-grid">
+        <aside class="stitch-rail">
+          <span class="section-index">02 // DISCIPLINE FILTER</span>
+          <span class="section-meta">FILTER ACTIVE POOLS</span>
+          <p class="rail-note">Select your primary qualification credential to verify open cohort capacity.</p>
+        </aside>
 
-  <section class="section" aria-labelledby="reality-heading">
-    <div class="container">
-      <h2 id="reality-heading">{t.home.realityHeading}</h2>
-      <p>{t.home.realityIntro}</p>
-      <div class="facts-grid">
-        {
-          t.home.realityPoints.map((pt) => (
-            <article class="fact-card">
-              <h3 class="fact-card__title">{pt.title}</h3>
-              <p class="fact-card__body">{pt.body}</p>
-            </article>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+        <div class="stitch-main">
+          <div class="section-heading-block">
+            <h2 id="discipline-heading" class="section-heading-h2">
+              {t.home.iWorkInLabel}
+            </h2>
+            <p class="section-lead-p">All roles require documented degree verification or professional standing.</p>
+          </div>
 
-  <section class="section" aria-labelledby="featured-roles-heading">
-    <div class="container">
-      <h2 id="featured-roles-heading">{t.home.featuredHeading}</h2>
-      <p>{t.home.featuredSub}</p>
-      <div class="roles-grid">
-        {
-          featuredRoles.map((role) => (
-            <RoleCard role={role} lang={lang} src="home" headingLevel="h3" />
-          ))
-        }
+          <div class="discipline-chips-grid">
+            {
+              audienceChoices.map((item) => (
+                <a href={item.href} class="discipline-chip">
+                  <span class="discipline-chip__title">{item.shortChoice}</span>
+                  <span class="discipline-chip__count">({item.count} {item.count === 1 ? 'pool' : 'pools'})</span>
+                </a>
+              ))
+            }
+          </div>
+        </div>
       </div>
-      <div class="btn-group mt-space-8">
-        <a href={getPagePath(lang, 'roles')} class="btn btn--secondary">
-          {t.common.viewAllRoles}
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" aria-labelledby="guides-hub-heading">
-    <div class="container">
-      <h2 id="guides-hub-heading">{hc.guidesHeading}</h2>
-      <p>{hc.guidesSub}</p>
-      <div class="audience-choices-grid">
-        {
-          hc.guideLinks.map((g) => (
-            <a href={getGuidePath(lang, g.slug)} class="audience-choice">
-              <div class="audience-choice__top">
-                <span class="audience-choice__title">{g.title}</span>
-              </div>
-              <span class="audience-choice__desc">{g.desc}</span>
+    <!-- 03 // TALENT POOLS LEDGER -->
+    <section class="stitch-section" id="talent-pools" aria-labelledby="talent-pools-heading">
+      <div class="container stitch-grid">
+        <aside class="stitch-rail">
+          <span class="section-index">03 // TALENT POOLS</span>
+          <span class="section-meta">ACTIVE POOLS</span>
+          <p class="rail-note">
+            Standing contractor pools on Mercor. Continuous evaluation cycles with direct client dispatch.
+          </p>
+          <div class="archive-spec-box hidden lg:block">
+            STATUS CODE: RECV-BATCH-26<br />
+            CONTRACT: 1099 / B2B CORRESPONDING
+          </div>
+        </aside>
+
+        <div class="stitch-main">
+          <div class="section-heading-block section-heading-block--split">
+            <h2 id="talent-pools-heading" class="section-heading-h2">
+              {t.home.featuredHeading}
+            </h2>
+            <span class="section-caption-label">Hourly compensation quoted in USD</span>
+          </div>
+
+          <!-- Ruled Index List Table -->
+          <div class="roles-ledger-table">
+            <div class="roles-ledger-table__header">
+              <div>Field &amp; Pool Designation</div>
+              <div>Role Designation</div>
+              <div>Rate (USD)</div>
+              <div>Credential Profile</div>
+              <div class="text-right">Intake</div>
+            </div>
+
+            {
+              featuredRoles.slice(0, 5).map((role) => {
+                const audLabel = t.audiences[role.audiences[0] as AudienceSlug]?.shortChoice || 'Domain';
+                const applyUrl = buildGoUrl(role.id, 'home-ledger');
+                const loc = getLocalizedRole(role.id, role);
+                return (
+                  <div class="roles-ledger-row">
+                    <div class="roles-ledger-row__field-col">
+                      <span class="roles-ledger-row__field">{audLabel}</span>
+                      <span class="roles-ledger-row__batch">Batch ID: {role.id.slice(0, 8).toUpperCase()}</span>
+                    </div>
+                    <div class="roles-ledger-row__role-col">
+                      <span class="roles-ledger-row__role">{loc.title}</span>
+                      <span class="roles-ledger-row__sub">{audLabel} Spec</span>
+                    </div>
+                    <div class="roles-ledger-row__pay-col">
+                      <span class="roles-ledger-row__pay">${role.minPay}–${role.maxPay}<span class="roles-ledger-row__unit">/h</span></span>
+                      <span class="roles-ledger-row__pay-label">Hourly rate</span>
+                    </div>
+                    <div class="roles-ledger-row__desc-col">
+                      {loc.whoItSuits}
+                    </div>
+                    <div class="roles-ledger-row__apply-col">
+                      <a
+                        href={applyUrl}
+                        target="_blank"
+                        rel="sponsored noopener noreferrer"
+                        class="roles-ledger-row__apply-btn"
+                      >
+                        Apply ↗
+                      </a>
+                      <span class="referral-ad-tag">referral · ad</span>
+                    </div>
+                  </div>
+                );
+              })
+            }
+          </div>
+
+          <div class="table-footer-row">
+            <a href={getPagePath(lang, 'roles')} class="footer-action-link">
+              <span>{t.common.viewAllRoles} ({roles.length} open talent pools) →</span>
             </a>
-          ))
-        }
+            <a href={getPlatformPath(lang, 'micro1')} class="footer-action-link footer-action-link--alt">
+              <span>{micro1PreviewText}</span>
+            </a>
+            <span class="table-footer-spec">ALL POOLS RUN ON OFFICIAL PLATFORM SERVERS</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section--compact" aria-labelledby="general-cta-heading">
-    <div class="container">
-      <h2 id="general-cta-heading">{t.home.generalCtaHeading}</h2>
-      <p>{t.home.generalCtaBody}</p>
-      <div class="role-card__apply-wrap">
-        <a
-          href={generalReferralHref}
-          target="_blank"
-          rel="sponsored noopener noreferrer"
-          class="btn btn--primary"
-        >
-          <span>{t.common.generalApplyButton}</span>
-          <span class="sr-only"> {t.common.externalLinkSr}</span>
-        </a>
-        <span class="referral-micro">{t.common.referralMicroLabel}</span>
+    <!-- 04 // INTAKE SEQUENCE -->
+    <section class="stitch-section" aria-labelledby="intake-heading">
+      <div class="container stitch-grid">
+        <aside class="stitch-rail">
+          <span class="section-index">04 // INTAKE SEQUENCE</span>
+          <span class="section-meta">VERIFICATION PROCESS</span>
+          <p class="rail-note">
+            Standardized intake sequence for Northern European contractor onboarding. Zero upfront commitments required.
+          </p>
+        </aside>
+
+        <div class="stitch-main">
+          <div class="section-heading-block">
+            <h2 id="intake-heading" class="section-heading-h2">
+              {t.howPage.title}
+            </h2>
+            <p class="section-lead-p">Four linear milestones from registration to paid work batches.</p>
+          </div>
+
+          <div class="intake-stages">
+            {
+              STEPS.map((s) => (
+                <div class="intake-stage-card">
+                  <div class="intake-stage-card__header">
+                    <span class="intake-stage-card__tag">{s.stage}</span>
+                    <span class="intake-stage-card__time">{s.time}</span>
+                  </div>
+                  <h3 class="intake-stage-card__title">{s.title}</h3>
+                  <p class="intake-stage-card__desc">{s.desc}</p>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="engagement-note-banner">
+            <div class="engagement-note-banner__content">
+              <strong>NOTE ON ENGAGEMENT DURATION:</strong>
+              <span>Contracts run on a flexible, part-time schedule typically varying between 5 and 25 hours weekly.</span>
+            </div>
+            <span class="engagement-note-banner__badge">STATUS: ACCEPTING</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <AuthorBox lang={lang} />
-    </div>
-  </section>
+    <!-- 05 // FIELD QUESTIONS (FAQ) -->
+    <section class="stitch-section" id="faq-section" aria-labelledby="faq-heading">
+      <div class="container stitch-grid">
+        <aside class="stitch-rail">
+          <span class="section-index">05 // FIELD QUESTIONS</span>
+          <span class="section-meta">HONEST FAQ</span>
+          <p class="rail-note">
+            Unvarnished clarification on compensation mechanisms, statutory taxation, and real intake probabilities.
+          </p>
+        </aside>
+
+        <div class="stitch-main">
+          <div class="section-heading-block">
+            <h2 id="faq-heading" class="section-heading-h2">
+              {t.home.realityHeading}
+            </h2>
+            <p class="section-lead-p">No hype, no recruitment promises. Read before submitting your credentials.</p>
+          </div>
+
+          <div class="faq-accordion-list">
+            {
+              t.home.realityPoints.map((pt, idx) => (
+                <details class="faq-accordion-item" open={idx === 0}>
+                  <summary class="faq-accordion-summary">
+                    <div class="faq-accordion-summary__inner">
+                      <span class="faq-accordion-num">0{idx + 1}</span>
+                      <span class="faq-accordion-title">{pt.title}</span>
+                    </div>
+                    <span class="faq-accordion-caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <div class="faq-accordion-body">
+                    {pt.body}
+                  </div>
+                </details>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 // HUBS & COMPARISON -->
+    <section class="stitch-section" aria-labelledby="platforms-hub-heading">
+      <div class="container stitch-grid">
+        <aside class="stitch-rail">
+          <span class="section-index">06 // INDEPENDENT HUBS</span>
+          <span class="section-meta">CROSS-PLATFORM DATA</span>
+          <p class="rail-note">
+            Full European coverage comparing rates, payout rails, and eligibility across major AI evaluation platforms.
+          </p>
+        </aside>
+
+        <div class="stitch-main">
+          <div class="section-heading-block">
+            <h2 id="platforms-hub-heading" class="section-heading-h2">
+              {hc.hubHeading}
+            </h2>
+            <p class="section-lead-p">{hc.hubLead}</p>
+          </div>
+
+          <div class="platforms-pill-grid">
+            {
+              PLATFORM_SLUGS.map((slug) => {
+                const p = platforms.find((item) => item.slug === slug)!;
+                return (
+                  <a href={getPlatformPath(lang, slug)} class="platform-pill-card">
+                    <div class="platform-pill-card__top">
+                      <span class="platform-pill-card__name">{p.name}</span>
+                      <span class="platform-pill-card__date">{p.last_checked}</span>
+                    </div>
+                    <span class="platform-pill-card__desc">{p.posted_pay_ranges.summary}</span>
+                  </a>
+                );
+              })
+            }
+          </div>
+
+          <div class="btn-group mt-space-6">
+            <a href={getPagePath(lang, 'compare')} class="btn btn--primary">
+              {hc.compareCta}
+            </a>
+            <a href={getPagePath(lang, 'pay-index')} class="btn btn--secondary">
+              {hc.payIndexCta}
+            </a>
+            <a href={getPagePath(lang, 'glossary')} class="btn btn--secondary">
+              {hc.glossaryCta}
+            </a>
+            <a href={getPagePath(lang, 'survey')} class="btn btn--secondary">
+              {hc.surveyCta}
+            </a>
+          </div>
+
+          <div class="guides-sub-block mt-space-10">
+            <h3 class="section-sub-h3">{hc.guidesHeading}</h3>
+            <p class="section-lead-p">{hc.guidesSub}</p>
+            <div class="guides-card-grid">
+              {
+                hc.guideLinks.map((g) => (
+                  <a href={getGuidePath(lang, g.slug)} class="guide-card-item">
+                    <span class="guide-card-item__title">{g.title}</span>
+                    <span class="guide-card-item__desc">{g.desc}</span>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+
+          <div class="author-wrap mt-space-10">
+            <AuthorBox lang={lang} />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </BaseLayout>

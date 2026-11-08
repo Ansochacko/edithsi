@@ -263,8 +263,8 @@
         "body": "Sivuston palveluntarjoajana toimii Vercel Inc. Kun vierailet sivustolla tai käytät /go/-ohjauslinkkiä, Vercel Inc. säilyttää lyhytaikaisesti tavanomaiset palvelinlokitiedot (IP-osoite ja pyynnön ajankohta) tietoturvan varmistamiseksi."
       },
       {
-        "heading": "4. Linkit Mercoriin (erillinen rekisterinpitäjä)",
-        "body": "Kun napsautat haku- tai suosittelulinkkiä Mercoriin, siirryt pois tältä sivustolta. Mercor on erillinen rekisterinpitäjä, jolla on oma tietosuojakäytäntönsä. Luovutat hakemustietosi suoraan Mercorille."
+        "heading": "4. Linkit Mercoriin ja micro1:een (erilliset rekisterinpitäjät)",
+        "body": "Kun napsautat haku- tai suosittelulinkkiä Mercoriin tai micro1:een, siirryt pois tältä sivustolta. Mercor ja micro1 ovat erillisiä rekisterinpitäjiä, joilla on omat tietosuojakäytäntönsä. Luovutat hakemustietosi suoraan kyseisille alustoille."
       },
       {
         "heading": "5. Yhteydenotot",
@@ -285,12 +285,12 @@
     "businessIdLabel": "Y-tunnus",
     "sections": [
       {
-        "heading": "Riippumaton verkkosivusto — ei sidoksissa Mercoriin",
-        "body": "Edithsi on yhden henkilön Suomesta käsin ylläpitämä riippumaton verkkosivusto. En ole työsuhteessa Mercoriin, eikä Mercor sponsoroi tai tue tätä sivustoa. Mercor on omistajansa tavaramerkki."
+        "heading": "Riippumaton verkkosivusto — ei sidoksissa Mercoriin tai micro1:een",
+        "body": "Edithsi on yhden henkilön Suomesta käsin ylläpitämä riippumaton verkkosivusto. En ole työsuhteessa Mercoriin tai micro1:een, eivätkä ne sponsoroi tai tue tätä sivustoa. Kaikki tavaramerkit kuuluvat omistajilleen."
       },
       {
         "heading": "Mainos- ja suosittelulinkki-ilmoitus",
-        "body": "Tämän sivuston sivut sisältävät suosittelulinkkejä (referral links) Mercoriin ja ovat luonteeltaan mainontaa. Jos siirryt Mercoriin linkkini kautta ja työllistyt projektiin, voin saada suosittelupalkkion ilman, että siitä aiheutuu sinulle kuluja."
+        "body": "Tämän sivuston sivut sisältävät suosittelulinkkejä (referral links) Mercoriin ja micro1:een ja ovat luonteeltaan mainontaa. Jos siirryt alustoille linkkini kautta ja työllistyt projektiin, voin saada suosittelupalkkion ilman, että siitä aiheutuu sinulle kuluja."
       },
       {
         "heading": "Tehtävä- ja palkkiotietojen ajantasaisuus",
@@ -299,7 +299,7 @@
     ]
   },
   "footer": {
-    "trademarkDisclaimer": "Edithsi on riippumaton sivusto, eikä se ole sidoksissa Mercoriin tai Mercorin tukema tai sponsoroima. Mercor on omistajansa tavaramerkki. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.)",
+    "trademarkDisclaimer": "Edithsi on riippumaton sivusto, eikä se ole sidoksissa Mercoriin tai micro1:een eikä kumpikaan tue tai sponsoroi sitä. Kaikki tavaramerkit kuuluvat omistajilleen. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor or micro1. All trademarks belong to their owners.)",
     "operatorLine": "Ylläpitäjä: {name} · {city} · {email}",
     "businessIdLine": "Y-tunnus: {businessId}",
     "audiencesHeading": "Sinulle (aloittain)",

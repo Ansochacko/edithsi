@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqList from '../FaqList.astro';
 import AuthorBox from '../AuthorBox.astro';
 import platforms from '../../data/platforms.json';
-import { CHECKED_ON, buildGoUrl } from '../../config';
+import { CHECKED_ON, buildGoUrl, buildMicro1GoUrl } from '../../config';
 import { getComparePageContent } from '../../data/platformContent';
 import {
   PLATFORM_SLUGS,
@@ -38,6 +38,7 @@ const UI_LABELS: Record<
     readProfileText: string;
     profilesHeading: string;
     faqHeading: string;
+    micro1ApplyText: string;
   }
 > = {
   en: {
@@ -48,6 +49,7 @@ const UI_LABELS: Record<
     readProfileText: 'Full review →',
     profilesHeading: 'Read individual platform profiles & guides',
     faqHeading: 'Frequently asked questions about comparing AI-training platforms',
+    micro1ApplyText: 'Browse micro1 jobs ↗',
   },
   fi: {
     lastUpdated: 'Päivitetty viimeksi',
@@ -57,6 +59,7 @@ const UI_LABELS: Record<
     readProfileText: 'Lue arvio →',
     profilesHeading: 'Tutustu alustakohtaisiin arvioihin ja oppaisiin',
     faqHeading: 'Usein kysytyt kysymykset tekoälyalustojen vertailusta',
+    micro1ApplyText: 'Selaa micro1-tehtäviä ↗',
   },
   sv: {
     lastUpdated: 'Senast uppdaterad',
@@ -66,6 +69,7 @@ const UI_LABELS: Record<
     readProfileText: 'Läs profil →',
     profilesHeading: 'Läs plattformsprofiler och praktiska guider',
     faqHeading: 'Vanliga frågor om att jämföra AI-träningsplattformar',
+    micro1ApplyText: 'Utforska micro1-jobb ↗',
   },
   de: {
     lastUpdated: 'Zuletzt aktualisiert',
@@ -75,6 +79,7 @@ const UI_LABELS: Record<
     readProfileText: 'Zum Profil →',
     profilesHeading: 'Einzelprofile der Plattformen & Praxis-Ratgeber',
     faqHeading: 'Häufige Fragen zum Vergleich von KI-Trainingsplattformen',
+    micro1ApplyText: 'micro1-Jobs ansehen ↗',
   },
   fr: {
     lastUpdated: 'Dernière mise à jour',
@@ -84,6 +89,7 @@ const UI_LABELS: Record<
     readProfileText: 'Voir le profil →',
     profilesHeading: 'Consulter les profils détaillés et guides pratiques',
     faqHeading: 'Questions fréquentes sur la comparaison des plateformes IA',
+    micro1ApplyText: 'Consulter les missions micro1 ↗',
   },
   es: {
     lastUpdated: 'Última actualización',
@@ -93,6 +99,7 @@ const UI_LABELS: Record<
     readProfileText: 'Ver perfil →',
     profilesHeading: 'Explorar perfiles detallados de plataformas y guías',
     faqHeading: 'Preguntas frecuentes al comparar plataformas de entrenamiento de IA',
+    micro1ApplyText: 'Ver empleos en micro1 ↗',
   },
 };
 
@@ -141,8 +148,11 @@ const ui = UI_LABELS[lang];
             {content.rows.map((row) => {
               const p = platforms.find((item) => item.slug === row.slug)!;
               const isMercor = row.slug === 'mercor';
+              const isMicro1 = row.slug === 'micro1';
               const applyHref = isMercor
                 ? buildGoUrl('general-portal', 'compare-table')
+                : isMicro1
+                ? buildMicro1GoUrl('compare-table')
                 : p.official_url;
               return (
                 <tr>
@@ -170,7 +180,19 @@ const ui = UI_LABELS[lang];
                           rel="sponsored noopener noreferrer"
                           class="table-apply-link"
                         >
-                          {t.common.applyOnMercor} ↗
+                          {t.common.applyButton} ↗
+                        </a>
+                        <span class="referral-micro">{t.common.referralMicroLabel}</span>
+                      </div>
+                    ) : isMicro1 ? (
+                      <div class="table-action-cell">
+                        <a
+                          href={applyHref}
+                          target="_blank"
+                          rel="sponsored noopener noreferrer"
+                          class="table-apply-link"
+                        >
+                          {ui.micro1ApplyText}
                         </a>
                         <span class="referral-micro">{t.common.referralMicroLabel}</span>
                       </div>

@@ -1,113 +1,247 @@
-# Edithsi — Design System & Specification (`DESIGN.md`)
-
-> Note: Canonical Nordic editorial design system for **Edithsi** (`https://edithsi.com`). Every token and layout rule below is implemented 1:1 in CSS custom properties in `src/styles/global.css`.
-
-## 1. Aesthetic Direction & Editorial Persona
-**Edithsi** is an independent, transparent 6-language reference guide that helps credentialed professionals in Finland and Europe find remote AI-training work on Mercor's official listings.
-- **Tone:** Calm, factual, editorial, understated Nordic precision (inspired by Finnish public-interest publications and classic print typography).
-- **Voice:** First-person singular ("I", never "we"), plain-spoken, honest about both posted pay ranges and limitations (no guaranteed work, contractor tax obligations, referral transparency).
-- **Positioning:** Never market Edithsi as an AI or "super intelligence"; it is an honest human-written guide. No Marvel/EDITH references, imagery, or wording anywhere.
-- **Strict Anti-Patterns (Banned):**
-  - No gradients (`linear-gradient`, `radial-gradient`)
-  - No glassmorphism (`backdrop-filter`, translucent blurred cards)
-  - No emoji icons anywhere in the UI
-  - No stock photography or decorative illustrations
-  - No banned fonts (`Inter`, `Roboto`, `Poppins`, or system fallbacks posing as primary fonts)
-  - No invented statistics, fake reviews, or testimonials
-  - No Mercor logos, brand colors, or "Mercor" in the site title
-
+---
+name: Nordic Field Guide
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#cedbf0'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e5eeff'
+  surface-container-high: '#dce9fe'
+  surface-container-highest: '#d6e3f9'
+  on-surface: '#0f1c2c'
+  on-surface-variant: '#434652'
+  inverse-surface: '#243141'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#737784'
+  outline-variant: '#c3c6d5'
+  surface-tint: '#225abc'
+  primary: '#003f94'
+  on-primary: '#ffffff'
+  primary-container: '#1c56b8'
+  on-primary-container: '#c2d2ff'
+  inverse-primary: '#b0c6ff'
+  secondary: '#b02a3f'
+  on-secondary: '#ffffff'
+  secondary-container: '#ff6475'
+  on-secondary-container: '#68001a'
+  tertiary: '#742e00'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#993f00'
+  on-tertiary-container: '#ffc6ac'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#d9e2ff'
+  primary-fixed-dim: '#b0c6ff'
+  on-primary-fixed: '#001945'
+  on-primary-fixed-variant: '#00429b'
+  secondary-fixed: '#ffdada'
+  secondary-fixed-dim: '#ffb3b6'
+  on-secondary-fixed: '#40000d'
+  on-secondary-fixed-variant: '#8f0c2a'
+  tertiary-fixed: '#ffdbcb'
+  tertiary-fixed-dim: '#ffb692'
+  on-tertiary-fixed: '#341100'
+  on-tertiary-fixed-variant: '#793000'
+  background: '#f8f9ff'
+  on-background: '#0f1c2c'
+  surface-variant: '#d6e3f9'
+typography:
+  display-lg:
+    fontFamily: Space Grotesk
+    fontSize: 48px
+    fontWeight: '600'
+    lineHeight: 56px
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Space Grotesk
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Space Grotesk
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.015em
+  headline-lg-mobile:
+    fontFamily: Space Grotesk
+    fontSize: 26px
+    fontWeight: '600'
+    lineHeight: 34px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Space Grotesk
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Space Grotesk
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 26px
+    letterSpacing: -0.005em
+  body-lg:
+    fontFamily: Source Serif 4
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 30px
+    letterSpacing: 0em
+  body-md:
+    fontFamily: Source Serif 4
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 26px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Space Grotesk
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 22px
+    letterSpacing: 0.005em
+  label-numeric:
+    fontFamily: Space Grotesk
+    fontSize: 15px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.02em
+  label-caption:
+    fontFamily: Space Grotesk
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+  label-counter:
+    fontFamily: Space Grotesk
+    fontSize: 11px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.08em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 3rem
+  margin-mobile: 1.25rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
 ---
 
-## 2. Typography (Self-Hosted WOFF2 Only)
-All fonts are self-hosted in `/public/fonts/` in WOFF2 format with `font-display: swap` and preloaded in `<head>`. Zero external font requests.
+## Brand & Style
 
-- **Display, Headings & UI (`--font-sans`):** `'Familjen Grotesk'`, crisp geometric-grotesque with distinct Nordic character.
-  - Used for: Site masthead, headings (`h1`–`h3`), navigation, `"I work in:"` audience choices, filter pills, sort controls, metadata badges, rate callouts, buttons, and the localized advertising disclosure bar.
-- **Editorial Body & Long-Form Prose (`--font-serif`):** `'Source Serif 4'`, high-legibility editorial serif designed for extended reading.
-  - Used for: Lead paragraphs, audience page introductions, role descriptions ("who it suits"), "How it works" prose, honest FAQ answers, Privacy policy, and Legal notice text.
-- **Monospace (`--font-mono`):** System monospace stack for dates (`2026-11-05`), codes, and domain verification (`@mercor.com`, `@mercor.expert`).
+This design system draws direct inspiration from mid-century Finnish editorial design, official state registers, and functional Nordic field guides. It prioritizes clarity, civic utility, and uncompromising legibility over synthetic ornamentation. The interface acts as a transparent, authoritative medium—calm, precise, restrained, and completely devoid of performative trends.
 
-### Type Scale & Measure
-- `--text-xs`: `0.75rem` (12px), line-height `1.4` — Ad stamps, referral micro-labels, uppercase metadata tags
-- `--text-sm`: `0.875rem` (14px), line-height `1.5` — Secondary UI, footer text, table/card metadata
-- `--text-base`: `1.0625rem` (17px), line-height `1.65` — Primary reading text (`Source Serif 4`)
-- `--text-lg`: `1.25rem` (20px), line-height `1.5` — Lead paragraphs, card titles
-- `--text-xl`: `1.5rem` (24px), line-height `1.3` — Section subheadings
-- `--text-2xl`: `2rem` (32px), line-height `1.2` — Section headings (`h2`)
-- `--text-3xl`: `clamp(2.125rem, 4vw, 3rem)`, line-height `1.12` — Page titles (`h1`)
-- **Line Measure (`--measure`):** `64ch` maximum (strictly `< 70ch` across all viewports)
-- **Heading Wrap:** `text-wrap: balance` on all headings (`h1`, `h2`, `h3`, `.card-title`)
+Key visual attributes:
+- **Nordic Editorial Precision**: Information hierarchy is established through disciplined typographic scales, crisp hairlines, and deliberate whitespace rather than drop shadows or saturated background fields.
+- **Flat Architectural Surfaces**: Zero gradients, zero blurs, and zero ambient drop shadows. Surfaces sit flat against one another, separated cleanly by single-pixel hairline dividers.
+- **Structured Cadence**: Prominent structural markers such as two-digit index counters (`01`, `02`, `03`) introduce editorial rhythm across section headers, step indicators, and data ledgers.
+- **Target Audience & Tone**: Tailored for specialized professionals, researchers, civil planners, and industry analysts requiring dense, high-accuracy information delivered with institutional composure.
 
----
+## Colors
 
-## 3. Color Tokens (WCAG 2.2 AA+ Verified)
-Solid, flat architectural surfaces inspired by Nordic paper, ink, slate, and forestry green/ochre accents.
+The palette balances cool, atmospheric Nordic greys with utilitarian functional inks. Accents are applied sparingly to preserve their signaling power.
 
-### Light Mode (`:root`)
-- `--bg-canvas`: `#FAF8F5` (Warm Nordic Birch Paper)
-- `--bg-surface`: `#FFFFFF` (Crisp Card Surface)
-- `--bg-subtle`: `#F1EDE6` (Muted Stone / Filter Bar / Disclosure Strip)
-- `--text-primary`: `#14181D` (Deep Charcoal Ink — 16.8:1 on canvas)
-- `--text-secondary`: `#3D4652` (Slate — 8.9:1 on canvas)
-- `--text-muted`: `#55606E` (Muted Slate — 5.9:1 on canvas, passes AA for all text sizes)
-- `--border-subtle`: `#DCD6CC` (Warm Hairline Rule)
-- `--border-strong`: `#8C857B` (Interactive Border)
-- `--accent-primary`: `#1B4332` (Nordic Pine — 10.6:1 contrast with white text)
-- `--accent-hover`: `#0F291E` (Deep Forest)
-- `--accent-subtle`: `#E6EFEA` (Soft Pine Tint for active pills/badges)
-- `--accent-text`: `#133425` (High-contrast Pine Ink — 12.1:1 on `--accent-subtle`)
-- `--warning-bg`: `#FBF3E4` (Amber Note Surface)
-- `--warning-border`: `#C89D54` (Amber Hairline)
-- `--warning-text`: `#4A3208` (Deep Ochre Ink — 10.4:1 contrast)
-- `--focus-ring`: `#1D4ED8` (High-visibility Cobalt Focus Ring)
+### Light Mode (Default)
+- **Background (`#F3F5F7`)**: A cool, pale slate-tinted field canvas resembling archival bond paper.
+- **Surface (`#FFFFFF`)**: Pure white editorial cards, tabular sheets, and reading panes.
+- **Body Text (`#0E1A2B`)**: Deep midnight ink, yielding high-contrast legibility without the harshness of pure black.
+- **Muted Text (`#5A6779`)**: Balanced slate grey for subheaders, secondary labels, metadata, and structural indices.
+- **Hairline Rules (`#D5DDE7`)**: Architectural 1px grid boundaries, table borders, and structural separators.
+- **Primary Accent / Finnish Blue (`#1C56B8`)**: Interactive affordances, links, primary buttons, highlighted financial metrics, and active states.
+- **Secondary Accent / Lingonberry Red (`#A8233A`)**: System warnings, strict notices, sponsored indicators, and ad boundary stamps.
 
-### Dark Mode (`@media (prefers-color-scheme: dark)` & `[data-theme="dark"]`)
-- `--bg-canvas`: `#0F1419` (Nordic Night Slate)
-- `--bg-surface`: `#171E26` (Elevated Slate Card)
-- `--bg-subtle`: `#202934` (Subtle Panel Surface)
-- `--text-primary`: `#F3F4F6` (Crisp Chalk — 16.1:1 on canvas)
-- `--text-secondary`: `#CBD5E1` (Silver Slate — 11.4:1 on canvas)
-- `--text-muted`: `#94A3B8` (Muted Silver — 6.4:1 on canvas, passes AA)
-- `--border-subtle`: `#2D3846` (Dark Hairline Rule)
-- `--border-strong`: `#64748B` (Interactive Border)
-- `--accent-primary`: `#74C69D` (Lichen Mint — 9.3:1 contrast with `#0B1911` text)
-- `--accent-hover`: `#95D5B2` (Bright Lichen)
-- `--accent-subtle`: `#183227` (Deep Pine Badge Surface)
-- `--accent-text`: `#A7F3D0` (Mint Ink — 10.2:1 on `--accent-subtle`)
-- `--warning-bg`: `#282012` (Dark Amber Surface)
-- `--warning-border`: `#A17C38` (Dark Amber Border)
-- `--warning-text`: `#FDE68A` (Pale Amber Ink — 11.8:1 contrast)
-- `--focus-ring`: `#60A5FA` (Bright Sky Focus Ring)
+### Dark Mode
+- **Background (`#0B1220`)**: Deep Nordic night sky; minimal light emission.
+- **Surface (`#121B2C`)**: Controlled low-glare midnight slate container.
+- **Body Text (`#E8EEF7`)**: Softened ice white for sustained reading comfort.
+- **Muted Text (`#9FB0C6`)**: Cool silver-slate for passive hierarchy.
+- **Hairline Rules (`#24324A`)**: Low-contrast boundary lines maintaining separation without visual vibration.
+- **Primary Accent (`#6B9CF0`)**: Calibrated pastel blue preserving accessible contrast against dark surfaces.
+- **Secondary Accent / Lingonberry (`#F0788C`)**: Soft berry tint for urgent alerts and markers.
 
----
+## Typography
 
-## 4. Spacing, Grid & Responsive Breakpoints
-### 8px Spatial Scale
-- `--space-1`: `0.25rem` (4px)
-- `--space-2`: `0.5rem` (8px)
-- `--space-3`: `0.75rem` (12px)
-- `--space-4`: `1rem` (16px)
-- `--space-5`: `1.25rem` (20px)
-- `--space-6`: `1.5rem` (24px)
-- `--space-8`: `2rem` (32px)
-- `--space-10`: `2.5rem` (40px)
-- `--space-12`: `3rem` (48px)
-- `--space-16`: `4rem` (64px)
-- `--space-20`: `5rem` (80px)
+Typographic hierarchy enforces a deliberate editorial distinction between interface mechanics and long-form analytical prose.
 
-### Layout & Viewports
-- **Container Max Width:** `1120px` (`--container-max`), with `1.25rem` (20px) horizontal padding at `390px` and `2rem` (32px) at `768px+`.
-- **Target Verification Breakpoints:**
-  - `390px` (Mobile portrait: single-column stack, full-width CTAs, accessible `"For you"` and language menus, wrapped filter pills)
-  - `768px` (Tablet: 2-column role grid and audience grid, horizontal navigation bar)
-  - `1024px` (Desktop: 2-column role grid with generous editorial margins, 2-column split hero/facts)
-  - `1440px` (Wide desktop: centered `1120px` editorial grid with balanced whitespace)
+- **Headlines, Controls & UI Markers**: Set in **Space Grotesk**. Its sharp geometric structure anchors navigation, data metrics, filters, and structural headers with crisp Scandinavian minimalism.
+- **Narrative & Long-Form Reading**: Set in **Source Serif 4**. Used for investigative articles, executive summaries, legal texts, and comprehensive expert reviews. The generous line heights (`body-lg` at 30px) ensure sustained reading without eye fatigue.
+- **Numerical Rigor**: All tabular rates, compensation metrics, dates, and accounting tables must enforce OpenType tabular figures (`font-variant-numeric: tabular-nums; lining-nums;`) to maintain strict vertical column alignment across rows.
+- **Index Numbering**: Structural headers use uppercase zero-padded serial digits (`01`, `02`, `03`) set in `label-counter` with extended letter spacing to punctuate structural transitions.
 
----
+## Layout & Spacing
 
-## 5. Interactive & Accessibility Rules
-- **Tap Targets:** Every interactive control (`a.btn`, `.audience-choice`, `button`, `"For you"` dropdown trigger, language switcher trigger, language links, filter links/buttons, sort controls, dismiss button) has `min-height: 44px` and `min-width: 44px`.
-- **Equal Button Heights:** Primary and secondary buttons share explicit `min-height: 44px`, identical vertical padding, and `display: inline-flex; align-items: center; justify-content: center`.
-- **Ad Stamp:** Placed directly beneath the site header on every page (`AD`, `MAINOS`, `REKLAM`, `WERBUNG`, `PUBLICITÉ`, `PUBLICIDAD`) alongside a clear one-line referral disclosure.
-- **"I work in:" Choices:** Large, clearly clickable architectural cards right under the hero on Home (and as filter pills on Open Roles), showing each group's role count and linking directly to `/for/<slug>/`.
-- **Role Cards & Ruled Index:** Structured flexbox column with `justify-content: space-between` so footers and "Apply on Mercor" buttons align along a strict horizontal baseline across rows. Every rate displays the posted range, the "not guaranteed" disclaimer, and the `CHECKED_ON` date (`2026-11-05`). Every Apply link routes via `/go/<role>?src=<page-or-audience>&referralCode=02e0c12a-d634-4738-9686-04f28f31f52b` in a new tab with `rel="sponsored noopener noreferrer"` and a localized `"referral link · ad"` label directly underneath.
+Layouts follow a disciplined 12-column grid system reminiscent of a printed broadsheet or journal ledger:
+
+- **Desktop (>= 1024px)**: 12-column symmetrical grid, maximum content width of 1280px, 48px outer canvas margin (`margin`), and 24px column gutters (`gutter`).
+- **Tablet (768px - 1023px)**: 8-column layout with 24px margins and 16px gutters. Reading columns collapse to a 6-column span with a 2-column sidebar for annotations.
+- **Mobile (< 768px)**: 4-column layout with 20px margins (`margin-mobile`) and 16px gutters (`gutter-mobile`). Grid sections stack into a vertical sequence.
+- **Editorial Cadence**: Whitespace is rhythmic and modular. Use `space-md` (16px) for intra-component relationships, `space-lg` (24px) for card body padding, and `space-xl` (40px) for macro section offsets.
+- **Alignment Rule**: Text baselines align rigorously with structural hairlines. No floating detached components; all cards, sheets, and headers align to the column boundaries.
+
+## Elevation & Depth
+
+This design system avoids spatial illusions. Depth is achieved purely through planographic layering and crisp boundary delineation:
+
+- **Zero Shadows**: No `box-shadow` or ambient drop shadows exist in the design system. Elevation is expressed strictly through planar contrast.
+- **Planar Hierarchy**:
+  - *Base Layer (Canvas)*: Set in background color (`#F3F5F7` light, `#0B1220` dark).
+  - *Content Layer (Surfaces)*: Discrete panels, tables, and article sheets set in pure surface (`#FFFFFF` light, `#121B2C` dark).
+  - *Overlay Layer (Dialogs & Drawers)*: Positioned flat above the surface with a continuous 1px hairline border and backed by an opaque scrim (`rgba(14, 26, 43, 0.4)` light mode).
+- **Hairline Boundaries**: Every structural division—whether card borders, header rules, table lines, or toolbar delimiters—uses a uniform 1px solid hairline (`#D5DDE7` light, `#24324A` dark).
+- **Interaction Feedback**: Hover and focus states do not lift or expand elements. State transitions trigger hairline color shifts (to `#1C56B8`) or crisp 1px inset outlines.
+
+## Shapes
+
+Shapes are architectural, deliberate, and restrained:
+
+- **Subtle Corner Radii**: UI components utilize a controlled, soft corner radius (4px to 6px; Level 1). This softens hard digital corners while preserving structural rectangular geometry.
+- **Strict Square Geometry for Rules**: Dividing rules and hairline strokes are drawn with crisp, square caps (`stroke-linecap: square;`).
+- **Asymmetric Ad Stamp / Lingonberry Boundary**: Sponsored disclosures, formal administrative warnings, and ad panels feature an asymmetric 3px solid Lingonberry left border (`border-left: 3px solid #A8233A` in light, `#F0788C` in dark), while remaining borders stay 1px hairline rules.
+- **Tags & Indicators**: Badges retain square or 4px radii; pill-shaped capsules (`rounded-full`) are excluded to avoid informal or juvenile visual associations.
+
+## Components
+
+### Buttons
+- **Primary**: Solid Finnish Blue background (`#1C56B8`), pure white typography, 4px border radius, zero shadow. Padding: 10px 18px (`space-sm` + 2px top/bottom, `space-md` + 2px left/right). Typography: `Space Grotesk` 14px, weight 600.
+- **Secondary / Outline**: Transparent background, 1px solid hairline rule (`#D5DDE7`), midnight ink text (`#0E1A2B`). Hover shifts the hairline border to Finnish Blue.
+- **Tertiary / Text**: Text-only with an underline offset of 4px. Underline transitions to Finnish Blue on hover.
+
+### Cards & Panels
+- Flat white surface (`#FFFFFF`), 1px solid hairline rule border (`#D5DDE7`), 4px border radius. Padding: 24px (`space-lg`).
+- Editorial article cards feature an optional counter prefix (`01`, `02`) placed top-left in `label-counter` with muted slate color (`#5A6779`).
+
+### Ad & Sponsored Units
+- Bounded card with an asymmetric 3px left rule in Lingonberry Red (`#A8233A`), remaining sides bounded by 1px hairline rules.
+- Header contains an uppercase tag `SPONSORED` or `NOTICE` set in `label-caption` (12px, weight 700) using Lingonberry Red.
+
+### Data Tables & Ledgers
+- Flat rows separated strictly by 1px hairline horizontal rules. No alternating zebra stripes.
+- Headers: Uppercase `Space Grotesk` (12px, weight 600, letter spacing `0.05em`) in muted slate.
+- Numeric Columns: Set right-aligned using tabular figures (`label-numeric`). Compensation and rates rendered in Finnish Blue (`#1C56B8`).
+
+### Form Inputs & Selects
+- 1px hairline border (`#D5DDE7`), background `#FFFFFF`, 4px radius, 12px 16px internal padding.
+- Text: Midnight ink (`#0E1A2B`), 15px.
+- Focus: Crisp 1px outline in Finnish Blue (`#1C56B8`) with zero glow or blur.
+- Field labels: Upper/lower sentence case in `Space Grotesk` (13px, weight 500, `#0E1A2B`).
+
+### Checkboxes & Radios
+- Checkboxes: 16x16px square with 2px radius, 1px hairline border. Checked state fills with Finnish Blue displaying a sharp white tick.
+- Radios: 16x16px circle, 1px hairline border. Checked state contains a 6px solid Finnish Blue inner dot.
+
+### Section Headers with Asymmetric Indexing
+- Section headers precede the title with an index block: e.g., `01 / REGULATORY AUDIT`.
+- Numbering (`01-05`) sits in `label-counter` font alongside a hairline horizontal divider extending across the remaining grid width.

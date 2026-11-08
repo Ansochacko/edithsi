@@ -264,8 +264,8 @@
         "body": "Ce site est hébergé par Vercel Inc. Lors de votre visite ou de l'utilisation d'une redirection /go/, l'hébergeur Vercel Inc. conserve à court terme des journaux serveur techniques (adresse IP et heure) uniquement à des fins de sécurité."
       },
       {
-        "heading": "4. Liens externes vers Mercor (responsable de traitement distinct)",
-        "body": "Lorsque vous cliquez sur un lien de candidature ou de parrainage vers Mercor, vous quittez ce site. Mercor est un responsable de traitement distinct disposant de sa propre politique de confidentialité. Vous partagez vos données directement avec Mercor."
+        "heading": "4. Liens externes vers Mercor et micro1 (responsables de traitement distincts)",
+        "body": "Lorsque vous cliquez sur un lien de candidature ou de parrainage vers Mercor ou micro1, vous quittez ce site. Mercor et micro1 sont des responsables de traitement distincts disposant de leurs propres politiques de confidentialité. Vous partagez vos données directement avec ces plateformes."
       },
       {
         "heading": "5. Contact",
@@ -286,12 +286,12 @@
     "businessIdLabel": "Numéro d'entreprise (Y-tunnus)",
     "sections": [
       {
-        "heading": "Site indépendant — non affilié à Mercor",
-        "body": "Edithsi est un site indépendant géré par une seule personne en Finlande. Je ne suis ni affilié à Mercor, ni approuvé ou sponsorisé par Mercor. Mercor est une marque déposée appartenant à son propriétaire."
+        "heading": "Site indépendant — non affilié à Mercor ni à micro1",
+        "body": "Edithsi est un site indépendant géré par une seule personne en Finlande. Je ne suis ni affilié à Mercor ni à micro1, et ce site n'est ni approuvé ni sponsorisé par eux. Toutes les marques appartiennent à leurs propriétaires respectifs."
       },
       {
         "heading": "Information sur la publicité et les liens de parrainage",
-        "body": "Les pages de ce site contiennent des liens de parrainage vers Mercor et constituent une communication commerciale (publicité). Si vous suivez un lien de parrainage et êtes retenu pour un projet, je peux percevoir une prime sans frais pour vous."
+        "body": "Les pages de ce site contiennent des liens de parrainage vers Mercor et micro1 et constituent une communication commerciale (publicité). Si vous suivez un lien de parrainage et êtes retenu pour un projet, je peux percevoir une prime sans frais pour vous."
       },
       {
         "heading": "Mise à jour des informations sur les missions",
@@ -300,7 +300,7 @@
     ]
   },
   "footer": {
-    "trademarkDisclaimer": "Edithsi est indépendant et n'est ni affilié à, ni approuvé ou sponsorisé par Mercor. Mercor est une marque de son propriétaire. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.)",
+    "trademarkDisclaimer": "Edithsi est indépendant et n'est ni affilié à, ni approuvé ou sponsorisé par Mercor ou micro1. Toutes les marques appartiennent à leurs propriétaires. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor or micro1. All trademarks belong to their owners.)",
     "operatorLine": "Édité par {name} · {city} · {email}",
     "businessIdLine": "Identifiant d'entreprise : {businessId}",
     "audiencesHeading": "Pour vous (par métier)",

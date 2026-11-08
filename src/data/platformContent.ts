@@ -335,7 +335,7 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
       directAnswer:
         'micro1 (micro1.ai/experts), operated by micro1 Inc., recruits global domain experts in Software Engineering, Finance, Healthcare, Legal, and Academic Research to generate human training data for frontier AI labs across programs like Realm, Cortex, and Medical Index. As checked on 2026-11-05, micro1 lists compensation as TBD on its public overview page ("Competitive compensation for expert knowledge" with rates posted per role listing) and welcomes remote experts worldwide, including Finland and Europe.',
       fairnessDisclosure:
-        'I earn $0 from micro1 (no affiliate or referral commission). I earn referral fees only from Mercor (code 02e0c12a-d634-4738-9686-04f28f31f52b), and I evaluate micro1 using the exact same criteria, public URLs, and verification date (2026-11-05) as every other platform.',
+        'Links to micro1 on Edithsi include my referral code (ad081063-9c31-41f4-8c1d-210fee47018c), and I may earn a referral bonus if you contract on a project. I evaluate micro1 using the exact same objective criteria, public URLs, and verification date (2026-11-05) as every other platform.',
       sections: [
         {
           h2: 'What kind of AI-training work and domains does micro1 offer?',
@@ -383,9 +383,9 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
             'Yes. micro1 provides an official interview preparation page at micro1.ai/interview-prep.',
         },
         {
-          question: 'Do I earn a referral commission when you apply to micro1?',
+          question: 'Do you earn a referral commission when I apply to micro1?',
           answer:
-            'No. I earn $0 from micro1 and link directly to micro1.ai/experts.',
+            'Yes. Application links to micro1 on Edithsi include my referral code (ad081063-9c31-41f4-8c1d-210fee47018c), and I may receive a referral bonus if you are hired on a project, at no cost to you.',
         },
       ],
     },
@@ -727,7 +727,7 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
       directAnswer:
         'micro1 (micro1.ai/experts), jota ylläpitää micro1 Inc., rekrytoi kansainvälisiä ohjelmistokehityksen, rahoituksen, terveydenhuollon, juridiikan ja akateemisen tutkimuksen asiantuntijoita tuottamaan koulutusdataa tekoälylaboratorioille (Realm, Cortex ja Medical Index). Tarkistuspäivänä 2026-11-05 micro1:n julkinen yleissivu merkitsee palkkahaarukan muodossa TBD ("Competitive compensation for expert knowledge", tarkat tuntipalkat ilmoitetaan roolikohtaisesti) ja ottaa vastaan hakemuksia myös Suomesta ja muualta Euroopasta.',
       fairnessDisclosure:
-        'En saa micro1-alustalta lainkaan suosittelupalkkiota ($0). Saan suosittelupalkkioita vain Mercorilta (koodi 02e0c12a-d634-4738-9686-04f28f31f52b), ja arvioin micro1:n täsmälleen samoilla kriteereillä, julkisilla lähteillä ja tarkistuspäivämäärällä (2026-11-05) kuin kaikki muutkin alustat.',
+        'Edithsi-sivuston linkit micro1-alustalle sisältävät suosittelukoodini (ad081063-9c31-41f4-8c1d-210fee47018c), ja voin saada suosittelupalkkion, jos työllistyt projektiin. Arvioin micro1:n täsmälleen samoilla kriteereillä, julkisilla lähteillä ja tarkistuspäivämäärällä (2026-11-05) kuin kaikki muutkin alustat.',
       sections: [
         {
           h2: 'Millaista tekoälyn koulutustyötä ja mitä aloja micro1 tarjoaa?',
@@ -777,7 +777,7 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
         {
           question: 'Saanko suosittelupalkkion, jos haet micro1:een?',
           answer:
-            'En. En saa micro1:ltä lainkaan palkkiota ($0), vaan linkitän suoraan viralliselle micro1.ai/experts-sivulle.',
+            'Kyllä. Edithsi-sivuston linkit micro1-alustalle sisältävät suosittelukoodini (ad081063-9c31-41f4-8c1d-210fee47018c), ja voin saada suosittelupalkkion, jos työllistyt projektiin, ilman lisäkuluja sinulle.',
         },
       ],
     },
@@ -1119,7 +1119,7 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
       directAnswer:
         'micro1 (micro1.ai/experts), som drivs av micro1 Inc., rekryterar globala specialister inom mjukvaruutveckling, finans, sjukvård, juridik och akademisk forskning för att generera träningsdata åt ledande AI-labb (Realm, Cortex och Medical Index). Per 2026-11-05 anges arvodet som TBD på den publika översiktssidan ("Competitive compensation for expert knowledge", med rollspecifika arvoden på enskilda annonser) och plattformen är öppen för sökande i Sverige, Finland och övriga Europa.',
       fairnessDisclosure:
-        'Jag tjänar $0 från micro1 (ingen affiliate- eller värvningslänk). Jag får endast värvningsersättning från Mercor (kod 02e0c12a-d634-4738-9686-04f28f31f52b) och utvärderar micro1 enligt exakt samma kriterier och datum (2026-11-05) som övriga plattformar.',
+        'Länkar till micro1 på Edithsi innehåller min värvningskod (ad081063-9c31-41f4-8c1d-210fee47018c), och jag kan få en värvningsersättning om du anlitas för ett projekt. Jag utvärderar micro1 enligt exakt samma kriterier och datum (2026-11-05) som övriga plattformar.',
       sections: [
         {
           h2: 'Vilken typ av AI-träningsarbete och områden erbjuder micro1?',
@@ -1167,9 +1167,9 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
             'Ja, micro1 har en officiell förberedelsesida på micro1.ai/interview-prep.',
         },
         {
-          question: 'Får jag ersättning om du ansöker till micro1?',
+          question: 'Får du ersättning om jag ansöker till micro1?',
           answer:
-            'Nej. Jag tjänar $0 från micro1.',
+            'Ja. Ansökningslänkar till micro1 på Edithsi innehåller min värvningskod (ad081063-9c31-41f4-8c1d-210fee47018c), och jag kan erhålla en värvningsbonus utan kostnad för dig.',
         },
       ],
     },
@@ -1511,7 +1511,7 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
       directAnswer:
         'micro1 (micro1.ai/experts), betrieben von der micro1 Inc., rekrutiert weltweit Fachexperten aus Software Engineering, Finanzen, Gesundheitswesen, Recht und akademischer Forschung zur Erstellung von Trainingsdaten für führende KI-Labore (Realm, Cortex und Medical Index). Stand 2026-11-05 ist die Vergütung auf der öffentlichen Übersichtsseite als TBD markiert („Competitive compensation for expert knowledge“, konkrete Sätze stehen in den einzelnen Stellenausschreibungen) und Bewerber aus Deutschland, Finnland und ganz Europa können sich remote bewerben.',
       fairnessDisclosure:
-        'Ich verdiene $0 an micro1 (kein Affiliate- oder Empfehlungslink). Ich erhalte Empfehlungsprovisionen ausschließlich von Mercor (Code 02e0c12a-d634-4738-9686-04f28f31f52b) und bewerte micro1 nach exakt denselben Kriterien und zum Prüfdatum 2026-11-05 wie alle anderen Plattformen.',
+        'Links zu micro1 auf Edithsi enthalten meinen Empfehlungscode (ad081063-9c31-41f4-8c1d-210fee47018c), und ich erhalte möglicherweise eine Vermittlungsprovision, wenn Sie für ein Projekt beauftragt werden. Ich bewerte micro1 nach exakt denselben Kriterien und zum Prüfdatum 2026-11-05 wie alle anderen Plattformen.',
       sections: [
         {
           h2: 'Welche KI-Trainingsarbeit und Fachgebiete bietet micro1 an?',
@@ -1559,9 +1559,9 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
             'Ja, micro1 stellt unter micro1.ai/interview-prep eine eigene Vorbereitungsseite bereit.',
         },
         {
-          question: 'Erhalte ich eine Provision, wenn Sie sich bei micro1 bewerben?',
+          question: 'Erhalten Sie eine Provision, wenn ich mich bei micro1 bewerbe?',
           answer:
-            'Nein. Ich verdiene $0 an micro1.',
+            'Ja. Bewerbungslinks zu micro1 auf Edithsi enthalten meinen Empfehlungscode (ad081063-9c31-41f4-8c1d-210fee47018c), und ich erhalte möglicherweise eine Provision ohne Zusatzkosten für Sie.',
         },
       ],
     },
@@ -1903,7 +1903,7 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
       directAnswer:
         'micro1 (micro1.ai/experts), opéré par micro1 Inc., recrute des experts pour produire des données humaines destinées aux laboratoires d’IA de pointe, construire des environnements d’apprentissage par renforcement et mener des évaluations d’agents ; les tarifs sont publiés offre par offre (fourchette publique : TBD ; vérifié le 2026-11-05). La communauté est mondiale et à distance, y compris pour la France et la Finlande, mais les restrictions géographiques par projet sont TBD sur la page publique.',
       fairnessDisclosure:
-        'Je perçois $0 de micro1 (aucun lien d’affiliation ni de parrainage). Je ne touche des commissions que de Mercor (code 02e0c12a-d634-4738-9686-04f28f31f52b) et j’évalue micro1 avec exactement les mêmes critères et la même date de vérification (2026-11-05) que toutes les autres plateformes.',
+        'Les liens vers micro1 sur Edithsi contiennent mon code de parrainage (ad081063-9c31-41f4-8c1d-210fee47018c), et je peux percevoir une commission si vous réalisez une mission. J’évalue micro1 avec exactement les mêmes critères et la même date de vérification (2026-11-05) que toutes les autres plateformes.',
       sections: [
         {
           h2: 'Quel type de travail d’IA et quels domaines micro1 propose-t-il ?',
@@ -1951,9 +1951,9 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
             'micro1 propose une page de préparation sur micro1.ai/interview-prep ; présentez des cas concrets tirés de votre expérience professionnelle.',
         },
         {
-          question: 'Est-ce que je touche une commission si vous rejoignez micro1 ?',
+          question: 'Touchez-vous une commission si je rejoins micro1 ?',
           answer:
-            'Non. Je perçois $0 de micro1.',
+            'Oui. Les liens de candidature vers micro1 sur Edithsi incluent mon code de parrainage (ad081063-9c31-41f4-8c1d-210fee47018c), et je peux percevoir une prime sans aucun frais pour vous.',
         },
       ],
     },
@@ -2295,7 +2295,7 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
       directAnswer:
         'micro1 (micro1.ai/experts), operado por micro1 Inc., selecciona especialistas para generar datos de alta calidad destinados a laboratorios líderes de IA, diseñar entornos de aprendizaje por refuerzo y evaluar agentes autónomos; las tarifas se indican por vacante (rango público: TBD; verificado el 2026-11-05). La comunidad es global y remota, cubriendo España y Finlandia, aunque los requisitos específicos por proyecto figuran como TBD en su web pública.',
       fairnessDisclosure:
-        'Percibo $0 de micro1 (sin enlaces de afiliación ni patrocinio). Únicamente recibo comisiones de Mercor (código 02e0c12a-d634-4738-9686-04f28f31f52b) y evalúo micro1 con los mismos criterios y fecha de verificación (2026-11-05) que las demás plataformas.',
+        'Los enlaces a micro1 en Edithsi incluyen mi código de recomendación (ad081063-9c31-41f4-8c1d-210fee47018c), y puedo recibir una comisión de referido si colaboras en un proyecto. Evalúo micro1 con los mismos criterios y fecha de verificación (2026-11-05) que las demás plataformas.',
       sections: [
         {
           h2: '¿Qué tipo de trabajo y áreas de especialidad ofrece micro1?',
@@ -2343,9 +2343,9 @@ const PLATFORM_CONTENT: Record<Lang, Record<PlatformSlug, PlatformPageContent>> 
             'micro1 ofrece pautas en micro1.ai/interview-prep; conviene preparar ejemplos prácticos y proyectos reales de tu especialidad.',
         },
         {
-          question: '¿Cobro comisión si te unes a micro1?',
+          question: '¿Cobras comisión si me uno a micro1?',
           answer:
-            'No. Recibo $0 de micro1.',
+            'Sí. Los enlaces a micro1 en Edithsi contienen mi código de recomendación (ad081063-9c31-41f4-8c1d-210fee47018c), y puedo recibir una bonificación por referido sin coste alguno para ti.',
         },
       ],
     },
@@ -2429,7 +2429,7 @@ const COMPARE_CONTENT: Record<Lang, ComparePageContent> = {
     directAnswer:
       'Across the 6 major AI-training talent platforms, posted hourly rates range from $15/h for entry-level work up to $180/h for clinical medical specialists as of 2026-11-05 (Mercor: $35–180/h; Mindrift: $15–100+/h; Alignerr: $15–120/h; Handshake AI: up to $150/h US-only; Outlier and micro1: set per project / TBD). European contractors in Finland and the EU can actively work on Mercor, Mindrift, and Outlier, while Alignerr currently requires US ID documents and Handshake AI is strictly limited to US-based workers.',
     fairnessDisclosure:
-      'I earn referral bonuses solely from Mercor via referral code 02e0c12a-d634-4738-9686-04f28f31f52b. I earn $0 from Mindrift, Alignerr, Outlier, micro1, and Handshake AI. To keep this comparison fair and objective, every platform is evaluated using identical criteria, verified strictly against official public pages on 2026-11-05, with unverified items explicitly marked TBD.',
+      'I earn referral commissions from Mercor (referral code 02e0c12a-d634-4738-9686-04f28f31f52b) and micro1 (referral code ad081063-9c31-41f4-8c1d-210fee47018c). I earn $0 from Mindrift, Alignerr, Outlier, and Handshake AI. To keep this comparison fair and objective, every platform is evaluated using identical criteria, verified strictly against official public pages on 2026-11-05, with unverified items explicitly marked TBD.',
     tableHeaders: [
       'Platform',
       'Posted Pay Range (2026-11-05)',
@@ -2558,7 +2558,7 @@ const COMPARE_CONTENT: Record<Lang, ComparePageContent> = {
     directAnswer:
       'Kuuden keskeisen tekoälyalustan julkiset tuntipalkkiot vaihtelevat 15 $/h perustason tehtävistä aina 180 $/h erikoislääkärin arviointityöhön (tarkistettu 5.11.2026; Mercor: 35–180 $/h; Mindrift: 15–100+ $/h; Alignerr: 15–120 $/h; Handshake AI: enintään 150 $/h vain Yhdysvalloissa; Outlier ja micro1: projektikohtainen / TBD). Suomessa asuville asiantuntijoille realistisimmat alustat ovat Mercor, Mindrift ja Outlier, kun taas Alignerr vaatii tällä hetkellä yhdysvaltalaisen henkilöllisyystodistuksen ja Handshake AI on rajattu vain Yhdysvalloissa asuville.',
     fairnessDisclosure:
-      'Saan suosittelupalkkioita ainoastaan Mercorilta (koodi 02e0c12a-d634-4738-9686-04f28f31f52b). Saan 0 dollaria Mindriftiltä, Alignerrilta, Outlierilta, micro1:ltä ja Handshake AI:lta. Jotta vertailu pysyy puolueettomana, arvioin jokaista alustaa täsmälleen samoilla kriteereillä ja virallisilla julkisilla lähteillä (tarkistettu 5.11.2026).',
+      'Saan suosittelupalkkioita Mercorilta (koodi 02e0c12a-d634-4738-9686-04f28f31f52b) ja micro1:ltä (koodi ad081063-9c31-41f4-8c1d-210fee47018c). Saan 0 dollaria Mindriftiltä, Alignerrilta, Outlierilta ja Handshake AI:lta. Jotta vertailu pysyy puolueettomana, arvioin jokaista alustaa täsmälleen samoilla kriteereillä ja virallisilla julkisilla lähteillä (tarkistettu 5.11.2026).',
     tableHeaders: [
       'Alusta',
       'Ilmoitettu tuntipalkkio (5.11.2026)',
@@ -2687,7 +2687,7 @@ const COMPARE_CONTENT: Record<Lang, ComparePageContent> = {
     directAnswer:
       'Bland de sex ledande AI-träningsplattformarna sträcker sig publicerade timersättningar från $15/h för nybörjaruppdrag upp till $180/h för medicinska specialister per 2026-11-05 (Mercor: $35–180/h; Mindrift: $15–100+/h; Alignerr: $15–120/h; Handshake AI: upp till $150/h endast USA; Outlier och micro1: per projekt / TBD). För specialister i Norden och Europa är Mercor, Mindrift och Outlier de mest tillgängliga, medan Alignerr kräver amerikanskt ID och Handshake AI är strikt begränsat till boende i USA.',
     fairnessDisclosure:
-      'Jag erhåller hänvisningsersättning uteslutande från Mercor via kod 02e0c12a-d634-4738-9686-04f28f31f52b. Jag tjänar $0 från Mindrift, Alignerr, Outlier, micro1 och Handshake AI. Alla plattformar utvärderas enligt identiska kriterier baserat på offentliga källor per 2026-11-05.',
+      'Jag erhåller hänvisningsersättning från Mercor (kod 02e0c12a-d634-4738-9686-04f28f31f52b) och micro1 (kod ad081063-9c31-41f4-8c1d-210fee47018c). Jag tjänar $0 från Mindrift, Alignerr, Outlier och Handshake AI. Alla plattformar utvärderas enligt identiska kriterier baserat på offentliga källor per 2026-11-05.',
     tableHeaders: [
       'Plattform',
       'Publicerat timintervall (2026-11-05)',
@@ -2816,7 +2816,7 @@ const COMPARE_CONTENT: Record<Lang, ComparePageContent> = {
     directAnswer:
       'Über die 6 führenden KI-Trainingsplattformen hinweg reichen die veröffentlichten Stundensätze von $15/h für Einstiegsaufgaben bis zu $180/h für Fachärzte (Stand 2026-11-05; Mercor: $35–180/h; Mindrift: $15–100+/h; Alignerr: $15–120/h; Handshake AI: bis zu $150/h nur USA; Outlier und micro1: projektbezogen / TBD). Für Fachkräfte in Deutschland, Österreich und der Schweiz sind Mercor, Mindrift und Outlier am besten zugänglich, während Alignerr US-Ausweise verlangt und Handshake AI auf die USA beschränkt ist.',
     fairnessDisclosure:
-      'Ich erhalte ausschließlich von Mercor Vermittlungsprovisionen über den Code 02e0c12a-d634-4738-9686-04f28f31f52b. Von Mindrift, Alignerr, Outlier, micro1 und Handshake AI erhalte ich $0. Alle Plattformen werden nach identischen Kriterien auf Basis öffentlicher Angaben vom 2026-11-05 verglichen.',
+      'Ich erhalte Vermittlungsprovisionen von Mercor (Code 02e0c12a-d634-4738-9686-04f28f31f52b) und micro1 (Code ad081063-9c31-41f4-8c1d-210fee47018c). Von Mindrift, Alignerr, Outlier und Handshake AI erhalte ich $0. Alle Plattformen werden nach identischen Kriterien auf Basis öffentlicher Angaben vom 2026-11-05 verglichen.',
     tableHeaders: [
       'Plattform',
       'Veröffentlichter Stundensatz (2026-11-05)',
@@ -2945,7 +2945,7 @@ const COMPARE_CONTENT: Record<Lang, ComparePageContent> = {
     directAnswer:
       'Sur les 6 principales plateformes d’entraînement d’IA, les tarifs horaires affichés vont de 15 $/h pour les missions généralistes jusqu’à 180 $/h pour les médecins spécialistes au 2026-11-05 (Mercor : 35–180 $/h ; Mindrift : 15–100+ $/h ; Alignerr : 15–120 $/h ; Handshake AI : jusqu’à 150 $/h réservé aux USA ; Outlier et micro1 : par projet / TBD). Pour les résidents en France et en Europe, Mercor, Mindrift et Outlier sont les plus accessibles, alors qu’Alignerr exige une pièce d’identité américaine et Handshake AI est strictement réservé aux résidents des États-Unis.',
     fairnessDisclosure:
-      'Je perçois des commissions de parrainage exclusivement de Mercor via le code 02e0c12a-d634-4738-9686-04f28f31f52b. Je touche 0 $ de Mindrift, Alignerr, Outlier, micro1 et Handshake AI. Toutes les plateformes sont évaluées selon des critères identiques et des données vérifiées au 2026-11-05.',
+      'Je perçois des commissions de parrainage de Mercor (code 02e0c12a-d634-4738-9686-04f28f31f52b) et de micro1 (code ad081063-9c31-41f4-8c1d-210fee47018c). Je touche 0 $ de Mindrift, Alignerr, Outlier et Handshake AI. Toutes les plateformes sont évaluées selon des critères identiques et des données vérifiées au 2026-11-05.',
     tableHeaders: [
       'Plateforme',
       'Tarifs horaires affichés (2026-11-05)',
@@ -3074,7 +3074,7 @@ const COMPARE_CONTENT: Record<Lang, ComparePageContent> = {
     directAnswer:
       'En las 6 principales plataformas de entrenamiento de IA, las tarifas horarias publicadas oscilan entre 15 $/h en tareas iniciales y 180 $/h en medicina especializada a fecha de 2026-11-05 (Mercor: 35–180 $/h; Mindrift: 15–100+ $/h; Alignerr: 15–120 $/h; Handshake AI: hasta 150 $/h solo EE. UU.; Outlier y micro1: por proyecto / TBD). Para especialistas en España y Europa, Mercor, Mindrift y Outlier son las más accesibles, mientras que Alignerr exige documentación estadounidense y Handshake AI restringe el acceso exclusivamente a residentes en EE. UU.',
     fairnessDisclosure:
-      'Percibo comisiones de recomendación únicamente de Mercor a través del código 02e0c12a-d634-4738-9686-04f28f31f52b. Recibo 0 $ de Mindrift, Alignerr, Outlier, micro1 y Handshake AI. Todas las plataformas se evalúan bajo idénticos criterios a partir de fuentes públicas comprobadas el 2026-11-05.',
+      'Percibo comisiones de recomendación de Mercor (código 02e0c12a-d634-4738-9686-04f28f31f52b) y de micro1 (código ad081063-9c31-41f4-8c1d-210fee47018c). Recibo 0 $ de Mindrift, Alignerr, Outlier y Handshake AI. Todas las plataformas se evalúan bajo idénticos criterios a partir de fuentes públicas comprobadas el 2026-11-05.',
     tableHeaders: [
       'Plataforma',
       'Tarifas horarias publicadas (2026-11-05)',

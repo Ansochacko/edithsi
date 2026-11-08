@@ -264,8 +264,8 @@
         "body": "Webbplatsen driftas hos Vercel Inc. När du besöker en sida eller klickar på en /go/-omdirigeringslänk sparar värden Vercel Inc. kortvariga serverloggar (IP-adress och tidpunkt) uteslutande för säkerhet och driftsäkerhet."
       },
       {
-        "heading": "4. Externa länkar till Mercor (separat personuppgiftsansvarig)",
-        "body": "När du klickar på en ansöknings- eller värvningslänk till Mercor lämnar du denna webbplats. Mercor är en separat personuppgiftsansvarig med egen integritetspolicy. Alla uppgifter du skickar in i din ansökan delas direkt med Mercor."
+        "heading": "4. Externa länkar till Mercor och micro1 (separata personuppgiftsansvariga)",
+        "body": "När du klickar på en ansöknings- eller värvningslänk till Mercor eller micro1 lämnar du denna webbplats. Mercor och micro1 är separata personuppgiftsansvariga med egna integritetspolicyer. Alla uppgifter du skickar in i din ansökan delas direkt med respektive plattform."
       },
       {
         "heading": "5. Kontakt",
@@ -286,12 +286,12 @@
     "businessIdLabel": "FO-nummer (Y-tunnus)",
     "sections": [
       {
-        "heading": "Oberoende webbplats — ej ansluten till Mercor",
-        "body": "Edithsi är en oberoende webbplats som drivs av en privatperson i Finland. Jag är inte ansluten till, godkänd av eller sponsrad av Mercor. Mercor är ett varumärke som tillhör sin ägare."
+        "heading": "Oberoende webbplats — ej ansluten till Mercor eller micro1",
+        "body": "Edithsi är en oberoende webbplats som drivs av en privatperson i Finland. Jag är inte ansluten till, godkänd av eller sponsrad av Mercor eller micro1. Alla varumärken tillhör sina respektive ägare."
       },
       {
         "heading": "Information om reklam och värvningslänkar",
-        "body": "Sidorna på denna webbplats innehåller värvningslänkar (referral links) till Mercor och utgör marknadsföring/reklam. Om du går vidare via en sådan länk och anlitas för ett projekt kan jag få en värvningsbonus utan kostnad för dig."
+        "body": "Sidorna på denna webbplats innehåller värvningslänkar (referral links) till Mercor och micro1 och utgör marknadsföring/reklam. Om du går vidare via en sådan länk och anlitas för ett projekt kan jag få en värvningsbonus utan kostnad för dig."
       },
       {
         "heading": "Uppgifter om uppdrag och arvoden",
@@ -300,7 +300,7 @@
     ]
   },
   "footer": {
-    "trademarkDisclaimer": "Edithsi är oberoende och inte anslutet till, godkänt eller sponsrat av Mercor. Mercor är ett varumärke som tillhör sin ägare. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.)",
+    "trademarkDisclaimer": "Edithsi är oberoende och inte anslutet till, godkänt eller sponsrat av Mercor eller micro1. Alla varumärken tillhör sina ägare. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor or micro1. All trademarks belong to their owners.)",
     "operatorLine": "Drivs av {name} · {city} · {email}",
     "businessIdLine": "FO-nummer: {businessId}",
     "audiencesHeading": "För dig (efter område)",

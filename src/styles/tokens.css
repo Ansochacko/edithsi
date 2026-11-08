@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Edithsi Design Tokens — Generated from Google Stitch (Nordic Field Guide)
+   Architecture: Flat Planographic Surfaces, Hairline Delimiters, Strict Scales
+   ========================================================================== */
+
+/* --- Self-Hosted WOFF2 Fonts --- */
+/* Space Grotesk (UI, Headlines, Tables, Markers, Indices) */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/fonts/space-grotesk-latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('/fonts/space-grotesk-latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('/fonts/space-grotesk-latin-600-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('/fonts/space-grotesk-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* Source Serif 4 (Long-form Reading, Prose, Editorial Context) */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/fonts/source-serif-4-latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('/fonts/source-serif-4-latin-600-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/fonts/source-serif-4-latin-400-italic.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* ==========================================================================
+   Light Mode Tokens (Default)
+   ========================================================================== */
+:root {
+  /* Fonts */
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace;
+
+  /* Stitch Light Palette */
+  --color-surface: #f8f9ff;
+  --color-surface-dim: #cedbf0;
+  --color-surface-bright: #f8f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-container: #e5eeff;
+  --color-surface-container-high: #dce9fe;
+  --color-surface-container-highest: #d6e3f9;
+
+  --color-on-surface: #0f1c2c;
+  --color-on-surface-variant: #434652;
+  --color-outline: #737784;
+  --color-outline-variant: #c3c6d5;
+
+  --color-primary: #003f94;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1c56b8;
+  --color-on-primary-container: #c2d2ff;
+  --color-primary-hover: #003277;
+
+  --color-secondary: #b02a3f;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #ff6475;
+  --color-on-secondary-container: #68001a;
+
+  --color-tertiary: #742e00;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+
+  /* Semantic UI Aliases */
+  --bg-canvas: var(--color-surface);
+  --bg-surface: var(--color-surface-container-lowest);
+  --bg-surface-muted: var(--color-surface-container-low);
+  --bg-surface-elevated: var(--color-surface-container);
+  --text-primary: var(--color-on-surface);
+  --text-secondary: var(--color-on-surface-variant);
+  --text-muted: var(--color-outline);
+  --border-hairline: var(--color-outline-variant);
+  --accent-primary: var(--color-primary-container);
+  --accent-primary-dark: var(--color-primary);
+  --accent-secondary: #a8233a; /* Lingonberry Red */
+
+  /* Spacing Scale */
+  --space-xs: 0.25rem;  /* 4px */
+  --space-sm: 0.5rem;   /* 8px */
+  --space-md: 1rem;     /* 16px */
+  --space-lg: 1.5rem;   /* 24px */
+  --space-xl: 2.5rem;   /* 40px */
+  --space-2xl: 4rem;    /* 64px */
+  --space-3xl: 6rem;    /* 96px */
+  --space-4xl: 8rem;    /* 128px */
+
+  --gutter: 1.5rem;
+  --gutter-desktop: 2rem;
+  --margin-mobile: 1.25rem;
+  --margin-desktop: 3rem;
+  --max-width: 1200px;
+
+  /* Corner Radii (Restrained architectural geometry) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Typography Scale */
+  --text-display-hero: clamp(2.25rem, 5vw, 3.5rem); /* 36px - 56px */
+  --lh-display-hero: 1.05;
+
+  --text-headline-lg: clamp(1.8rem, 3.5vw, 2.5rem);  /* 28px - 40px */
+  --lh-headline-lg: 1.15;
+
+  --text-headline-md: clamp(1.5rem, 2.5vw, 2rem);    /* 24px - 32px */
+  --lh-headline-md: 1.2;
+
+  --text-headline-sm: clamp(1.2rem, 2vw, 1.5rem);    /* 19px - 24px */
+  --lh-headline-sm: 1.25;
+
+  --text-title-md: 1.15rem;   /* ~18.5px */
+  --lh-title-md: 1.4;
+
+  --text-body-lg: 1.25rem;    /* 20px */
+  --lh-body-lg: 1.6;
+
+  --text-body-base: 1.0625rem;/* 17px */
+  --lh-body-base: 1.6;
+
+  --text-body-sm: 0.875rem;   /* 14px */
+  --lh-body-sm: 1.5;
+
+  --text-label-numeric: 1.0625rem; /* 17px */
+  --text-label-sm: 0.8125rem;      /* 13px */
+  --text-label-counter: 0.6875rem; /* 11px */
+  --text-section-index: 0.8125rem; /* 13px */
+}
+
+/* ==========================================================================
+   Dark Mode Tokens (via prefers-color-scheme: dark or .dark)
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface: #0b1220;
+    --color-surface-dim: #090e1a;
+    --color-surface-bright: #121b2c;
+    --color-surface-container-lowest: #0e1726;
+    --color-surface-container-low: #121c2e;
+    --color-surface-container: #162238;
+    --color-surface-container-high: #1c2b46;
+    --color-surface-container-highest: #243554;
+
+    --color-on-surface: #e8eef7;
+    --color-on-surface-variant: #9fb0c6;
+    --color-outline: #72849e;
+    --color-outline-variant: #24324a;
+
+    --color-primary: #6b9cf0;
+    --color-on-primary: #001945;
+    --color-primary-container: #1c56b8;
+    --color-on-primary-container: #c2d2ff;
+    --color-primary-hover: #8cb5f8;
+
+    --color-secondary: #f0788c;
+    --color-on-secondary: #40000d;
+    --color-secondary-container: #8f0c2a;
+    --color-on-secondary-container: #ffdada;
+
+    --color-error: #ffb4ab;
+    --color-error-container: #93000a;
+
+    /* Semantic Dark Aliases */
+    --bg-canvas: #0b1220;
+    --bg-surface: #121b2c;
+    --bg-surface-muted: #162238;
+    --bg-surface-elevated: #1c2b46;
+    --text-primary: #e8eef7;
+    --text-secondary: #9fb0c6;
+    --text-muted: #72849e;
+    --border-hairline: #24324a;
+    --accent-primary: #6b9cf0;
+    --accent-primary-dark: #b0c6ff;
+    --accent-secondary: #f0788c;
+  }
+}

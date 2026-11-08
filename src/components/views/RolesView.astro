@@ -2,7 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RoleFilter from '../RoleFilter.astro';
 import RoleCard, { type RoleEntry } from '../RoleCard.astro';
+import Micro1Callout from '../Micro1Callout.astro';
 import rolesRaw from '../../data/roles.json';
+import { CHECKED_ON } from '../../config';
 import {
   AUDIENCE_SLUGS,
   getDictionary,
@@ -65,11 +67,30 @@ const audienceGroups = AUDIENCE_SLUGS.map((slug) => {
   title={t.rolesPage.metaTitle}
   description={t.rolesPage.metaDescription}
 >
-  <section class="section" id="roles-directory">
-    <div class="container">
-      <span class="eyebrow">{t.rolesPage.eyebrow}</span>
-      <h1>{t.rolesPage.title}</h1>
-      <p class="lead">{t.rolesPage.lead}</p>
+  <div class="stitch-canvas">
+    <section class="stitch-section" id="roles-directory">
+      <div class="container stitch-grid">
+        <aside class="stitch-rail">
+          <span class="section-index">02 // TALENT DIRECTORY</span>
+          <span class="section-meta">ISSUE 2026.11 · VERIFIED</span>
+          <div class="archive-spec-box hidden lg:block">
+            ARCHIVE REF: FI-MERC-ROLES<br />
+            STATUS: 8 ACTIVE POOLS<br />
+            DISPATCH: NORTH EUROPE
+          </div>
+        </aside>
+
+        <div class="stitch-main">
+          <div class="section-heading-block">
+            <span class="eyebrow">{t.rolesPage.eyebrow}</span>
+            <h1 class="hero-display-h1">{t.rolesPage.title}</h1>
+            <p class="lead">{t.rolesPage.lead}</p>
+          </div>
+
+          <div class="status-indicator-bar">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="status-text">{CHECKED_ON} · Rates quoted in USD/hr as posted by Mercor · Zero upfront candidate fees</span>
+          </div>
 
       <!-- CSS-only radio inputs so Sort works even with JavaScript disabled -->
       <input
@@ -180,9 +201,11 @@ const audienceGroups = AUDIENCE_SLUGS.map((slug) => {
             }
           </div>
         </div>
+
+        <Micro1Callout lang={lang} src="roles" />
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </BaseLayout>
 
 <script src="../../scripts/roles-filter.ts"></script>

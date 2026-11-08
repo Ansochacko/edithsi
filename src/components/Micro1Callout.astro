@@ -1,0 +1,78 @@
+---
+import { buildMicro1GoUrl } from '../config';
+import { getDictionary, getPlatformPath, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+  src: string;
+}
+
+const { lang, src } = Astro.props;
+const t = getDictionary(lang);
+const micro1Href = buildMicro1GoUrl(src);
+const profileHref = getPlatformPath(lang, 'micro1');
+
+const LABELS = {
+  en: {
+    heading: 'More roles on micro1',
+    lead: 'micro1 recruits domain specialists in engineering, finance, healthcare, law, and research for frontier lab training programs (Realm, Cortex, Medical Index). Rates are posted per opportunity (checked 2026-11-05). Some listings restrict eligibility by country—check each listing before applying.',
+    button: 'Browse micro1 jobs ↗',
+    readReview: 'Read micro1 profile →',
+  },
+  fi: {
+    heading: 'Lisää tehtäviä micro1-alustalla',
+    lead: 'micro1 rekrytoi ohjelmistokehityksen, rahoituksen, terveydenhuollon, juridiikan ja tutkimuksen asiantuntijoita tekoälyohjelmiin (Realm, Cortex, Medical Index). Palkkiot ilmoitetaan roolikohtaisesti (tarkistettu 5.11.2026). Osa tehtävistä voi sisältää maarajoituksia—tarkista kelpoisuus kustakin ilmoituksesta.',
+    button: 'Selaa micro1-tehtäviä ↗',
+    readReview: 'Lue micro1-arvio →',
+  },
+  sv: {
+    heading: 'Fler roller hos micro1',
+    lead: 'micro1 rekryterar specialister inom programmering, finans, vård, juridik och forskning för AI-utvärderingsprogram (Realm, Cortex, Medical Index). Ersättningar publiceras per uppdrag (kontrollerat 2026-11-05). Vissa roller kan ha geografiska begränsningar—kontrollera varje annons noga.',
+    button: 'Utforska micro1-jobb ↗',
+    readReview: 'Läs micro1-profil →',
+  },
+  de: {
+    heading: 'Weitere Rollen bei micro1',
+    lead: 'micro1 sucht Spezialisten in Softwareentwicklung, Finanzen, Medizin, Recht und Forschung für KI-Trainingsprogramme (Realm, Cortex, Medical Index). Stundensätze werden je Ausschreibung genannt (Stand 2026-11-05). Manche Rollen haben geografische Einschränkungen—bitte jedes Angebot prüfen.',
+    button: 'micro1-Jobs ansehen ↗',
+    readReview: 'Zum micro1-Profil →',
+  },
+  fr: {
+    heading: 'Plus de missions sur micro1',
+    lead: 'micro1 recrute des experts en informatique, finance, santé, droit et recherche pour des programmes d’évaluation d’IA (Realm, Cortex, Medical Index). Les rémunérations sont fixées par offre (vérifié le 2026-11-05). Certaines missions restreignent l’accès par pays—vérifiez chaque fiche.',
+    button: 'Consulter les missions micro1 ↗',
+    readReview: 'Voir le profil micro1 →',
+  },
+  es: {
+    heading: 'Más oportunidades en micro1',
+    lead: 'micro1 selecciona expertos en software, finanzas, salud, derecho e investigación para programas de entrenamiento de IA (Realm, Cortex, Medical Index). Las tarifas se indican por vacante (verificado el 2026-11-05). Algunas vacantes limitan el acceso por país—revisa cada oferta antes de postular.',
+    button: 'Ver empleos en micro1 ↗',
+    readReview: 'Ver perfil de micro1 →',
+  },
+};
+
+const l = LABELS[lang] ?? LABELS.en;
+---
+
+<div class="micro1-callout-card">
+  <div class="micro1-callout-card__header">
+    <div class="micro1-callout-card__title-group">
+      <span class="micro1-callout-card__badge">PARTNER PLATFORM</span>
+      <h3 class="micro1-callout-card__title">{l.heading}</h3>
+    </div>
+    <a href={profileHref} class="micro1-callout-card__profile-link">{l.readReview}</a>
+  </div>
+  <p class="micro1-callout-card__lead">{l.lead}</p>
+  <div class="micro1-callout-card__action">
+    <a
+      href={micro1Href}
+      target="_blank"
+      rel="sponsored noopener noreferrer"
+      class="btn btn--primary"
+    >
+      <span>{l.button}</span>
+      <span class="sr-only"> {t.common.externalLinkSr}</span>
+    </a>
+    <span class="referral-micro">{t.common.referralMicroLabel}</span>
+  </div>
+</div>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-fixed-variant":"#00429b","on-error":"#ffffff","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#8f0c2a","inverse-surface":"#253143","on-primary":"#ffffff","tertiary-fixed-dim":"#ffb692","surface-variant":"#d7e3fb","on-secondary-fixed":"#40000d","secondary-fixed":"#ffdada","on-secondary":"#ffffff","secondary-fixed-dim":"#ffb3b6","background":"#f9f9ff","primary-fixed-dim":"#b0c6ff","tertiary-fixed":"#ffdbcb","on-tertiary-container":"#ffc6ac","surface-dim":"#cfdaf2","inverse-primary":"#b0c6ff","outline":"#737784","surface-container":"#e7eeff","surface":"#f9f9ff","tertiary-container":"#993f00","on-background":"#101c2d","on-primary-fixed":"#001945","inverse-on-surface":"#ebf1ff","on-surface":"#101c2d","on-primary-container":"#c2d2ff","outline-variant":"#c3c6d5","on-secondary-container":"#68001a","surface-container-highest":"#d7e3fb","on-error-container":"#93000a","secondary-container":"#ff6475","tertiary":"#742e00","error":"#ba1a1a","error-container":"#ffdad6","primary":"#003f94","on-tertiary-fixed":"#341100","secondary":"#b02a3f","on-surface-variant":"#434652","surface-bright":"#f9f9ff","on-tertiary-fixed-variant":"#793000","primary-fixed":"#d9e2ff","surface-container-high":"#dee9ff","primary-container":"#1c56b8","on-tertiary":"#ffffff","surface-container-low":"#f0f3ff","surface-tint":"#225abc"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","margin-desktop":"3rem","space-xl":"2.5rem","space-md":"1rem","gutter-desktop":"2rem","gutter":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","section-gap-mobile":"4rem","margin":"1.5rem","section-gap-desktop":"8rem"},"fontFamily":{"section-index":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-base":["\"Source Serif 4\""],"display-hero":["Space Grotesk"],"headline-sm":["Space Grotesk"],"title-md":["Space Grotesk"],"label-numeric":["Space Grotesk"],"label-sm":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-sm":["\"Source Serif 4\""],"body-lg":["\"Source Serif 4\""]},"fontSize":{"section-index":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"display-hero-mobile":["38px",{"lineHeight":"41.8px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["33.2px",{"lineHeight":"40px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-base":["17px",{"lineHeight":"26px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"58.8px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["26.5px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"title-md":["21.25px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"500"}],"label-numeric":["17px",{"lineHeight":"22px","letterSpacing":"0.02em","fontWeight":"600"}],"label-sm":["13.6px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg":["41.5px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13.6px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["21.25px",{"lineHeight":"32px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-base text-body-base antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant"><div class="h-24 w-full flex flex-col justify-between"><div class="h-16 w-full max-w-[1200px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-baseline gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Edithsi</span><span class="font-label-sm text-label-sm text-outline border-l border-outline-variant pl-space-sm hidden sm:inline uppercase tracking-wider">Nordic AI Work Registry</span></div><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="open-roles" href="#">Open roles</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="for-you" href="#">For you</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="how-it-works" href="#">How it works</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="questions" href="#">Questions</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="compare" href="#">Compare</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface py-space-xs transition-colors" data-path="pay-index" href="#">Pay Index</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-space-sm py-space-xs border border-outline-variant"><span class="material-symbols-outlined text-[16px] text-outline">language</span><span class="tracking-wider">EN · FI · SV · DE · FR · ES</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-8 w-full bg-surface-container-low border-t border-outline-variant"><div class="h-full max-w-[1200px] mx-auto px-gutter flex items-center"><div class="border-l-[3px] border-secondary pl-space-sm flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-secondary font-bold tracking-widest uppercase">AD</span><span class="font-label-sm text-label-sm text-outline">·</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Independent site, not an official Mercor page. Links are referral links; I may earn a bonus. Applying is always free.</span></div></div></div></div></header><main class="w-full pt-24 bg-surface min-h-[calc(100vh-24rem)]"><div class="flex flex-col w-full">
+<!-- Content Canvas: Nordic 12-Column Asymmetric Ledger (Max 1200px) -->
+<div class="w-full max-w-[1200px] mx-auto px-gutter py-space-xl">
+<!-- SECTION 01: LEDGER HEADER & ADMINISTRATIVE PREFIX -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop pb-space-xl border-b border-outline-variant">
+<!-- Asymmetric Index Rail (Cols 1-3) -->
+<aside class="lg:col-span-3 flex flex-col justify-between pt-space-xs">
+<div class="space-y-space-sm">
+<div class="flex items-center gap-space-xs text-secondary font-section-index text-section-index">
+<span class="inline-block w-2 h-2 bg-secondary"></span>
+<span>02 // TALENT DIRECTORY</span>
+</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider space-y-space-xs pt-space-xs">
+<p>ISSUE 2026.11 · VERIFIED</p>
+<p class="font-mono text-on-surface-variant">ARCHIVE REF: FI-MERC-ROLES</p>
+<p>CYCLE: Q4-FOUNDATION-EVAL</p>
+</div>
+</div>
+<div class="hidden lg:block pt-space-xl text-outline-variant">
+<svg class="text-outline" fill="none" height="64" viewbox="0 0 64 64" width="64">
+<rect height="63" stroke="currentColor" stroke-dasharray="2 2" width="63" x="0.5" y="0.5"></rect>
+<line stroke="currentColor" x1="8" x2="56" y1="16" y2="16"></line>
+<line stroke="currentColor" x1="8" x2="40" y1="28" y2="28"></line>
+<line stroke="currentColor" x1="8" x2="48" y1="40" y2="40"></line>
+</svg>
+<span class="block font-label-sm text-label-sm text-outline mt-space-xs">HELSINKI GAZETTE SYSTEM</span>
+</div>
+</aside>
+<!-- Primary Ledger Header (Cols 4-12) -->
+<div class="lg:col-span-9 flex flex-col gap-space-md">
+<div class="flex flex-wrap items-baseline justify-between gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            Open talent pools
+          </h1>
+<span class="font-label-sm text-label-sm px-space-sm py-space-xs bg-surface-container-high text-on-surface border border-outline-variant font-medium">
+            8 ACTIVE STANDING ALLOCATIONS
+          </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+          Each listing below represents an active standing contractor pool on Mercor, not a single static job vacancy. Passing the asynchronous evaluation qualifies you for recurring project allocations; client demand fluctuates with foundation model training cycles. Verified and updated regularly.
+        </p>
+<!-- Ledger Administrative Verification Tag -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-low border border-outline-variant px-space-sm py-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span class="font-label-sm text-label-sm font-medium">Checked 5 Nov 2026</span>
+</div>
+<div class="inline-flex items-center gap-space-xs bg-surface-container-low border border-outline-variant px-space-sm py-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-outline">payments</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rates quoted in USD/hr as posted by Mercor</span>
+</div>
+<div class="inline-flex items-center gap-space-xs bg-surface-container-low border border-outline-variant px-space-sm py-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zero upfront candidate fees</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02: TAXONOMY FILTERS & VIEW CONTROLS -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop py-space-lg border-b border-outline-variant">
+<div class="lg:col-span-3 flex items-center">
+<span class="font-section-index text-section-index uppercase text-outline tracking-wider">
+          FILTER BY DOMAIN
+        </span>
+</div>
+<div class="lg:col-span-9 flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<!-- Interactive Taxonomy Chips -->
+<div class="flex flex-wrap gap-space-xs items-center" id="filter-container">
+<button class="filter-btn active h-11 px-space-md bg-primary text-on-primary font-label-sm text-label-sm font-medium border border-primary transition-colors" data-filter="all">
+            All Pools (8)
+          </button>
+<button class="filter-btn h-11 px-space-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium border border-outline-variant transition-colors" data-filter="law">
+            Law &amp; Jurisprudence (2)
+          </button>
+<button class="filter-btn h-11 px-space-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium border border-outline-variant transition-colors" data-filter="medical">
+            Medical &amp; Health (1)
+          </button>
+<button class="filter-btn h-11 px-space-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium border border-outline-variant transition-colors" data-filter="engineering">
+            Software &amp; IT (1)
+          </button>
+<button class="filter-btn h-11 px-space-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium border border-outline-variant transition-colors" data-filter="productivity">
+            Office &amp; ERP (1)
+          </button>
+<button class="filter-btn h-11 px-space-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium border border-outline-variant transition-colors" data-filter="finance">
+            Finance &amp; Business (1)
+          </button>
+<button class="filter-btn h-11 px-space-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium border border-outline-variant transition-colors" data-filter="linguistics">
+            Languages &amp; Linguistics (1)
+          </button>
+<button class="filter-btn h-11 px-space-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium border border-outline-variant transition-colors" data-filter="interdisciplinary">
+            Generalist &amp; PhD (1)
+          </button>
+</div>
+<!-- Metric Sort / Currency Notation -->
+<div class="flex items-center gap-space-sm shrink-0 border-t md:border-t-0 md:border-l border-outline-variant pt-space-sm md:pt-0 md:pl-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider text-[11px]">SORT BY SPECIFICATION</span>
+<select class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm border border-outline-variant px-space-sm py-1 focus:outline-none focus:border-primary">
+<option>Grouped by Discipline</option>
+<option>Highest Hourly Rate (USD)</option>
+<option>Batch Code (A–Z)</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: DUAL-COLUMN LEDGER DIRECTORY & FIELD NOTES SIDEBAR -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop mt-space-xl items-start">
+<!-- SUB-COLUMN A: Grouped Ruled Roles Directory (Cols 1-8 of active grid, 8 Desktop Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl" id="role-directory-ledger">
+<!-- GROUP 1: LAW & JURISPRUDENCE -->
+<section class="role-group flex flex-col gap-space-md" data-category="law">
+<div class="flex items-center justify-between border-b border-outline-variant pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-section-index text-section-index text-outline">SEC.01</span>
+<h2 class="font-title-md text-title-md font-bold tracking-tight text-on-surface">LAW &amp; JURISPRUDENCE</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2 POOLS ACTIVE</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- ROLE 1: Licensed Lawyer -->
+<article class="bg-surface-container-lowest border border-outline-variant p-space-lg transition-colors hover:border-primary">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">balance</span>
+<span class="uppercase tracking-wider">LAW &amp; REGULATION · BATCH LEG-EU-88</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                    Legal Expert (Licensed Lawyer)
+                  </h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-xl pt-space-xs">
+                    Bar-admitted attorneys, legal scholars, and EU jurisprudence specialists evaluating statutory compliance and reasoning.
+                  </p>
+</div>
+<div class="flex flex-col items-start md:items-end justify-between shrink-0 gap-space-sm">
+<div class="text-left md:text-right">
+<div class="font-display-hero text-[34px] leading-tight font-bold text-primary tracking-tight">
+                      $100–150<span class="text-body-base text-on-surface-variant font-normal">/h</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">USD equivalent billed weekly</span>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-space-lg py-space-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wider transition-colors inline-flex items-center justify-center gap-1" href="https://mercor.com" rel="noopener noreferrer" target="_blank">
+                      Apply on Mercor <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-tight uppercase text-[11px]">referral link · ad</span>
+</div>
+</div>
+</div>
+</article>
+<!-- ROLE 2: Non-Bar / Specialist -->
+<article class="bg-surface-container-lowest border border-outline-variant p-space-lg transition-colors hover:border-primary">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">description</span>
+<span class="uppercase tracking-wider">LAW &amp; REGULATION · BATCH LEG-PAR-22</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                    Legal Expert (Non-Bar / Specialist)
+                  </h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-xl pt-space-xs">
+                    Law graduates, paralegals, contract specialists, and compliance officers evaluating contract synthesis.
+                  </p>
+</div>
+<div class="flex flex-col items-start md:items-end justify-between shrink-0 gap-space-sm">
+<div class="text-left md:text-right">
+<div class="font-display-hero text-[34px] leading-tight font-bold text-primary tracking-tight">
+                      $60–150<span class="text-body-base text-on-surface-variant font-normal">/h</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Tier depends on test evaluation</span>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-space-lg py-space-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wider transition-colors inline-flex items-center justify-center gap-1" href="https://mercor.com" rel="noopener noreferrer" target="_blank">
+                      Apply on Mercor <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-tight uppercase text-[11px]">referral link · ad</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- GROUP 2: MEDICINE & HEALTHCARE -->
+<section class="role-group flex flex-col gap-space-md" data-category="medical">
+<div class="flex items-center justify-between border-b border-outline-variant pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-section-index text-section-index text-outline">SEC.02</span>
+<h2 class="font-title-md text-title-md font-bold tracking-tight text-on-surface">MEDICINE &amp; HEALTHCARE</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1 POOL ACTIVE</span>
+</div>
+<article class="bg-surface-container-lowest border border-outline-variant p-space-lg transition-colors hover:border-primary">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">clinical_notes</span>
+<span class="uppercase tracking-wider">MEDICINE &amp; CLINICAL · BATCH MED-CLIN-04</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                  Medical Expert
+                </h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-xl pt-space-xs">
+                  Licensed physicians (MD), resident doctors, and clinical researchers auditing medical diagnostics and Q&amp;A.
+                </p>
+</div>
+<div class="flex flex-col items-start md:items-end justify-between shrink-0 gap-space-sm">
+<div class="text-left md:text-right">
+<div class="font-display-hero text-[34px] leading-tight font-bold text-primary tracking-tight">
+                    $60–180<span class="text-body-base text-on-surface-variant font-normal">/h</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Clinical specialty weighting</span>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-space-lg py-space-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wider transition-colors inline-flex items-center justify-center gap-1" href="https://mercor.com" rel="noopener noreferrer" target="_blank">
+                    Apply on Mercor <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-tight uppercase text-[11px]">referral link · ad</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- GROUP 3: ENGINEERING & COMPUTER SCIENCE -->
+<section class="role-group flex flex-col gap-space-md" data-category="engineering">
+<div class="flex items-center justify-between border-b border-outline-variant pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-section-index text-section-index text-outline">SEC.03</span>
+<h2 class="font-title-md text-title-md font-bold tracking-tight text-on-surface">ENGINEERING &amp; COMPUTER SCIENCE</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1 POOL ACTIVE</span>
+</div>
+<article class="bg-surface-container-lowest border border-outline-variant p-space-lg transition-colors hover:border-primary">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">terminal</span>
+<span class="uppercase tracking-wider">SOFTWARE &amp; SYSTEMS · BATCH SWE-CORE-90</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                  Software Engineering Expert
+                </h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-xl pt-space-xs">
+                  Senior developers and systems architects in C++, Python, Rust, and distributed systems consensus evaluation.
+                </p>
+</div>
+<div class="flex flex-col items-start md:items-end justify-between shrink-0 gap-space-sm">
+<div class="text-left md:text-right">
+<div class="font-display-hero text-[34px] leading-tight font-bold text-primary tracking-tight">
+                    $70–150<span class="text-body-base text-on-surface-variant font-normal">/h</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Based on system architecture benchmark</span>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-space-lg py-space-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wider transition-colors inline-flex items-center justify-center gap-1" href="https://mercor.com" rel="noopener noreferrer" target="_blank">
+                    Apply on Mercor <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-tight uppercase text-[11px]">referral link · ad</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- GROUP 4: PRODUCTIVITY & OPERATIONS -->
+<section class="role-group flex flex-col gap-space-md" data-category="productivity">
+<div class="flex items-center justify-between border-b border-outline-variant pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-section-index text-section-index text-outline">SEC.04</span>
+<h2 class="font-title-md text-title-md font-bold tracking-tight text-on-surface">PRODUCTIVITY &amp; OPERATIONS</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1 POOL ACTIVE</span>
+</div>
+<article class="bg-surface-container-lowest border border-outline-variant p-space-lg transition-colors hover:border-primary">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">table_chart</span>
+<span class="uppercase tracking-wider">ENTERPRISE TOOLS · BATCH OPS-ERP-14</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                  Office &amp; Productivity Software Expert
+                </h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-xl pt-space-xs">
+                  Excel modeling experts, ERP power users, automation workflow designers, and financial formula testers.
+                </p>
+</div>
+<div class="flex flex-col items-start md:items-end justify-between shrink-0 gap-space-sm">
+<div class="text-left md:text-right">
+<div class="font-display-hero text-[34px] leading-tight font-bold text-primary tracking-tight">
+                    $60–70<span class="text-body-base text-on-surface-variant font-normal">/h</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Spreadsheet &amp; macro syntax validation</span>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-space-lg py-space-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wider transition-colors inline-flex items-center justify-center gap-1" href="https://mercor.com" rel="noopener noreferrer" target="_blank">
+                    Apply on Mercor <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-tight uppercase text-[11px]">referral link · ad</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- GROUP 5: FINANCE & VALUATION -->
+<section class="role-group flex flex-col gap-space-md" data-category="finance">
+<div class="flex items-center justify-between border-b border-outline-variant pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-section-index text-section-index text-outline">SEC.05</span>
+<h2 class="font-title-md text-title-md font-bold tracking-tight text-on-surface">FINANCE &amp; VALUATION</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1 POOL ACTIVE</span>
+</div>
+<article class="bg-surface-container-lowest border border-outline-variant p-space-lg transition-colors hover:border-primary">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">trending_up</span>
+<span class="uppercase tracking-wider">FINANCE &amp; VALUATION · BATCH FIN-ANL-31</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                  Finance Expert
+                </h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-xl pt-space-xs">
+                  CFA charterholders, equity research analysts, and corporate valuation professionals auditing balance sheet analyses.
+                </p>
+</div>
+<div class="flex flex-col items-start md:items-end justify-between shrink-0 gap-space-sm">
+<div class="text-left md:text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight">
+                    Rate set per project
+                  </div>
+<span class="font-label-sm text-label-sm text-outline block">Typically ~$70–120/h equivalent</span>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-space-lg py-space-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wider transition-colors inline-flex items-center justify-center gap-1" href="https://mercor.com" rel="noopener noreferrer" target="_blank">
+                    Apply on Mercor <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-tight uppercase text-[11px]">referral link · ad</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- GROUP 6: LINGUISTICS & MULTILINGUAL -->
+<section class="role-group flex flex-col gap-space-md" data-category="linguistics">
+<div class="flex items-center justify-between border-b border-outline-variant pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-section-index text-section-index text-outline">SEC.06</span>
+<h2 class="font-title-md text-title-md font-bold tracking-tight text-on-surface">LINGUISTICS &amp; MULTILINGUAL</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1 POOL ACTIVE</span>
+</div>
+<article class="bg-surface-container-lowest border border-outline-variant p-space-lg transition-colors hover:border-primary">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">translate</span>
+<span class="uppercase tracking-wider">LINGUISTICS &amp; LOCALIZATION · BATCH LING-NORD-12</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                    Language &amp; Audio Expert
+                  </h3>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-space-xs py-0.5 border border-outline-variant">
+                    Finnish, French, Spanish, Italian, Polish, Dutch, Swedish…
+                  </span>
+</div>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-xl pt-space-xs">
+                  Native linguists, phonetic annotators, sworn translators, and localization editors reviewing nuance and dialect accuracy.
+                </p>
+</div>
+<div class="flex flex-col items-start md:items-end justify-between shrink-0 gap-space-sm">
+<div class="text-left md:text-right">
+<div class="font-display-hero text-[34px] leading-tight font-bold text-primary tracking-tight">
+                    $35–50<span class="text-body-base text-on-surface-variant font-normal">/h</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Fluency verification mandatory</span>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-space-lg py-space-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wider transition-colors inline-flex items-center justify-center gap-1" href="https://mercor.com" rel="noopener noreferrer" target="_blank">
+                    Apply on Mercor <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-tight uppercase text-[11px]">referral link · ad</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- GROUP 7: INTERDISCIPLINARY REASONING -->
+<section class="role-group flex flex-col gap-space-md" data-category="interdisciplinary">
+<div class="flex items-center justify-between border-b border-outline-variant pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-section-index text-section-index text-outline">SEC.07</span>
+<h2 class="font-title-md text-title-md font-bold tracking-tight text-on-surface">INTERDISCIPLINARY REASONING</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">1 POOL ACTIVE</span>
+</div>
+<article class="bg-surface-container-lowest border border-outline-variant p-space-lg transition-colors hover:border-primary">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">psychology</span>
+<span class="uppercase tracking-wider">INTERDISCIPLINARY · BATCH GEN-REAS-55</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                  Generalist Expert
+                </h3>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-xl pt-space-xs">
+                  STEM PhDs, factual research editors, and academic evaluators validating multi-step chain-of-thought logic.
+                </p>
+</div>
+<div class="flex flex-col items-start md:items-end justify-between shrink-0 gap-space-sm">
+<div class="text-left md:text-right">
+<div class="font-display-hero text-[34px] leading-tight font-bold text-primary tracking-tight">
+                    $40–70<span class="text-body-base text-on-surface-variant font-normal">/h</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block">Academic publication track assessed</span>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-space-lg py-space-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-sm text-label-sm font-semibold tracking-wider transition-colors inline-flex items-center justify-center gap-1" href="https://mercor.com" rel="noopener noreferrer" target="_blank">
+                    Apply on Mercor <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-tight uppercase text-[11px]">referral link · ad</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<!-- SUB-COLUMN B: Sticky Right Sidebar: Field Notes & Protocol (Cols 9-12, 4 Desktop Cols) -->
+<aside class="lg:col-span-4 sticky top-28 space-y-space-md">
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg">
+<div class="flex items-center justify-between border-b border-outline-variant pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">menu_book</span>
+<span class="font-section-index text-section-index tracking-wider uppercase font-bold">BEFORE YOU APPLY</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">DOC-FI-82</span>
+</div>
+<h4 class="font-title-md text-title-md font-semibold text-on-surface mb-space-sm">
+            Operational prerequisites for Nordic &amp; European specialists
+          </h4>
+<div class="space-y-space-md divide-y divide-outline-variant">
+<!-- Item 01 -->
+<div class="pt-space-sm first:pt-0">
+<div class="flex items-baseline gap-space-xs mb-1">
+<span class="font-section-index text-section-index text-primary font-bold">01.</span>
+<span class="font-headline-sm text-[16px] font-semibold text-on-surface">100% Free Intake</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Applying is entirely free. Never pay third parties claiming to guarantee Mercor contracts or selling assessment answers.
+              </p>
+</div>
+<!-- Item 02 -->
+<div class="pt-space-sm">
+<div class="flex items-baseline gap-space-xs mb-1">
+<span class="font-section-index text-section-index text-primary font-bold">02.</span>
+<span class="font-headline-sm text-[16px] font-semibold text-on-surface">Contractor Status</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                You operate as an independent contractor (B2B/1099 equivalent). You supply your own workstation, hardware, and statutory coverage (YEL in Finland).
+              </p>
+</div>
+<!-- Item 03 -->
+<div class="pt-space-sm">
+<div class="flex items-baseline gap-space-xs mb-1">
+<span class="font-section-index text-section-index text-primary font-bold">03.</span>
+<span class="font-headline-sm text-[16px] font-semibold text-on-surface">Fiscal Responsibility</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Gross payouts are not pre-taxed. Reporting is mandatory via your tax administration (Vero, Skatteverket). Cross-border EU invoices apply standard reverse-charge mechanics.
+              </p>
+</div>
+<!-- Item 04 -->
+<div class="pt-space-sm">
+<div class="flex items-baseline gap-space-xs mb-1">
+<span class="font-section-index text-section-index text-primary font-bold">04.</span>
+<span class="font-headline-sm text-[16px] font-semibold text-on-surface">Verification Security</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Official invites and evaluation communications arrive strictly from verified domains ending in <code class="font-mono text-primary bg-surface-container px-1 py-0.5">@mercor.com</code>.
+              </p>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-outline-variant flex flex-col gap-space-sm">
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center justify-between font-semibold" href="#">
+<span>Read the compliance &amp; tax guide</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<!-- Status Indicator Badge -->
+<div class="p-space-xs bg-surface-container border border-outline-variant flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold text-[11px]">
+                INTAKE STATUS: ACCEPTING CANDIDATES
+              </span>
+</div>
+</div>
+</div>
+<!-- Registry Metadata Ticket -->
+<div class="p-space-md bg-surface-container-low border border-outline-variant space-y-space-xs">
+<div class="flex justify-between items-center text-outline font-label-sm text-label-sm">
+<span>HELSINKI SYNC</span>
+<span class="font-mono">11:42:00 EET</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Data verified via automated API crawler cross-referenced with public Mercor intake endpoints.
+          </p>
+</div>
+</aside>
+</div>
+</div>
+<!-- Client-side filter interaction micro-script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const groups = document.querySelectorAll('.role-group');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Reset styles
+          buttons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+            b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant', 'border-outline-variant');
+          });
+
+          // Set active button
+          btn.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+          btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+
+          const filter = btn.getAttribute('data-filter');
+
+          groups.forEach(group => {
+            if (filter === 'all' || group.getAttribute('data-category') === filter) {
+              group.style.display = 'flex';
+            } else {
+              group.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant py-space-xl mt-section-gap-mobile lg:mt-section-gap-desktop"><div class="max-w-[1200px] mx-auto px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop border-b border-outline-variant pb-space-xl"><div class="flex flex-col gap-space-sm"><h4 class="font-section-index text-section-index uppercase text-outline tracking-wider">Who Runs This</h4><div class="font-body-sm text-body-sm text-on-surface space-y-space-xs"><p class="font-semibold">M. Virtanen</p><p class="text-on-surface-variant">Helsinki, Finland</p><p><a class="text-primary hover:underline" href="mailto:hello@edithsi.com">hello@edithsi.com</a></p></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-section-index text-section-index uppercase text-outline tracking-wider">Index Registry</h4><ul class="font-label-sm text-label-sm space-y-space-xs text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="open-roles" href="#">Open roles catalog</a></li><li><a class="hover:text-on-surface transition-colors" data-path="pay-index" href="#">Pay Index &amp; compensation</a></li><li><a class="hover:text-on-surface transition-colors" data-path="compare" href="#">Platform comparison ledger</a></li><li><a class="hover:text-on-surface transition-colors" data-path="how-it-works" href="#">Vetting protocol &amp; guides</a></li><li><a class="hover:text-on-surface transition-colors" data-path="questions" href="#">Frequently queried items</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-section-index text-section-index uppercase text-outline tracking-wider">Statutory Disclosures</h4><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Edithsi is independent and not affiliated with Mercor. All trademarks belong to respective holders. Field guides are maintained for factual analysis and labor market transparency.</p></div><div class="flex flex-col gap-space-sm"><h4 class="font-section-index text-section-index uppercase text-outline tracking-wider">Legal &amp; Privacy</h4><ul class="font-label-sm text-label-sm space-y-space-xs text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="privacy-notice" href="#">Privacy notice &amp; GDPR</a></li><li><a class="hover:text-on-surface transition-colors" data-path="editorial-standards" href="#">Editorial &amp; compensation policy</a></li><li><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of documentation use</a></li><li><a class="hover:text-on-surface transition-colors" data-path="cookie-settings" href="#">Cookie registry settings</a></li></ul></div></div><div class="pt-space-md flex flex-col sm:flex-row justify-between items-center gap-space-sm"><span class="font-label-sm text-label-sm text-outline">© 2024 Edithsi. Nordic AI Work Registry. Utilitarian Field Edition.</span><span class="font-section-index text-section-index text-outline">REG-FI-0091-HELSINKI</span></div></div></footer></body></html>

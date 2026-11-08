@@ -264,8 +264,8 @@
         "body": "Este sitio está alojado en Vercel Inc. Al visitar una página o seguir una redirección /go/, el proveedor Vercel Inc. conserva a corto plazo registros del servidor (dirección IP y hora) exclusivamente por motivos de seguridad."
       },
       {
-        "heading": "4. Enlaces externos a Mercor (responsable independiente)",
-        "body": "Al hacer clic en un enlace de solicitud o referido hacia Mercor, abandonas este sitio web. Mercor es un responsable del tratamiento independiente con su propia política de privacidad. Compartes tus datos directamente con Mercor."
+        "heading": "4. Enlaces externos a Mercor y micro1 (responsables independientes)",
+        "body": "Al hacer clic en un enlace de solicitud o referido hacia Mercor o micro1, abandonas este sitio web. Mercor y micro1 son responsables del tratamiento independientes con sus propias políticas de privacidad. Compartes tus datos directamente con cada plataforma."
       },
       {
         "heading": "5. Contacto",
@@ -286,12 +286,12 @@
     "businessIdLabel": "Identificador empresarial (Y-tunnus)",
     "sections": [
       {
-        "heading": "Sitio web independiente — no afiliado a Mercor",
-        "body": "Edithsi es un sitio web independiente gestionado por una sola persona desde Finlandia. No estoy afiliado, respaldado ni patrocinado por Mercor. Mercor es una marca registrada de su respectivo propietario."
+        "heading": "Sitio web independiente — no afiliado a Mercor ni a micro1",
+        "body": "Edithsi es un sitio web independiente gestionado por una sola persona desde Finlandia. No estoy afiliado, respaldado ni patrocinado por Mercor ni micro1. Todas las marcas pertenecen a sus respectivos propietarios."
       },
       {
         "heading": "Aviso sobre publicidad y enlaces de referido",
-        "body": "Las páginas de este sitio contienen enlaces de referido hacia Mercor y constituyen publicidad comercial. Si accedes a Mercor mediante uno de mis enlaces y te contratan, puedo recibir una bonificación por recomendación sin coste adicional para ti."
+        "body": "Las páginas de este sitio contienen enlaces de referido hacia Mercor y micro1 y constituyen publicidad comercial. Si accedes a una plataforma mediante uno de mis enlaces y te contratan, puedo recibir una bonificación por recomendación sin coste adicional para ti."
       },
       {
         "heading": "Exactitud de los resúmenes de puestos y tarifas",
@@ -300,7 +300,7 @@
     ]
   },
   "footer": {
-    "trademarkDisclaimer": "Edithsi es independiente y no está afiliado, respaldado ni patrocinado por Mercor. Mercor es una marca registrada de su propietario. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor. Mercor is a trademark of its owner.)",
+    "trademarkDisclaimer": "Edithsi es independiente y no está afiliado, respaldado ni patrocinado por Mercor o micro1. Todas las marcas pertenecen a sus respectivos propietarios. (Edithsi is independent and not affiliated with, endorsed or sponsored by Mercor or micro1. All trademarks belong to their owners.)",
     "operatorLine": "Gestionado por {name} · {city} · {email}",
     "businessIdLine": "ID empresarial: {businessId}",
     "audiencesHeading": "Para ti (por profesión)",

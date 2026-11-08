@@ -178,15 +178,15 @@
       "source_date": "2026-11-05"
     },
     "how_payment_works": "Independent contractor compensation; exact payout schedule and payment rail on public /experts page: TBD (confirm inside candidate portal during onboarding).",
-    "countries_accepted": "Global remote expert community (specific country restrictions per project: TBD on public page).",
+    "countries_accepted": "Global remote expert community (individual listings specify geographic eligibility; some roles are open worldwide including Finland and Europe, while others may restrict to specific countries — check each listing on micro1; unverified country restrictions marked TBD).",
     "application_steps": [
       "Apply for open domain opportunities on micro1.ai/experts/opportunities.",
       "Take the automated AI interview (interview prep available at micro1.ai/interview-prep).",
       "Complete onboarding if selected.",
       "Start earning on matched frontier AI lab projects."
     ],
-    "referral_link": "",
-    "referral_code": "",
+    "referral_link": "https://refer.micro1.ai/referral/jobs?referralCode=ad081063-9c31-41f4-8c1d-210fee47018c&utm_source=referral&utm_medium=share&utm_campaign=job_referral",
+    "referral_code": "ad081063-9c31-41f4-8c1d-210fee47018c",
     "last_checked": "2026-11-05"
   },
   {

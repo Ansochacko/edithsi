@@ -1,6 +1,6 @@
 ---
 import rolesData from '../../data/roles.json';
-import { REFERRAL_CODE, GENERAL_REFERRAL_URL, SITE_NAME } from '../../config';
+import { REFERRAL_CODE, GENERAL_REFERRAL_URL, MICRO1_REFERRAL_URL, SITE_NAME } from '../../config';
 
 export function getStaticPaths() {
   const rolePaths = rolesData.map((role) => ({
@@ -8,6 +8,7 @@ export function getStaticPaths() {
     props: {
       title: role.title,
       targetUrl: `${role.listingUrl}?referralCode=${REFERRAL_CODE}`,
+      platform: 'Mercor',
     },
   }));
 
@@ -16,13 +17,23 @@ export function getStaticPaths() {
     props: {
       title: 'Mercor General Application',
       targetUrl: `${GENERAL_REFERRAL_URL}?referralCode=${REFERRAL_CODE}`,
+      platform: 'Mercor',
+    },
+  });
+
+  rolePaths.push({
+    params: { role: 'micro1' },
+    props: {
+      title: 'micro1 AI Jobs',
+      targetUrl: MICRO1_REFERRAL_URL,
+      platform: 'micro1',
     },
   });
 
   return rolePaths;
 }
 
-const { title, targetUrl } = Astro.props;
+const { title, targetUrl, platform = 'Mercor' } = Astro.props;
 ---
 
 <!doctype html>
@@ -60,10 +71,10 @@ const { title, targetUrl } = Astro.props;
   </head>
   <body>
     <main class="card">
-      <h1>Opening official listing on Mercor…</h1>
+      <h1>Opening official listing on {platform}…</h1>
       <p>
         You are leaving {SITE_NAME} via a referral link (AD). If you are not redirected automatically,
-        <a href={targetUrl} rel="sponsored noopener noreferrer">continue to {title} on Mercor</a>.
+        <a href={targetUrl} rel="sponsored noopener noreferrer">continue to {title} on {platform}</a>.
       </p>
     </main>
   </body>
