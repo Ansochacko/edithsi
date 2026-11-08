@@ -166,27 +166,4 @@ const extras = NAV_EXTRAS[lang];
   </div>
 </header>
 
-<script is:inline>
-  (function () {
-    const menus = Array.from(document.querySelectorAll('#lang-menu-details, #for-you-menu-details'));
-    if (!menus.length) return;
-    document.addEventListener('click', function (e) {
-      menus.forEach(function (menu) {
-        if (menu.hasAttribute('open') && !menu.contains(e.target)) {
-          menu.removeAttribute('open');
-        }
-      });
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        menus.forEach(function (menu) {
-          if (menu.hasAttribute('open')) {
-            menu.removeAttribute('open');
-            const summary = menu.querySelector('summary');
-            if (summary) summary.focus();
-          }
-        });
-      }
-    });
-  })();
-</script>
+<script src="../scripts/header-menus.ts"></script>

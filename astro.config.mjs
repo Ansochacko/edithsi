@@ -7,6 +7,12 @@ export default defineConfig({
   trailingSlash: 'always',
   build: {
     format: 'directory',
+    inlineStylesheets: 'never',
+  },
+  vite: {
+    build: {
+      assetsInlineLimit: 0,
+    },
   },
   integrations: [
     sitemap({

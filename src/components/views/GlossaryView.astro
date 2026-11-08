@@ -149,7 +149,7 @@ const ui = UI_LABELS[lang];
         {content.terms.map((item) => (
           <article class="fact-card" id={`term-${item.id}`}>
             <h3 class="fact-card__title">{item.term}</h3>
-            <p class="fact-card__body" style="margin-bottom: var(--space-3);">
+            <p class="fact-card__body mb-space-3">
               <strong>{item.firstSentenceDefinition}</strong>
             </p>
             <p class="fact-card__body">{item.details}</p>
