@@ -3,17 +3,6 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.edithsi.com"
-        }
-      ],
-      "destination": "https://edithsi.com/:path*",
-      "permanent": true
-    },
-    {
       "source": "/go/legal-licensed/:path*",
       "destination": "https://work.mercor.com/jobs/list_AAABnXhvagXHJt27tM9AQqyk/legal-experts?referralCode=02e0c12a-d634-4738-9686-04f28f31f52b",
       "permanent": false
